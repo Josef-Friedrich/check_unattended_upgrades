@@ -1,0 +1,167 @@
+#! /bin/sh
+
+# 1 day + 2 hours
+CHECK_WARNING=93600
+
+# 2 days + 4 hours
+CHECK_CRITICAL=187200
+
+CHECK_DOWNLOAD=1
+CHECK_MAIL='logs@josef-friedrich.de'
+CHECK_UNATTENDED=1
+CHECK_AUTOCLEAN=7
+CHECK_LISTS=1
+CHECK_REMOVE='true'
+
+
+_get_config() {
+	eval $(apt-config shell "$2" "$1")
+}
+
+_check_config() {
+	local CONFIG=$1
+	local DEBIT=$2
+
+	_get_config $CONFIG "CREDIT"
+	if [ $DEBIT != $CREDIT ]; then
+			echo "CRITICAL - The configuration '$CONFIG' is not configured properly. It has the value '$CREDIT', but it should have '$DEBIT'."
+		exit 2
+	fi
+}
+
+_usage() {
+  echo "Usage: check_unattended_upgrades <options>
+
+  Options:
+  -a   Check if the configuration 'APT::Periodic::AutocleanInterval' is set properly.
+  -c   Critical in seconds.
+  -d   Check if the configuration 'APT::Periodic:Download-Upgradeable-Packages' is set properly.
+  -h   Show this help message.
+  -l   Check if the configuration 'APT::Periodic::Update-Package-Lists' is set properly.
+  -m   Check if the configuration 'Unattended-Upgrade::Mail' is set properly.
+  -r   Check if the configuration 'Unattended-Upgrade::Remove-Unused-Dependencies' is set properly.
+  -u   Check if the configuration 'APT::Periodic::Unattended-Upgrade' is set properly.
+  -w   Warning in seconds.
+"
+}
+
+while getopts ":a:c:d:hl:m:r:u:w:" OPT; do
+	case $OPT in
+
+		a)
+			CHECK_AUTOCLEAN="$OPTART"
+			;;
+
+		c)
+			CHECK_CRITICAL="$OPTARG"
+			;;
+
+		d)
+			CHECK_DOWNLOAD="$OPTARG"
+			;;
+
+		h)
+			_usage
+			exit 0
+			;;
+
+		l)
+			CHECK_LISTS="$OPTARG"
+			;;
+
+		m)
+			CHECK_MAIL="$OPTARG"
+			;;
+
+		r)
+			CHECK_REMOVE="$OPTARG"
+			;;
+
+		u)
+			CHECK_UNATTENDED="$OPTARG"
+			;;
+
+		w)
+			CHECK_WARNING="$OPTARG"
+			;;
+    
+		\?)
+			echo "Invalid option: -$OPTARG" >&2
+			exit 1
+			;;
+
+		:)
+			echo "Option -$OPTARG requires an argument." >&2
+			exit 1
+			;;
+
+	esac
+done
+
+##
+# Configuration checks
+##
+
+# -u
+if [ ! -z ${CHECK_UNATTENDED+x} ]; then
+	_check_config "APT::Periodic::Unattended-Upgrade" $CHECK_UNATTENDED
+fi
+
+# -m
+if [ ! -z ${CHECK_MAIL+x} ]; then
+	_check_config "Unattended-Upgrade::Mail" $CHECK_MAIL
+fi
+
+# -d
+if [ ! -z ${CHECK_DOWNLOAD+x} ]; then
+	_check_config "APT::Periodic::Download-Upgradeable-Packages" $CHECK_DOWNLOAD
+fi
+
+# -r
+if [ ! -z ${CHECK_REMOVE+x} ]; then
+	_check_config "Unattended-Upgrade::Remove-Unused-Dependencies" $CHECK_REMOVE
+fi
+
+# -l
+if [ ! -z ${CHECK_LISTS+x} ]; then
+	_check_config "APT::Periodic::Update-Package-Lists" $CHECK_LISTS
+fi
+
+# -a
+if [ ! -z ${CHECK_AUTOCLEAN+x} ]; then
+	_check_config "APT::Periodic::AutocleanInterval" $CHECK_AUTOCLEAN
+fi
+
+##
+# Time checks
+##
+
+# Log file check
+
+LOG_FILE='/var/log/unattended-upgrades/unattended-upgrades.log'
+
+if [ ! -f $LOG_FILE ]; then
+	echo "CRITICAL - Log file ($LOG_FILE) does not exist."
+	exit 2
+fi
+
+LAST_RUN_DATE=$(tail -n 1 /var/log/unattended-upgrades/unattended-upgrades.log | cut -d "," -f 1)
+LAST_RUN=$(date -d "$LAST_RUN_DATE" +%s)
+
+CURRENT_DATE=$(date +%s)
+
+DIFF=$((CURRENT_DATE - LAST_RUN))
+
+# Critical
+if [ "$DIFF" -gt "$CHECK_CRITICAL" ]; then
+	echo "CRITICAL - Unattended upgrades last run was on $LAST_RUN_DATE (more than 2 days ago)."
+	exit 2
+# Warning
+elif [ "$DIFF" -gt "$CHECK_WARNING" ]; then
+	echo "WARNING - Unattended upgrades last run was on $LAST_RUN_DATE (more than 1 day ago)."
+	exit 1
+else
+	echo "OK - Unattended upgrades last run was on $LAST_RUN_DATE"
+	exit 0
+
+fi
