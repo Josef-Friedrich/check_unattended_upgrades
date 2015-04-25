@@ -22,7 +22,7 @@ _check_config() {
 	local DEBIT=$2
 
 	_get_config $CONFIG "CREDIT"
-	if [ $DEBIT != $CREDIT ]; then
+	if [ "$DEBIT" != "$CREDIT" ]; then
 			echo "CRITICAL - The configuration '$CONFIG' is not configured properly. It has the value '$CREDIT', but it should have '$DEBIT'."
 		exit 2
 	fi
