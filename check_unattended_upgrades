@@ -7,11 +7,11 @@
 #CHECK_WARNING=93600
 #CHECK_CRITICAL=187200
 #CHECK_DOWNLOAD=1
-#CHECK_MAIL='you@example.com'
+#CHECK_MAIL="you@example.com"
 #CHECK_UNATTENDED=1
 #CHECK_AUTOCLEAN=7
 #CHECK_LISTS=1
-#CHECK_REMOVE='true'
+#CHECK_REMOVE="true"
 
 _get_config() {
 	eval $(apt-config shell "$2" "$1")
