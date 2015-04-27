@@ -164,7 +164,7 @@ fi
 
 # Log file check
 
-LOG_FILE='/var/log/unattended-upgrades/unattended-upgrades-test.log'
+LOG_FILE='/var/log/unattended-upgrades/unattended-upgrades.log'
 
 if [ ! -f $LOG_FILE ]; then
 	echo "CRITICAL - Log file ($LOG_FILE) does not exist."
