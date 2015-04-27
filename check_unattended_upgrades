@@ -178,6 +178,11 @@ if [ -z "$LAST_RUN_DATE" ]; then
 	exit 2
 fi
 
+if [ -z ${CHECK_CRITICAL+x} ] || [ -z ${CHECK_WARNING+x} ]; then
+	echo "CRITICAL - You have at least to specify the two options '-c' and '-w', e. g.: check_unattended_upgrades -c 3600 -w 7200."
+	exit 2
+fi
+
 LAST_RUN=$(date -d "$LAST_RUN_DATE" +%s)
 CURRENT_DATE=$(date +%s)
 DIFF=$((CURRENT_DATE - LAST_RUN))
