@@ -12,6 +12,7 @@
 #CHECK_AUTOCLEAN=7
 #CHECK_LISTS=1
 #CHECK_REMOVE="true"
+#CHECK_ENABLE=1
 
 _get_config() {
 	eval $(apt-config shell "$2" "$1")
@@ -44,6 +45,8 @@ Options:
     Critical in seconds.
  -d
     Check if the configuration 'APT::Periodic:Download-Upgradeable-Packages' is set properly.
+ -e
+    Check if the configuration 'APT::Periodic::Enable' is set properly.
  -h
     Show this help message.
  -l
@@ -59,7 +62,7 @@ Options:
 "
 }
 
-while getopts ":a:c:d:hl:m:r:u:w:" OPT; do
+while getopts ":a:c:d:e:hl:m:r:u:w:" OPT; do
 	case $OPT in
 
 		a)
@@ -72,6 +75,10 @@ while getopts ":a:c:d:hl:m:r:u:w:" OPT; do
 
 		d)
 			CHECK_DOWNLOAD="$OPTARG"
+			;;
+
+		e)
+			CHECK_ENABLE="$OPTARG"
 			;;
 
 		h)
@@ -115,6 +122,11 @@ done
 ##
 # Configuration checks
 ##
+
+# -e
+if [ ! -z ${CHECK_ENABLE+x} ]; then
+	_check_config "APT::Periodic::Enable" $CHECK_ENABLE
+fi
 
 # -u
 if [ ! -z ${CHECK_UNATTENDED+x} ]; then
