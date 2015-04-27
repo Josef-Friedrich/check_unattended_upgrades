@@ -184,8 +184,8 @@ if [ -z ${CHECK_CRITICAL+x} ] || [ -z ${CHECK_WARNING+x} ]; then
 fi
 
 LAST_RUN=$(date -d "$LAST_RUN_DATE" +%s)
-CURRENT_DATE=$(date +%s)
-DIFF=$((CURRENT_DATE - LAST_RUN))
+CURRENT=$(date +%s)
+DIFF=$((CURRENT - LAST_RUN))
 
 # Critical
 if [ "$DIFF" -gt "$CHECK_CRITICAL" ]; then
@@ -198,5 +198,4 @@ elif [ "$DIFF" -gt "$CHECK_WARNING" ]; then
 else
 	echo "OK - Unattended upgrades last run was on ${LAST_RUN_DATE}."
 	exit 0
-
 fi
