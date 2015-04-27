@@ -189,14 +189,14 @@ DIFF=$((CURRENT_DATE - LAST_RUN))
 
 # Critical
 if [ "$DIFF" -gt "$CHECK_CRITICAL" ]; then
-	echo "CRITICAL - Unattended upgrades last run was on $LAST_RUN_DATE (more than 2 days ago)."
+	echo "CRITICAL - Unattended upgrades last run was on ${LAST_RUN_DATE}."
 	exit 2
 # Warning
 elif [ "$DIFF" -gt "$CHECK_WARNING" ]; then
-	echo "WARNING - Unattended upgrades last run was on $LAST_RUN_DATE (more than 1 day ago)."
+	echo "WARNING - Unattended upgrades last run was on ${LAST_RUN_DATE}."
 	exit 1
 else
-	echo "OK - Unattended upgrades last run was on $LAST_RUN_DATE"
+	echo "OK - Unattended upgrades last run was on ${LAST_RUN_DATE}."
 	exit 0
 
 fi
