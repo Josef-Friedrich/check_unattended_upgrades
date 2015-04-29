@@ -20,6 +20,13 @@
 #CHECK_ENABLE=1
 #CHECK_SLEEP=0
 
+# Exit codes
+STATE_OK=0
+STATE_WARNING=1
+STATE_CRITICAL=2
+STATE_UNKNOWN=3
+
+
 _get_config() {
 	eval $(apt-config shell "$2" "$1")
 }
@@ -31,7 +38,7 @@ _check_config() {
 	_get_config $CONFIG "CREDIT"
 	if [ "$DEBIT" != "$CREDIT" ]; then
 			echo "CRITICAL - The configuration '$CONFIG' is not configured properly. It has the value '$CREDIT', but it should have '$DEBIT'."
-		exit 2
+		exit $STATE_CRITICAL
 	fi
 }
 
@@ -181,7 +188,7 @@ fi
 
 if [ -f /var/run/reboot-required ]; then
 	echo "WARNING - Machine requires a reboot."
-	exit 1
+	exit $STATE_WARNING
 fi
 
 ##
@@ -194,19 +201,19 @@ LOG_FILE='/var/log/unattended-upgrades/unattended-upgrades.log'
 
 if [ ! -f $LOG_FILE ]; then
 	echo "CRITICAL - Log file ($LOG_FILE) does not exist."
-	exit 2
+	exit $STATE_CRITICAL
 fi
 
 LAST_RUN_DATE=$(tail -n 1 $LOG_FILE | cut -d "," -f 1)
 
 if [ -z "$LAST_RUN_DATE" ]; then
 	echo "CRITICAL - The date on which the command 'unattended-upgrades' ran for the last time, could not be determined. The log file '$LOG_FILE' is empty."
-	exit 2
+	exit $STATE_CRITICAL
 fi
 
 if [ -z ${CHECK_CRITICAL+x} ] || [ -z ${CHECK_WARNING+x} ]; then
 	echo "CRITICAL - You have at least to specify the two options '-c' and '-w', e. g.: check_unattended_upgrades -c 3600 -w 7200."
-	exit 2
+	exit $STATE_CRITICAL
 fi
 
 LAST_RUN=$(date -d "$LAST_RUN_DATE" +%s)
@@ -216,12 +223,12 @@ DIFF=$((CURRENT - LAST_RUN))
 # Critical
 if [ "$DIFF" -gt "$CHECK_CRITICAL" ]; then
 	echo "CRITICAL - Unattended upgrades last run was on ${LAST_RUN_DATE}."
-	exit 2
+	exit $STATE_CRITICAL
 # Warning
 elif [ "$DIFF" -gt "$CHECK_WARNING" ]; then
 	echo "WARNING - Unattended upgrades last run was on ${LAST_RUN_DATE}."
-	exit 1
+	exit $STATE_WARNING
 else
 	echo "OK - Unattended upgrades last run was on ${LAST_RUN_DATE}."
-	exit 0
+	exit $STATE_OK
 fi
