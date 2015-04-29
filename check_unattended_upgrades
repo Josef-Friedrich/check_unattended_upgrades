@@ -13,6 +13,7 @@
 #CHECK_LISTS=1
 #CHECK_REMOVE="true"
 #CHECK_ENABLE=1
+#CHECK_SLEEP=0
 
 _get_config() {
 	eval $(apt-config shell "$2" "$1")
@@ -55,6 +56,8 @@ Options:
     Check if the configuration 'Unattended-Upgrade::Mail' is set properly.
  -r
     Check if the configuration 'Unattended-Upgrade::Remove-Unused-Dependencies' is set properly.
+ -s
+    Check if the configuration 'APT::Periodic::RandomSleep' is set properly.
  -u
     Check if the configuration 'APT::Periodic::Unattended-Upgrade' is set properly.
  -w
@@ -62,7 +65,7 @@ Options:
 "
 }
 
-while getopts ":a:c:d:e:hl:m:r:u:w:" OPT; do
+while getopts ":a:c:d:e:hl:m:r:s:u:w:" OPT; do
 	case $OPT in
 
 		a)
@@ -96,6 +99,10 @@ while getopts ":a:c:d:e:hl:m:r:u:w:" OPT; do
 
 		r)
 			CHECK_REMOVE="$OPTARG"
+			;;
+
+		s)
+			CHECK_SLEEP="$OPTARG"
 			;;
 
 		u)
@@ -146,6 +153,11 @@ fi
 # -r
 if [ ! -z ${CHECK_REMOVE+x} ]; then
 	_check_config "Unattended-Upgrade::Remove-Unused-Dependencies" $CHECK_REMOVE
+fi
+
+# -s
+if [ ! -z ${CHECK_SLEEP+x} ]; then
+	_check_config "APT::Periodic::RandomSleep" $CHECK_SLEEP
 fi
 
 # -l
