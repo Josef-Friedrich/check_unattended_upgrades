@@ -176,6 +176,15 @@ if [ ! -z ${CHECK_AUTOCLEAN+x} ]; then
 fi
 
 ##
+# Reboot
+##
+
+if [ -f /var/run/reboot-required ]; then
+	echo "WARNING - Machine requires a reboot."
+	exit 1
+fi
+
+##
 # Time checks
 ##
 
