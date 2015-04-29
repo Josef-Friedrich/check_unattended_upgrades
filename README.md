@@ -17,9 +17,11 @@ Options:
  -a
     Check if the configuration 'APT::Periodic::AutocleanInterval' is set properly.
  -c
-    Critical in seconds.
+    Time interval since the last execution to result in a critical state (seconds).
  -d
     Check if the configuration 'APT::Periodic:Download-Upgradeable-Packages' is set properly.
+ -e
+    Check if the configuration 'APT::Periodic::Enable' is set properly.
  -h
     Show this help message.
  -l
@@ -28,10 +30,11 @@ Options:
     Check if the configuration 'Unattended-Upgrade::Mail' is set properly.
  -r
     Check if the configuration 'Unattended-Upgrade::Remove-Unused-Dependencies' is set properly.
+ -s
+    Check if the configuration 'APT::Periodic::RandomSleep' is set properly.
  -u
     Check if the configuration 'APT::Periodic::Unattended-Upgrade' is set properly.
  -w
-    Warning in seconds.
-
+    Time interval since the last execution to result in a warning state (seconds).
 ```
 

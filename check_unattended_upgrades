@@ -55,7 +55,7 @@ Options:
  -a
     Check if the configuration 'APT::Periodic::AutocleanInterval' is set properly.
  -c
-    Critical in seconds.
+    Time interval since the last execution to result in a critical state (seconds).
  -d
     Check if the configuration 'APT::Periodic:Download-Upgradeable-Packages' is set properly.
  -e
@@ -73,7 +73,7 @@ Options:
  -u
     Check if the configuration 'APT::Periodic::Unattended-Upgrade' is set properly.
  -w
-    Warning in seconds.
+    Time interval since the last execution to result in a warning state (seconds).
 "
 }
 
