@@ -1,6 +1,11 @@
 #! /bin/sh
 
 ##
+# Project page: https://github.com/Josef-Friedrich/check_unattended_upgrades
+# Copyright (c) 2015 Josef Friedrich <jf@josef-friedrich.de>
+##
+
+##
 # Default check values
 ##
 
