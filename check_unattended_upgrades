@@ -19,13 +19,13 @@
 #CHECK_REMOVE="true"
 #CHECK_ENABLE=1
 #CHECK_SLEEP=0
+#CHECK_REBOOT
 
 # Exit codes
 STATE_OK=0
 STATE_WARNING=1
 STATE_CRITICAL=2
 STATE_UNKNOWN=3
-
 
 _get_config() {
 	eval $(apt-config shell "$2" "$1")
@@ -68,6 +68,8 @@ Options:
     Check if the configuration 'Unattended-Upgrade::Mail' is set properly.
  -r
     Check if the configuration 'Unattended-Upgrade::Remove-Unused-Dependencies' is set properly.
+ -R 
+    Check if the machine needs a reboot.
  -s
     Check if the configuration 'APT::Periodic::RandomSleep' is set properly.
  -u
@@ -77,7 +79,7 @@ Options:
 "
 }
 
-while getopts ":a:c:d:e:hl:m:r:s:u:w:" OPT; do
+while getopts ":a:c:d:e:hl:m:r:Rs:u:w:" OPT; do
 	case $OPT in
 
 		a)
@@ -111,6 +113,10 @@ while getopts ":a:c:d:e:hl:m:r:s:u:w:" OPT; do
 
 		r)
 			CHECK_REMOVE="$OPTARG"
+			;;
+
+		R)
+			CHECK_REBOOT=1
 			;;
 
 		s)
@@ -186,7 +192,7 @@ fi
 # Reboot
 ##
 
-if [ -f /var/run/reboot-required ]; then
+if [ -n "$CHECK_REBOOT" ] && [ -f /var/run/reboot-required ]; then
 	echo "WARNING - Machine requires a reboot."
 	exit $STATE_WARNING
 fi
@@ -204,7 +210,14 @@ if [ ! -f $LOG_FILE ]; then
 	exit $STATE_CRITICAL
 fi
 
-LAST_RUN_DATE=$(tail -n 1 $LOG_FILE | cut -d "," -f 1)
+LAST_LOG_LINE=$(tail -n 1 $LOG_FILE )
+
+if [ -z "$LAST_LOG_LINE" ]; then
+	LATEST_COMPRESSED_LOG=$(ls ${LOG_FILE}.*.gz | tail -n 1)
+	LAST_LOG_LINE=$(zcat $LATEST_COMPRESSED_LOG | tail -n 1)
+fi
+
+LAST_RUN_DATE=$(echo $LAST_LOG_LINE | cut -d "," -f 1)
 
 if [ -z "$LAST_RUN_DATE" ]; then
 	echo "CRITICAL - The date on which the command 'unattended-upgrades' ran for the last time, could not be determined. The log file '$LOG_FILE' is empty."
