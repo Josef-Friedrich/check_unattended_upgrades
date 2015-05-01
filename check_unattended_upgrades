@@ -213,7 +213,7 @@ fi
 LAST_LOG_LINE=$(tail -n 1 $LOG_FILE )
 
 if [ -z "$LAST_LOG_LINE" ]; then
-	LATEST_COMPRESSED_LOG=$(ls ${LOG_FILE}.*.gz | tail -n 1)
+	LATEST_COMPRESSED_LOG=$(ls -r ${LOG_FILE}.*.gz | tail -n 1)
 	LAST_LOG_LINE=$(zcat $LATEST_COMPRESSED_LOG | tail -n 1)
 fi
 
