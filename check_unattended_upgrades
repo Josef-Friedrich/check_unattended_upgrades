@@ -148,44 +148,47 @@ done
 # Configuration checks
 ##
 
-# -e
-if [ ! -z ${CHECK_ENABLE+x} ]; then
-	_check_config "APT::Periodic::Enable" $CHECK_ENABLE
-fi
+if which apt-config >/dev/null; then
 
-# -u
-if [ ! -z ${CHECK_UNATTENDED+x} ]; then
-	_check_config "APT::Periodic::Unattended-Upgrade" $CHECK_UNATTENDED
-fi
-
-# -m
-if [ ! -z ${CHECK_MAIL+x} ]; then
-	_check_config "Unattended-Upgrade::Mail" $CHECK_MAIL
-fi
-
-# -d
-if [ ! -z ${CHECK_DOWNLOAD+x} ]; then
-	_check_config "APT::Periodic::Download-Upgradeable-Packages" $CHECK_DOWNLOAD
-fi
-
-# -r
-if [ ! -z ${CHECK_REMOVE+x} ]; then
-	_check_config "Unattended-Upgrade::Remove-Unused-Dependencies" $CHECK_REMOVE
-fi
-
-# -s
-if [ ! -z ${CHECK_SLEEP+x} ]; then
-	_check_config "APT::Periodic::RandomSleep" $CHECK_SLEEP
-fi
-
-# -l
-if [ ! -z ${CHECK_LISTS+x} ]; then
-	_check_config "APT::Periodic::Update-Package-Lists" $CHECK_LISTS
-fi
-
-# -a
-if [ ! -z ${CHECK_AUTOCLEAN+x} ]; then
-	_check_config "APT::Periodic::AutocleanInterval" $CHECK_AUTOCLEAN
+	# -e
+	if [ ! -z ${CHECK_ENABLE+x} ]; then
+		_check_config "APT::Periodic::Enable" $CHECK_ENABLE
+	fi
+	
+	# -u
+	if [ ! -z ${CHECK_UNATTENDED+x} ]; then
+		_check_config "APT::Periodic::Unattended-Upgrade" $CHECK_UNATTENDED
+	fi
+	
+	# -m
+	if [ ! -z ${CHECK_MAIL+x} ]; then
+		_check_config "Unattended-Upgrade::Mail" $CHECK_MAIL
+	fi
+	
+	# -d
+	if [ ! -z ${CHECK_DOWNLOAD+x} ]; then
+		_check_config "APT::Periodic::Download-Upgradeable-Packages" $CHECK_DOWNLOAD
+	fi
+	
+	# -r
+	if [ ! -z ${CHECK_REMOVE+x} ]; then
+		_check_config "Unattended-Upgrade::Remove-Unused-Dependencies" $CHECK_REMOVE
+	fi
+	
+	# -s
+	if [ ! -z ${CHECK_SLEEP+x} ]; then
+		_check_config "APT::Periodic::RandomSleep" $CHECK_SLEEP
+	fi
+	
+	# -l
+	if [ ! -z ${CHECK_LISTS+x} ]; then
+		_check_config "APT::Periodic::Update-Package-Lists" $CHECK_LISTS
+	fi
+	
+	# -a
+	if [ ! -z ${CHECK_AUTOCLEAN+x} ]; then
+		_check_config "APT::Periodic::AutocleanInterval" $CHECK_AUTOCLEAN
+	fi
 fi
 
 ##
