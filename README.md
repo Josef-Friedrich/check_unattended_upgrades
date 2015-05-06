@@ -30,8 +30,12 @@ Options:
     Check if the configuration 'Unattended-Upgrade::Mail' is set properly.
  -r
     Check if the configuration 'Unattended-Upgrade::Remove-Unused-Dependencies' is set properly.
+ -R 
+    Check if the machine needs a reboot.
  -s
     Check if the configuration 'APT::Periodic::RandomSleep' is set properly.
+ -S
+    Check if 'Unattended-upgrades' is configured to handle security updates.
  -u
     Check if the configuration 'APT::Periodic::Unattended-Upgrade' is set properly.
  -w
