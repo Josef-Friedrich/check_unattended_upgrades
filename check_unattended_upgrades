@@ -221,7 +221,7 @@ if which apt-config > /dev/null; then
 	fi
 
 	if [ ! -z ${CHECK_SECURITY+x} ]; then
-		if ! apt-config dump | grep 'Unattended-Upgrade::Allowed-Origins' | grep -i 'security' > /dev/null ; then
+		if ! apt-config dump | grep 'Unattended-Upgrade::Allowed-Origins\|Unattended-Upgrade::Origins-Pattern' | grep -i 'security' > /dev/null ; then
 			echo 'CRITICAL - Unattended-upgrades is not configured to handle security updates.'
 			exit $STATE_CRITICAL
 		fi
