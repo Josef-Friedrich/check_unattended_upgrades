@@ -9,40 +9,49 @@
 # Default check values
 ##
 
-# Check if the configuration 'APT::Periodic::AutocleanInterval' is set properly.
+# Check if the configuration 'APT::Periodic::AutocleanInterval' is set
+# properly.
 #CHECK_AUTOCLEAN=7
 
-# Time interval since the last execution to result in a critical state (seconds).
+# Time interval since the last execution to result in a critical state
+# (seconds).
 #CHECK_CRITICAL=187200
 
-# Check if the configuration 'APT::Periodic:Download-Upgradeable-Packages' is set properly.
+# Check if the configuration
+# 'APT::Periodic:Download-Upgradeable-Packages' is set properly.
 #CHECK_DOWNLOAD=1
 
 # Check if the configuration 'APT::Periodic::Enable' is set properly.
 #CHECK_ENABLE=1
 
-# Check if the configuration 'APT::Periodic::Update-Package-Lists' is set properly.
+# Check if the configuration 'APT::Periodic::Update-Package-Lists' is
+# set properly.
 #CHECK_LISTS=1
 
 # Check if the configuration 'Unattended-Upgrade::Mail' is set properly.
 #CHECK_MAIL="you@example.com"
 
-# Check if the configuration 'Unattended-Upgrade::Remove-Unused-Dependencies' is set properly.
+# Check if the configuration
+# 'Unattended-Upgrade::Remove-Unused-Dependencies' is set properly.
 #CHECK_REMOVE="true"
 
 # Check if the machine needs a reboot.
 #CHECK_REBOOT=1
 
-# Check if the configuration 'APT::Periodic::RandomSleep' is set properly.
+# Check if the configuration 'APT::Periodic::RandomSleep' is set
+# properly.
 #CHECK_SLEEP=0
 
-# Check if 'Unattended-upgrades' is configured to handle security updates.
+# Check if 'Unattended-upgrades' is configured to handle security
+# updates.
 #CHECK_SECURITY=1
 
-# Check if the configuration 'APT::Periodic::Unattended-Upgrade' is set properly.
+# Check if the configuration 'APT::Periodic::Unattended-Upgrade' is set
+# properly.
 #CHECK_UNATTENDED=1
 
-# Time interval since the last execution to result in a warning state (seconds).
+# Time interval since the last execution to result in a warning state
+# (seconds).
 #CHECK_WARNING=93600
 
 # Exit codes
