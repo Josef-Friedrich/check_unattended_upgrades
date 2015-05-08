@@ -13,6 +13,9 @@
 # properly.
 #CHECK_AUTOCLEAN=7
 
+# Check if the package 'anacron' is installed.
+#CHECK_ANACRON=1
+
 # Time interval since the last execution to result in a critical state
 # (seconds).
 #CHECK_CRITICAL=187200
@@ -88,6 +91,8 @@ Options:
  -a
     Check if the configuration 'APT::Periodic::AutocleanInterval' is set
     properly.
+ -A
+    Check if the package 'anacron' is installed.
  -c
     Time interval since the last execution to result in a critical state
     (seconds).
@@ -121,11 +126,14 @@ Options:
 "
 }
 
-while getopts ":a:c:d:e:hl:m:r:Rs:Su:w:" OPT; do
+while getopts ":a:Ac:d:e:hl:m:r:Rs:Su:w:" OPT; do
 	case $OPT in
 
 		a)
 			CHECK_AUTOCLEAN="$OPTART"
+			;;
+		A)
+			CHECK_ANACRON=1
 			;;
 
 		c)
@@ -191,6 +199,15 @@ while getopts ":a:c:d:e:hl:m:r:Rs:Su:w:" OPT; do
 done
 
 ##
+# Check for auxiliary packages.
+##
+
+if ! which anacron > /dev/null; then
+	echo 'CRITICAL - Package "anacron" is not installed.'
+	exit $STATE_CRITICAL
+fi
+
+##
 # Configuration checks
 ##
 
@@ -243,6 +260,7 @@ if which apt-config > /dev/null; then
 		fi
 	fi
 fi
+
 ##
 # Reboot
 ##
