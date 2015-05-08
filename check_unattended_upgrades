@@ -86,21 +86,26 @@ Usage: check_unattended_upgrades <options>
 
 Options:
  -a
-    Check if the configuration 'APT::Periodic::AutocleanInterval' is set properly.
+    Check if the configuration 'APT::Periodic::AutocleanInterval' is set
+    properly.
  -c
-    Time interval since the last execution to result in a critical state (seconds).
+    Time interval since the last execution to result in a critical state
+    (seconds).
  -d
-    Check if the configuration 'APT::Periodic:Download-Upgradeable-Packages' is set properly.
+    Check if the configuration 'APT::Periodic:Download-Upgradeable-Packages'
+    is set properly.
  -e
     Check if the configuration 'APT::Periodic::Enable' is set properly.
  -h
     Show this help message.
  -l
-    Check if the configuration 'APT::Periodic::Update-Package-Lists' is set properly.
+    Check if the configuration 'APT::Periodic::Update-Package-Lists' is set
+    properly.
  -m
     Check if the configuration 'Unattended-Upgrade::Mail' is set properly.
  -r
-    Check if the configuration 'Unattended-Upgrade::Remove-Unused-Dependencies' is set properly.
+    Check if the configuration 'Unattended-Upgrade::Remove-Unused-
+    Dependencies' is set properly.
  -R
     Check if the machine needs a reboot.
  -s
@@ -108,9 +113,11 @@ Options:
  -S
     Check if 'Unattended-upgrades' is configured to handle security updates.
  -u
-    Check if the configuration 'APT::Periodic::Unattended-Upgrade' is set properly.
+    Check if the configuration 'APT::Periodic::Unattended-Upgrade' is set
+    properly.
  -w
-    Time interval since the last execution to result in a warning state (seconds).
+    Time interval since the last execution to result in a warning state
+    (seconds).
 "
 }
 
