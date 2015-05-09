@@ -203,11 +203,9 @@ done
 ##
 
 # -A
-if [ ! -z ${CHECK_ANACRON+x} ]; then
-	if ! which anacron > /dev/null; then
-		echo 'CRITICAL - Package "anacron" is not installed.'
-		exit $STATE_CRITICAL
-	fi
+if [ ! -z ${CHECK_ANACRON+x} ] && [ ! -x /usr/sbin/anacron ]; then	
+	echo 'CRITICAL - Package "anacron" is not installed.'
+	exit $STATE_CRITICAL
 fi
 
 ##
