@@ -130,7 +130,7 @@ while getopts ":a:Ac:d:e:hl:m:r:Rs:Su:w:" OPT; do
 	case $OPT in
 
 		a)
-			CHECK_AUTOCLEAN="$OPTART"
+			CHECK_AUTOCLEAN="$OPTARG"
 			;;
 		A)
 			CHECK_ANACRON=1
