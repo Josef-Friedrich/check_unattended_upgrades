@@ -1,0 +1,19 @@
+---
+name: check_unattended_upgrades
+description: "file:///README.md"
+url: "https://github.com/JosefFriedrich-shell/check_unattended_upgrades"
+tags: zpool
+vendor: Linux
+target: Operating System
+type: Plugin
+license: mit
+releases:
+  -
+    name: 1.0
+    description: "1.0 Release"
+    files:
+      -
+        name: check_unattended_upgrades
+        url: "file:///check_unattended_upgrades"
+        description: "First release"
+        checksum: 1874ae702147e259f28f99e8dab86ef3
