@@ -2,9 +2,9 @@
 name: check_unattended_upgrades
 description: "file:///README.md"
 url: "https://github.com/JosefFriedrich-shell/check_unattended_upgrades"
-tags: zpool
+tags: unattended-upgrades, apt
 vendor: Linux
-target: Operating System
+target: Debian, Ubuntu
 type: Plugin
 license: mit
 releases:
@@ -16,4 +16,4 @@ releases:
         name: check_unattended_upgrades
         url: "file:///check_unattended_upgrades"
         description: "First release"
-        checksum: 1874ae702147e259f28f99e8dab86ef3
+        checksum: 5f29a4d8d963916fbf5ee9d47ce67555
