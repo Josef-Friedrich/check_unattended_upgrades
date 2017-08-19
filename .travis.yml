@@ -1,0 +1,5 @@
+language: bash
+dist: trusty
+
+script:
+  - make -s test
