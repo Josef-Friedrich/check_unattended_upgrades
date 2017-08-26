@@ -25,15 +25,18 @@
 
 FIRST_RELEASE=2017-08-13
 VERSION=1.0
-PROJECT_PAGES="https://github.com/JosefFriedrich-shell/skeleton"
+PROJECT_PAGES="https://github.com/JosefFriedrich-shell/skeleton.sh"
 SHORT_DESCRIPTION='This is the management script of the skeleton.sh project!'
 USAGE="$(basename "$0") v$VERSION
 
-Usage: $(basename "$0") [-dhrSsv]
+Usage: $(basename "$0") [-AdhrSstv]
 
 $SHORT_DESCRIPTION
 
 Options:
+	-A, --sync-all
+	  Sync all projects that have the same parent folder as this
+	  project.
 	-d, --sync-dependencies
 	  Sync external dependenices (e. g. test-helper.sh bats)
 	-h, --help
@@ -45,6 +48,8 @@ Options:
 	  boilerplate files (e. g. Makefile test/lib/skeleton.sh)
 	-s, --short-description
 	  Show a short description / summary
+	-t, --test
+	  Run the tests located in the “test” folder.
 	-v, --version
 	  Show the version number of this script.
 "
@@ -58,8 +63,9 @@ PROJECT_NAME="$(basename "$(pwd)")"
 # Missing argument: 3
 # No argument allowed: 4
 _getopts() {
-	while getopts ':ab:cdhrSsv-:' OPT ; do
+	while getopts ':Aab:cdhrSstv-:' OPT ; do
 		case $OPT in
+			A) OPT_ALL=1;;
 			a)
 				OPT_ALPHA=1
 				;;
@@ -77,6 +83,7 @@ _getopts() {
 			r) OPT_README=1;;
 			S) OPT_SKELETON=1;;
 			s) echo "$SHORT_DESCRIPTION"; exit 0;;
+			t) OPT_TEST=1;;
 			v) echo "$VERSION"; exit 0;;
 
 			\?)
@@ -93,6 +100,7 @@ _getopts() {
 				LONG_OPTARG="${OPTARG#*=}"
 
 				case $OPTARG in
+					sync-all) OPT_ALL=1;;
 					alpha)
 						OPT_ALPHA=1
 						;;
@@ -121,9 +129,10 @@ _getopts() {
 					render-readme) OPT_README=1;;
 					sync-skeleton) OPT_SKELETON=1;;
 					short-description) echo "$SHORT_DESCRIPTION"; exit 0;;
+					test) OPT_TEST=1;;
 					version) echo "$VERSION"; exit 0;;
 
-					sync-dependencies*|help*|render-readme*|sync-skeleton*|short-description*|version*)
+					sync-dependencies*|help*|render-readme*|sync-skeleton*|short-description*|test*|version*)
 						echo "No argument allowed for the option “--$OPTARG”!" >&2
 						exit 4
 						;;
@@ -143,6 +152,22 @@ _getopts() {
 		esac
 	done
 	GETOPTS_SHIFT=$((OPTIND - 1))
+}
+
+_sync_all() {
+	PROJECTS=$(find .. -maxdepth 1 -type d | sed 1d)
+	for PROJECT in $PROJECTS; do
+		cd $PROJECT
+
+		echo "
+###
+# $(pwd)
+###"
+		_sync_skeleton
+		git add -Av
+		git commit -m 'Sync with skeleton'
+		git push
+	done
 }
 
 _sync_skeleton() {
@@ -178,13 +203,13 @@ _sync_skeleton() {
 	_getx test/lib/bats/bats-format-tap-stream
 	_getx test/lib/bats/bats-preprocess
 	_getx test/lib/skeleton.sh
-	_getx test/lib/test-runner.sh
 
 	_rm README.md.template.sh
 	_rm sync-skeleton.sh
 	_rm test.sh
 	_rm test/bash_unit
 	_rm test/lib/render-readme.sh
+	_rm test/lib/test-runner.sh
 	_rm test/test-helper.sh
 }
 
@@ -196,6 +221,7 @@ _sync_dependencies() {
 
 	_get test/lib/bash_unit pgrange/bash_unit/master/bash_unit
 	_get test/lib/test-helper.sh JosefFriedrich-shell/test-helper.sh/master/test-helper.sh
+	rm -f test/lib/skeleton.sh
 	cp skeleton.sh test/lib/skeleton.sh
 
 	rm -rf tmp_bats
@@ -243,6 +269,7 @@ EOF
 EOF
 	echo "$USAGE" >> README.md
 	echo '```'  >> README.md
+	echo >> README.md
 
 	### TESTING ####################################################
 
@@ -259,6 +286,39 @@ EOF
 	echo >> README.md
 	[ -f README-footer.md ] && cat README-footer.md >> README.md
 	cat README.md
+}
+
+_run_tests() {
+	# bash_unit
+	if ls test/*.bash_unit > /dev/null 2>&1; then
+		echo "
+Running bash_unit tests:"
+		./test/lib/bash_unit test/*.bash_unit
+		RETURN_BASH_UNIT=$?
+	else
+		RETURN_BASH_UNIT=0
+	fi
+
+	# bats
+	if ls test/*.bats > /dev/null 2>&1; then
+		echo "
+Running bats tests:"
+		./test/lib/bats/bats test
+		## or:
+		# bats test
+		RETURN_BATS=$?
+	else
+		RETURN_BATS=0
+	fi
+
+
+	if [ 0 -eq "$RETURN_BASH_UNIT" ] && [ 0 -eq "$RETURN_BATS" ] ; then
+		echo 'All tests pass!'
+		exit 0
+	else
+		echo 'Some tests fail!'
+		exit 1
+	fi
 }
 
 ## This SEPARATOR is required for test purposes. Please don’t remove! ##
@@ -286,8 +346,22 @@ cat <<EOF
     ==' '==
 EOF
 
-[ "$OPT_DEPENDENCIES" = 1 ] && _sync_dependencies
-[ "$OPT_README" = 1 ] && _render_readme
-[ "$OPT_SKELETON" = 1 ] && _sync_skeleton
+if [ "$OPT_ALL" = 1 ] ; then
+	 _sync_all
+fi
 
-exit 0
+if [ "$OPT_DEPENDENCIES" = 1 ] ; then
+	_sync_dependencies
+fi
+
+if [ "$OPT_README" = 1 ] ; then
+	_render_readme
+fi
+
+if [ "$OPT_SKELETON" = 1 ] ; then
+	 _sync_skeleton;
+fi
+
+if [ "$OPT_TEST" = 1 ] ; then
+	_run_tests
+fi
