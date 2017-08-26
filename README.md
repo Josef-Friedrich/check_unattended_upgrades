@@ -11,7 +11,7 @@
 
 ```
 check_unattended_upgrades v1.0
-Copyright (c) 2015 Josef Friedrich <jf@josef-friedrich.de>
+Copyright (c) 2015-2017 Josef Friedrich <josef@friedrich.rocks>
 
 Monitoring plugin to check automatic updates (unattended-upgrades) on Debian / Ubuntu.
 

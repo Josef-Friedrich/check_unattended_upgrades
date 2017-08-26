@@ -83,7 +83,7 @@ https://exchange.icinga.com/joseffriedrich/check_unattended_upgrades
 https://exchange.nagios.org/directory/Plugins/Software/check_unattended_upgrades/details'
 SHORT_DESCRIPTION='Monitoring plugin to check automatic updates (unattended-upgrades) on Debian / Ubuntu.'
 USAGE="check_unattended_upgrades v$VERSION
-Copyright (c) 2015 Josef Friedrich <jf@josef-friedrich.de>
+Copyright (c) $(date +%Y --date=$FIRST_RELEASE)-$(date +%Y) Josef Friedrich <josef@friedrich.rocks>
 
 $SHORT_DESCRIPTION
 
