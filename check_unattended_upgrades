@@ -229,7 +229,7 @@ done
 
 # -A
 if [ ! -z ${CHECK_ANACRON+x} ] && [ ! -x /usr/sbin/anacron ]; then
-	echo 'CRITICAL - Package "anacron" is not installed.'
+	echo 'CRITICAL - Package “anacron” is not installed.'
 	exit $STATE_CRITICAL
 fi
 
