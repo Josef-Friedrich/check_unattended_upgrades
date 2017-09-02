@@ -2,7 +2,7 @@
 
 setup() {
 	. ./test/lib/test-helper.sh
-	#mock_path test/bin
+	mock_path test/bin
 	source_exec check_unattended_upgrades
 }
 
@@ -13,7 +13,14 @@ setup() {
 }
 
 @test "run ./check_unattended_upgrades -A" {
+	skip
 	run ./check_unattended_upgrades -A
 	[ "$status" -eq 2 ]
 	[ "${lines[0]}" = 'CRITICAL - Package “anacron” is not installed.' ]
+}
+
+@test "run ./check_unattended_upgrades -R" {
+	run ./check_unattended_upgrades -R
+	[ "$status" -eq 1 ]
+	[ "${lines[0]}" = 'WARNING - Machine requires a reboot.' ]
 }

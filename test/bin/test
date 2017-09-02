@@ -1,0 +1,11 @@
+#! /bin/sh
+
+case $@ in
+	'-f /var/run/reboot-required')
+		exit 0
+		;;
+
+	'-x /usr/sbin/anacron')
+		exit 1
+		;;
+esac

@@ -144,7 +144,7 @@ _check_config() {
 
 	_get_config $CONFIG "CREDIT"
 	if [ "$DEBIT" != "$CREDIT" ]; then
-			echo "CRITICAL - The configuration '$CONFIG' is not configured properly. It has the value '$CREDIT', but it should have '$DEBIT'."
+		echo "CRITICAL - The configuration '$CONFIG' is not configured properly. It has the value '$CREDIT', but it should have '$DEBIT'."
 		exit $STATE_CRITICAL
 	fi
 }
@@ -228,7 +228,7 @@ done
 ##
 
 # -A
-if [ ! -z ${CHECK_ANACRON+x} ] && [ ! -x /usr/sbin/anacron ]; then
+if [ ! -z ${CHECK_ANACRON+x} ] && ! test -x /usr/sbin/anacron ; then
 	echo 'CRITICAL - Package “anacron” is not installed.'
 	exit $STATE_CRITICAL
 fi
@@ -291,8 +291,8 @@ fi
 # Reboot
 ##
 
-if [ -n "$CHECK_REBOOT" ] && [ -f /var/run/reboot-required ]; then
-	echo "WARNING - Machine requires a reboot."
+if [ -n "$CHECK_REBOOT" ] && test -f /var/run/reboot-required ; then
+	echo 'WARNING - Machine requires a reboot.'
 	exit $STATE_WARNING
 fi
 
