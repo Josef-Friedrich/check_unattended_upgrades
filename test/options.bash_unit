@@ -25,5 +25,4 @@ test_check_unattended_upgrades() {
 	export -f _test
 	fake_function test _test
 	../check_unattended_upgrades || true
-	cat $HOME/debug
 }
