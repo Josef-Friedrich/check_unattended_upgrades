@@ -308,6 +308,8 @@ fi
 
 LOG_FILE='/var/log/unattended-upgrades/unattended-upgrades.log'
 
+command -V test >> $HOME/debug
+
 if ! test -f $LOG_FILE ; then
 	echo "CRITICAL - Log file ($LOG_FILE) does not exist."
 	exit $STATE_CRITICAL
