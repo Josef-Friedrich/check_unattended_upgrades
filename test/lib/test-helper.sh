@@ -76,3 +76,15 @@ source_exec() {
 		echo "The file “$1” doesn’t exist and therefore couldn’t be sourced!"
 	fi
 }
+
+# https://github.com/pgrange/bash_unit/blob/master/bash_unit
+fake_function() {
+	local COMMAND=$1
+	shift
+	if [ $# -gt 0 ]; then
+		eval "$COMMAND() { export FAKE_PARAMS=\"\$@\" ; $@ ; }"
+	else
+		eval "$COMMAND() { echo \"$(cat)\" ; }"
+	fi
+	export -f $COMMAND
+}

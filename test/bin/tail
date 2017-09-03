@@ -1,0 +1,9 @@
+#! /bin/sh
+
+case $@ in
+	'-n 1 /var/log/unattended-upgrades/unattended-upgrades.log')
+		echo '2017-09-01 09:55:34,218 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen'
+		exit 0
+		;;
+
+esac

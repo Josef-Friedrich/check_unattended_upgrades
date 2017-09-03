@@ -1,5 +1,9 @@
 #! /bin/sh
 
+if [ "$(uname)" = Darwin ]; then
+	G=g
+fi
+
 # MIT License
 #
 # Copyright (c) 2015-2017 Josef Friedrich <josef@friedrich.rocks>
@@ -83,7 +87,7 @@ https://exchange.icinga.com/joseffriedrich/check_unattended_upgrades
 https://exchange.nagios.org/directory/Plugins/Software/check_unattended_upgrades/details'
 SHORT_DESCRIPTION='Monitoring plugin to check automatic updates (unattended-upgrades) on Debian / Ubuntu.'
 USAGE="check_unattended_upgrades v$VERSION
-Copyright (c) $(date +%Y --date=$FIRST_RELEASE)-$(date +%Y) Josef Friedrich <josef@friedrich.rocks>
+Copyright (c) $(${G}date +%Y --date=$FIRST_RELEASE)-$(${G}date +%Y) Josef Friedrich <josef@friedrich.rocks>
 
 $SHORT_DESCRIPTION
 
@@ -304,7 +308,7 @@ fi
 
 LOG_FILE='/var/log/unattended-upgrades/unattended-upgrades.log'
 
-if [ ! -f $LOG_FILE ]; then
+if ! test -f $LOG_FILE ; then
 	echo "CRITICAL - Log file ($LOG_FILE) does not exist."
 	exit $STATE_CRITICAL
 fi
@@ -319,17 +323,17 @@ fi
 LAST_RUN_DATE=$(echo $LAST_LOG_LINE | cut -d "," -f 1)
 
 if [ -z "$LAST_RUN_DATE" ]; then
-	echo "CRITICAL - The date on which the command 'unattended-upgrades' ran for the last time, could not be determined. The log file '$LOG_FILE' is empty."
+	echo "CRITICAL - The ${G}date on which the command 'unattended-upgrades' ran for the last time, could not be determined. The log file '$LOG_FILE' is empty."
 	exit $STATE_CRITICAL
 fi
 
 if [ -z ${CHECK_CRITICAL+x} ] || [ -z ${CHECK_WARNING+x} ]; then
-	echo "CRITICAL - You have at least to specify the two options '-c' and '-w', e. g.: check_unattended_upgrades -c 3600 -w 7200."
+	echo 'CRITICAL - You have at least to specify the two options “-c” and “-w”, e. g.: check_unattended_upgrades -c 3600 -w 7200.'
 	exit $STATE_CRITICAL
 fi
 
-LAST_RUN=$(date -d "$LAST_RUN_DATE" +%s)
-CURRENT=$(date +%s)
+LAST_RUN=$(${G}date -d "$LAST_RUN_DATE" +%s)
+CURRENT=$(${G}date +%s)
 DIFF=$((CURRENT - LAST_RUN))
 
 # Critical
