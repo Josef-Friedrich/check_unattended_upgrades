@@ -28,6 +28,7 @@ setup() {
 
 @test "run ./check_unattended_upgrades" {
 	_test() {
+		echo lol
 		case $@ in
 			'-f /var/run/reboot-required')
 				return 0
