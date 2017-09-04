@@ -11,7 +11,8 @@ setup() {
 	run ./check_unattended_upgrades_patched
 	[ "$status" -eq 0 ]
 	[ "${lines[0]}" = \
-'OK - The last execution of “unattended-upgrades” was at 2017-09-04 13:17:10.' ]
+"OK - The last execution of “unattended-upgrades” was at 2017-09-04 13:17:10. \
+| last_ago=0 warning=93600 critical=187200" ]
 }
 
 @test "Date: OK_LAST" {
@@ -19,7 +20,8 @@ setup() {
 	run ./check_unattended_upgrades_patched
 	[ "$status" -eq 0 ]
 	[ "${lines[0]}" = \
-'OK - The last execution of “unattended-upgrades” was at 2017-09-03 11:17:11.' ]
+"OK - The last execution of “unattended-upgrades” was at 2017-09-03 11:17:11. \
+| last_ago=93599 warning=93600 critical=187200" ]
 }
 
 @test "Date: WARNING_FIRST" {
@@ -27,7 +29,8 @@ setup() {
 	run ./check_unattended_upgrades_patched
 	[ "$status" -eq 1 ]
 	[ "${lines[0]}" = \
-'WARNING - The last execution of “unattended-upgrades” was at 2017-09-03 11:17:10.' ]
+"WARNING - The last execution of “unattended-upgrades” was at 2017-09-03 11:17:10. \
+| last_ago=93600 warning=93600 critical=187200" ]
 }
 
 @test "Date: WARNING_LAST" {
@@ -35,7 +38,8 @@ setup() {
 	run ./check_unattended_upgrades_patched
 	[ "$status" -eq 1 ]
 	[ "${lines[0]}" = \
-'WARNING - The last execution of “unattended-upgrades” was at 2017-09-02 09:17:11.' ]
+"WARNING - The last execution of “unattended-upgrades” was at 2017-09-02 09:17:11. \
+| last_ago=187199 warning=93600 critical=187200" ]
 }
 
 @test "Date: CRITICAL_FIRST" {
@@ -43,5 +47,6 @@ setup() {
 	run ./check_unattended_upgrades_patched
 	[ "$status" -eq 2 ]
 	[ "${lines[0]}" = \
-'CRITICAL - The last execution of “unattended-upgrades” was at 2017-09-02 09:17:10.' ]
+"CRITICAL - The last execution of “unattended-upgrades” was at 2017-09-02 09:17:10. \
+| last_ago=187200 warning=93600 critical=187200" ]
 }

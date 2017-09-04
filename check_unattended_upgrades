@@ -126,6 +126,14 @@ Options:
  -w
     Time interval since the last execution to result in a warning state
     (seconds).
+
+Performance data:
+  - last_ago
+      Time interval in seconds for last unattended-upgrades execution.
+  - warning
+      Interval in seconds.
+  - critical
+      Interval in seconds.
 "
 
 # Exit codes
@@ -147,6 +155,13 @@ _check_config() {
 		echo "CRITICAL - The configuration '$CONFIG' is not configured properly. It has the value '$CREDIT', but it should have '$DEBIT'."
 		exit $STATE_CRITICAL
 	fi
+}
+
+_performance_data() {
+	echo "| \
+last_ago=$DIFF \
+warning=$CHECK_WARNING \
+critical=$CHECK_CRITICAL"
 }
 
 ## This SEPARATOR is required for test purposes. Please don’t remove! ##
@@ -338,7 +353,8 @@ LAST_RUN=$(date +%s -d "$LAST_RUN_DATE")
 CURRENT=$(date +%s)
 DIFF=$((CURRENT - LAST_RUN))
 
-MESSAGE="- The last execution of “unattended-upgrades” was at $LAST_RUN_DATE."
+MESSAGE="- The last execution of “unattended-upgrades” was at \
+$LAST_RUN_DATE. $(_performance_data)"
 
 # Critical
 if [ "$DIFF" -ge "$CHECK_CRITICAL" ]; then
