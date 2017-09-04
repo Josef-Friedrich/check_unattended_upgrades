@@ -29,51 +29,51 @@
 
 # Check if the configuration 'APT::Periodic::AutocleanInterval' is set
 # properly.
-#CHECK_AUTOCLEAN=7
+#OPT_AUTOCLEAN=7
 
 # Check if the package 'anacron' is installed.
-#CHECK_ANACRON=1
+#OPT_ANACRON=1
 
 # Time interval since the last execution to result in a critical state
 # (seconds).
-#CHECK_CRITICAL=187200
+#OPT_CRITICAL=187200
 
 # Check if the configuration
 # 'APT::Periodic:Download-Upgradeable-Packages' is set properly.
-#CHECK_DOWNLOAD=1
+#OPT_DOWNLOAD=1
 
 # Check if the configuration 'APT::Periodic::Enable' is set properly.
-#CHECK_ENABLE=1
+#OPT_ENABLE=1
 
 # Check if the configuration 'APT::Periodic::Update-Package-Lists' is
 # set properly.
-#CHECK_LISTS=1
+#OPT_LISTS=1
 
 # Check if the configuration 'Unattended-Upgrade::Mail' is set properly.
-#CHECK_MAIL="you@example.com"
+#OPT_MAIL="you@example.com"
 
 # Check if the configuration
 # 'Unattended-Upgrade::Remove-Unused-Dependencies' is set properly.
-#CHECK_REMOVE="true"
+#OPT_REMOVE="true"
 
 # Check if the machine needs a reboot.
-#CHECK_REBOOT=1
+#OPT_REBOOT=1
 
 # Check if the configuration 'APT::Periodic::RandomSleep' is set
 # properly.
-#CHECK_SLEEP=0
+#OPT_SLEEP=0
 
 # Check if 'Unattended-upgrades' is configured to handle security
 # updates.
-#CHECK_SECURITY=1
+#OPT_SECURITY=1
 
 # Check if the configuration 'APT::Periodic::Unattended-Upgrade' is set
 # properly.
-#CHECK_UNATTENDED=1
+#OPT_UNATTENDED=1
 
 # Time interval since the last execution to result in a warning state
 # (seconds).
-#CHECK_WARNING=93600
+#OPT_WARNING=93600
 
 
 FIRST_RELEASE=2015-04-25
@@ -160,8 +160,8 @@ _check_config() {
 _performance_data() {
 	echo "| \
 last_ago=$DIFF \
-warning=$CHECK_WARNING \
-critical=$CHECK_CRITICAL"
+warning=$OPT_WARNING \
+critical=$OPT_CRITICAL"
 }
 
 ## This SEPARATOR is required for test purposes. Please don’t remove! ##
@@ -170,22 +170,22 @@ while getopts ":a:Ac:d:e:hl:m:r:Rs:Su:w:" OPT; do
 	case $OPT in
 
 		a)
-			CHECK_AUTOCLEAN="$OPTARG"
+			OPT_AUTOCLEAN="$OPTARG"
 			;;
 		A)
-			CHECK_ANACRON=1
+			OPT_ANACRON=1
 			;;
 
 		c)
-			CHECK_CRITICAL="$OPTARG"
+			OPT_CRITICAL="$OPTARG"
 			;;
 
 		d)
-			CHECK_DOWNLOAD="$OPTARG"
+			OPT_DOWNLOAD="$OPTARG"
 			;;
 
 		e)
-			CHECK_ENABLE="$OPTARG"
+			OPT_ENABLE="$OPTARG"
 			;;
 
 		h)
@@ -194,35 +194,35 @@ while getopts ":a:Ac:d:e:hl:m:r:Rs:Su:w:" OPT; do
 			;;
 
 		l)
-			CHECK_LISTS="$OPTARG"
+			OPT_LISTS="$OPTARG"
 			;;
 
 		m)
-			CHECK_MAIL="$OPTARG"
+			OPT_MAIL="$OPTARG"
 			;;
 
 		r)
-			CHECK_REMOVE="$OPTARG"
+			OPT_REMOVE="$OPTARG"
 			;;
 
 		R)
-			CHECK_REBOOT=1
+			OPT_REBOOT=1
 			;;
 
 		s)
-			CHECK_SLEEP="$OPTARG"
+			OPT_SLEEP="$OPTARG"
 			;;
 
 		S)
-			CHECK_SECURITY=1
+			OPT_SECURITY=1
 			;;
 
 		u)
-			CHECK_UNATTENDED="$OPTARG"
+			OPT_UNATTENDED="$OPTARG"
 			;;
 
 		w)
-			CHECK_WARNING="$OPTARG"
+			OPT_WARNING="$OPTARG"
 			;;
 
 		\?)
@@ -239,17 +239,17 @@ while getopts ":a:Ac:d:e:hl:m:r:Rs:Su:w:" OPT; do
 done
 
 # 26h = 1d + 2h
-[ -z "$CHECK_WARNING" ] && CHECK_WARNING=93600
+[ -z "$OPT_WARNING" ] && OPT_WARNING=93600
 
 # 52h = 2d + 4h
-[ -z "$CHECK_CRITICAL" ] && CHECK_CRITICAL=187200
+[ -z "$OPT_CRITICAL" ] && OPT_CRITICAL=187200
 
 ##
 # Check for auxiliary packages.
 ##
 
 # -A
-if [ -n "$CHECK_ANACRON" ] && ! test -x /usr/sbin/anacron ; then
+if [ -n "$OPT_ANACRON" ] && ! test -x /usr/sbin/anacron ; then
 	echo 'CRITICAL - Package “anacron” is not installed.'
 	exit $STATE_CRITICAL
 fi
@@ -261,46 +261,46 @@ fi
 if which apt-config > /dev/null 2>&1; then
 
 	# -e
-	if [ ! -z ${CHECK_ENABLE+x} ]; then
-		_check_config "APT::Periodic::Enable" $CHECK_ENABLE
+	if [ ! -z ${OPT_ENABLE+x} ]; then
+		_check_config "APT::Periodic::Enable" $OPT_ENABLE
 	fi
 
 	# -u
-	if [ ! -z ${CHECK_UNATTENDED+x} ]; then
-		_check_config "APT::Periodic::Unattended-Upgrade" $CHECK_UNATTENDED
+	if [ ! -z ${OPT_UNATTENDED+x} ]; then
+		_check_config "APT::Periodic::Unattended-Upgrade" $OPT_UNATTENDED
 	fi
 
 	# -m
-	if [ ! -z ${CHECK_MAIL+x} ]; then
-		_check_config "Unattended-Upgrade::Mail" $CHECK_MAIL
+	if [ ! -z ${OPT_MAIL+x} ]; then
+		_check_config "Unattended-Upgrade::Mail" $OPT_MAIL
 	fi
 
 	# -d
-	if [ ! -z ${CHECK_DOWNLOAD+x} ]; then
-		_check_config "APT::Periodic::Download-Upgradeable-Packages" $CHECK_DOWNLOAD
+	if [ ! -z ${OPT_DOWNLOAD+x} ]; then
+		_check_config "APT::Periodic::Download-Upgradeable-Packages" $OPT_DOWNLOAD
 	fi
 
 	# -r
-	if [ ! -z ${CHECK_REMOVE+x} ]; then
-		_check_config "Unattended-Upgrade::Remove-Unused-Dependencies" $CHECK_REMOVE
+	if [ ! -z ${OPT_REMOVE+x} ]; then
+		_check_config "Unattended-Upgrade::Remove-Unused-Dependencies" $OPT_REMOVE
 	fi
 
 	# -s
-	if [ ! -z ${CHECK_SLEEP+x} ]; then
-		_check_config "APT::Periodic::RandomSleep" $CHECK_SLEEP
+	if [ ! -z ${OPT_SLEEP+x} ]; then
+		_check_config "APT::Periodic::RandomSleep" $OPT_SLEEP
 	fi
 
 	# -l
-	if [ ! -z ${CHECK_LISTS+x} ]; then
-		_check_config "APT::Periodic::Update-Package-Lists" $CHECK_LISTS
+	if [ ! -z ${OPT_LISTS+x} ]; then
+		_check_config "APT::Periodic::Update-Package-Lists" $OPT_LISTS
 	fi
 
 	# -a
-	if [ ! -z ${CHECK_AUTOCLEAN+x} ]; then
-		_check_config "APT::Periodic::AutocleanInterval" $CHECK_AUTOCLEAN
+	if [ ! -z ${OPT_AUTOCLEAN+x} ]; then
+		_check_config "APT::Periodic::AutocleanInterval" $OPT_AUTOCLEAN
 	fi
 
-	if [ ! -z ${CHECK_SECURITY+x} ]; then
+	if [ ! -z ${OPT_SECURITY+x} ]; then
 		if ! apt-config dump | grep 'Unattended-Upgrade::Allowed-Origins\|Unattended-Upgrade::Origins-Pattern' | grep -i 'security' > /dev/null ; then
 			echo 'CRITICAL - Unattended-upgrades is not configured to handle security updates.'
 			exit $STATE_CRITICAL
@@ -312,7 +312,7 @@ fi
 # Reboot
 ##
 
-if [ -n "$CHECK_REBOOT" ] && test -f /var/run/reboot-required ; then
+if [ -n "$OPT_REBOOT" ] && test -f /var/run/reboot-required ; then
 	echo 'WARNING - Machine requires a reboot.'
 	exit $STATE_WARNING
 fi
@@ -344,7 +344,7 @@ if [ -z "$LAST_RUN_DATE" ]; then
 	exit $STATE_CRITICAL
 fi
 
-if [ -z ${CHECK_CRITICAL+x} ] || [ -z ${CHECK_WARNING+x} ]; then
+if [ -z ${OPT_CRITICAL+x} ] || [ -z ${OPT_WARNING+x} ]; then
 	echo 'CRITICAL - You have at least to specify the two options “-c” and “-w”, e. g.: check_unattended_upgrades -c 3600 -w 7200.'
 	exit $STATE_CRITICAL
 fi
@@ -357,15 +357,15 @@ MESSAGE="- The last execution of “unattended-upgrades” was at \
 $LAST_RUN_DATE. $(_performance_data)"
 
 # Critical
-if [ "$DIFF" -ge "$CHECK_CRITICAL" ]; then
+if [ "$DIFF" -ge "$OPT_CRITICAL" ]; then
 	echo "CRITICAL $MESSAGE"
 	exit $STATE_CRITICAL
 # Warning
-elif [ "$DIFF" -ge "$CHECK_WARNING" ]; then
+elif [ "$DIFF" -ge "$OPT_WARNING" ]; then
 	echo "WARNING $MESSAGE"
 	exit $STATE_WARNING
 # ok
-elif [ "$DIFF" -lt "$CHECK_WARNING" ]; then
+elif [ "$DIFF" -lt "$OPT_WARNING" ]; then
 	echo "OK $MESSAGE"
 	exit $STATE_OK
 else

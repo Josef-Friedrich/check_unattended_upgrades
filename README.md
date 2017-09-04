@@ -55,6 +55,14 @@ Options:
     Time interval since the last execution to result in a warning state
     (seconds).
 
+Performance data:
+  - last_ago
+      Time interval in seconds for last unattended-upgrades execution.
+  - warning
+      Interval in seconds.
+  - critical
+      Interval in seconds.
+
 ```
 
 ## Testing
