@@ -1,9 +1,5 @@
 #! /bin/sh
 
-if [ "$(uname)" = Darwin ]; then
-	G=g
-fi
-
 # MIT License
 #
 # Copyright (c) 2015-2017 Josef Friedrich <josef@friedrich.rocks>
@@ -87,7 +83,7 @@ https://exchange.icinga.com/joseffriedrich/check_unattended_upgrades
 https://exchange.nagios.org/directory/Plugins/Software/check_unattended_upgrades/details'
 SHORT_DESCRIPTION='Monitoring plugin to check automatic updates (unattended-upgrades) on Debian / Ubuntu.'
 USAGE="check_unattended_upgrades v$VERSION
-Copyright (c) $(${G}date +%Y --date=$FIRST_RELEASE)-$(${G}date +%Y) Josef Friedrich <josef@friedrich.rocks>
+Copyright (c) $(date +%Y --date=$FIRST_RELEASE)-$(date +%Y) Josef Friedrich <josef@friedrich.rocks>
 
 $SHORT_DESCRIPTION
 
@@ -232,7 +228,7 @@ done
 ##
 
 # -A
-if [ ! -z ${CHECK_ANACRON+x} ] && ! test -x /usr/sbin/anacron ; then
+if [ -n "$CHECK_ANACRON" ] && ! test -x /usr/sbin/anacron ; then
 	echo 'CRITICAL - Package “anacron” is not installed.'
 	exit $STATE_CRITICAL
 fi
@@ -323,7 +319,7 @@ fi
 LAST_RUN_DATE=$(echo $LAST_LOG_LINE | cut -d "," -f 1)
 
 if [ -z "$LAST_RUN_DATE" ]; then
-	echo "CRITICAL - The ${G}date on which the command 'unattended-upgrades' ran for the last time, could not be determined. The log file '$LOG_FILE' is empty."
+	echo "CRITICAL - The date on which the command 'unattended-upgrades' ran for the last time, could not be determined. The log file '$LOG_FILE' is empty."
 	exit $STATE_CRITICAL
 fi
 
@@ -332,8 +328,8 @@ if [ -z ${CHECK_CRITICAL+x} ] || [ -z ${CHECK_WARNING+x} ]; then
 	exit $STATE_CRITICAL
 fi
 
-LAST_RUN=$(${G}date -d "$LAST_RUN_DATE" +%s)
-CURRENT=$(${G}date +%s)
+LAST_RUN=$(date -d "$LAST_RUN_DATE" +%s)
+CURRENT=$(date +%s)
 DIFF=$((CURRENT - LAST_RUN))
 
 # Critical
