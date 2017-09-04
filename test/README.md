@@ -5,38 +5,30 @@ WARNING = 93600s = 26h = 1d + 2h
 CRITICAL = 187200s = 52h = 2d + 4h
 ```
 
-```
-LAST_RUN = 2017-09-01 09:55:34 = 1504252534
-```
 
-CURRENT
-
-## CURRENT_OK
+CURRENT 1504523830
 
 ```
-CURRENT_OK < LAST_RUN + CHECK_WARNING
-```
-
-## CURRENT_WARNING
-
-```
-CURRENT_WARNING > LAST_RUN + CHECK_WARNING and < LAST_RUN + CHECK_CRITICAL
-```
-
-# CURRENT_CRITICAL
-
-```
-CURRENT_CRITICAL > LAST_RUN + CHECK_CRITICAL
+RUN_OK_FIRST = CURRENT = CURRENT
+RUN_OK_LAST = CURRENT - WARNING + 1
+RUN_WARNING_FIRST = CURRENT - WARNING
+RUN_WARNING_LAST =  CURRENT - CRITICAL + 1
+RUN_CRITICAL_FIRST = CURRENT - CRITICAL
 ```
 
 ```
                                    CURRENT
---------------|----------|-----------|
+-----------|-----------|-----------|
+           ..          ..          .
+           ^.          ..          ^
+RUN_CRITICAL_FIRST     .^      RUN_OK_FIRST
+            .          ^ RUN_OK_LAST
+            ^  RUN_WARNING_FIRST
+     RUN_WARNING_LAST
 
-< critical    |< warning |<   ok
-
+ CRITICAL <| WARNING <|   OK
 
                    |
-                LAST_RUN
+                  RUN
 
 ```
