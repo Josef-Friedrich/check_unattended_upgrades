@@ -237,7 +237,7 @@ fi
 # Configuration checks
 ##
 
-if which apt-config > /dev/null; then
+if which apt-config > /dev/null 2>&1; then
 
 	# -e
 	if [ ! -z ${CHECK_ENABLE+x} ]; then
