@@ -340,18 +340,18 @@ DIFF=$((CURRENT - LAST_RUN))
 
 MESSAGE="- The last execution of “unattended-upgrades” was at $LAST_RUN_DATE."
 
-# ok
-if [ "$DIFF" -lt "$CHECK_WARNING" ]; then
-	echo "OK $MESSAGE"
-	exit $STATE_OK
-# Warning
-elif [ "$DIFF" -ge "$CHECK_WARNING" ] || [ "$DIFF" -lt "$CHECK_CRITICAL" ]; then
-	echo "WARNING $MESSAGE"
-	exit $STATE_WARNING
 # Critical
-elif [ "$DIFF" -ge "$CHECK_CRITICAL" ]; then
+if [ "$DIFF" -ge "$CHECK_CRITICAL" ]; then
 	echo "CRITICAL $MESSAGE"
 	exit $STATE_CRITICAL
+# Warning
+elif [ "$DIFF" -ge "$CHECK_WARNING" ]; then
+	echo "WARNING $MESSAGE"
+	exit $STATE_WARNING
+# ok
+elif [ "$DIFF" -lt "$CHECK_WARNING" ]; then
+	echo "OK $MESSAGE"
+	exit $STATE_OK
 else
 	echo "UNKOWN $MESSAGE"
 	exit $STATE_UNKNOWN

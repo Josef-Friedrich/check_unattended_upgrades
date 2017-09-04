@@ -39,7 +39,6 @@ setup() {
 }
 
 @test "Date: CRITICAL_FIRST" {
-	skip
 	mock_path test/bin/critical_first
 	run ./check_unattended_upgrades_patched
 	[ "$status" -eq 2 ]
