@@ -1,1 +1,31 @@
 #! /bin/sh
+
+case $3 in
+
+	# -a
+	'APT::Periodic::AutocleanInterval') VALUE=7 ;;
+
+	# -d
+	'APT::Periodic::Download-Upgradeable-Packages') VALUE=1 ;;
+
+	# -e
+	'APT::Periodic::Enable') VALUE=1 ;;
+
+	# -l
+	'APT::Periodic::Update-Package-Lists') VALUE=1 ;;
+
+	# -m
+	'Unattended-Upgrade::Mail') VALUE=you@example.com ;;
+
+	# -r
+	'Unattended-Upgrade::Remove-Unused-Dependencies') VALUE=true ;;
+
+	# -s
+	'APT::Periodic::RandomSleep') VALUE=0 ;;
+
+	# -u
+ 	'APT::Periodic::Unattended-Upgrade') VALUE=1 ;;
+
+esac
+
+echo "CREDIT=$VALUE"

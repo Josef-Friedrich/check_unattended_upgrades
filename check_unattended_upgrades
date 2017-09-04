@@ -152,7 +152,9 @@ _check_config() {
 
 	_get_config $CONFIG "CREDIT"
 	if [ "$DEBIT" != "$CREDIT" ]; then
-		echo "CRITICAL - The configuration '$CONFIG' is not configured properly. It has the value '$CREDIT', but it should have '$DEBIT'."
+		echo "CRITICAL - The configuration “$CONFIG” is not \
+configured properly. It has the value “$CREDIT”, \
+but it should have the value “$DEBIT”."
 		exit $STATE_CRITICAL
 	fi
 }
@@ -261,46 +263,46 @@ fi
 if which apt-config > /dev/null 2>&1; then
 
 	# -e
-	if [ ! -z ${OPT_ENABLE+x} ]; then
+	if [ -n "$OPT_ENABLE" ]; then
 		_check_config "APT::Periodic::Enable" $OPT_ENABLE
 	fi
 
 	# -u
-	if [ ! -z ${OPT_UNATTENDED+x} ]; then
+	if [ -n "$OPT_UNATTENDED" ]; then
 		_check_config "APT::Periodic::Unattended-Upgrade" $OPT_UNATTENDED
 	fi
 
 	# -m
-	if [ ! -z ${OPT_MAIL+x} ]; then
+	if [ -n "$OPT_MAIL" ]; then
 		_check_config "Unattended-Upgrade::Mail" $OPT_MAIL
 	fi
 
 	# -d
-	if [ ! -z ${OPT_DOWNLOAD+x} ]; then
+	if [ -n "$OPT_DOWNLOAD" ]; then
 		_check_config "APT::Periodic::Download-Upgradeable-Packages" $OPT_DOWNLOAD
 	fi
 
 	# -r
-	if [ ! -z ${OPT_REMOVE+x} ]; then
+	if [ -n "$OPT_REMOVE" ]; then
 		_check_config "Unattended-Upgrade::Remove-Unused-Dependencies" $OPT_REMOVE
 	fi
 
 	# -s
-	if [ ! -z ${OPT_SLEEP+x} ]; then
+	if [ -n "$OPT_SLEEP" ]; then
 		_check_config "APT::Periodic::RandomSleep" $OPT_SLEEP
 	fi
 
 	# -l
-	if [ ! -z ${OPT_LISTS+x} ]; then
+	if [ -n "$OPT_LISTS" ]; then
 		_check_config "APT::Periodic::Update-Package-Lists" $OPT_LISTS
 	fi
 
 	# -a
-	if [ ! -z ${OPT_AUTOCLEAN+x} ]; then
+	if [ -n "$OPT_AUTOCLEAN" ]; then
 		_check_config "APT::Periodic::AutocleanInterval" $OPT_AUTOCLEAN
 	fi
 
-	if [ ! -z ${OPT_SECURITY+x} ]; then
+	if [ -n "$OPT_SECURITY" ]; then
 		if ! apt-config dump | grep 'Unattended-Upgrade::Allowed-Origins\|Unattended-Upgrade::Origins-Pattern' | grep -i 'security' > /dev/null ; then
 			echo 'CRITICAL - Unattended-upgrades is not configured to handle security updates.'
 			exit $STATE_CRITICAL
