@@ -24,9 +24,3 @@ setup() {
 	[ "$status" -eq 1 ]
 	[ "${lines[0]}" = 'WARNING - Machine requires a reboot.' ]
 }
-
-@test "run ./check_unattended_upgrades_patched" {
-	run ./check_unattended_upgrades_patched
-	[ "$status" -eq 2 ]
-	[ "${lines[0]}" = 'CRITICAL - You have at least to specify the two options “-c” and “-w”, e. g.: check_unattended_upgrades -c 3600 -w 7200.' ]
-}

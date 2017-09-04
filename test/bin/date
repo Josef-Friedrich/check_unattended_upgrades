@@ -1,10 +1,28 @@
 #! /bin/sh
 
 case $@ in
-	# now
+	# CURRENT
 	'+%s')
-		echo 1502958348
-		exit 0
-		;;
+		echo 1504523830 ; exit 0 ;;
+
+	# OK_FIRST
+	'+%s -d 2017-09-04 13:17:10')
+		echo 1504523830 ; exit 0 ;;
+
+	# OK_LAST
+	'+%s -d 2017-09-03 11:17:11')
+		echo 1504430231 ; exit 0 ;;
+
+	# WARNING_FIRST
+	'+%s -d 2017-09-03 11:17:10')
+		echo 1504430230 ; exit 0 ;;
+
+	# WARNING_LAST
+	'+%s -d 2017-09-02 09:17:11')
+		echo 1504336631 ; exit 0 ;;
+
+	# CRITICAL_FIRST
+	'+%s -d 2017-09-02 09:17:10')
+		echo 1504336630 ; exit 0 ;;
 
 esac

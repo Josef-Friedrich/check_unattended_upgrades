@@ -223,6 +223,12 @@ while getopts ":a:Ac:d:e:hl:m:r:Rs:Su:w:" OPT; do
 	esac
 done
 
+# 26h = 1d + 2h
+[ -z "$CHECK_WARNING" ] && CHECK_WARNING=93600
+
+# 52h = 2d + 4h
+[ -z "$CHECK_CRITICAL" ] && CHECK_CRITICAL=187200
+
 ##
 # Check for auxiliary packages.
 ##
@@ -328,19 +334,25 @@ if [ -z ${CHECK_CRITICAL+x} ] || [ -z ${CHECK_WARNING+x} ]; then
 	exit $STATE_CRITICAL
 fi
 
-LAST_RUN=$(date -d "$LAST_RUN_DATE" +%s)
+LAST_RUN=$(date +%s -d "$LAST_RUN_DATE")
 CURRENT=$(date +%s)
 DIFF=$((CURRENT - LAST_RUN))
 
-# Critical
-if [ "$DIFF" -gt "$CHECK_CRITICAL" ]; then
-	echo "CRITICAL - Unattended upgrades last run was on ${LAST_RUN_DATE}."
-	exit $STATE_CRITICAL
-# Warning
-elif [ "$DIFF" -gt "$CHECK_WARNING" ]; then
-	echo "WARNING - Unattended upgrades last run was on ${LAST_RUN_DATE}."
-	exit $STATE_WARNING
-else
-	echo "OK - Unattended upgrades last run was on ${LAST_RUN_DATE}."
+MESSAGE="- The last execution of “unattended-upgrades” was at $LAST_RUN_DATE."
+
+# ok
+if [ "$DIFF" -lt "$CHECK_WARNING" ]; then
+	echo "OK $MESSAGE"
 	exit $STATE_OK
+# Warning
+elif [ "$DIFF" -ge "$CHECK_WARNING" ] || [ "$DIFF" -lt "$CHECK_CRITICAL" ]; then
+	echo "WARNING $MESSAGE"
+	exit $STATE_WARNING
+# Critical
+elif [ "$DIFF" -ge "$CHECK_CRITICAL" ]; then
+	echo "CRITICAL $MESSAGE"
+	exit $STATE_CRITICAL
+else
+	echo "UNKOWN $MESSAGE"
+	exit $STATE_UNKNOWN
 fi
