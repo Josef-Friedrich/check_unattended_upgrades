@@ -1,0 +1,10 @@
+#! /bin/sh
+
+case $@ in
+	# now
+	'+%s')
+		echo 1502958348
+		exit 0
+		;;
+
+esac
