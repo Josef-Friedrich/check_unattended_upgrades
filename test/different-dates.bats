@@ -3,7 +3,7 @@
 setup() {
 	. ./test/lib/test-helper.sh
 	mock_path test/bin
-	./test/patch.sh
+	patch check_unattended_upgrades 's/ test / test_patched /g'
 }
 
 @test "Date: OK_FIRST" {

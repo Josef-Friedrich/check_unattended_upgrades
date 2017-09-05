@@ -4,7 +4,7 @@ setup() {
 	. ./test/lib/test-helper.sh
 	mock_path test/bin
 	source_exec check_unattended_upgrades
-	./test/patch.sh
+	patch check_unattended_upgrades 's/ test / test_patched /g'
 }
 
 @test "run ./check_unattended_upgrades_patched -h" {
