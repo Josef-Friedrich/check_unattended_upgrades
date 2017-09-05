@@ -104,16 +104,16 @@ Options:
     is set properly.
  -e, --enable
     Check if the configuration 'APT::Periodic::Enable' is set properly.
- -h
+ -h, --help
     Show this help message.
- -l
+ -l, --lists
     Check if the configuration 'APT::Periodic::Update-Package-Lists' is set
     properly.
- -m
+ -m, --mail
     Check if the configuration 'Unattended-Upgrade::Mail' is set properly.
- -R
+ -R, --reboot
     Check if the machine needs a reboot.
- -r
+ -r, --remove
     Check if the configuration 'Unattended-Upgrade::Remove-Unused-
     Dependencies' is set properly.
  -S
@@ -172,15 +172,19 @@ _getopts() {
 					download=?*) OPT_DOWNLOAD="$LONG_OPTARG" ;;
 					enable=?*) OPT_ENABLE="$LONG_OPTARG" ;;
 					help) echo "$USAGE" ; exit 0 ;;
+					lists=?*) OPT_LISTS="$LONG_OPTARG" ;;
+					mail=?*) OPT_MAIL="$LONG_OPTARG" ;;
+					reboot) OPT_REBOOT=1 ;;
+					remove=?*) OPT_REMOVE="$LONG_OPTARG" ;;
 					short-description) echo "$SHORT_DESCRIPTION" ; exit 0 ;;
 					version) echo "$VERSION" ; exit 0 ;;
 
-					autoclean*|critical*|download*|enable*)
+					autoclean*|critical*|download*|enable*|lists*|mail*|remove*)
 						echo "Option “--$OPTARG” requires an argument!" >&2
 						exit 3
 						;;
 
-					sync-dependencies*|help*|render-readme*|sync-skeleton*|short-description*|test*|version*)
+					anacron*|help*|reboot*|version*)
 						echo "No argument allowed for the option “--$OPTARG”!" >&2
 						exit 4
 						;;

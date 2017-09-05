@@ -17,6 +17,11 @@ setup() {
 	[ "$OPT_ANACRON" -eq 1 ]
 }
 
+@test "_getopts --anacron=123" {
+	run _getopts --anacron=123
+	[ "$status" -eq 4 ]
+}
+
 # -a
 
 @test "_getopts -a 123" {
@@ -113,6 +118,17 @@ setup() {
 	[ "${lines[0]}" = "check_unattended_upgrades v$VERSION" ]
 }
 
+@test "_getopts --help" {
+	run _getopts --help
+	[ "$status" -eq 0 ]
+	[ "${lines[0]}" = "check_unattended_upgrades v$VERSION" ]
+}
+
+@test "_getopts --help=123" {
+	run _getopts --help=123
+	[ "$status" -eq 4 ]
+}
+
 # -l
 
 @test "_getopts -l 123" {
@@ -122,6 +138,16 @@ setup() {
 
 @test "_getopts -l" {
 	run _getopts -l
+	[ "$status" -eq 3 ]
+}
+
+@test "_getopts --lists=123" {
+	_getopts --lists=123
+	[ "$OPT_LISTS" -eq 123 ]
+}
+
+@test "_getopts --lists" {
+	run _getopts --lists
 	[ "$status" -eq 3 ]
 }
 
@@ -137,6 +163,16 @@ setup() {
 	[ "$status" -eq 3 ]
 }
 
+@test "_getopts --mail=123" {
+	_getopts --mail=123
+	[ "$OPT_MAIL" -eq 123 ]
+}
+
+@test "_getopts --mail" {
+	run _getopts --mail
+	[ "$status" -eq 3 ]
+}
+
 # -R
 
 @test "_getopts -R" {
@@ -144,6 +180,15 @@ setup() {
 	[ "$OPT_REBOOT" -eq 1 ]
 }
 
+@test "_getopts --reboot" {
+	_getopts --reboot
+	[ "$OPT_REBOOT" -eq 1 ]
+}
+
+@test "_getopts --reboot=123" {
+	run _getopts --reboot=123
+	[ "$status" -eq 4 ]
+}
 
 # -r
 
@@ -154,6 +199,16 @@ setup() {
 
 @test "_getopts -r" {
 	run _getopts -r
+	[ "$status" -eq 3 ]
+}
+
+@test "_getopts --remove=123" {
+	_getopts --remove=123
+	[ "$OPT_REMOVE" -eq 123 ]
+}
+
+@test "_getopts --remove" {
+	run _getopts --remove
 	[ "$status" -eq 3 ]
 }
 
