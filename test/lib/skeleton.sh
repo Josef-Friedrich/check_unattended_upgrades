@@ -23,13 +23,15 @@
 # TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 # SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+NAME="$(basename "$0")"
+PROJECT_NAME="$(basename "$(pwd)")"
 FIRST_RELEASE=2017-08-13
 VERSION=1.0
 PROJECT_PAGES="https://github.com/JosefFriedrich-shell/skeleton.sh"
 SHORT_DESCRIPTION='This is the management script of the skeleton.sh project!'
-USAGE="$(basename "$0") v$VERSION
+USAGE="$NAME v$VERSION
 
-Usage: $(basename "$0") [-AdhrSstv]
+Usage: $NAME [-AdhrSstv]
 
 $SHORT_DESCRIPTION
 
@@ -53,7 +55,7 @@ Options:
 	-v, --version
 	  Show the version number of this script.
 "
-PROJECT_NAME="$(basename "$(pwd)")"
+
 
 
 # See https://stackoverflow.com/a/28466267
