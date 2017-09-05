@@ -303,8 +303,11 @@ if which apt-config > /dev/null 2>&1; then
 	fi
 
 	if [ -n "$OPT_SECURITY" ]; then
-		if ! apt-config dump | grep 'Unattended-Upgrade::Allowed-Origins\|Unattended-Upgrade::Origins-Pattern' | grep -i 'security' > /dev/null ; then
-			echo 'CRITICAL - Unattended-upgrades is not configured to handle security updates.'
+		if ! apt-config dump \
+			| grep 'Unattended-Upgrade::Allowed-Origins\|Unattended-Upgrade::Origins-Pattern' \
+			| grep -i 'security' > /dev/null ; then
+			echo 'CRITICAL - Unattended-upgrades is not \
+configured to handle security updates.'
 			exit $STATE_CRITICAL
 		fi
 	fi
@@ -342,12 +345,9 @@ fi
 LAST_RUN_DATE=$(echo $LAST_LOG_LINE | cut -d "," -f 1)
 
 if [ -z "$LAST_RUN_DATE" ]; then
-	echo "CRITICAL - The date on which the command 'unattended-upgrades' ran for the last time, could not be determined. The log file '$LOG_FILE' is empty."
-	exit $STATE_CRITICAL
-fi
-
-if [ -z ${OPT_CRITICAL+x} ] || [ -z ${OPT_WARNING+x} ]; then
-	echo 'CRITICAL - You have at least to specify the two options “-c” and “-w”, e. g.: check_unattended_upgrades -c 3600 -w 7200.'
+	echo "CRITICAL - The date on which the command \
+“unattended-upgrades” ran for the last time, could not be determined. \
+The log file “$LOG_FILE” is empty."
 	exit $STATE_CRITICAL
 fi
 
