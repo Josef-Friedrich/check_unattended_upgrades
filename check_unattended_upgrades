@@ -142,6 +142,80 @@ STATE_WARNING=1
 STATE_CRITICAL=2
 STATE_UNKNOWN=3
 
+_getopts() {
+	while getopts ":a:Ac:d:e:hl:m:r:Rs:Su:w:" OPT; do
+		case $OPT in
+
+			a)
+				OPT_AUTOCLEAN="$OPTARG"
+				;;
+			A)
+				OPT_ANACRON=1
+				;;
+
+			c)
+				OPT_CRITICAL="$OPTARG"
+				;;
+
+			d)
+				OPT_DOWNLOAD="$OPTARG"
+				;;
+
+			e)
+				OPT_ENABLE="$OPTARG"
+				;;
+
+			h)
+				echo "$USAGE"
+				exit 0
+				;;
+
+			l)
+				OPT_LISTS="$OPTARG"
+				;;
+
+			m)
+				OPT_MAIL="$OPTARG"
+				;;
+
+			r)
+				OPT_REMOVE="$OPTARG"
+				;;
+
+			R)
+				OPT_REBOOT=1
+				;;
+
+			s)
+				OPT_SLEEP="$OPTARG"
+				;;
+
+			S)
+				OPT_SECURITY=1
+				;;
+
+			u)
+				OPT_UNATTENDED="$OPTARG"
+				;;
+
+			w)
+				OPT_WARNING="$OPTARG"
+				;;
+
+			\?)
+				echo "Invalid option: -$OPTARG" >&2
+				exit 1
+				;;
+
+			:)
+				echo "Option -$OPTARG requires an argument." >&2
+				exit 1
+				;;
+
+		esac
+	done
+}
+
 _get_config() {
 	eval $(apt-config shell "$2" "$1")
 }
@@ -168,77 +242,7 @@ critical=$OPT_CRITICAL"
 
 ## This SEPARATOR is required for test purposes. Please don’t remove! ##
 
-while getopts ":a:Ac:d:e:hl:m:r:Rs:Su:w:" OPT; do
-	case $OPT in
-
-		a)
-			OPT_AUTOCLEAN="$OPTARG"
-			;;
-		A)
-			OPT_ANACRON=1
-			;;
-
-		c)
-			OPT_CRITICAL="$OPTARG"
-			;;
-
-		d)
-			OPT_DOWNLOAD="$OPTARG"
-			;;
-
-		e)
-			OPT_ENABLE="$OPTARG"
-			;;
-
-		h)
-			echo "$USAGE"
-			exit 0
-			;;
-
-		l)
-			OPT_LISTS="$OPTARG"
-			;;
-
-		m)
-			OPT_MAIL="$OPTARG"
-			;;
-
-		r)
-			OPT_REMOVE="$OPTARG"
-			;;
-
-		R)
-			OPT_REBOOT=1
-			;;
-
-		s)
-			OPT_SLEEP="$OPTARG"
-			;;
-
-		S)
-			OPT_SECURITY=1
-			;;
-
-		u)
-			OPT_UNATTENDED="$OPTARG"
-			;;
-
-		w)
-			OPT_WARNING="$OPTARG"
-			;;
-
-		\?)
-			echo "Invalid option: -$OPTARG" >&2
-			exit 1
-			;;
-
-		:)
-			echo "Option -$OPTARG requires an argument." >&2
-			exit 1
-			;;
-
-	esac
-done
+_getopts $@
 
 # 26h = 1d + 2h
 [ -z "$OPT_WARNING" ] && OPT_WARNING=93600
