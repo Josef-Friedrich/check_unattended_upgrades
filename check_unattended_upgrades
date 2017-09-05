@@ -91,18 +91,18 @@ $SHORT_DESCRIPTION
 Usage: check_unattended_upgrades <options>
 
 Options:
- -A
+ -A, --anacron
     Check if the package 'anacron' is installed.
- -a
+ -a, --autoclean
     Check if the configuration 'APT::Periodic::AutocleanInterval' is set
     properly.
- -c
+ -c, --critical
     Time interval since the last execution to result in a critical state
     (seconds).
- -d
+ -d, --download
     Check if the configuration 'APT::Periodic:Download-Upgradeable-Packages'
     is set properly.
- -e
+ -e, --enable
     Check if the configuration 'APT::Periodic::Enable' is set properly.
  -h
     Show this help message.
@@ -143,7 +143,7 @@ STATE_CRITICAL=2
 STATE_UNKNOWN=3
 
 _getopts() {
-	while getopts ":Aa:c:d:e:hl:m:Rr:Ss:u:w:" OPT; do
+	while getopts ":Aa:c:d:e:hl:m:Rr:Ss:u:w:-:" OPT; do
 		case $OPT in
 			A) OPT_ANACRON=1 ;;
 			a) OPT_AUTOCLEAN="$OPTARG" ;;
@@ -162,6 +162,34 @@ _getopts() {
 			\?) echo "Invalid option “-$OPTARG”!" >&2 ; exit 2 ;;
 			:) echo "Option “-$OPTARG” requires an argument!" >&2 ; exit 3 ;;
 
+			-)
+				LONG_OPTARG="${OPTARG#*=}"
+
+				case $OPTARG in
+					anacron) OPT_ANACRON=1 ;;
+					autoclean=?*) OPT_AUTOCLEAN="$LONG_OPTARG" ;;
+					critical=?*) OPT_CRITICAL="$LONG_OPTARG" ;;
+					download=?*) OPT_DOWNLOAD="$LONG_OPTARG" ;;
+					enable=?*) OPT_ENABLE="$LONG_OPTARG" ;;
+					help) echo "$USAGE" ; exit 0 ;;
+					short-description) echo "$SHORT_DESCRIPTION" ; exit 0 ;;
+					version) echo "$VERSION" ; exit 0 ;;
+
+					autoclean*|critical*|download*|enable*)
+						echo "Option “--$OPTARG” requires an argument!" >&2
+						exit 3
+						;;
+
+					sync-dependencies*|help*|render-readme*|sync-skeleton*|short-description*|test*|version*)
+						echo "No argument allowed for the option “--$OPTARG”!" >&2
+						exit 4
+						;;
+
+					'') break ;; # "--" terminates argument processing
+					*) echo "Invalid option “--$OPTARG”!" >&2 ; exit 2 ;;
+
+				esac
+				;;
 		esac
 	done
 }

@@ -12,6 +12,11 @@ setup() {
 	[ "$OPT_ANACRON" -eq 1 ]
 }
 
+@test "_getopts --anacron" {
+	_getopts --anacron
+	[ "$OPT_ANACRON" -eq 1 ]
+}
+
 # -a
 
 @test "_getopts -a 123" {
@@ -24,6 +29,16 @@ setup() {
 	[ "$status" -eq 3 ]
 }
 
+@test "_getopts --autoclean=123" {
+	_getopts --autoclean=123
+	[ "$OPT_AUTOCLEAN" -eq 123 ]
+}
+
+@test "_getopts --autoclean" {
+	run _getopts --autoclean
+	[ "$status" -eq 3 ]
+}
+
 # -c
 
 @test "_getopts -c 123" {
@@ -33,6 +48,60 @@ setup() {
 
 @test "_getopts -c" {
 	run _getopts -c
+	[ "$status" -eq 3 ]
+}
+
+@test "_getopts --critical=123" {
+	_getopts --critical=123
+	[ "$OPT_CRITICAL" -eq 123 ]
+}
+
+@test "_getopts --critical" {
+	run _getopts --critical
+	[ "$status" -eq 3 ]
+}
+
+# -d
+
+@test "_getopts -d 123" {
+	_getopts -d 123
+	[ "$OPT_DOWNLOAD" -eq 123 ]
+}
+
+@test "_getopts -d" {
+	run _getopts -d
+	[ "$status" -eq 3 ]
+}
+
+@test "_getopts --download=123" {
+	_getopts --download=123
+	[ "$OPT_DOWNLOAD" -eq 123 ]
+}
+
+@test "_getopts --download" {
+	run _getopts --download
+	[ "$status" -eq 3 ]
+}
+
+# -e
+
+@test "_getopts -e 123" {
+	_getopts -e 123
+	[ "$OPT_ENABLE" -eq 123 ]
+}
+
+@test "_getopts -e" {
+	run _getopts -e
+	[ "$status" -eq 3 ]
+}
+
+@test "_getopts --enable=123" {
+	_getopts --enable=123
+	[ "$OPT_ENABLE" -eq 123 ]
+}
+
+@test "_getopts --enable" {
+	run _getopts --enable
 	[ "$status" -eq 3 ]
 }
 
