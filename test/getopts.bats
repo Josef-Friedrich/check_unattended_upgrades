@@ -44,6 +44,57 @@ setup() {
 	[ "${lines[0]}" = "check_unattended_upgrades v$VERSION" ]
 }
 
+# -l
+
+@test "_getopts -l 123" {
+	_getopts -l 123
+	[ "$OPT_LISTS" -eq 123 ]
+}
+
+@test "_getopts -l" {
+	run _getopts -l
+	[ "$status" -eq 3 ]
+}
+
+# -m
+
+@test "_getopts -m 123" {
+	_getopts -m 123
+	[ "$OPT_MAIL" -eq 123 ]
+}
+
+@test "_getopts -m" {
+	run _getopts -m
+	[ "$status" -eq 3 ]
+}
+
+# -R
+
+@test "_getopts -R" {
+	_getopts -R
+	[ "$OPT_REBOOT" -eq 1 ]
+}
+
+
+# -r
+
+@test "_getopts -r 123" {
+	_getopts -r 123
+	[ "$OPT_REMOVE" -eq 123 ]
+}
+
+@test "_getopts -r" {
+	run _getopts -r
+	[ "$status" -eq 3 ]
+}
+
+# -S
+
+@test "_getopts -S" {
+	_getopts -S
+	[ "$OPT_SECURITY" -eq 1 ]
+}
+
 # -s
 
 @test "_getopts -s 123" {

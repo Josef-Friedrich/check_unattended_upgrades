@@ -91,11 +91,11 @@ $SHORT_DESCRIPTION
 Usage: check_unattended_upgrades <options>
 
 Options:
+ -A
+    Check if the package 'anacron' is installed.
  -a
     Check if the configuration 'APT::Periodic::AutocleanInterval' is set
     properly.
- -A
-    Check if the package 'anacron' is installed.
  -c
     Time interval since the last execution to result in a critical state
     (seconds).
@@ -111,15 +111,15 @@ Options:
     properly.
  -m
     Check if the configuration 'Unattended-Upgrade::Mail' is set properly.
+ -R
+    Check if the machine needs a reboot.
  -r
     Check if the configuration 'Unattended-Upgrade::Remove-Unused-
     Dependencies' is set properly.
- -R
-    Check if the machine needs a reboot.
- -s
-    Check if the configuration 'APT::Periodic::RandomSleep' is set properly.
  -S
     Check if 'Unattended-upgrades' is configured to handle security updates.
+ -s
+    Check if the configuration 'APT::Periodic::RandomSleep' is set properly.
  -u
     Check if the configuration 'APT::Periodic::Unattended-Upgrade' is set
     properly.
@@ -143,7 +143,7 @@ STATE_CRITICAL=2
 STATE_UNKNOWN=3
 
 _getopts() {
-	while getopts ":a:Ac:d:e:hl:m:r:Rs:Su:w:" OPT; do
+	while getopts ":Aa:c:d:e:hl:m:Rr:Ss:u:w:" OPT; do
 		case $OPT in
 
 			a) OPT_AUTOCLEAN="$OPTARG" ;;
