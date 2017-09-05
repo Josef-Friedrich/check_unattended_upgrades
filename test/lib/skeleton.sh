@@ -80,29 +80,22 @@ _getopts() {
 				OPT_CHARLIE=1
 				;;
 
-			d) OPT_DEPENDENCIES=1;;
-			h) echo "$USAGE"; exit 0;;
-			r) OPT_README=1;;
-			S) OPT_SKELETON=1;;
-			s) echo "$SHORT_DESCRIPTION"; exit 0;;
+			d) OPT_DEPENDENCIES=1 ;;
+			h) echo "$USAGE" ; exit 0 ;;
+			r) OPT_README=1 ;;
+			S) OPT_SKELETON=1 ;;
+			s) echo "$SHORT_DESCRIPTION" ; exit 0 ;;
 			t) OPT_TEST=1;;
-			v) echo "$VERSION"; exit 0;;
+			v) echo "$VERSION" ; exit 0 ;;
 
-			\?)
-				echo "Invalid option “-$OPTARG”!" >&2
-				exit 2
-				;;
-
-			:)
-				echo "Option “-$OPTARG” requires an argument!" >&2
-				exit 3
-				;;
+			\?) echo "Invalid option “-$OPTARG”!" >&2 ; exit 2 ;;
+			:) echo "Option “-$OPTARG” requires an argument!" >&2 ; exit 3 ;;
 
 			-)
 				LONG_OPTARG="${OPTARG#*=}"
 
 				case $OPTARG in
-					sync-all) OPT_ALL=1;;
+					sync-all) OPT_ALL=1 ;;
 					alpha)
 						OPT_ALPHA=1
 						;;
@@ -115,7 +108,7 @@ _getopts() {
 						OPT_CHARLIE=1
 						;;
 
-					sync-dependencies) OPT_DEPENDENCIES=1;;
+					sync-dependencies) OPT_DEPENDENCIES=1 ;;
 
 					alpha*|charlie*)
 						echo "No argument allowed for the option “--$OPTARG”!" >&2
@@ -127,26 +120,20 @@ _getopts() {
 						exit 3
 						;;
 
-					help) echo "$USAGE"; exit 0;;
-					render-readme) OPT_README=1;;
-					sync-skeleton) OPT_SKELETON=1;;
-					short-description) echo "$SHORT_DESCRIPTION"; exit 0;;
-					test) OPT_TEST=1;;
-					version) echo "$VERSION"; exit 0;;
+					help) echo "$USAGE" ; exit 0 ;;
+					render-readme) OPT_README=1 ;;
+					sync-skeleton) OPT_SKELETON=1 ;;
+					short-description) echo "$SHORT_DESCRIPTION" ; exit 0 ;;
+					test) OPT_TEST=1 ;;
+					version) echo "$VERSION" ; exit 0 ;;
 
 					sync-dependencies*|help*|render-readme*|sync-skeleton*|short-description*|test*|version*)
 						echo "No argument allowed for the option “--$OPTARG”!" >&2
 						exit 4
 						;;
 
-					'')	# "--" terminates argument processing
-						break
-						;;
-
-					*)
-						echo "Invalid option “--$OPTARG”!" >&2
-						exit 2
-						;;
+					'') break ;; # "--" terminates argument processing
+					*) echo "Invalid option “--$OPTARG”!" >&2 ; exit 2 ;;
 
 				esac
 				;;
@@ -348,22 +335,22 @@ cat <<EOF
     ==' '==
 EOF
 
-if [ "$OPT_ALL" = 1 ] ; then
+if [ "$OPT_ALL" -eq 1 ] ; then
 	 _sync_all
 fi
 
-if [ "$OPT_DEPENDENCIES" = 1 ] ; then
+if [ "$OPT_DEPENDENCIES" -eq 1 ] ; then
 	_sync_dependencies
 fi
 
-if [ "$OPT_README" = 1 ] ; then
+if [ "$OPT_README" -eq 1 ] ; then
 	_render_readme
 fi
 
-if [ "$OPT_SKELETON" = 1 ] ; then
+if [ "$OPT_SKELETON" -eq 1 ] ; then
 	 _sync_skeleton;
 fi
 
-if [ "$OPT_TEST" = 1 ] ; then
+if [ "$OPT_TEST" -eq 1 ] ; then
 	_run_tests
 fi

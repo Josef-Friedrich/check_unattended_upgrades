@@ -146,71 +146,22 @@ _getopts() {
 	while getopts ":a:Ac:d:e:hl:m:r:Rs:Su:w:" OPT; do
 		case $OPT in
 
-			a)
-				OPT_AUTOCLEAN="$OPTARG"
-				;;
-			A)
-				OPT_ANACRON=1
-				;;
-
-			c)
-				OPT_CRITICAL="$OPTARG"
-				;;
-
-			d)
-				OPT_DOWNLOAD="$OPTARG"
-				;;
-
-			e)
-				OPT_ENABLE="$OPTARG"
-				;;
-
-			h)
-				echo "$USAGE"
-				exit 0
-				;;
-
-			l)
-				OPT_LISTS="$OPTARG"
-				;;
-
-			m)
-				OPT_MAIL="$OPTARG"
-				;;
-
-			r)
-				OPT_REMOVE="$OPTARG"
-				;;
-
-			R)
-				OPT_REBOOT=1
-				;;
-
-			s)
-				OPT_SLEEP="$OPTARG"
-				;;
-
-			S)
-				OPT_SECURITY=1
-				;;
-
-			u)
-				OPT_UNATTENDED="$OPTARG"
-				;;
-
-			w)
-				OPT_WARNING="$OPTARG"
-				;;
-
-			\?)
-				echo "Invalid option: -$OPTARG" >&2
-				exit 1
-				;;
-
-			:)
-				echo "Option -$OPTARG requires an argument." >&2
-				exit 1
-				;;
+			a) OPT_AUTOCLEAN="$OPTARG" ;;
+			A) OPT_ANACRON=1 ;;
+			c) OPT_CRITICAL="$OPTARG" ;;
+			d) OPT_DOWNLOAD="$OPTARG" ;;
+			e) OPT_ENABLE="$OPTARG" ;;
+			h) echo "$USAGE" ; exit 0 ;;
+			l) OPT_LISTS="$OPTARG" ;;
+			m) OPT_MAIL="$OPTARG" ;;
+			r) OPT_REMOVE="$OPTARG" ;;
+			R) OPT_REBOOT=1 ;;
+			s) OPT_SLEEP="$OPTARG" ;;
+			S) OPT_SECURITY=1 ;;
+			u) OPT_UNATTENDED="$OPTARG" ;;
+			w) OPT_WARNING="$OPTARG" ;;
+			\?) echo "Invalid option “-$OPTARG”!" >&2 ; exit 2 ;;
+			:) echo "Option “-$OPTARG” requires an argument!" >&2 ; exit 3 ;;
 
 		esac
 	done

@@ -5,9 +5,6 @@ setup() {
 	source_exec check_unattended_upgrades
 }
 
-
-
-
 # -A
 
 @test "_getopts -A" {
@@ -24,7 +21,7 @@ setup() {
 
 @test "_getopts -a" {
 	run _getopts -a
-	[ "$status" -eq 1 ]
+	[ "$status" -eq 3 ]
 }
 
 # -c
@@ -36,7 +33,7 @@ setup() {
 
 @test "_getopts -c" {
 	run _getopts -c
-	[ "$status" -eq 1 ]
+	[ "$status" -eq 3 ]
 }
 
 # -h
@@ -56,5 +53,5 @@ setup() {
 
 @test "_getopts -w" {
 	run _getopts -w
-	[ "$status" -eq 1 ]
+	[ "$status" -eq 3 ]
 }
