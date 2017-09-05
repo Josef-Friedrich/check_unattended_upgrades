@@ -335,22 +335,22 @@ cat <<EOF
     ==' '==
 EOF
 
-if [ "$OPT_ALL" -eq 1 ] ; then
+if [ -n "$OPT_ALL" ] ; then
 	 _sync_all
 fi
 
-if [ "$OPT_DEPENDENCIES" -eq 1 ] ; then
+if [ -n "$OPT_DEPENDENCIES" ] ; then
 	_sync_dependencies
 fi
 
-if [ "$OPT_README" -eq 1 ] ; then
+if [ -n "$OPT_README" ] ; then
 	_render_readme
 fi
 
-if [ "$OPT_SKELETON" -eq 1 ] ; then
+if [ -n "$OPT_SKELETON" ] ; then
 	 _sync_skeleton;
 fi
 
-if [ "$OPT_TEST" -eq 1 ] ; then
+if [ -n "$OPT_TEST" ] ; then
 	_run_tests
 fi

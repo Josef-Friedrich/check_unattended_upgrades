@@ -44,6 +44,30 @@ setup() {
 	[ "${lines[0]}" = "check_unattended_upgrades v$VERSION" ]
 }
 
+# -s
+
+@test "_getopts -s 123" {
+	_getopts -s 123
+	[ "$OPT_SLEEP" -eq 123 ]
+}
+
+@test "_getopts -s" {
+	run _getopts -s
+	[ "$status" -eq 3 ]
+}
+
+# -u
+
+@test "_getopts -u 123" {
+	_getopts -u 123
+	[ "$OPT_UNATTENDED" -eq 123 ]
+}
+
+@test "_getopts -u" {
+	run _getopts -u
+	[ "$status" -eq 3 ]
+}
+
 # -w
 
 @test "_getopts -w 123" {

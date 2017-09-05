@@ -154,10 +154,10 @@ _getopts() {
 			h) echo "$USAGE" ; exit 0 ;;
 			l) OPT_LISTS="$OPTARG" ;;
 			m) OPT_MAIL="$OPTARG" ;;
-			r) OPT_REMOVE="$OPTARG" ;;
 			R) OPT_REBOOT=1 ;;
-			s) OPT_SLEEP="$OPTARG" ;;
+			r) OPT_REMOVE="$OPTARG" ;;
 			S) OPT_SECURITY=1 ;;
+			s) OPT_SLEEP="$OPTARG" ;;
 			u) OPT_UNATTENDED="$OPTARG" ;;
 			w) OPT_WARNING="$OPTARG" ;;
 			\?) echo "Invalid option “-$OPTARG”!" >&2 ; exit 2 ;;
