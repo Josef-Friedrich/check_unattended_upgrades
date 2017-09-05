@@ -145,9 +145,8 @@ STATE_UNKNOWN=3
 _getopts() {
 	while getopts ":Aa:c:d:e:hl:m:Rr:Ss:u:w:" OPT; do
 		case $OPT in
-
-			a) OPT_AUTOCLEAN="$OPTARG" ;;
 			A) OPT_ANACRON=1 ;;
+			a) OPT_AUTOCLEAN="$OPTARG" ;;
 			c) OPT_CRITICAL="$OPTARG" ;;
 			d) OPT_DOWNLOAD="$OPTARG" ;;
 			e) OPT_ENABLE="$OPTARG" ;;
