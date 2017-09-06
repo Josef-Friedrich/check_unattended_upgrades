@@ -66,6 +66,27 @@ setup() {
 	[ "$status" -eq 3 ]
 }
 
+# -D
+
+@test "_getopts -D" {
+	run _getopts --short-description
+	[ "$status" -eq 0 ]
+	[ "${lines[0]}" = "Monitoring plugin to check automatic updates \
+(unattended-upgrades) on Debian / Ubuntu." ]
+}
+
+@test "_getopts --short-description" {
+	run _getopts --short-description
+	[ "$status" -eq 0 ]
+	[ "${lines[0]}" = "Monitoring plugin to check automatic updates \
+(unattended-upgrades) on Debian / Ubuntu." ]
+}
+
+@test "_getopts --short-description=123" {
+	run _getopts --short-description=123
+	[ "$status" -eq 4 ]
+}
+
 # -d
 
 @test "_getopts -d 123" {
@@ -219,6 +240,16 @@ setup() {
 	[ "$OPT_SECURITY" -eq 1 ]
 }
 
+@test "_getopts --security" {
+	_getopts --security
+	[ "$OPT_SECURITY" -eq 1 ]
+}
+
+@test "_getopts --security=123" {
+	run _getopts --security=123
+	[ "$status" -eq 4 ]
+}
+
 # -s
 
 @test "_getopts -s 123" {
@@ -228,6 +259,16 @@ setup() {
 
 @test "_getopts -s" {
 	run _getopts -s
+	[ "$status" -eq 3 ]
+}
+
+@test "_getopts --sleep=123" {
+	_getopts --sleep=123
+	[ "$OPT_SLEEP" -eq 123 ]
+}
+
+@test "_getopts --sleep" {
+	run _getopts --sleep
 	[ "$status" -eq 3 ]
 }
 
@@ -243,6 +284,35 @@ setup() {
 	[ "$status" -eq 3 ]
 }
 
+@test "_getopts --unattended=123" {
+	_getopts --unattended=123
+	[ "$OPT_UNATTENDED" -eq 123 ]
+}
+
+@test "_getopts --unattended" {
+	run _getopts --unattended
+	[ "$status" -eq 3 ]
+}
+
+# -v
+
+@test "_getopts -v" {
+	run _getopts -v
+	[ "$status" -eq 0 ]
+	[ "${lines[0]}" = "$VERSION" ]
+}
+
+@test "_getopts --version" {
+	run _getopts --version
+	[ "$status" -eq 0 ]
+	[ "${lines[0]}" = "$VERSION" ]
+}
+
+@test "_getopts --version=123" {
+	run _getopts --version=123
+	[ "$status" -eq 4 ]
+}
+
 # -w
 
 @test "_getopts -w 123" {
@@ -252,5 +322,15 @@ setup() {
 
 @test "_getopts -w" {
 	run _getopts -w
+	[ "$status" -eq 3 ]
+}
+
+@test "_getopts --warning=123" {
+	_getopts --warning=123
+	[ "$OPT_WARNING" -eq 123 ]
+}
+
+@test "_getopts --warning" {
+	run _getopts --warning
 	[ "$status" -eq 3 ]
 }
