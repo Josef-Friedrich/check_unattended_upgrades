@@ -9,11 +9,11 @@ type: Plugin
 license: mit
 releases:
   -
-    name: 1.0
-    description: "1.0 Release"
+    name: 1.1
+    description: "1.1 Release"
     files:
       -
         name: check_unattended_upgrades
         url: "file:///check_unattended_upgrades"
-        description: "First release"
-        checksum: 5f29a4d8d963916fbf5ee9d47ce67555
+        description: "1.1 Release"
+        checksum: 4028f2ab76489a197d3c7eae92a049bc

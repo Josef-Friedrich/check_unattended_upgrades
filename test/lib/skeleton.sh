@@ -56,8 +56,6 @@ Options:
 	  Show the version number of this script.
 "
 
-
-
 # See https://stackoverflow.com/a/28466267
 
 # Exit codes
@@ -259,6 +257,21 @@ EOF
 	echo "$USAGE" >> README.md
 	echo '```'  >> README.md
 	echo >> README.md
+
+	### PROJECT_PAGES ##############################################
+
+	if [ -n "$PROJECT_PAGES" ]; then
+
+		echo '## Project pages' >> README.md
+		echo >> README.md
+
+		for PROJECT_PAGE in $PROJECT_PAGES; do
+			echo "* $PROJECT_PAGE" >> README.md
+		done
+
+		echo >> README.md
+
+	fi
 
 	### TESTING ####################################################
 

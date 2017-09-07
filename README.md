@@ -10,7 +10,7 @@
 ## Usage
 
 ```
-check_unattended_upgrades v1.0
+check_unattended_upgrades v1.1
 Copyright (c) 2015-2017 Josef Friedrich <josef@friedrich.rocks>
 
 Monitoring plugin to check automatic updates (unattended-upgrades) on Debian / Ubuntu.
@@ -68,6 +68,12 @@ Performance data:
       Interval in seconds.
 
 ```
+
+## Project pages
+
+* https://github.com/JosefFriedrich-shell/check_unattended_upgrades
+* https://exchange.icinga.com/joseffriedrich/check_unattended_upgrades
+* https://exchange.nagios.org/directory/Plugins/Software/check_unattended_upgrades/details
 
 ## Testing
 
