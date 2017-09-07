@@ -69,7 +69,7 @@ setup() {
 # -D
 
 @test "_getopts -D" {
-	run _getopts --short-description
+	run _getopts -D
 	[ "$status" -eq 0 ]
 	[ "${lines[0]}" = "Monitoring plugin to check automatic updates \
 (unattended-upgrades) on Debian / Ubuntu." ]
