@@ -41,6 +41,9 @@ Options:
     properly.
  -m, --mail
     Check if the configuration 'Unattended-Upgrade::Mail' is set properly.
+ -p, --repo
+    Check if 'Unattended-upgrades' is configured to include the specified
+    custom repository.
  -R, --reboot
     Check if the machine needs a reboot.
  -r, --remove
