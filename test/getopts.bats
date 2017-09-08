@@ -194,6 +194,28 @@ setup() {
 	[ "$status" -eq 3 ]
 }
 
+# -p
+
+@test "_getopts -p 123" {
+	_getopts -p 123
+	[ "$OPT_CUSTOM_REPO" -eq 123 ]
+}
+
+@test "_getopts -p" {
+	run _getopts -p
+	[ "$status" -eq 3 ]
+}
+
+@test "_getopts --repo=123" {
+	_getopts --repo=123
+	[ "$OPT_CUSTOM_REPO" -eq 123 ]
+}
+
+@test "_getopts --repo" {
+	run _getopts --repo
+	[ "$status" -eq 3 ]
+}
+
 # -R
 
 @test "_getopts -R" {

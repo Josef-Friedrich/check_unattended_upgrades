@@ -198,7 +198,7 @@ _getopts() {
 					version) echo "$VERSION" ; exit 0 ;;
 					warning=?*) OPT_WARNING="$LONG_OPTARG" ;;
 
-					autoclean*|critical*|download*|enable*|lists*|mail*|remove*|sleep*|unattended*|warning*)
+					autoclean*|critical*|download*|enable*|lists*|mail*|repo*|remove*|sleep*|unattended*|warning*)
 						echo "Option “--$OPTARG” requires an argument!" >&2
 						exit 3
 						;;
@@ -322,7 +322,7 @@ configured to handle security updates.'
 			| grep 'Unattended-Upgrade::Allowed-Origins\|Unattended-Upgrade::Origins-Pattern' \
 			| grep -i "${OPT_CUSTOM_REPO}" > /dev/null ; then
 			echo "CRITICAL - Unattended-upgrades is not \
-configured to handle updates for custom repository ${OPT_CUSTOM_REPO}."
+configured to handle updates for custom repository “${OPT_CUSTOM_REPO}”."
 			exit $STATE_CRITICAL
 		fi
 	fi

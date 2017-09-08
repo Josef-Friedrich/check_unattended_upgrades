@@ -24,3 +24,24 @@ setup() {
 	[ "$status" -eq 1 ]
 	[ "${lines[0]}" = 'WARNING - Machine requires a reboot.' ]
 }
+
+@test "run ./check_unattended_upgrades_patched -S" {
+	mock_path test/bin/ok_first
+	run ./check_unattended_upgrades_patched -S
+	[ "$status" -eq 0 ]
+}
+
+@test "run ./check_unattended_upgrades_patched -p LP-PPA-webupd8team-atom" {
+	mock_path test/bin/ok_first
+	run ./check_unattended_upgrades_patched -p LP-PPA-webupd8team-atom
+	[ "$status" -eq 0 ]
+}
+
+@test "run ./check_unattended_upgrades_patched -p some-obscure-repo" {
+	mock_path test/bin/ok_first
+	run ./check_unattended_upgrades_patched -p some-obscure-repo
+	[ "$status" -eq 2 ]
+	[ "${lines[0]}" = "CRITICAL - Unattended-upgrades is not \
+configured to handle updates for custom repository “some-obscure-repo”." ]
+
+}
