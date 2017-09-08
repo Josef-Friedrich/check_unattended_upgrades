@@ -52,6 +52,9 @@
 # Check if the configuration 'Unattended-Upgrade::Mail' is set properly.
 #OPT_MAIL="you@example.com"
 
+# Check if 'Unattended-upgrades' is configured to include specific repo.
+#OPT_CUSTOM_REPO="your-repo"
+
 # Check if the configuration
 # 'Unattended-Upgrade::Remove-Unused-Dependencies' is set properly.
 #OPT_REMOVE="true"
@@ -114,6 +117,9 @@ Options:
     properly.
  -m, --mail
     Check if the configuration 'Unattended-Upgrade::Mail' is set properly.
+ -p, --repo
+    Check if 'Unattended-upgrades' is configured to include the specified
+    custom repository.
  -R, --reboot
     Check if the machine needs a reboot.
  -r, --remove
@@ -148,7 +154,7 @@ STATE_CRITICAL=2
 STATE_UNKNOWN=3
 
 _getopts() {
-	while getopts ":Aa:c:Dd:e:hl:m:Rr:Ss:u:vw:-:" OPT; do
+	while getopts ":Aa:c:Dd:e:hl:m:p:Rr:Ss:u:vw:-:" OPT; do
 		case $OPT in
 			A) OPT_ANACRON=1 ;;
 			a) OPT_AUTOCLEAN="$OPTARG" ;;
@@ -159,6 +165,7 @@ _getopts() {
 			h) echo "$USAGE" ; exit 0 ;;
 			l) OPT_LISTS="$OPTARG" ;;
 			m) OPT_MAIL="$OPTARG" ;;
+			p) OPT_CUSTOM_REPO="$OPTARG" ;;
 			R) OPT_REBOOT=1 ;;
 			r) OPT_REMOVE="$OPTARG" ;;
 			S) OPT_SECURITY=1 ;;
@@ -182,6 +189,7 @@ _getopts() {
 					help) echo "$USAGE" ; exit 0 ;;
 					lists=?*) OPT_LISTS="$LONG_OPTARG" ;;
 					mail=?*) OPT_MAIL="$LONG_OPTARG" ;;
+					repo=?*) OPT_CUSTOM_REPO="$LONG_OPTARG" ;;
 					reboot) OPT_REBOOT=1 ;;
 					remove=?*) OPT_REMOVE="$LONG_OPTARG" ;;
 					security) OPT_SECURITY=1 ;;
@@ -305,6 +313,16 @@ if which apt-config > /dev/null 2>&1; then
 			| grep -i 'security' > /dev/null ; then
 			echo 'CRITICAL - Unattended-upgrades is not \
 configured to handle security updates.'
+			exit $STATE_CRITICAL
+		fi
+	fi
+
+	if [ -n "$OPT_CUSTOM_REPO" ]; then
+		if ! apt-config dump \
+			| grep 'Unattended-Upgrade::Allowed-Origins\|Unattended-Upgrade::Origins-Pattern' \
+			| grep -i "${OPT_CUSTOM_REPO}" > /dev/null ; then
+			echo "CRITICAL - Unattended-upgrades is not \
+configured to handle updates for custom repository ${OPT_CUSTOM_REPO}."
 			exit $STATE_CRITICAL
 		fi
 	fi
