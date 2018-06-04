@@ -40,16 +40,16 @@ Options:
 	  Sync all projects that have the same parent folder as this
 	  project.
 	-d, --sync-dependencies
-	  Sync external dependenices (e. g. test-helper.sh bats)
+	  Sync external dependenices (e. g. test-helper.sh bats).
 	-h, --help
-	  Show this help message
+	  Show this help message.
 	-r, --render-readme
 	  Render “README.md”.
-	-S, -sync-skeleton
+	-S, --sync-skeleton
 	  Sync your project with the skeleton project and update some
-	  boilerplate files (e. g. Makefile test/lib/skeleton.sh)
+	  boilerplate files (e. g. Makefile test/lib/skeleton.sh).
 	-s, --short-description
-	  Show a short description / summary
+	  Show a short description / summary.
 	-t, --test
 	  Run the tests located in the “test” folder.
 	-v, --version
