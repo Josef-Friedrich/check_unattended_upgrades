@@ -1,7 +1,7 @@
 ---
 name: check_unattended_upgrades
 description: "file:///README.md"
-url: "https://github.com/JosefFriedrich-shell/check_unattended_upgrades"
+url: "https://github.com/Josef-Friedrich/check_unattended_upgrades"
 tags: unattended-upgrades, apt
 vendor: Linux
 target: Debian, Ubuntu

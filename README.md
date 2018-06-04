@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/JosefFriedrich-shell/check_unattended_upgrades.svg?branch=master)](https://travis-ci.org/JosefFriedrich-shell/check_unattended_upgrades)
+[![Build Status](https://travis-ci.org/Josef-Friedrich/check_unattended_upgrades.svg?branch=master)](https://travis-ci.org/Josef-Friedrich/check_unattended_upgrades)
 
 # check_unattended_upgrades
 
@@ -74,7 +74,7 @@ Performance data:
 
 ## Project pages
 
-* https://github.com/JosefFriedrich-shell/check_unattended_upgrades
+* https://github.com/Josef-Friedrich/check_unattended_upgrades
 * https://exchange.icinga.com/joseffriedrich/check_unattended_upgrades
 * https://exchange.nagios.org/directory/Plugins/Software/check_unattended_upgrades/details
 
