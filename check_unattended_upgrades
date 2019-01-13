@@ -350,7 +350,7 @@ if ! test -f $LOG_FILE ; then
 	exit $STATE_CRITICAL
 fi
 
-LAST_LOG_LINE=$(tail -n 1 $LOG_FILE )
+LAST_LOG_LINE=$(cat $LOG_FILE | grep -v ' WARNING ' | grep -v ' ERROR ' | tail -n 1)
 
 if [ -z "$LAST_LOG_LINE" ]; then
 	LATEST_COMPRESSED_LOG=$(ls -r ${LOG_FILE}.*.gz | tail -n 1)
