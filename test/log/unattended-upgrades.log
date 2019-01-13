@@ -1,170 +1,170 @@
-2017-08-01 23:50:30,878 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
-2017-08-01 23:50:30,878 INFO Erst-Pakete der Positivliste:  
+2017-08-01 23:50:30,878 INFO Pakete, die anfangs auf die schwarzen Liste standen:
+2017-08-01 23:50:30,878 INFO Erst-Pakete der Positivliste:
 2017-08-01 23:50:30,879 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
 2017-08-01 23:50:30,879 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
 2017-08-01 23:50:34,288 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
-2017-08-02 11:30:50,331 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
-2017-08-02 11:30:50,331 INFO Erst-Pakete der Positivliste:  
+2017-08-02 11:30:50,331 INFO Pakete, die anfangs auf die schwarzen Liste standen:
+2017-08-02 11:30:50,331 INFO Erst-Pakete der Positivliste:
 2017-08-02 11:30:50,331 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
 2017-08-02 11:30:50,332 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
 2017-08-02 11:30:53,471 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
-2017-08-02 23:10:06,762 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
-2017-08-02 23:10:06,762 INFO Erst-Pakete der Positivliste:  
+2017-08-02 23:10:06,762 INFO Pakete, die anfangs auf die schwarzen Liste standen:
+2017-08-02 23:10:06,762 INFO Erst-Pakete der Positivliste:
 2017-08-02 23:10:06,763 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
 2017-08-02 23:10:06,763 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
-2017-08-02 23:10:10,380 INFO Pakete, von denen ein Upgrade durchgeführt wird: 
+2017-08-02 23:10:10,380 INFO Pakete, von denen ein Upgrade durchgeführt wird:
 2017-08-02 23:10:13,183 INFO Pakete, die automatisch entfernt wurden: »galera-3 libdbi-perl libgsasl7 libjemalloc1 libkyotocabinet16v5 libntlm0 mailutils-common«
 2017-08-02 23:10:18,576 INFO Pakete wurden erfolgreich automatisch entfernt
-2017-08-03 09:16:27,798 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
-2017-08-03 09:16:27,799 INFO Erst-Pakete der Positivliste:  
+2017-08-03 09:16:27,798 INFO Pakete, die anfangs auf die schwarzen Liste standen:
+2017-08-03 09:16:27,799 INFO Erst-Pakete der Positivliste:
 2017-08-03 09:16:27,800 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
 2017-08-03 09:16:27,800 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
 2017-08-03 09:16:53,111 INFO Pakete, von denen ein Upgrade durchgeführt wird: gir1.2-javascriptcoregtk-4.0 gir1.2-webkit2-4.0 libjavascriptcoregtk-4.0-18 libjavascriptcoregtk-4.0-dev libwebkit2gtk-4.0-37 libwebkit2gtk-4.0-37-gtk2 libwebkit2gtk-4.0-dev
 2017-08-03 09:16:53,111 INFO Dpkg-Protokoll wird nach »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« geschrieben
 2017-08-03 09:17:04,006 INFO alle Upgrades installiert
-2017-08-03 10:25:26,535 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
-2017-08-03 10:25:26,535 INFO Erst-Pakete der Positivliste:  
+2017-08-03 10:25:26,535 INFO Pakete, die anfangs auf die schwarzen Liste standen:
+2017-08-03 10:25:26,535 INFO Erst-Pakete der Positivliste:
 2017-08-03 10:25:26,535 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
 2017-08-03 10:25:26,536 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
 2017-08-03 10:25:29,894 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
-2017-08-03 14:08:07,841 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
-2017-08-03 14:08:07,842 INFO Erst-Pakete der Positivliste:  
+2017-08-03 14:08:07,841 INFO Pakete, die anfangs auf die schwarzen Liste standen:
+2017-08-03 14:08:07,842 INFO Erst-Pakete der Positivliste:
 2017-08-03 14:08:07,842 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
 2017-08-03 14:08:07,842 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
 2017-08-03 14:08:11,176 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
-2017-08-04 06:06:30,807 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
-2017-08-04 06:06:30,808 INFO Erst-Pakete der Positivliste:  
+2017-08-04 06:06:30,807 INFO Pakete, die anfangs auf die schwarzen Liste standen:
+2017-08-04 06:06:30,808 INFO Erst-Pakete der Positivliste:
 2017-08-04 06:06:30,808 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
 2017-08-04 06:06:30,808 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
 2017-08-04 06:07:39,777 INFO Pakete, von denen ein Upgrade durchgeführt wird: gnome-tweak-tool libqt5concurrent5 libqt5core5a libqt5dbus5 libqt5gui5 libqt5network5 libqt5opengl5 libqt5opengl5-dev libqt5printsupport5 libqt5sql5 libqt5sql5-sqlite libqt5test5 libqt5widgets5 libqt5xml5 linux-generic linux-headers-generic linux-image-generic linux-libc-dev qt5-gtk-platformtheme qt5-qmake qtbase5-dev qtbase5-dev-tools
 2017-08-04 06:07:39,778 INFO Dpkg-Protokoll wird nach »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« geschrieben
 2017-08-04 06:08:48,446 INFO alle Upgrades installiert
 2017-08-04 06:08:53,914 WARNING Found /var/run/reboot-required, rebooting
-2017-08-04 09:56:11,388 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
-2017-08-04 09:56:11,389 INFO Erst-Pakete der Positivliste:  
+2017-08-04 09:56:11,388 INFO Pakete, die anfangs auf die schwarzen Liste standen:
+2017-08-04 09:56:11,389 INFO Erst-Pakete der Positivliste:
 2017-08-04 09:56:11,389 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
 2017-08-04 09:56:11,389 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
-2017-08-04 09:56:14,985 INFO Pakete, von denen ein Upgrade durchgeführt wird: 
+2017-08-04 09:56:14,985 INFO Pakete, von denen ein Upgrade durchgeführt wird:
 2017-08-04 09:56:17,944 INFO Pakete, die automatisch entfernt wurden: »linux-headers-4.10.0-26 linux-headers-4.10.0-26-generic linux-image-4.10.0-26-generic linux-image-extra-4.10.0-26-generic«
 2017-08-04 09:56:33,647 INFO Pakete wurden erfolgreich automatisch entfernt
 2017-08-04 09:56:35,828 WARNING Found /var/run/reboot-required, rebooting
-2017-08-06 12:50:17,773 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
-2017-08-06 12:50:17,774 INFO Erst-Pakete der Positivliste:  
+2017-08-06 12:50:17,773 INFO Pakete, die anfangs auf die schwarzen Liste standen:
+2017-08-06 12:50:17,774 INFO Erst-Pakete der Positivliste:
 2017-08-06 12:50:17,774 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
 2017-08-06 12:50:17,774 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
-2017-08-06 12:50:20,821 INFO Pakete, von denen ein Upgrade durchgeführt wird: 
+2017-08-06 12:50:20,821 INFO Pakete, von denen ein Upgrade durchgeführt wird:
 2017-08-06 12:50:23,270 INFO Pakete, die automatisch entfernt wurden: »galera-3 libdbi-perl libjemalloc1 mariadb-client-10.1 mariadb-client-core-10.1 mariadb-common mariadb-server-core-10.1«
 2017-08-06 12:50:27,382 INFO Pakete wurden erfolgreich automatisch entfernt
-2017-08-06 18:13:02,921 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
-2017-08-06 18:13:02,921 INFO Erst-Pakete der Positivliste:  
+2017-08-06 18:13:02,921 INFO Pakete, die anfangs auf die schwarzen Liste standen:
+2017-08-06 18:13:02,921 INFO Erst-Pakete der Positivliste:
 2017-08-06 18:13:02,922 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
 2017-08-06 18:13:02,922 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
-2017-08-06 18:13:06,091 INFO Pakete, von denen ein Upgrade durchgeführt wird: 
+2017-08-06 18:13:06,091 INFO Pakete, von denen ein Upgrade durchgeführt wird:
 2017-08-06 18:13:08,754 INFO Pakete, die automatisch entfernt wurden: »libcec4 libcrossguid0 libmicrohttpd10 libnfs8 libp8-platform2 libshairplay0 libssh-4 libtinyxml2.6.2v5 python-bluez«
 2017-08-06 18:13:13,831 INFO Pakete wurden erfolgreich automatisch entfernt
-2017-08-07 06:56:04,295 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
-2017-08-07 06:56:04,295 INFO Erst-Pakete der Positivliste:  
+2017-08-07 06:56:04,295 INFO Pakete, die anfangs auf die schwarzen Liste standen:
+2017-08-07 06:56:04,295 INFO Erst-Pakete der Positivliste:
 2017-08-07 06:56:04,296 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
 2017-08-07 06:56:04,296 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
 2017-08-07 06:56:07,721 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
-2017-08-07 18:06:54,087 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
-2017-08-07 18:06:54,088 INFO Erst-Pakete der Positivliste:  
+2017-08-07 18:06:54,087 INFO Pakete, die anfangs auf die schwarzen Liste standen:
+2017-08-07 18:06:54,088 INFO Erst-Pakete der Positivliste:
 2017-08-07 18:06:54,088 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
 2017-08-07 18:06:54,089 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
 2017-08-07 18:06:59,311 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
-2017-08-08 12:27:23,930 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
-2017-08-08 12:27:23,931 INFO Erst-Pakete der Positivliste:  
+2017-08-08 12:27:23,930 INFO Pakete, die anfangs auf die schwarzen Liste standen:
+2017-08-08 12:27:23,931 INFO Erst-Pakete der Positivliste:
 2017-08-08 12:27:23,931 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
 2017-08-08 12:27:23,932 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
-2017-08-08 12:27:27,007 DEBUG pkgs that look like they should be upgraded: 
+2017-08-08 12:27:27,007 DEBUG pkgs that look like they should be upgraded:
 2017-08-08 12:27:27,075 DEBUG fetch.run() result: 0
 2017-08-08 12:27:27,076 DEBUG blacklist: []
 2017-08-08 12:27:27,076 DEBUG whitelist: []
 2017-08-08 12:27:28,084 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
-2017-08-08 12:30:54,944 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
-2017-08-08 12:30:54,945 INFO Erst-Pakete der Positivliste:  
+2017-08-08 12:30:54,944 INFO Pakete, die anfangs auf die schwarzen Liste standen:
+2017-08-08 12:30:54,945 INFO Erst-Pakete der Positivliste:
 2017-08-08 12:30:54,946 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
 2017-08-08 12:30:54,946 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
-2017-08-08 12:31:02,656 INFO Pakete, von denen ein Upgrade durchgeführt wird: 
+2017-08-08 12:31:02,656 INFO Pakete, von denen ein Upgrade durchgeführt wird:
 2017-08-08 12:31:07,041 INFO Pakete, die automatisch entfernt wurden: »apache2-data apache2-utils man2html-base«
 2017-08-08 12:31:13,627 INFO Pakete wurden erfolgreich automatisch entfernt
-2017-08-10 10:00:30,618 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
-2017-08-10 10:00:30,618 INFO Erst-Pakete der Positivliste:  
+2017-08-10 10:00:30,618 INFO Pakete, die anfangs auf die schwarzen Liste standen:
+2017-08-10 10:00:30,618 INFO Erst-Pakete der Positivliste:
 2017-08-10 10:00:30,618 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
 2017-08-10 10:00:30,619 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
 2017-08-10 10:00:33,886 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
-2017-08-11 19:18:11,883 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
-2017-08-11 19:18:11,884 INFO Erst-Pakete der Positivliste:  
+2017-08-11 19:18:11,883 INFO Pakete, die anfangs auf die schwarzen Liste standen:
+2017-08-11 19:18:11,884 INFO Erst-Pakete der Positivliste:
 2017-08-11 19:18:11,884 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
 2017-08-11 19:18:11,884 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
 2017-08-11 19:22:09,365 INFO Pakete, von denen ein Upgrade durchgeführt wird: chromium-browser chromium-browser-l10n chromium-codecs-ffmpeg-extra gir1.2-soup-2.4 git git-man gtk2-engines-pixbuf libapache2-mod-php7.0 libegl1-mesa libegl1-mesa-dev libgail-common libgail18 libgbm1 libgl1-mesa-dev libgl1-mesa-dri libgl1-mesa-glx libglapi-mesa libgles2-mesa libgles2-mesa-dev libgtk2.0-0 libgtk2.0-bin libgtk2.0-common libsoup-gnome2.4-1 libsoup2.4-1 libsoup2.4-dev libsvn-perl libsvn1 libvirt-bin libvirt-clients libvirt-daemon libvirt-daemon-system libvirt0 libvlc-bin libvlc5 libvlccore8 libwayland-egl1-mesa libxatracker2 linux-generic linux-headers-generic linux-image-generic linux-libc-dev mesa-common-dev mesa-va-drivers mesa-vdpau-drivers php7.0 php7.0-cli php7.0-common php7.0-curl php7.0-fpm php7.0-gd php7.0-json php7.0-mbstring php7.0-mysql php7.0-opcache php7.0-readline php7.0-xml php7.0-zip python3-update-manager subversion update-manager update-manager-core vlc vlc-bin vlc-data vlc-l10n vlc-plugin-base vlc-plugin-notify vlc-plugin-qt vlc-plugin-samba vlc-plugin-skins2 vlc-plugin-video-output vlc-plugin-video-splitter vlc-plugin-visualization
 2017-08-11 19:22:09,366 INFO Dpkg-Protokoll wird nach »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« geschrieben
 2017-08-11 19:24:21,704 INFO alle Upgrades installiert
 2017-08-11 19:24:27,579 WARNING Found /var/run/reboot-required, rebooting
-2017-08-11 23:30:45,559 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
-2017-08-11 23:30:45,560 INFO Erst-Pakete der Positivliste:  
+2017-08-11 23:30:45,559 INFO Pakete, die anfangs auf die schwarzen Liste standen:
+2017-08-11 23:30:45,560 INFO Erst-Pakete der Positivliste:
 2017-08-11 23:30:45,560 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
 2017-08-11 23:30:45,560 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
-2017-08-11 23:30:49,062 INFO Pakete, von denen ein Upgrade durchgeführt wird: 
+2017-08-11 23:30:49,062 INFO Pakete, von denen ein Upgrade durchgeführt wird:
 2017-08-11 23:30:51,636 INFO Pakete, die automatisch entfernt wurden: »linux-headers-4.10.0-28 linux-headers-4.10.0-28-generic linux-image-4.10.0-28-generic linux-image-extra-4.10.0-28-generic«
 2017-08-11 23:31:08,360 INFO Pakete wurden erfolgreich automatisch entfernt
 2017-08-11 23:31:10,075 WARNING Found /var/run/reboot-required, rebooting
-2017-08-14 20:05:42,934 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
-2017-08-14 20:05:42,935 INFO Erst-Pakete der Positivliste:  
+2017-08-14 20:05:42,934 INFO Pakete, die anfangs auf die schwarzen Liste standen:
+2017-08-14 20:05:42,935 INFO Erst-Pakete der Positivliste:
 2017-08-14 20:05:42,935 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
 2017-08-14 20:05:42,935 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
 2017-08-14 20:05:46,564 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
-2017-08-15 09:11:43,356 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
-2017-08-15 09:11:43,357 INFO Erst-Pakete der Positivliste:  
+2017-08-15 09:11:43,356 INFO Pakete, die anfangs auf die schwarzen Liste standen:
+2017-08-15 09:11:43,357 INFO Erst-Pakete der Positivliste:
 2017-08-15 09:11:43,357 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
 2017-08-15 09:11:43,357 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
 2017-08-15 09:11:46,512 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
-2017-08-15 21:40:34,598 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
-2017-08-15 21:40:34,599 INFO Erst-Pakete der Positivliste:  
+2017-08-15 21:40:34,598 INFO Pakete, die anfangs auf die schwarzen Liste standen:
+2017-08-15 21:40:34,599 INFO Erst-Pakete der Positivliste:
 2017-08-15 21:40:34,599 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
 2017-08-15 21:40:34,599 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
 2017-08-15 21:40:37,756 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
-2017-08-16 13:42:13,911 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
-2017-08-16 13:42:13,912 INFO Erst-Pakete der Positivliste:  
+2017-08-16 13:42:13,911 INFO Pakete, die anfangs auf die schwarzen Liste standen:
+2017-08-16 13:42:13,912 INFO Erst-Pakete der Positivliste:
 2017-08-16 13:42:13,912 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
 2017-08-16 13:42:13,913 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
 2017-08-16 13:42:52,880 INFO Pakete, von denen ein Upgrade durchgeführt wird: firefox firefox-locale-de firefox-locale-en libgd3 libsmbclient libwbclient0 python-samba samba-common samba-common-bin samba-libs xul-ext-ubufox
 2017-08-16 13:42:52,880 INFO Dpkg-Protokoll wird nach »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« geschrieben
 2017-08-16 13:43:14,150 INFO alle Upgrades installiert
-2017-08-18 19:40:11,352 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
-2017-08-18 19:40:11,353 INFO Erst-Pakete der Positivliste:  
+2017-08-18 19:40:11,352 INFO Pakete, die anfangs auf die schwarzen Liste standen:
+2017-08-18 19:40:11,353 INFO Erst-Pakete der Positivliste:
 2017-08-18 19:40:11,353 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
 2017-08-18 19:40:11,353 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
 2017-08-18 19:40:41,329 INFO Pakete, von denen ein Upgrade durchgeführt wird: firefox firefox-locale-de firefox-locale-en fwupd libc-ares2 libdfu1 libfwupd1
 2017-08-18 19:40:41,330 INFO Dpkg-Protokoll wird nach »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« geschrieben
 2017-08-18 19:41:00,557 INFO alle Upgrades installiert
-2017-08-21 23:05:45,720 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
-2017-08-21 23:05:45,721 INFO Erst-Pakete der Positivliste:  
+2017-08-21 23:05:45,720 INFO Pakete, die anfangs auf die schwarzen Liste standen:
+2017-08-21 23:05:45,721 INFO Erst-Pakete der Positivliste:
 2017-08-21 23:05:45,721 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
 2017-08-21 23:05:45,721 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
 2017-08-21 23:05:54,985 INFO Pakete, von denen ein Upgrade durchgeführt wird: augeas-lenses libaugeas0 libgraphite2-3 libgraphite2-dev
 2017-08-21 23:05:54,986 INFO Dpkg-Protokoll wird nach »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« geschrieben
 2017-08-21 23:06:02,054 INFO alle Upgrades installiert
-2017-08-22 23:21:04,018 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
-2017-08-22 23:21:04,018 INFO Erst-Pakete der Positivliste:  
+2017-08-22 23:21:04,018 INFO Pakete, die anfangs auf die schwarzen Liste standen:
+2017-08-22 23:21:04,018 INFO Erst-Pakete der Positivliste:
 2017-08-22 23:21:04,019 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
 2017-08-22 23:21:04,019 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
 2017-08-22 23:21:05,552 DEBUG Checking: atom ([<Origin component:'main' archive:'zesty' origin:'LP-PPA-webupd8team-atom' label:'Atom text editor' site:'ppa.launchpad.net' isTrusted:True>])
 2017-08-22 23:21:06,191 DEBUG Checking: numix-folders ([<Origin component:'main' archive:'zesty' origin:'LP-PPA-numix' label:'PPA for the Numix Project Ltd.' site:'ppa.launchpad.net' isTrusted:True>, <Origin component:'main' archive:'zesty' origin:'LP-PPA-numix' label:'PPA for the Numix Project Ltd.' site:'ppa.launchpad.net' isTrusted:True>])
 2017-08-22 23:21:06,418 DEBUG Checking: tor ([<Origin component:'main' archive:'zesty' origin:'TorProject' label:'' site:'deb.torproject.org' isTrusted:True>])
 2017-08-22 23:21:06,422 DEBUG Checking: tor-geoipdb ([<Origin component:'main' archive:'zesty' origin:'TorProject' label:'' site:'deb.torproject.org' isTrusted:True>, <Origin component:'main' archive:'zesty' origin:'TorProject' label:'' site:'deb.torproject.org' isTrusted:True>])
-2017-08-22 23:21:06,474 DEBUG pkgs that look like they should be upgraded: 
+2017-08-22 23:21:06,474 DEBUG pkgs that look like they should be upgraded:
 2017-08-22 23:21:06,543 DEBUG fetch.run() result: 0
 2017-08-22 23:21:06,543 DEBUG blacklist: []
 2017-08-22 23:21:06,543 DEBUG whitelist: []
 2017-08-22 23:21:07,483 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
-2017-08-22 23:27:16,315 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
-2017-08-22 23:27:16,316 INFO Erst-Pakete der Positivliste:  
+2017-08-22 23:27:16,315 INFO Pakete, die anfangs auf die schwarzen Liste standen:
+2017-08-22 23:27:16,316 INFO Erst-Pakete der Positivliste:
 2017-08-22 23:27:16,316 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
 2017-08-22 23:27:16,316 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
 2017-08-22 23:27:19,713 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
-2017-08-23 22:21:29,426 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
-2017-08-23 22:21:29,428 INFO Erst-Pakete der Positivliste:  
+2017-08-23 22:21:29,426 INFO Pakete, die anfangs auf die schwarzen Liste standen:
+2017-08-23 22:21:29,428 INFO Erst-Pakete der Positivliste:
 2017-08-23 22:21:29,429 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
 2017-08-23 22:21:29,429 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
 2017-08-23 22:21:30,812 DEBUG adjusting candidate version: 'kodi=2:17.1+dfsg1-1ubuntu0.1'
@@ -175,30 +175,30 @@
 2017-08-23 22:21:32,243 DEBUG Checking: numix-icon-theme-square ([<Origin component:'main' archive:'zesty' origin:'LP-PPA-numix' label:'PPA for the Numix Project Ltd.' site:'ppa.launchpad.net' isTrusted:True>, <Origin component:'main' archive:'zesty' origin:'LP-PPA-numix' label:'PPA for the Numix Project Ltd.' site:'ppa.launchpad.net' isTrusted:True>])
 2017-08-23 22:21:32,442 DEBUG Checking: tor ([<Origin component:'main' archive:'zesty' origin:'TorProject' label:'' site:'deb.torproject.org' isTrusted:True>])
 2017-08-23 22:21:32,445 DEBUG Checking: tor-geoipdb ([<Origin component:'main' archive:'zesty' origin:'TorProject' label:'' site:'deb.torproject.org' isTrusted:True>, <Origin component:'main' archive:'zesty' origin:'TorProject' label:'' site:'deb.torproject.org' isTrusted:True>])
-2017-08-23 22:21:32,495 DEBUG pkgs that look like they should be upgraded: 
+2017-08-23 22:21:32,495 DEBUG pkgs that look like they should be upgraded:
 2017-08-23 22:21:32,564 DEBUG fetch.run() result: 0
 2017-08-23 22:21:32,565 DEBUG blacklist: []
 2017-08-23 22:21:32,565 DEBUG whitelist: []
 2017-08-23 22:21:33,397 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
-2017-08-23 22:27:49,001 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
-2017-08-23 22:27:49,002 INFO Erst-Pakete der Positivliste:  
+2017-08-23 22:27:49,001 INFO Pakete, die anfangs auf die schwarzen Liste standen:
+2017-08-23 22:27:49,002 INFO Erst-Pakete der Positivliste:
 2017-08-23 22:27:49,002 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
 2017-08-23 22:27:49,002 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
 2017-08-23 22:28:00,335 INFO Pakete, von denen ein Upgrade durchgeführt wird: logrotate ubuntu-drivers-common
 2017-08-23 22:28:00,336 INFO Dpkg-Protokoll wird nach »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« geschrieben
 2017-08-23 22:28:08,057 INFO alle Upgrades installiert
-2017-08-24 16:34:44,515 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
-2017-08-24 16:34:44,515 INFO Erst-Pakete der Positivliste:  
+2017-08-24 16:34:44,515 INFO Pakete, die anfangs auf die schwarzen Liste standen:
+2017-08-24 16:34:44,515 INFO Erst-Pakete der Positivliste:
 2017-08-24 16:34:44,516 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
 2017-08-24 16:34:44,516 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
 2017-08-24 16:34:47,819 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
-2017-08-28 09:28:47,138 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
-2017-08-28 09:28:47,139 INFO Erst-Pakete der Positivliste:  
+2017-08-28 09:28:47,138 INFO Pakete, die anfangs auf die schwarzen Liste standen:
+2017-08-28 09:28:47,139 INFO Erst-Pakete der Positivliste:
 2017-08-28 09:28:47,139 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
 2017-08-28 09:28:47,139 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
 2017-08-28 09:28:50,818 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
-2017-08-31 21:00:45,888 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
-2017-08-31 21:00:45,889 INFO Erst-Pakete der Positivliste:  
+2017-08-31 21:00:45,888 INFO Pakete, die anfangs auf die schwarzen Liste standen:
+2017-08-31 21:00:45,889 INFO Erst-Pakete der Positivliste:
 2017-08-31 21:00:45,890 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
 2017-08-31 21:00:45,891 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
 2017-08-31 21:00:46,960 DEBUG adjusting candidate version: 'kodi=2:17.1+dfsg1-1ubuntu0.1'
@@ -212,18 +212,18 @@
 2017-08-31 21:00:48,314 DEBUG Checking: numix-icon-theme-square ([<Origin component:'main' archive:'zesty' origin:'LP-PPA-numix' label:'PPA for the Numix Project Ltd.' site:'ppa.launchpad.net' isTrusted:True>, <Origin component:'main' archive:'zesty' origin:'LP-PPA-numix' label:'PPA for the Numix Project Ltd.' site:'ppa.launchpad.net' isTrusted:True>])
 2017-08-31 21:00:48,505 DEBUG Checking: tor ([<Origin component:'main' archive:'zesty' origin:'TorProject' label:'' site:'deb.torproject.org' isTrusted:True>])
 2017-08-31 21:00:48,509 DEBUG Checking: tor-geoipdb ([<Origin component:'main' archive:'zesty' origin:'TorProject' label:'' site:'deb.torproject.org' isTrusted:True>, <Origin component:'main' archive:'zesty' origin:'TorProject' label:'' site:'deb.torproject.org' isTrusted:True>])
-2017-08-31 21:00:48,562 DEBUG pkgs that look like they should be upgraded: 
+2017-08-31 21:00:48,562 DEBUG pkgs that look like they should be upgraded:
 2017-08-31 21:00:48,630 DEBUG fetch.run() result: 0
 2017-08-31 21:00:48,630 DEBUG blacklist: []
 2017-08-31 21:00:48,630 DEBUG whitelist: []
 2017-08-31 21:00:49,453 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
-2017-08-31 21:05:59,901 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
-2017-08-31 21:05:59,902 INFO Erst-Pakete der Positivliste:  
+2017-08-31 21:05:59,901 INFO Pakete, die anfangs auf die schwarzen Liste standen:
+2017-08-31 21:05:59,902 INFO Erst-Pakete der Positivliste:
 2017-08-31 21:05:59,902 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
 2017-08-31 21:05:59,902 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
 2017-08-31 21:06:03,097 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
-2017-09-01 09:55:30,748 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
-2017-09-01 09:55:30,749 INFO Erst-Pakete der Positivliste:  
+2017-09-01 09:55:30,748 INFO Pakete, die anfangs auf die schwarzen Liste standen:
+2017-09-01 09:55:30,749 INFO Erst-Pakete der Positivliste:
 2017-09-01 09:55:30,749 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
 2017-09-01 09:55:30,749 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
 2017-09-01 09:55:31,670 DEBUG adjusting candidate version: 'kodi=2:17.1+dfsg1-1ubuntu0.1'
@@ -237,8 +237,9 @@
 2017-09-01 09:55:33,059 DEBUG Checking: numix-icon-theme-square ([<Origin component:'main' archive:'zesty' origin:'LP-PPA-numix' label:'PPA for the Numix Project Ltd.' site:'ppa.launchpad.net' isTrusted:True>, <Origin component:'main' archive:'zesty' origin:'LP-PPA-numix' label:'PPA for the Numix Project Ltd.' site:'ppa.launchpad.net' isTrusted:True>])
 2017-09-01 09:55:33,256 DEBUG Checking: tor ([<Origin component:'main' archive:'zesty' origin:'TorProject' label:'' site:'deb.torproject.org' isTrusted:True>])
 2017-09-01 09:55:33,260 DEBUG Checking: tor-geoipdb ([<Origin component:'main' archive:'zesty' origin:'TorProject' label:'' site:'deb.torproject.org' isTrusted:True>, <Origin component:'main' archive:'zesty' origin:'TorProject' label:'' site:'deb.torproject.org' isTrusted:True>])
-2017-09-01 09:55:33,312 DEBUG pkgs that look like they should be upgraded: 
+2017-09-01 09:55:33,312 DEBUG pkgs that look like they should be upgraded:
 2017-09-01 09:55:33,379 DEBUG fetch.run() result: 0
 2017-09-01 09:55:33,379 DEBUG blacklist: []
 2017-09-01 09:55:33,379 DEBUG whitelist: []
 2017-09-01 09:55:34,218 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2019-01-12 14:35:58,860 ERROR Cache has broken packages, exiting
