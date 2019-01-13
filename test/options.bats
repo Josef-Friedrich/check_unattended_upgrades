@@ -28,14 +28,12 @@ setup() {
 @test "run ./check_unattended_upgrades_patched -S" {
 	mock_path test/bin/ok_first
 	run ./check_unattended_upgrades_patched -S
-	echo $lines >> $HOME/debug
 	[ "$status" -eq 0 ]
 }
 
 @test "run ./check_unattended_upgrades_patched -p LP-PPA-webupd8team-atom" {
 	mock_path test/bin/ok_first
 	run ./check_unattended_upgrades_patched -p LP-PPA-webupd8team-atom
-	echo $lines >> $HOME/debug
 	[ "$status" -eq 0 ]
 }
 
@@ -45,5 +43,4 @@ setup() {
 	[ "$status" -eq 2 ]
 	[ "${lines[0]}" = "CRITICAL - Unattended-upgrades is not \
 configured to handle updates for custom repository “some-obscure-repo”." ]
-
 }

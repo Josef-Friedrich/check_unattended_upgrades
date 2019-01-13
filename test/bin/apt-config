@@ -2,7 +2,7 @@
 
 if [ "$1" = dump ]; then
 
-	cat <<'EOF'
+	tee <<'EOF'
 APT "";
 APT::Architecture "amd64";
 APT::Build-Essential "";
