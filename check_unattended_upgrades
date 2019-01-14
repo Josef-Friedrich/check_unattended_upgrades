@@ -251,6 +251,14 @@ _getopts $@
 # 52h = 2d + 4h
 [ -z "$OPT_CRITICAL" ] && OPT_CRITICAL=187200
 
+
+unattended-upgrades --dry-run > /dev/null 2>&1
+DRY_RUN=$?
+if [ "$DRY_RUN" -ne 0 ]; then
+	echo 'CRITICAL - unattended-upgrades --dry-run exits with a non-zero status.'
+	exit $STATE_CRITICAL
+fi
+
 ##
 # Check for auxiliary packages.
 ##

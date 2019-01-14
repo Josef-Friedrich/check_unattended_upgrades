@@ -1,0 +1,948 @@
+#! /bin/sh
+
+case $@ in
+	'--dry-run')
+tee <<'EOF'
+Initial blacklisted packages:
+Initial whitelisted packages:
+Starting unattended upgrades script
+Allowed origins are: o=Ubuntu,a=bionic, o=Ubuntu,a=bionic-security, o=UbuntuESM,a=bionic
+Using (^linux-image|^linux-headers|^linux-image-extra|^linux-modules|^linux-modules-extra|^linux-signed-image|^kfreebsd-image|^kfreebsd-headers|^gnumach-image|^.*-modules|^.*-kernel|^linux-backports-modules-.*|^linux-modules-.*|^linux-tools|^linux-cloud-tools) regexp to find kernel packages
+Using (^linux-image.*4.15.0-1018-gcp|^linux-headers.*4.15.0-1018-gcp|^linux-image-extra.*4.15.0-1018-gcp|^linux-modules.*4.15.0-1018-gcp|^linux-modules-extra.*4.15.0-1018-gcp|^linux-signed-image.*4.15.0-1018-gcp|^kfreebsd-image.*4.15.0-1018-gcp|^kfreebsd-headers.*4.15.0-1018-gcp|^gnumach-image.*4.15.0-1018-gcp|4.15.0-1018-gcp.*-modules|4.15.0-1018-gcp.*-kernel|^linux-backports-modules-.*.*4.15.0-1018-gcp|^linux-modules-.*.*4.15.0-1018-gcp|^linux-tools.*4.15.0-1018-gcp|^linux-cloud-tools.*4.15.0-1018-gcp) regexp to find running kernel packages
+Checking: apache2 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: apache2-bin ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: apache2-data ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: apache2-utils ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: apparmor ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: apport ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: apt ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: apt-utils ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: base-files ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: bind9-host ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: bsdutils ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: chrony ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: cloud-init ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: cloud-initramfs-copymods ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: cloud-initramfs-dyn-netconf ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: command-not-found ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: command-not-found-data ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: console-setup ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: console-setup-linux ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: cryptsetup ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: cryptsetup-bin ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: curl ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: dirmngr ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: distro-info-data ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: dnsutils ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: dpkg ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: e2fsprogs ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: ebtables ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: exim4-base ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: exim4-config ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: exim4-daemon-light ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: fdisk ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: friendly-recovery ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: gcc-8-base ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: gce-compute-image-packages ([<Origin component:'universe' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: gettext-base ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: git ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: git-man ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: gnupg ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: gnupg-l10n ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: gnupg-utils ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: google-compute-engine-oslogin ([<Origin component:'universe' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: gpg ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: gpg-agent ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: gpg-wks-client ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: gpg-wks-server ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: gpgconf ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: gpgsm ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: gpgv ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: grub-common ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: grub-efi-amd64 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: grub-efi-amd64-bin ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: grub-efi-amd64-signed ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: grub-pc-bin ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: grub2-common ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: guile-2.0-libs ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: initramfs-tools ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: initramfs-tools-bin ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: initramfs-tools-core ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: keyboard-configuration ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: kmod ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: landscape-common ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libapache2-mod-php7.2 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: libapparmor1 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: libapt-inst2.0 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libapt-pkg5.0 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libbind9-160 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libblkid1 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libcom-err2 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libcryptsetup12 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libcurl3-gnutls ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: libcurl4 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: libdns-export1100 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libdns1100 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libext2fs2 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libfdisk1 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libgcc1 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libgd3 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: libglib2.0-0 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libglib2.0-data ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libirs160 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libisc-export169 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libisc169 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libisccc160 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libisccfg160 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libkmod2 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libldap-2.4-2 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libldap-common ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: liblwres160 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: liblxc-common ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: liblxc1 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libmount1 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libmspack0 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: libmysqlclient20 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: libnss-systemd ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: libnss3 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: libpam-systemd ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: libparted2 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libperl5.26 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: libplymouth4 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libpython2.7 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: libpython2.7-minimal ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: libpython2.7-stdlib ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: libpython3-stdlib ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libpython3.6 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libpython3.6-minimal ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libpython3.6-stdlib ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libsmartcols1 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libss2 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libssl1.0.0 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: libssl1.1 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: libstdc++6 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libsystemd0 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: libudev1 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: libuuid1 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: libx11-6 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: libx11-data ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: linux-gcp ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: linux-headers-gcp ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: linux-image-gcp ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: lshw ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: lxd-client ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: man-db ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: mdadm ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: mokutil ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: mount ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: mysql-client-5.7 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: mysql-client-core-5.7 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: mysql-server ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: mysql-server-5.7 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: mysql-server-core-5.7 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: netplan.io ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: networkd-dispatcher ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: nplan ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: open-iscsi ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: open-vm-tools ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: openssh-client ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: openssh-server ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: openssh-sftp-server ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: openssl ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: overlayroot ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: parted ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: perl ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: perl-base ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: perl-modules-5.26 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: php7.2 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: php7.2-bz2 ([<Origin component:'universe' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: php7.2-cli ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: php7.2-common ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: php7.2-curl ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: php7.2-gd ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: php7.2-imap ([<Origin component:'universe' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: php7.2-json ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: php7.2-mbstring ([<Origin component:'universe' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: php7.2-mysql ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: php7.2-opcache ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: php7.2-readline ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: php7.2-recode ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: php7.2-tidy ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: php7.2-xml ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: php7.2-xmlrpc ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: php7.2-zip ([<Origin component:'universe' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: plymouth ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: plymouth-theme-ubuntu-text ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: pollinate ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: psmisc ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: python-apt-common ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: python-google-compute-engine ([<Origin component:'universe' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: python-requests ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: python2.7 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: python2.7-minimal ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: python3 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: python3-apport ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: python3-apt ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: python3-commandnotfound ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: python3-distupgrade ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: python3-gdbm ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: python3-google-compute-engine ([<Origin component:'universe' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: python3-minimal ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: python3-problem-report ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: python3-requests ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: python3-software-properties ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: python3-update-manager ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: python3.6 ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: python3.6-minimal ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: screen ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: secureboot-db ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: shim ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: shim-signed ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: software-properties-common ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: sosreport ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: squashfs-tools ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: systemd ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: systemd-sysv ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: tmux ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: tzdata ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: ubuntu-keyring ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: ubuntu-release-upgrader-core ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: udev ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'bionic-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+Checking: unattended-upgrades ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: update-manager-core ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: update-notifier-common ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: util-linux ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+Checking: uuid-runtime ([<Origin component:'main' archive:'bionic-updates' origin:'Ubuntu' label:'Ubuntu' site:'us-east1.gce.archive.ubuntu.com' isTrusted:True>])
+pkgs that look like they should be upgraded: apparmor
+curl
+dirmngr
+distro-info-data
+gettext-base
+git
+git-man
+gnupg
+gnupg-l10n
+gnupg-utils
+gpg
+gpg-agent
+gpg-wks-client
+gpg-wks-server
+gpgconf
+gpgsm
+gpgv
+initramfs-tools
+initramfs-tools-bin
+initramfs-tools-core
+libapache2-mod-php7.2
+libapparmor1
+libcurl3-gnutls
+libcurl4
+libgd3
+libmspack0
+libmysqlclient20
+libnss-systemd
+libnss3
+libpam-systemd
+libperl5.26
+libpython2.7
+libpython2.7-minimal
+libpython2.7-stdlib
+libssl1.0.0
+libssl1.1
+libsystemd0
+libudev1
+libx11-6
+libx11-data
+linux-gcp
+linux-headers-gcp
+linux-image-gcp
+mysql-client-5.7
+mysql-client-core-5.7
+mysql-server
+mysql-server-5.7
+mysql-server-core-5.7
+netplan.io
+nplan
+openssh-client
+openssh-server
+openssh-sftp-server
+openssl
+perl
+perl-base
+perl-modules-5.26
+php7.2
+php7.2-bz2
+php7.2-cli
+php7.2-common
+php7.2-curl
+php7.2-gd
+php7.2-imap
+php7.2-json
+php7.2-mbstring
+php7.2-mysql
+php7.2-opcache
+php7.2-readline
+php7.2-recode
+php7.2-tidy
+php7.2-xml
+php7.2-xmlrpc
+php7.2-zip
+python-requests
+python2.7
+python2.7-minimal
+python3-requests
+systemd
+systemd-sysv
+tzdata
+udev
+
+Fetched 0 B in 0s (0 B/s)
+fetch.run() result: 0
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 3527356 DestFile:'/var/cache/apt/archives/libperl5.26_5.26.1-6ubuntu0.3_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/p/perl/libperl5.26_5.26.1-6ubuntu0.3_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/libperl5.26_5.26.1-6ubuntu0.3_amd64.deb)
+found pkg: libperl5.26
+No conffiles in deb /var/cache/apt/archives/libperl5.26_5.26.1-6ubuntu0.3_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 201436 DestFile:'/var/cache/apt/archives/perl_5.26.1-6ubuntu0.3_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.26.1-6ubuntu0.3_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/perl_5.26.1-6ubuntu0.3_amd64.deb)
+found pkg: perl
+conffile line: /etc/perl/Net/libnet.cfg fb2946cae573b8ed3d654a180d458733
+current md5: fb2946cae573b8ed3d654a180d458733
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 1390348 DestFile:'/var/cache/apt/archives/perl-base_5.26.1-6ubuntu0.3_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/p/perl/perl-base_5.26.1-6ubuntu0.3_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/perl-base_5.26.1-6ubuntu0.3_amd64.deb)
+found pkg: perl-base
+No conffiles in deb /var/cache/apt/archives/perl-base_5.26.1-6ubuntu0.3_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 2762592 DestFile:'/var/cache/apt/archives/perl-modules-5.26_5.26.1-6ubuntu0.3_all.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/p/perl/perl-modules-5.26_5.26.1-6ubuntu0.3_all.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/perl-modules-5.26_5.26.1-6ubuntu0.3_all.deb)
+found pkg: perl-modules-5.26
+No conffiles in deb /var/cache/apt/archives/perl-modules-5.26_5.26.1-6ubuntu0.3_all.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 204480 DestFile:'/var/cache/apt/archives/libsystemd0_237-3ubuntu10.11_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/s/systemd/libsystemd0_237-3ubuntu10.11_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/libsystemd0_237-3ubuntu10.11_amd64.deb)
+found pkg: libsystemd0
+No conffiles in deb /var/cache/apt/archives/libsystemd0_237-3ubuntu10.11_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 107864 DestFile:'/var/cache/apt/archives/libpam-systemd_237-3ubuntu10.11_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/s/systemd/libpam-systemd_237-3ubuntu10.11_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/libpam-systemd_237-3ubuntu10.11_amd64.deb)
+found pkg: libpam-systemd
+No conffiles in deb /var/cache/apt/archives/libpam-systemd_237-3ubuntu10.11_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 105320 DestFile:'/var/cache/apt/archives/libnss-systemd_237-3ubuntu10.11_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/s/systemd/libnss-systemd_237-3ubuntu10.11_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/libnss-systemd_237-3ubuntu10.11_amd64.deb)
+found pkg: libnss-systemd
+No conffiles in deb /var/cache/apt/archives/libnss-systemd_237-3ubuntu10.11_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 2897896 DestFile:'/var/cache/apt/archives/systemd_237-3ubuntu10.11_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.11_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/systemd_237-3ubuntu10.11_amd64.deb)
+found pkg: systemd
+conffile line: /etc/dhcp/dhclient-enter-hooks.d/resolved 17323c120a8bb9f8453c24b43d900203
+current md5: 17323c120a8bb9f8453c24b43d900203
+conffile line: /etc/dhcp/dhclient-exit-hooks.d/timesyncd a891f21f45b0648b7082d999bf424591
+current md5: a891f21f45b0648b7082d999bf424591
+conffile line: /etc/pam.d/systemd-user 3d97692a0125712fcfbd7ddf756f7696
+current md5: 3d97692a0125712fcfbd7ddf756f7696
+conffile line: /etc/systemd/journald.conf 5b3af70869d5a6449fe454c73f8fff99
+current md5: 5b3af70869d5a6449fe454c73f8fff99
+conffile line: /etc/systemd/logind.conf aeeac805b4bfb7450183ce346999dd38
+current md5: aeeac805b4bfb7450183ce346999dd38
+conffile line: /etc/systemd/resolved.conf 9e7ae2d59d69ab0c1241fd5d9c5512fe
+current md5: 9e7ae2d59d69ab0c1241fd5d9c5512fe
+conffile line: /etc/systemd/system.conf 33654a446116028d8a1fca1dbb7ea7b0
+current md5: 33654a446116028d8a1fca1dbb7ea7b0
+conffile line: /etc/systemd/timesyncd.conf dff71825daf78f541a22ea98d46df80e
+current md5: dff71825daf78f541a22ea98d46df80e
+conffile line: /etc/systemd/user.conf 675370e2d80a4ad957202e68c1b4aaee
+current md5: 675370e2d80a4ad957202e68c1b4aaee
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 1100784 DestFile:'/var/cache/apt/archives/udev_237-3ubuntu10.11_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/s/systemd/udev_237-3ubuntu10.11_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/udev_237-3ubuntu10.11_amd64.deb)
+found pkg: udev
+conffile line: /etc/init.d/udev c7723dd7bb64ea6711974e3fd584c81c
+current md5: c7723dd7bb64ea6711974e3fd584c81c
+conffile line: /etc/udev/udev.conf a9c43ddab6e58eefa56db50ff44b2b46
+current md5: a9c43ddab6e58eefa56db50ff44b2b46
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 54172 DestFile:'/var/cache/apt/archives/libudev1_237-3ubuntu10.11_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/s/systemd/libudev1_237-3ubuntu10.11_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/libudev1_237-3ubuntu10.11_amd64.deb)
+found pkg: libudev1
+No conffiles in deb /var/cache/apt/archives/libudev1_237-3ubuntu10.11_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 63312 DestFile:'/var/cache/apt/archives/netplan.io_0.40.1~18.04.4_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/n/netplan.io/netplan.io_0.40.1~18.04.4_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/netplan.io_0.40.1~18.04.4_amd64.deb)
+found pkg: netplan.io
+No conffiles in deb /var/cache/apt/archives/netplan.io_0.40.1~18.04.4_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 9612 DestFile:'/var/cache/apt/archives/initramfs-tools_0.130ubuntu3.6_all.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/i/initramfs-tools/initramfs-tools_0.130ubuntu3.6_all.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/initramfs-tools_0.130ubuntu3.6_all.deb)
+found pkg: initramfs-tools
+conffile line: /etc/initramfs-tools/update-initramfs.conf e2026d4603e7161efaccca519aeb1297
+current md5: e2026d4603e7161efaccca519aeb1297
+conffile line: /etc/kernel/postinst.d/initramfs-tools f9dcd9b9d4b6aa84c18407f2aeecb096
+current md5: f9dcd9b9d4b6aa84c18407f2aeecb096
+conffile line: /etc/kernel/postrm.d/initramfs-tools f57d0b03f79fd46dd1a1fa3b00206070
+current md5: f57d0b03f79fd46dd1a1fa3b00206070
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 48116 DestFile:'/var/cache/apt/archives/initramfs-tools-core_0.130ubuntu3.6_all.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/i/initramfs-tools/initramfs-tools-core_0.130ubuntu3.6_all.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/initramfs-tools-core_0.130ubuntu3.6_all.deb)
+found pkg: initramfs-tools-core
+conffile line: /etc/initramfs-tools/initramfs.conf 1f4c9bc107b078479d0c5303ba477548
+current md5: 1f4c9bc107b078479d0c5303ba477548
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 12916 DestFile:'/var/cache/apt/archives/initramfs-tools-bin_0.130ubuntu3.6_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/i/initramfs-tools/initramfs-tools-bin_0.130ubuntu3.6_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/initramfs-tools-bin_0.130ubuntu3.6_amd64.deb)
+found pkg: initramfs-tools-bin
+No conffiles in deb /var/cache/apt/archives/initramfs-tools-bin_0.130ubuntu3.6_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 12784 DestFile:'/var/cache/apt/archives/python3-netifaces_0.10.4-0.1build4_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/n/netifaces/python3-netifaces_0.10.4-0.1build4_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/python3-netifaces_0.10.4-0.1build4_amd64.deb)
+No conffiles in deb /var/cache/apt/archives/python3-netifaces_0.10.4-0.1build4_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 11976 DestFile:'/var/cache/apt/archives/systemd-sysv_237-3ubuntu10.11_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd-sysv_237-3ubuntu10.11_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/systemd-sysv_237-3ubuntu10.11_amd64.deb)
+found pkg: systemd-sysv
+No conffiles in deb /var/cache/apt/archives/systemd-sysv_237-3ubuntu10.11_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 31308 DestFile:'/var/cache/apt/archives/libapparmor1_2.12-4ubuntu5.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/a/apparmor/libapparmor1_2.12-4ubuntu5.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/libapparmor1_2.12-4ubuntu5.1_amd64.deb)
+found pkg: libapparmor1
+No conffiles in deb /var/cache/apt/archives/libapparmor1_2.12-4ubuntu5.1_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 6988204 DestFile:'/var/cache/apt/archives/mysql-client-core-5.7_5.7.24-0ubuntu0.18.04.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-client-core-5.7_5.7.24-0ubuntu0.18.04.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/mysql-client-core-5.7_5.7.24-0ubuntu0.18.04.1_amd64.deb)
+found pkg: mysql-client-core-5.7
+No conffiles in deb /var/cache/apt/archives/mysql-client-core-5.7_5.7.24-0ubuntu0.18.04.1_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 2311884 DestFile:'/var/cache/apt/archives/mysql-client-5.7_5.7.24-0ubuntu0.18.04.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-client-5.7_5.7.24-0ubuntu0.18.04.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/mysql-client-5.7_5.7.24-0ubuntu0.18.04.1_amd64.deb)
+found pkg: mysql-client-5.7
+No conffiles in deb /var/cache/apt/archives/mysql-client-5.7_5.7.24-0ubuntu0.18.04.1_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 3192772 DestFile:'/var/cache/apt/archives/mysql-server-5.7_5.7.24-0ubuntu0.18.04.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-server-5.7_5.7.24-0ubuntu0.18.04.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/mysql-server-5.7_5.7.24-0ubuntu0.18.04.1_amd64.deb)
+found pkg: mysql-server-5.7
+conffile line: /etc/apparmor.d/usr.sbin.mysqld f6b03f86843796ca1fcbc25decac3960
+current md5: f6b03f86843796ca1fcbc25decac3960
+conffile line: /etc/init.d/mysql 89a1a5b6ad710389112802fc3fbb81e1
+current md5: 89a1a5b6ad710389112802fc3fbb81e1
+conffile line: /etc/init/mysql.conf 5b097f4a577d63c60a8f6ca01b12bc47
+current md5: 5b097f4a577d63c60a8f6ca01b12bc47
+conffile line: /etc/logcheck/ignore.d.paranoid/mysql-server-5_7 6babe46e791059cdd5a26f4f7fec9eca
+current md5: 6babe46e791059cdd5a26f4f7fec9eca
+conffile line: /etc/logcheck/ignore.d.server/mysql-server-5_7 2d34a7ed83fefc165cd1dfea3a72ccc8
+current md5: 2d34a7ed83fefc165cd1dfea3a72ccc8
+conffile line: /etc/logcheck/ignore.d.workstation/mysql-server-5_7 2d34a7ed83fefc165cd1dfea3a72ccc8
+current md5: 2d34a7ed83fefc165cd1dfea3a72ccc8
+conffile line: /etc/logrotate.d/mysql-server b3c32cbc55b042b1fe76698c8e928974
+current md5: b3c32cbc55b042b1fe76698c8e928974
+conffile line: /etc/mysql/debian-start 68f4d300f151fd3facec50d0bcf009ef
+current md5: 68f4d300f151fd3facec50d0bcf009ef
+conffile line: /etc/mysql/mysql.cnf f5d3113b607567fd2ce955f4279fa9ce
+current md5: f5d3113b607567fd2ce955f4279fa9ce
+conffile line: /etc/mysql/mysql.conf.d/mysqld.cnf cae4bc0923e3a19cdfe3c85c06fbbfb7
+current md5: cae4bc0923e3a19cdfe3c85c06fbbfb7
+conffile line: /etc/mysql/mysql.conf.d/mysqld_safe_syslog.cnf 347fa9f3d579ffc06c39bf7e69f4fc6e
+current md5: 347fa9f3d579ffc06c39bf7e69f4fc6e
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 7776600 DestFile:'/var/cache/apt/archives/mysql-server-core-5.7_5.7.24-0ubuntu0.18.04.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-server-core-5.7_5.7.24-0ubuntu0.18.04.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/mysql-server-core-5.7_5.7.24-0ubuntu0.18.04.1_amd64.deb)
+found pkg: mysql-server-core-5.7
+No conffiles in deb /var/cache/apt/archives/mysql-server-core-5.7_5.7.24-0ubuntu0.18.04.1_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 238500 DestFile:'/var/cache/apt/archives/python2.7_2.7.15~rc1-1ubuntu0.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.15~rc1-1ubuntu0.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/python2.7_2.7.15~rc1-1ubuntu0.1_amd64.deb)
+found pkg: python2.7
+No conffiles in deb /var/cache/apt/archives/python2.7_2.7.15~rc1-1ubuntu0.1_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 1052776 DestFile:'/var/cache/apt/archives/libpython2.7_2.7.15~rc1-1ubuntu0.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/p/python2.7/libpython2.7_2.7.15~rc1-1ubuntu0.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/libpython2.7_2.7.15~rc1-1ubuntu0.1_amd64.deb)
+found pkg: libpython2.7
+No conffiles in deb /var/cache/apt/archives/libpython2.7_2.7.15~rc1-1ubuntu0.1_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 1130132 DestFile:'/var/cache/apt/archives/libssl1.1_1.1.0g-2ubuntu4.3_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4.3_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/libssl1.1_1.1.0g-2ubuntu4.3_amd64.deb)
+found pkg: libssl1.1
+No conffiles in deb /var/cache/apt/archives/libssl1.1_1.1.0g-2ubuntu4.3_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 1912240 DestFile:'/var/cache/apt/archives/libpython2.7-stdlib_2.7.15~rc1-1ubuntu0.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/p/python2.7/libpython2.7-stdlib_2.7.15~rc1-1ubuntu0.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/libpython2.7-stdlib_2.7.15~rc1-1ubuntu0.1_amd64.deb)
+found pkg: libpython2.7-stdlib
+No conffiles in deb /var/cache/apt/archives/libpython2.7-stdlib_2.7.15~rc1-1ubuntu0.1_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 1304432 DestFile:'/var/cache/apt/archives/python2.7-minimal_2.7.15~rc1-1ubuntu0.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7-minimal_2.7.15~rc1-1ubuntu0.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/python2.7-minimal_2.7.15~rc1-1ubuntu0.1_amd64.deb)
+found pkg: python2.7-minimal
+No conffiles in deb /var/cache/apt/archives/python2.7-minimal_2.7.15~rc1-1ubuntu0.1_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 334124 DestFile:'/var/cache/apt/archives/libpython2.7-minimal_2.7.15~rc1-1ubuntu0.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/p/python2.7/libpython2.7-minimal_2.7.15~rc1-1ubuntu0.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/libpython2.7-minimal_2.7.15~rc1-1ubuntu0.1_amd64.deb)
+found pkg: libpython2.7-minimal
+conffile line: /etc/python2.7/sitecustomize.py d6b276695157bde06a56ba1b2bc53670
+current md5: d6b276695157bde06a56ba1b2bc53670
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 91852 DestFile:'/var/cache/apt/archives/gpg-wks-client_2.2.4-1ubuntu1.2_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gpg-wks-client_2.2.4-1ubuntu1.2_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/gpg-wks-client_2.2.4-1ubuntu1.2_amd64.deb)
+found pkg: gpg-wks-client
+No conffiles in deb /var/cache/apt/archives/gpg-wks-client_2.2.4-1ubuntu1.2_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 316496 DestFile:'/var/cache/apt/archives/dirmngr_2.2.4-1ubuntu1.2_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/dirmngr_2.2.4-1ubuntu1.2_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/dirmngr_2.2.4-1ubuntu1.2_amd64.deb)
+found pkg: dirmngr
+No conffiles in deb /var/cache/apt/archives/dirmngr_2.2.4-1ubuntu1.2_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 466772 DestFile:'/var/cache/apt/archives/gpg_2.2.4-1ubuntu1.2_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gpg_2.2.4-1ubuntu1.2_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/gpg_2.2.4-1ubuntu1.2_amd64.deb)
+found pkg: gpg
+No conffiles in deb /var/cache/apt/archives/gpg_2.2.4-1ubuntu1.2_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 126976 DestFile:'/var/cache/apt/archives/gnupg-utils_2.2.4-1ubuntu1.2_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg-utils_2.2.4-1ubuntu1.2_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/gnupg-utils_2.2.4-1ubuntu1.2_amd64.deb)
+found pkg: gnupg-utils
+No conffiles in deb /var/cache/apt/archives/gnupg-utils_2.2.4-1ubuntu1.2_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 49560 DestFile:'/var/cache/apt/archives/gnupg-l10n_2.2.4-1ubuntu1.2_all.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg-l10n_2.2.4-1ubuntu1.2_all.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/gnupg-l10n_2.2.4-1ubuntu1.2_all.deb)
+found pkg: gnupg-l10n
+No conffiles in deb /var/cache/apt/archives/gnupg-l10n_2.2.4-1ubuntu1.2_all.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 227164 DestFile:'/var/cache/apt/archives/gpg-agent_2.2.4-1ubuntu1.2_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gpg-agent_2.2.4-1ubuntu1.2_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/gpg-agent_2.2.4-1ubuntu1.2_amd64.deb)
+found pkg: gpg-agent
+conffile line: /etc/X11/Xsession.d/90gpg-agent fbb9ce5e8e4ba5727090f0aa51b61a82
+current md5: fbb9ce5e8e4ba5727090f0aa51b61a82
+conffile line: /etc/logcheck/ignore.d.server/gpg-agent 040d545c7f33c0581fd2ae198dab1d7a
+current md5: 040d545c7f33c0581fd2ae198dab1d7a
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 214868 DestFile:'/var/cache/apt/archives/gpgsm_2.2.4-1ubuntu1.2_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gpgsm_2.2.4-1ubuntu1.2_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/gpgsm_2.2.4-1ubuntu1.2_amd64.deb)
+found pkg: gpgsm
+No conffiles in deb /var/cache/apt/archives/gpgsm_2.2.4-1ubuntu1.2_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 122708 DestFile:'/var/cache/apt/archives/gpgconf_2.2.4-1ubuntu1.2_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gpgconf_2.2.4-1ubuntu1.2_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/gpgconf_2.2.4-1ubuntu1.2_amd64.deb)
+found pkg: gpgconf
+No conffiles in deb /var/cache/apt/archives/gpgconf_2.2.4-1ubuntu1.2_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 248800 DestFile:'/var/cache/apt/archives/gnupg_2.2.4-1ubuntu1.2_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg_2.2.4-1ubuntu1.2_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/gnupg_2.2.4-1ubuntu1.2_amd64.deb)
+found pkg: gnupg
+No conffiles in deb /var/cache/apt/archives/gnupg_2.2.4-1ubuntu1.2_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 84904 DestFile:'/var/cache/apt/archives/gpg-wks-server_2.2.4-1ubuntu1.2_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gpg-wks-server_2.2.4-1ubuntu1.2_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/gpg-wks-server_2.2.4-1ubuntu1.2_amd64.deb)
+found pkg: gpg-wks-server
+No conffiles in deb /var/cache/apt/archives/gpg-wks-server_2.2.4-1ubuntu1.2_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 197636 DestFile:'/var/cache/apt/archives/gpgv_2.2.4-1ubuntu1.2_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gpgv_2.2.4-1ubuntu1.2_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/gpgv_2.2.4-1ubuntu1.2_amd64.deb)
+found pkg: gpgv
+No conffiles in deb /var/cache/apt/archives/gpgv_2.2.4-1ubuntu1.2_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 4460 DestFile:'/var/cache/apt/archives/distro-info-data_0.37ubuntu0.2_all.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/d/distro-info-data/distro-info-data_0.37ubuntu0.2_all.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/distro-info-data_0.37ubuntu0.2_all.deb)
+found pkg: distro-info-data
+No conffiles in deb /var/cache/apt/archives/distro-info-data_0.37ubuntu0.2_all.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 1380 DestFile:'/var/cache/apt/archives/nplan_0.40.1~18.04.4_all.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/n/netplan.io/nplan_0.40.1~18.04.4_all.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/nplan_0.40.1~18.04.4_all.deb)
+found pkg: nplan
+No conffiles in deb /var/cache/apt/archives/nplan_0.40.1~18.04.4_all.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 532268 DestFile:'/var/cache/apt/archives/openssl_1.1.0g-2ubuntu4.3_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.0g-2ubuntu4.3_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/openssl_1.1.0g-2ubuntu4.3_amd64.deb)
+found pkg: openssl
+conffile line: /etc/ssl/openssl.cnf f697ef5df0d006882e6326606e8dbf4a
+current md5: f697ef5df0d006882e6326606e8dbf4a
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 189296 DestFile:'/var/cache/apt/archives/tzdata_2018i-0ubuntu0.18.04_all.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2018i-0ubuntu0.18.04_all.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/tzdata_2018i-0ubuntu0.18.04_all.deb)
+found pkg: tzdata
+No conffiles in deb /var/cache/apt/archives/tzdata_2018i-0ubuntu0.18.04_all.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 486664 DestFile:'/var/cache/apt/archives/apparmor_2.12-4ubuntu5.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/a/apparmor/apparmor_2.12-4ubuntu5.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/apparmor_2.12-4ubuntu5.1_amd64.deb)
+found pkg: apparmor
+conffile line: /etc/apparmor.d/abstractions/X e6facb406ee833df6d538f0060f5d99c
+current md5: e6facb406ee833df6d538f0060f5d99c
+conffile line: /etc/apparmor.d/abstractions/apache2-common a5e5f684da7023f93ffa8859d0c69223
+current md5: a5e5f684da7023f93ffa8859d0c69223
+conffile line: /etc/apparmor.d/abstractions/apparmor_api/change_profile 9f4c0a621f4939af15588b7fe670dfe7
+current md5: 9f4c0a621f4939af15588b7fe670dfe7
+conffile line: /etc/apparmor.d/abstractions/apparmor_api/examine f3b118b0344df2bcf4d18b81b45536bd
+current md5: f3b118b0344df2bcf4d18b81b45536bd
+conffile line: /etc/apparmor.d/abstractions/apparmor_api/find_mountpoint cf9e6513e00b441c0e3fbaf57b5c5110
+current md5: cf9e6513e00b441c0e3fbaf57b5c5110
+conffile line: /etc/apparmor.d/abstractions/apparmor_api/introspect 4c345c7e02de097f250c3ab12a442bed
+current md5: 4c345c7e02de097f250c3ab12a442bed
+conffile line: /etc/apparmor.d/abstractions/apparmor_api/is_enabled d98f1c1f3f41075007943f3ef072bd99
+current md5: d98f1c1f3f41075007943f3ef072bd99
+conffile line: /etc/apparmor.d/abstractions/aspell fdcbf54106fd1ee376d4ade77e720488
+current md5: fdcbf54106fd1ee376d4ade77e720488
+conffile line: /etc/apparmor.d/abstractions/audio e03512df51c7e1fa248edfc7fdc13c04
+current md5: e03512df51c7e1fa248edfc7fdc13c04
+conffile line: /etc/apparmor.d/abstractions/authentication 4ca6d1cf0d2d782f23059939670643c2
+current md5: 4ca6d1cf0d2d782f23059939670643c2
+conffile line: /etc/apparmor.d/abstractions/base e8df433c17efd6e769e3a4c5d6870cb0
+current md5: e8df433c17efd6e769e3a4c5d6870cb0
+conffile line: /etc/apparmor.d/abstractions/bash 4a5f51dc0fe10de2eba86b22351ae092
+current md5: 4a5f51dc0fe10de2eba86b22351ae092
+conffile line: /etc/apparmor.d/abstractions/consoles c7e6e00c4845e9afb877359691946386
+current md5: c7e6e00c4845e9afb877359691946386
+conffile line: /etc/apparmor.d/abstractions/cups-client ea86b52242df406f0bc955039f990006
+current md5: ea86b52242df406f0bc955039f990006
+conffile line: /etc/apparmor.d/abstractions/dbus db5bb2211ee5ecf1d2d4eb72c0e52617
+current md5: db5bb2211ee5ecf1d2d4eb72c0e52617
+conffile line: /etc/apparmor.d/abstractions/dbus-accessibility 1a9829023057d91f2f709b49ded37c87
+current md5: 1a9829023057d91f2f709b49ded37c87
+conffile line: /etc/apparmor.d/abstractions/dbus-accessibility-strict 0e07c997566b1d71b9287c0a3dcb1292
+current md5: 0e07c997566b1d71b9287c0a3dcb1292
+conffile line: /etc/apparmor.d/abstractions/dbus-session e9dabe52be01410c4e4c9a9e8ef9779d
+current md5: e9dabe52be01410c4e4c9a9e8ef9779d
+conffile line: /etc/apparmor.d/abstractions/dbus-session-strict 1b337318faff3bd439f86dfc4b040d1d
+current md5: 1b337318faff3bd439f86dfc4b040d1d
+conffile line: /etc/apparmor.d/abstractions/dbus-strict d2a901e0369ab95a244828e2d296276e
+current md5: d2a901e0369ab95a244828e2d296276e
+conffile line: /etc/apparmor.d/abstractions/dconf 02249fe91402fccef01161a61c557098
+current md5: 02249fe91402fccef01161a61c557098
+conffile line: /etc/apparmor.d/abstractions/dovecot-common 76f2f15c26a2a4f4ebe621848c696dcf
+current md5: 76f2f15c26a2a4f4ebe621848c696dcf
+conffile line: /etc/apparmor.d/abstractions/enchant a1ac9629b466be8a41cb5f87757f3363
+current md5: a1ac9629b466be8a41cb5f87757f3363
+conffile line: /etc/apparmor.d/abstractions/fcitx 3c43cb38623c123d8a64a02aae42b452
+current md5: 3c43cb38623c123d8a64a02aae42b452
+conffile line: /etc/apparmor.d/abstractions/fcitx-strict dbf5ff5b2fcbaa30bd47eb6789190485
+current md5: dbf5ff5b2fcbaa30bd47eb6789190485
+conffile line: /etc/apparmor.d/abstractions/fonts 8a01af3a688820730425d47b3e43d460
+current md5: 8a01af3a688820730425d47b3e43d460
+conffile line: /etc/apparmor.d/abstractions/freedesktop.org f375c96c79327c0efb7638e47c325493
+current md5: f375c96c79327c0efb7638e47c325493
+conffile line: /etc/apparmor.d/abstractions/gnome 71a02a4641599afd988a361dc09c34fb
+current md5: 71a02a4641599afd988a361dc09c34fb
+conffile line: /etc/apparmor.d/abstractions/gnupg 7cde476e7fc1b5e3ae1ff8a15f0bd524
+current md5: 7cde476e7fc1b5e3ae1ff8a15f0bd524
+conffile line: /etc/apparmor.d/abstractions/ibus 3e70b36c4931993a0a37d50fa6ddc1ec
+current md5: 3e70b36c4931993a0a37d50fa6ddc1ec
+conffile line: /etc/apparmor.d/abstractions/kde c51da7a01bb8eaa94410a6394c2d05c3
+current md5: c51da7a01bb8eaa94410a6394c2d05c3
+conffile line: /etc/apparmor.d/abstractions/kerberosclient 165918f6f7a43c7f8026ff330500a1ba
+current md5: 165918f6f7a43c7f8026ff330500a1ba
+conffile line: /etc/apparmor.d/abstractions/launchpad-integration 08239d10ba383041e97bc7f3962eb788
+current md5: 08239d10ba383041e97bc7f3962eb788
+conffile line: /etc/apparmor.d/abstractions/ldapclient f6d4bac77e72abbace3805ad95dc5fad
+current md5: f6d4bac77e72abbace3805ad95dc5fad
+conffile line: /etc/apparmor.d/abstractions/libpam-systemd fdeb09a6c1f0d201abfd5cd12262a3b7
+current md5: fdeb09a6c1f0d201abfd5cd12262a3b7
+conffile line: /etc/apparmor.d/abstractions/likewise eda6f01c5c1f1f09bc85a7f3a1d3ebaf
+current md5: eda6f01c5c1f1f09bc85a7f3a1d3ebaf
+conffile line: /etc/apparmor.d/abstractions/mdns d4959c984a530f8c682e31f34927d57e
+current md5: d4959c984a530f8c682e31f34927d57e
+conffile line: /etc/apparmor.d/abstractions/mir d40c45b5284efa1e7aa8e473bf3eaa63
+current md5: d40c45b5284efa1e7aa8e473bf3eaa63
+conffile line: /etc/apparmor.d/abstractions/mozc fde97592da93e4b4ec9667cc0a38cd11
+current md5: fde97592da93e4b4ec9667cc0a38cd11
+conffile line: /etc/apparmor.d/abstractions/mysql be34db29008a5c06387c6928b0536ecc
+current md5: be34db29008a5c06387c6928b0536ecc
+conffile line: /etc/apparmor.d/abstractions/nameservice 697598c38e71181cb9b7f5353fdc1360
+current md5: 697598c38e71181cb9b7f5353fdc1360
+conffile line: /etc/apparmor.d/abstractions/nis b2a829a4e26dd3ae92ec2f67536edc20
+current md5: b2a829a4e26dd3ae92ec2f67536edc20
+conffile line: /etc/apparmor.d/abstractions/nvidia cf1d22b35ec9d678ad037f7dcc09a876
+current md5: cf1d22b35ec9d678ad037f7dcc09a876
+conffile line: /etc/apparmor.d/abstractions/openssl 774ca398a166520a1cdb84d8b8a7b7dc
+current md5: 774ca398a166520a1cdb84d8b8a7b7dc
+conffile line: /etc/apparmor.d/abstractions/orbit2 98b6459f02e5c68e6ef83dced628ea5f
+current md5: 98b6459f02e5c68e6ef83dced628ea5f
+conffile line: /etc/apparmor.d/abstractions/p11-kit dc059947c11d3f353c380ca7547390ce
+current md5: dc059947c11d3f353c380ca7547390ce
+conffile line: /etc/apparmor.d/abstractions/perl 2efc405658e3cbcfdca9e95bfdecdcff
+current md5: 2efc405658e3cbcfdca9e95bfdecdcff
+conffile line: /etc/apparmor.d/abstractions/php 00a8102eef7749f675d988227ec3a4ff
+current md5: 00a8102eef7749f675d988227ec3a4ff
+conffile line: /etc/apparmor.d/abstractions/php5 491c7cb0bc6d38adbe874d782359ca33
+current md5: 491c7cb0bc6d38adbe874d782359ca33
+conffile line: /etc/apparmor.d/abstractions/postfix-common 01ab59eb3ee004960446eb8afbc48bcb
+current md5: 01ab59eb3ee004960446eb8afbc48bcb
+conffile line: /etc/apparmor.d/abstractions/private-files 4d537d0f24c3bfac9c056e01c1aa13d4
+current md5: 4d537d0f24c3bfac9c056e01c1aa13d4
+conffile line: /etc/apparmor.d/abstractions/private-files-strict 0887fef81cd5f0ece403a73b355a6992
+current md5: 0887fef81cd5f0ece403a73b355a6992
+conffile line: /etc/apparmor.d/abstractions/python f0686901654e561535195d6978929cb3
+current md5: f0686901654e561535195d6978929cb3
+conffile line: /etc/apparmor.d/abstractions/ruby 2747c396fa14819b92683e23e8f5a889
+current md5: 2747c396fa14819b92683e23e8f5a889
+conffile line: /etc/apparmor.d/abstractions/samba 159f66945be45a89c2d15d3353e1c4a1
+current md5: 159f66945be45a89c2d15d3353e1c4a1
+conffile line: /etc/apparmor.d/abstractions/smbpass b4d3be08dff2a9e3b4f1a18ddb65c63c
+current md5: b4d3be08dff2a9e3b4f1a18ddb65c63c
+conffile line: /etc/apparmor.d/abstractions/ssl_certs 5ab2ce340de889398d1d3564456c29c4
+current md5: 5ab2ce340de889398d1d3564456c29c4
+conffile line: /etc/apparmor.d/abstractions/ssl_keys 9a2a3a3daaaf3047bf17cb73a5eafcfb
+current md5: 9a2a3a3daaaf3047bf17cb73a5eafcfb
+conffile line: /etc/apparmor.d/abstractions/svn-repositories 8bc8a123d9ce516c53b818b8a4fc0ed1
+current md5: 8bc8a123d9ce516c53b818b8a4fc0ed1
+conffile line: /etc/apparmor.d/abstractions/ubuntu-bittorrent-clients 1398edfc93d57694774bcad9b83e6764
+current md5: 1398edfc93d57694774bcad9b83e6764
+conffile line: /etc/apparmor.d/abstractions/ubuntu-browsers 6b2d87ce410afa18803b2df40bf632d8
+current md5: 6b2d87ce410afa18803b2df40bf632d8
+conffile line: /etc/apparmor.d/abstractions/ubuntu-browsers.d/java aff8e6f00e172b20735f61969fb8ab59
+current md5: aff8e6f00e172b20735f61969fb8ab59
+conffile line: /etc/apparmor.d/abstractions/ubuntu-browsers.d/kde 15541761a5dbdc5ccd12e85e2afe4094
+current md5: 15541761a5dbdc5ccd12e85e2afe4094
+conffile line: /etc/apparmor.d/abstractions/ubuntu-browsers.d/mailto e60b3e4611a14d835d8b6fe0ffe27fc2
+current md5: e60b3e4611a14d835d8b6fe0ffe27fc2
+conffile line: /etc/apparmor.d/abstractions/ubuntu-browsers.d/multimedia a4d49472876b6cfc23530f853ce4c7ea
+current md5: a4d49472876b6cfc23530f853ce4c7ea
+conffile line: /etc/apparmor.d/abstractions/ubuntu-browsers.d/plugins-common 07e327f4e32e2333db1f609c87831b65
+current md5: 07e327f4e32e2333db1f609c87831b65
+conffile line: /etc/apparmor.d/abstractions/ubuntu-browsers.d/productivity dd54584ceece9aa1ee9c3c71418cd9ae
+current md5: dd54584ceece9aa1ee9c3c71418cd9ae
+conffile line: /etc/apparmor.d/abstractions/ubuntu-browsers.d/text-editors 006c96f21261b0c15e2f453527136973
+current md5: 006c96f21261b0c15e2f453527136973
+conffile line: /etc/apparmor.d/abstractions/ubuntu-browsers.d/ubuntu-integration a3146cbc94bc1d8172fa09135fb82d7c
+current md5: a3146cbc94bc1d8172fa09135fb82d7c
+conffile line: /etc/apparmor.d/abstractions/ubuntu-browsers.d/ubuntu-integration-xul a6d33002626e1d9a81a490e2f61509fa
+current md5: a6d33002626e1d9a81a490e2f61509fa
+conffile line: /etc/apparmor.d/abstractions/ubuntu-browsers.d/user-files 34dfa51211ac5aeed07e4ddae75c03fb
+current md5: 34dfa51211ac5aeed07e4ddae75c03fb
+conffile line: /etc/apparmor.d/abstractions/ubuntu-console-browsers d560f0509cdc8ffcdfa1dc115eee88f1
+current md5: d560f0509cdc8ffcdfa1dc115eee88f1
+conffile line: /etc/apparmor.d/abstractions/ubuntu-console-email 1ebfacc8ac5cfba7f3d59baceae52af8
+current md5: 1ebfacc8ac5cfba7f3d59baceae52af8
+conffile line: /etc/apparmor.d/abstractions/ubuntu-email 86920e7f6f3acbcd28b1d046d9de5a19
+current md5: 86920e7f6f3acbcd28b1d046d9de5a19
+conffile line: /etc/apparmor.d/abstractions/ubuntu-feed-readers b8eb233df01672f4941357487b39cda9
+current md5: b8eb233df01672f4941357487b39cda9
+conffile line: /etc/apparmor.d/abstractions/ubuntu-gnome-terminal 886de107666e17033b11aa3abb1ce054
+current md5: 886de107666e17033b11aa3abb1ce054
+conffile line: /etc/apparmor.d/abstractions/ubuntu-helpers ce2542f656f59509856e18b0afad3e0d
+current md5: ce2542f656f59509856e18b0afad3e0d
+conffile line: /etc/apparmor.d/abstractions/ubuntu-konsole 2ba4958d99c66160f118b5cda90b26c7
+current md5: 2ba4958d99c66160f118b5cda90b26c7
+conffile line: /etc/apparmor.d/abstractions/ubuntu-media-players ff25e51b62d2bf5146134ae3c6530c6b
+current md5: ff25e51b62d2bf5146134ae3c6530c6b
+conffile line: /etc/apparmor.d/abstractions/ubuntu-unity7-base 9adb20c938466802c326a75667d06a3f
+current md5: 9adb20c938466802c326a75667d06a3f
+conffile line: /etc/apparmor.d/abstractions/ubuntu-unity7-launcher 96f03042c5465f46ddadf15691507414
+current md5: 96f03042c5465f46ddadf15691507414
+conffile line: /etc/apparmor.d/abstractions/ubuntu-unity7-messaging 4b9196db0bc697cb80f7e211edc78ae0
+current md5: 4b9196db0bc697cb80f7e211edc78ae0
+conffile line: /etc/apparmor.d/abstractions/ubuntu-xterm bef5766269999b9e73ad6e11dd7930bd
+current md5: bef5766269999b9e73ad6e11dd7930bd
+conffile line: /etc/apparmor.d/abstractions/user-download 87e37fbec5bf0c055db102d71205e2a0
+current md5: 87e37fbec5bf0c055db102d71205e2a0
+conffile line: /etc/apparmor.d/abstractions/user-mail c9951880d0b3d64365a870320fbc4d50
+current md5: c9951880d0b3d64365a870320fbc4d50
+conffile line: /etc/apparmor.d/abstractions/user-manpages c59f25e289e9a426807ab5830136aa42
+current md5: c59f25e289e9a426807ab5830136aa42
+conffile line: /etc/apparmor.d/abstractions/user-tmp 93247b3296a7f0bff353eb9ee11fba06
+current md5: 93247b3296a7f0bff353eb9ee11fba06
+conffile line: /etc/apparmor.d/abstractions/user-write 5d5f3787434d3723fde32929c1496e49
+current md5: 5d5f3787434d3723fde32929c1496e49
+conffile line: /etc/apparmor.d/abstractions/video 2194baba2007ea20698441bc333f9446
+current md5: 2194baba2007ea20698441bc333f9446
+conffile line: /etc/apparmor.d/abstractions/wayland ba356d31c77b2505149d3635464f1f48
+current md5: ba356d31c77b2505149d3635464f1f48
+conffile line: /etc/apparmor.d/abstractions/web-data 36eb024800c81ef69733027f1a27a907
+current md5: 36eb024800c81ef69733027f1a27a907
+conffile line: /etc/apparmor.d/abstractions/winbind 3b37bfd8193e84c6d08809750346e7c1
+current md5: 3b37bfd8193e84c6d08809750346e7c1
+conffile line: /etc/apparmor.d/abstractions/wutmp 3cb05ef8e125c7c3edf00a505dd9e68f
+current md5: 3cb05ef8e125c7c3edf00a505dd9e68f
+conffile line: /etc/apparmor.d/abstractions/xad 0b2fdc7be71e977e240d77338f414ec7
+current md5: 0b2fdc7be71e977e240d77338f414ec7
+conffile line: /etc/apparmor.d/abstractions/xdg-desktop d891f70210acc01e42c525012a1c3fc6
+current md5: d891f70210acc01e42c525012a1c3fc6
+conffile line: /etc/apparmor.d/local/README b2c6b40577b4099c584cdf731f5aeb0b
+current md5: b2c6b40577b4099c584cdf731f5aeb0b
+conffile line: /etc/apparmor.d/tunables/alias 45dca5dd72a6c862d27caa936e6c00ad
+current md5: 45dca5dd72a6c862d27caa936e6c00ad
+conffile line: /etc/apparmor.d/tunables/apparmorfs 5797c1a5b267c3f51d983ab8daf8f587
+current md5: 5797c1a5b267c3f51d983ab8daf8f587
+conffile line: /etc/apparmor.d/tunables/dovecot 1b0d5ec63a9c87387142bdb2c94e7ede
+current md5: 1b0d5ec63a9c87387142bdb2c94e7ede
+conffile line: /etc/apparmor.d/tunables/global 9bfa12c972f13c06aeff3e7b59c65b89
+current md5: 9bfa12c972f13c06aeff3e7b59c65b89
+conffile line: /etc/apparmor.d/tunables/home ec0b11e815b30dc6fbf4d05a41aff9f5
+current md5: ec0b11e815b30dc6fbf4d05a41aff9f5
+conffile line: /etc/apparmor.d/tunables/home.d/site.local 3b274206fb06833ee3e151e351dad51b
+current md5: 3b274206fb06833ee3e151e351dad51b
+conffile line: /etc/apparmor.d/tunables/kernelvars e40785bf1c0ef9d0ee466672d7ce2177
+current md5: e40785bf1c0ef9d0ee466672d7ce2177
+conffile line: /etc/apparmor.d/tunables/multiarch 6ebecd63690d4a53f3e7ff6ae48941ca
+current md5: 6ebecd63690d4a53f3e7ff6ae48941ca
+conffile line: /etc/apparmor.d/tunables/multiarch.d/site.local 3c9eef1fbfb41fc452060086262e7bcb
+current md5: 3c9eef1fbfb41fc452060086262e7bcb
+conffile line: /etc/apparmor.d/tunables/proc ffaa055ceb36031c973ffaece22a5fc0
+current md5: ffaa055ceb36031c973ffaece22a5fc0
+conffile line: /etc/apparmor.d/tunables/securityfs bb3695a39a1bb8a5399f76b95bacc40f
+current md5: bb3695a39a1bb8a5399f76b95bacc40f
+conffile line: /etc/apparmor.d/tunables/sys ba0699f2f961179a3352cb3de3e9f586
+current md5: ba0699f2f961179a3352cb3de3e9f586
+conffile line: /etc/apparmor.d/tunables/xdg-user-dirs 602eaa969d2dfa00a0ec16eed9b60b7f
+current md5: 602eaa969d2dfa00a0ec16eed9b60b7f
+conffile line: /etc/apparmor/parser.conf 8fed7a9ec65d4f695e2aa14faf261c8b
+current md5: 8fed7a9ec65d4f695e2aa14faf261c8b
+conffile line: /etc/apparmor/subdomain.conf df4dade439e2786fd1d227c99164563d
+current md5: df4dade439e2786fd1d227c99164563d
+conffile line: /etc/init.d/apparmor 458ba0335ba2c1c2dce836092bc736d6
+current md5: 458ba0335ba2c1c2dce836092bc736d6
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 50128 DestFile:'/var/cache/apt/archives/gettext-base_0.19.8.1-6ubuntu0.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/g/gettext/gettext-base_0.19.8.1-6ubuntu0.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/gettext-base_0.19.8.1-6ubuntu0.1_amd64.deb)
+found pkg: gettext-base
+No conffiles in deb /var/cache/apt/archives/gettext-base_0.19.8.1-6ubuntu0.1_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 1087768 DestFile:'/var/cache/apt/archives/libssl1.0.0_1.0.2n-1ubuntu5.2_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/o/openssl1.0/libssl1.0.0_1.0.2n-1ubuntu5.2_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/libssl1.0.0_1.0.2n-1ubuntu5.2_amd64.deb)
+found pkg: libssl1.0.0
+No conffiles in deb /var/cache/apt/archives/libssl1.0.0_1.0.2n-1ubuntu5.2_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 113460 DestFile:'/var/cache/apt/archives/libx11-data_2%3a1.6.4-3ubuntu0.1_all.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11-data_1.6.4-3ubuntu0.1_all.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/libx11-data_2%3a1.6.4-3ubuntu0.1_all.deb)
+found pkg: libx11-data
+No conffiles in deb /var/cache/apt/archives/libx11-data_2%3a1.6.4-3ubuntu0.1_all.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 571404 DestFile:'/var/cache/apt/archives/libx11-6_2%3a1.6.4-3ubuntu0.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11-6_1.6.4-3ubuntu0.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/libx11-6_2%3a1.6.4-3ubuntu0.1_amd64.deb)
+found pkg: libx11-6
+No conffiles in deb /var/cache/apt/archives/libx11-6_2%3a1.6.4-3ubuntu0.1_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 802888 DestFile:'/var/cache/apt/archives/git-man_1%3a2.17.1-1ubuntu0.4_all.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/g/git/git-man_2.17.1-1ubuntu0.4_all.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/git-man_1%3a2.17.1-1ubuntu0.4_all.deb)
+found pkg: git-man
+No conffiles in deb /var/cache/apt/archives/git-man_1%3a2.17.1-1ubuntu0.4_all.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 212408 DestFile:'/var/cache/apt/archives/libcurl3-gnutls_7.58.0-2ubuntu3.5_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/c/curl/libcurl3-gnutls_7.58.0-2ubuntu3.5_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/libcurl3-gnutls_7.58.0-2ubuntu3.5_amd64.deb)
+found pkg: libcurl3-gnutls
+No conffiles in deb /var/cache/apt/archives/libcurl3-gnutls_7.58.0-2ubuntu3.5_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 3907168 DestFile:'/var/cache/apt/archives/git_1%3a2.17.1-1ubuntu0.4_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.17.1-1ubuntu0.4_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/git_1%3a2.17.1-1ubuntu0.4_amd64.deb)
+found pkg: git
+conffile line: /etc/bash_completion.d/git-prompt 7baac5c3ced94ebf2c0e1dde65c3b1a6
+current md5: 7baac5c3ced94ebf2c0e1dde65c3b1a6
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 45468 DestFile:'/var/cache/apt/archives/openssh-sftp-server_1%3a7.6p1-4ubuntu0.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh-sftp-server_7.6p1-4ubuntu0.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/openssh-sftp-server_1%3a7.6p1-4ubuntu0.1_amd64.deb)
+found pkg: openssh-sftp-server
+No conffiles in deb /var/cache/apt/archives/openssh-sftp-server_1%3a7.6p1-4ubuntu0.1_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 332460 DestFile:'/var/cache/apt/archives/openssh-server_1%3a7.6p1-4ubuntu0.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh-server_7.6p1-4ubuntu0.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/openssh-server_1%3a7.6p1-4ubuntu0.1_amd64.deb)
+found pkg: openssh-server
+conffile line: /etc/default/ssh 500e3cf069fe9a7b9936108eb9d9c035
+current md5: 500e3cf069fe9a7b9936108eb9d9c035
+conffile line: /etc/init.d/ssh 64d52dbd33144a38e8d4a837f6cec726
+current md5: 64d52dbd33144a38e8d4a837f6cec726
+conffile line: /etc/network/if-up.d/openssh-server 12a34c77b9032e5b23a63782fcc03fef
+current md5: 12a34c77b9032e5b23a63782fcc03fef
+conffile line: /etc/pam.d/sshd 8b4c7a12b031424b2a9946881da59812
+current md5: 8b4c7a12b031424b2a9946881da59812
+conffile line: /etc/ufw/applications.d/openssh-server 486b78d54b93cc9fdc950c1d52ff479e
+current md5: 486b78d54b93cc9fdc950c1d52ff479e
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 611664 DestFile:'/var/cache/apt/archives/openssh-client_1%3a7.6p1-4ubuntu0.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh-client_7.6p1-4ubuntu0.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/openssh-client_1%3a7.6p1-4ubuntu0.1_amd64.deb)
+found pkg: openssh-client
+conffile line: /etc/ssh/moduli fe5be9e1b2ad5c55132a3521ecaadcdd
+current md5: fe5be9e1b2ad5c55132a3521ecaadcdd
+conffile line: /etc/ssh/ssh_config f7bf238a3b0bf155c565454a9f819731
+current md5: 8591d9389aa8af4ffb4ff98274efd4b0
+pkg_md5sum: f7bf238a3b0bf155c565454a9f819731
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 158980 DestFile:'/var/cache/apt/archives/curl_7.58.0-2ubuntu3.5_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.58.0-2ubuntu3.5_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/curl_7.58.0-2ubuntu3.5_amd64.deb)
+found pkg: curl
+No conffiles in deb /var/cache/apt/archives/curl_7.58.0-2ubuntu3.5_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 213796 DestFile:'/var/cache/apt/archives/libcurl4_7.58.0-2ubuntu3.5_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/c/curl/libcurl4_7.58.0-2ubuntu3.5_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/libcurl4_7.58.0-2ubuntu3.5_amd64.deb)
+found pkg: libcurl4
+No conffiles in deb /var/cache/apt/archives/libcurl4_7.58.0-2ubuntu3.5_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 118136 DestFile:'/var/cache/apt/archives/php7.2-mysql_7.2.10-0ubuntu0.18.04.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/p/php7.2/php7.2-mysql_7.2.10-0ubuntu0.18.04.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/php7.2-mysql_7.2.10-0ubuntu0.18.04.1_amd64.deb)
+found pkg: php7.2-mysql
+No conffiles in deb /var/cache/apt/archives/php7.2-mysql_7.2.10-0ubuntu0.18.04.1_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 164564 DestFile:'/var/cache/apt/archives/php7.2-opcache_7.2.10-0ubuntu0.18.04.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/p/php7.2/php7.2-opcache_7.2.10-0ubuntu0.18.04.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/php7.2-opcache_7.2.10-0ubuntu0.18.04.1_amd64.deb)
+found pkg: php7.2-opcache
+No conffiles in deb /var/cache/apt/archives/php7.2-opcache_7.2.10-0ubuntu0.18.04.1_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 18812 DestFile:'/var/cache/apt/archives/php7.2-json_7.2.10-0ubuntu0.18.04.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/p/php7.2/php7.2-json_7.2.10-0ubuntu0.18.04.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/php7.2-json_7.2.10-0ubuntu0.18.04.1_amd64.deb)
+found pkg: php7.2-json
+No conffiles in deb /var/cache/apt/archives/php7.2-json_7.2.10-0ubuntu0.18.04.1_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 5620 DestFile:'/var/cache/apt/archives/php7.2-recode_7.2.10-0ubuntu0.18.04.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/p/php7.2/php7.2-recode_7.2.10-0ubuntu0.18.04.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/php7.2-recode_7.2.10-0ubuntu0.18.04.1_amd64.deb)
+found pkg: php7.2-recode
+No conffiles in deb /var/cache/apt/archives/php7.2-recode_7.2.10-0ubuntu0.18.04.1_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 12136 DestFile:'/var/cache/apt/archives/php7.2-readline_7.2.10-0ubuntu0.18.04.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/p/php7.2/php7.2-readline_7.2.10-0ubuntu0.18.04.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/php7.2-readline_7.2.10-0ubuntu0.18.04.1_amd64.deb)
+found pkg: php7.2-readline
+No conffiles in deb /var/cache/apt/archives/php7.2-readline_7.2.10-0ubuntu0.18.04.1_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 10216 DestFile:'/var/cache/apt/archives/php7.2-bz2_7.2.10-0ubuntu0.18.04.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/universe/p/php7.2/php7.2-bz2_7.2.10-0ubuntu0.18.04.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/php7.2-bz2_7.2.10-0ubuntu0.18.04.1_amd64.deb)
+found pkg: php7.2-bz2
+No conffiles in deb /var/cache/apt/archives/php7.2-bz2_7.2.10-0ubuntu0.18.04.1_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 483088 DestFile:'/var/cache/apt/archives/php7.2-mbstring_7.2.10-0ubuntu0.18.04.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/universe/p/php7.2/php7.2-mbstring_7.2.10-0ubuntu0.18.04.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/php7.2-mbstring_7.2.10-0ubuntu0.18.04.1_amd64.deb)
+found pkg: php7.2-mbstring
+No conffiles in deb /var/cache/apt/archives/php7.2-mbstring_7.2.10-0ubuntu0.18.04.1_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 16888 DestFile:'/var/cache/apt/archives/php7.2-tidy_7.2.10-0ubuntu0.18.04.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/p/php7.2/php7.2-tidy_7.2.10-0ubuntu0.18.04.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/php7.2-tidy_7.2.10-0ubuntu0.18.04.1_amd64.deb)
+found pkg: php7.2-tidy
+No conffiles in deb /var/cache/apt/archives/php7.2-tidy_7.2.10-0ubuntu0.18.04.1_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 28888 DestFile:'/var/cache/apt/archives/php7.2-curl_7.2.10-0ubuntu0.18.04.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/p/php7.2/php7.2-curl_7.2.10-0ubuntu0.18.04.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/php7.2-curl_7.2.10-0ubuntu0.18.04.1_amd64.deb)
+found pkg: php7.2-curl
+No conffiles in deb /var/cache/apt/archives/php7.2-curl_7.2.10-0ubuntu0.18.04.1_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 28936 DestFile:'/var/cache/apt/archives/php7.2-imap_7.2.10-0ubuntu0.18.04.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/universe/p/php7.2/php7.2-imap_7.2.10-0ubuntu0.18.04.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/php7.2-imap_7.2.10-0ubuntu0.18.04.1_amd64.deb)
+found pkg: php7.2-imap
+No conffiles in deb /var/cache/apt/archives/php7.2-imap_7.2.10-0ubuntu0.18.04.1_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 20336 DestFile:'/var/cache/apt/archives/php7.2-zip_7.2.10-0ubuntu0.18.04.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/universe/p/php7.2/php7.2-zip_7.2.10-0ubuntu0.18.04.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/php7.2-zip_7.2.10-0ubuntu0.18.04.1_amd64.deb)
+found pkg: php7.2-zip
+No conffiles in deb /var/cache/apt/archives/php7.2-zip_7.2.10-0ubuntu0.18.04.1_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 12740 DestFile:'/var/cache/apt/archives/php7.2-xmlrpc_7.2.10-0ubuntu0.18.04.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/p/php7.2/php7.2-xmlrpc_7.2.10-0ubuntu0.18.04.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/php7.2-xmlrpc_7.2.10-0ubuntu0.18.04.1_amd64.deb)
+found pkg: php7.2-xmlrpc
+No conffiles in deb /var/cache/apt/archives/php7.2-xmlrpc_7.2.10-0ubuntu0.18.04.1_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 107136 DestFile:'/var/cache/apt/archives/php7.2-xml_7.2.10-0ubuntu0.18.04.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/p/php7.2/php7.2-xml_7.2.10-0ubuntu0.18.04.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/php7.2-xml_7.2.10-0ubuntu0.18.04.1_amd64.deb)
+found pkg: php7.2-xml
+No conffiles in deb /var/cache/apt/archives/php7.2-xml_7.2.10-0ubuntu0.18.04.1_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 118720 DestFile:'/var/cache/apt/archives/libgd3_2.2.5-4ubuntu0.2_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/libg/libgd2/libgd3_2.2.5-4ubuntu0.2_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/libgd3_2.2.5-4ubuntu0.2_amd64.deb)
+found pkg: libgd3
+No conffiles in deb /var/cache/apt/archives/libgd3_2.2.5-4ubuntu0.2_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 27132 DestFile:'/var/cache/apt/archives/php7.2-gd_7.2.10-0ubuntu0.18.04.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/p/php7.2/php7.2-gd_7.2.10-0ubuntu0.18.04.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/php7.2-gd_7.2.10-0ubuntu0.18.04.1_amd64.deb)
+found pkg: php7.2-gd
+No conffiles in deb /var/cache/apt/archives/php7.2-gd_7.2.10-0ubuntu0.18.04.1_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 1348992 DestFile:'/var/cache/apt/archives/libapache2-mod-php7.2_7.2.10-0ubuntu0.18.04.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/p/php7.2/libapache2-mod-php7.2_7.2.10-0ubuntu0.18.04.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/libapache2-mod-php7.2_7.2.10-0ubuntu0.18.04.1_amd64.deb)
+found pkg: libapache2-mod-php7.2
+conffile line: /etc/apache2/mods-available/php7.2.conf ad48fb8185ef5a0054b3d42dd69ddd83
+current md5: ad48fb8185ef5a0054b3d42dd69ddd83
+conffile line: /etc/apache2/mods-available/php7.2.load 1790052956cac6a431bea6593ebdbfb4
+current md5: 1790052956cac6a431bea6593ebdbfb4
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 1404696 DestFile:'/var/cache/apt/archives/php7.2-cli_7.2.10-0ubuntu0.18.04.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/p/php7.2/php7.2-cli_7.2.10-0ubuntu0.18.04.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/php7.2-cli_7.2.10-0ubuntu0.18.04.1_amd64.deb)
+found pkg: php7.2-cli
+No conffiles in deb /var/cache/apt/archives/php7.2-cli_7.2.10-0ubuntu0.18.04.1_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 877912 DestFile:'/var/cache/apt/archives/php7.2-common_7.2.10-0ubuntu0.18.04.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/p/php7.2/php7.2-common_7.2.10-0ubuntu0.18.04.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/php7.2-common_7.2.10-0ubuntu0.18.04.1_amd64.deb)
+found pkg: php7.2-common
+No conffiles in deb /var/cache/apt/archives/php7.2-common_7.2.10-0ubuntu0.18.04.1_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 37408 DestFile:'/var/cache/apt/archives/libmspack0_0.6-3ubuntu0.2_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/libm/libmspack/libmspack0_0.6-3ubuntu0.2_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/libmspack0_0.6-3ubuntu0.2_amd64.deb)
+found pkg: libmspack0
+No conffiles in deb /var/cache/apt/archives/libmspack0_0.6-3ubuntu0.2_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 817136 DestFile:'/var/cache/apt/archives/libmysqlclient20_5.7.24-0ubuntu0.18.04.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/libmysqlclient20_5.7.24-0ubuntu0.18.04.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/libmysqlclient20_5.7.24-0ubuntu0.18.04.1_amd64.deb)
+found pkg: libmysqlclient20
+No conffiles in deb /var/cache/apt/archives/libmysqlclient20_5.7.24-0ubuntu0.18.04.1_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 1134912 DestFile:'/var/cache/apt/archives/libnss3_2%3a3.35-2ubuntu2.1_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/n/nss/libnss3_3.35-2ubuntu2.1_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/libnss3_2%3a3.35-2ubuntu2.1_amd64.deb)
+found pkg: libnss3
+No conffiles in deb /var/cache/apt/archives/libnss3_2%3a3.35-2ubuntu2.1_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 12825592 DestFile:'/var/cache/apt/archives/linux-modules-4.15.0-1026-gcp_4.15.0-1026.27_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/l/linux-gcp/linux-modules-4.15.0-1026-gcp_4.15.0-1026.27_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/linux-modules-4.15.0-1026-gcp_4.15.0-1026.27_amd64.deb)
+No conffiles in deb /var/cache/apt/archives/linux-modules-4.15.0-1026-gcp_4.15.0-1026.27_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 7866936 DestFile:'/var/cache/apt/archives/linux-image-4.15.0-1026-gcp_4.15.0-1026.27_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/l/linux-signed-gcp/linux-image-4.15.0-1026-gcp_4.15.0-1026.27_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/linux-image-4.15.0-1026-gcp_4.15.0-1026.27_amd64.deb)
+No conffiles in deb /var/cache/apt/archives/linux-image-4.15.0-1026-gcp_4.15.0-1026.27_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 1880 DestFile:'/var/cache/apt/archives/linux-gcp_4.15.0.1026.28_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/l/linux-meta-gcp/linux-gcp_4.15.0.1026.28_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/linux-gcp_4.15.0.1026.28_amd64.deb)
+found pkg: linux-gcp
+No conffiles in deb /var/cache/apt/archives/linux-gcp_4.15.0.1026.28_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 2444 DestFile:'/var/cache/apt/archives/linux-image-gcp_4.15.0.1026.28_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/l/linux-meta-gcp/linux-image-gcp_4.15.0.1026.28_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/linux-image-gcp_4.15.0.1026.28_amd64.deb)
+found pkg: linux-image-gcp
+No conffiles in deb /var/cache/apt/archives/linux-image-gcp_4.15.0.1026.28_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 11003228 DestFile:'/var/cache/apt/archives/linux-gcp-headers-4.15.0-1026_4.15.0-1026.27_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/l/linux-gcp/linux-gcp-headers-4.15.0-1026_4.15.0-1026.27_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/linux-gcp-headers-4.15.0-1026_4.15.0-1026.27_amd64.deb)
+No conffiles in deb /var/cache/apt/archives/linux-gcp-headers-4.15.0-1026_4.15.0-1026.27_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 1137416 DestFile:'/var/cache/apt/archives/linux-headers-4.15.0-1026-gcp_4.15.0-1026.27_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/l/linux-gcp/linux-headers-4.15.0-1026-gcp_4.15.0-1026.27_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/linux-headers-4.15.0-1026-gcp_4.15.0-1026.27_amd64.deb)
+No conffiles in deb /var/cache/apt/archives/linux-headers-4.15.0-1026-gcp_4.15.0-1026.27_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 2444 DestFile:'/var/cache/apt/archives/linux-headers-gcp_4.15.0.1026.28_amd64.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/l/linux-meta-gcp/linux-headers-gcp_4.15.0.1026.28_amd64.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/linux-headers-gcp_4.15.0.1026.28_amd64.deb)
+found pkg: linux-headers-gcp
+No conffiles in deb /var/cache/apt/archives/linux-headers-gcp_4.15.0.1026.28_amd64.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 9948 DestFile:'/var/cache/apt/archives/mysql-server_5.7.24-0ubuntu0.18.04.1_all.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-server_5.7.24-0ubuntu0.18.04.1_all.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/mysql-server_5.7.24-0ubuntu0.18.04.1_all.deb)
+found pkg: mysql-server
+No conffiles in deb /var/cache/apt/archives/mysql-server_5.7.24-0ubuntu0.18.04.1_all.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 9248 DestFile:'/var/cache/apt/archives/php7.2_7.2.10-0ubuntu0.18.04.1_all.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/p/php7.2/php7.2_7.2.10-0ubuntu0.18.04.1_all.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/php7.2_7.2.10-0ubuntu0.18.04.1_all.deb)
+found pkg: php7.2
+No conffiles in deb /var/cache/apt/archives/php7.2_7.2.10-0ubuntu0.18.04.1_all.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 58496 DestFile:'/var/cache/apt/archives/python-requests_2.18.4-2ubuntu0.1_all.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/r/requests/python-requests_2.18.4-2ubuntu0.1_all.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/python-requests_2.18.4-2ubuntu0.1_all.deb)
+found pkg: python-requests
+No conffiles in deb /var/cache/apt/archives/python-requests_2.18.4-2ubuntu0.1_all.deb (There is no member named 'conffiles')
+<apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 58328 DestFile:'/var/cache/apt/archives/python3-requests_2.18.4-2ubuntu0.1_all.deb' DescURI: 'http://us-east1.gce.archive.ubuntu.com/ubuntu/pool/main/r/requests/python3-requests_2.18.4-2ubuntu0.1_all.deb' ID:0 ErrorText: ''>
+check_conffile_prompt(/var/cache/apt/archives/python3-requests_2.18.4-2ubuntu0.1_all.deb)
+found pkg: python3-requests
+No conffiles in deb /var/cache/apt/archives/python3-requests_2.18.4-2ubuntu0.1_all.deb (There is no member named 'conffiles')
+blacklist: []
+whitelist: []
+Option --dry-run given, *not* performing real actions
+Packages that will be upgraded: apparmor curl dirmngr distro-info-data gettext-base git git-man gnupg gnupg-l10n gnupg-utils gpg gpg-agent gpg-wks-client gpg-wks-server gpgconf gpgsm gpgv initramfs-tools initramfs-tools-bin initramfs-tools-core libapache2-mod-php7.2 libapparmor1 libcurl3-gnutls libcurl4 libgd3 libmspack0 libmysqlclient20 libnss-systemd libnss3 libpam-systemd libperl5.26 libpython2.7 libpython2.7-minimal libpython2.7-stdlib libssl1.0.0 libssl1.1 libsystemd0 libudev1 libx11-6 libx11-data linux-gcp linux-headers-gcp linux-image-gcp mysql-client-5.7 mysql-client-core-5.7 mysql-server mysql-server-5.7 mysql-server-core-5.7 netplan.io nplan openssh-client openssh-server openssh-sftp-server openssl perl perl-base perl-modules-5.26 php7.2 php7.2-bz2 php7.2-cli php7.2-common php7.2-curl php7.2-gd php7.2-imap php7.2-json php7.2-mbstring php7.2-mysql php7.2-opcache php7.2-readline php7.2-recode php7.2-tidy php7.2-xml php7.2-xmlrpc php7.2-zip python-requests python2.7 python2.7-minimal python3-requests systemd systemd-sysv tzdata udev
+Writing dpkg log to /var/log/unattended-upgrades/unattended-upgrades-dpkg.log
+Exception: E:Error, pkgProblemResolver::Resolve generated breaks, this may be caused by held packages.
+Cache has broken packages, exiting
+Cache has broken packages, exiting
+EOF
+		exit 1
+		;;
+esac
