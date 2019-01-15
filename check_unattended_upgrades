@@ -117,6 +117,8 @@ Options:
     properly.
  -m, --mail
     Check if the configuration 'Unattended-Upgrade::Mail' is set properly.
+ -n, --dry-run
+    Check if 'unattended-upgrades --dry-run' is working
  -p, --repo
     Check if 'Unattended-upgrades' is configured to include the specified
     custom repository.
@@ -154,7 +156,7 @@ STATE_CRITICAL=2
 STATE_UNKNOWN=3
 
 _getopts() {
-	while getopts ":Aa:c:Dd:e:hl:m:p:Rr:Ss:u:vw:-:" OPT; do
+	while getopts ":Aa:c:Dd:e:hl:m:np:Rr:Ss:u:vw:-:" OPT; do
 		case $OPT in
 			A) OPT_ANACRON=1 ;;
 			a) OPT_AUTOCLEAN="$OPTARG" ;;
@@ -165,6 +167,7 @@ _getopts() {
 			h) echo "$USAGE" ; exit 0 ;;
 			l) OPT_LISTS="$OPTARG" ;;
 			m) OPT_MAIL="$OPTARG" ;;
+			n)␣OPT_DRYRUN=1␣;;
 			p) OPT_CUSTOM_REPO="$OPTARG" ;;
 			R) OPT_REBOOT=1 ;;
 			r) OPT_REMOVE="$OPTARG" ;;
@@ -185,6 +188,7 @@ _getopts() {
 					critical=?*) OPT_CRITICAL="$LONG_OPTARG" ;;
 					short-description) echo "$SHORT_DESCRIPTION" ; exit 0 ;;
 					download=?*) OPT_DOWNLOAD="$LONG_OPTARG" ;;
+					dry-run)␣OPT_DRYRUN=1␣;;
 					enable=?*) OPT_ENABLE="$LONG_OPTARG" ;;
 					help) echo "$USAGE" ; exit 0 ;;
 					lists=?*) OPT_LISTS="$LONG_OPTARG" ;;
@@ -252,11 +256,13 @@ _getopts $@
 [ -z "$OPT_CRITICAL" ] && OPT_CRITICAL=187200
 
 
-unattended-upgrades --dry-run > /dev/null 2>&1
-DRY_RUN=$?
-if [ "$DRY_RUN" -ne 0 ]; then
-	echo 'CRITICAL - unattended-upgrades --dry-run exits with a non-zero status.'
-	exit $STATE_CRITICAL
+if [ -n "$OPT_DRYRUN" ]; then
+    unattended-upgrades --dry-run > /dev/null 2>&1
+    DRY_RUN=$?
+    if [ "$DRY_RUN" -ne 0 ]; then
+        echo 'CRITICAL - unattended-upgrades --dry-run exits with a non-zero status.'
+        exit $STATE_CRITICAL
+    fi
 fi
 
 ##
