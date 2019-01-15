@@ -371,17 +371,19 @@ if [ -z "$LOG_TEXT" ]; then
 	LOG_TEXT="$(zcat $LATEST_COMPRESSED_LOG)"
 fi
 
-if [ -z "$(cat $LOG_TEXT | tail -n 1 | grep -v ' ERROR ')" ]; then
+# added -s check because it returns error on an empty file
+if [ -s $LOG_FILE ] && [ -z "$(tail -n 1 $LOG_FILE | grep -v ' ERROR ')" ]; then
 	echo "CRITICAL - The last line in the log file is an ERROR message."
 	exit $STATE_CRITICAL
 fi
 
-if [ -z "$(cat $LOG_TEXT | tail -n 1 | grep -v ' WARNING ')" ]; then
+# added -s check because it returns error on an empty file
+if [ -s $LOG_FILE ] && [ -z "$(tail -n 1 $LOG_FILE | grep -v ' WARNING ')" ]; then
 	echo "WARNING - The last line in the log file is a WARNING message."
 	exit $STATE_WARNING
 fi
 
-LAST_LOG_LINE="$(cat $LOG_TEXT | grep -v ' WARNING ' | grep -v ' ERROR ' | tail -n 1)"
+LAST_LOG_LINE="$(echo $LOG_TEXT | grep -v ' WARNING ' | grep -v ' ERROR ' | tail -n 1)"
 
 LAST_RUN_DATE=$(echo $LAST_LOG_LINE | cut -d "," -f 1)
 
