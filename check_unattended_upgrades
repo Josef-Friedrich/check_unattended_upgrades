@@ -167,7 +167,7 @@ _getopts() {
 			h) echo "$USAGE" ; exit 0 ;;
 			l) OPT_LISTS="$OPTARG" ;;
 			m) OPT_MAIL="$OPTARG" ;;
-			n)␣OPT_DRYRUN=1␣;;
+			n) OPT_DRYRUN=1 ;;
 			p) OPT_CUSTOM_REPO="$OPTARG" ;;
 			R) OPT_REBOOT=1 ;;
 			r) OPT_REMOVE="$OPTARG" ;;
@@ -188,7 +188,7 @@ _getopts() {
 					critical=?*) OPT_CRITICAL="$LONG_OPTARG" ;;
 					short-description) echo "$SHORT_DESCRIPTION" ; exit 0 ;;
 					download=?*) OPT_DOWNLOAD="$LONG_OPTARG" ;;
-					dry-run)␣OPT_DRYRUN=1␣;;
+					dry-run) OPT_DRYRUN=1 ;;
 					enable=?*) OPT_ENABLE="$LONG_OPTARG" ;;
 					help) echo "$USAGE" ; exit 0 ;;
 					lists=?*) OPT_LISTS="$LONG_OPTARG" ;;
