@@ -41,6 +41,8 @@ Options:
     properly.
  -m, --mail
     Check if the configuration 'Unattended-Upgrade::Mail' is set properly.
+ -n, --dry-run
+    Check if 'unattended-upgrades --dry-run' is working
  -p, --repo
     Check if 'Unattended-upgrades' is configured to include the specified
     custom repository.
