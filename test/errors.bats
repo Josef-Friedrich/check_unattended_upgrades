@@ -6,9 +6,16 @@ setup() {
 	patch check_unattended_upgrades 's/ test / test_patched /g'
 }
 
+@test "CRITICAL caused by non-zero status of unattended-upgrades --dry-run, short opt" {
+	mock_path test/bin/errors
+	run ./check_unattended_upgrades_patched -n
+	[ "$status" -eq 2 ]
+	[ "${lines[0]}" = 'CRITICAL - unattended-upgrades --dry-run exits with a non-zero status.' ]
+}
+
 @test "CRITICAL caused by non-zero status of unattended-upgrades --dry-run" {
 	mock_path test/bin/errors
-	run ./check_unattended_upgrades_patched
+	run ./check_unattended_upgrades_patched --dry-run
 	[ "$status" -eq 2 ]
 	[ "${lines[0]}" = 'CRITICAL - unattended-upgrades --dry-run exits with a non-zero status.' ]
 }
