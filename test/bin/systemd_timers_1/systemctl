@@ -1,0 +1,13 @@
+#! /bin/sh
+
+case $@ in
+	'is-enabled apt-daily.timer')
+        echo disabled
+		exit 1
+		;;
+
+	*)
+        echo enabled
+		exit 0
+		;;
+esac
