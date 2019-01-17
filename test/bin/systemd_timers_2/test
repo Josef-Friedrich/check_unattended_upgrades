@@ -1,0 +1,8 @@
+#! /bin/sh
+
+case $@ in
+	'-d /run/systemd/system')
+		exit 0
+		;;
+
+esac

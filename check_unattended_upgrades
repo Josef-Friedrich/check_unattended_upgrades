@@ -244,7 +244,7 @@ but it should have the value “$DEBIT”."
 _check_systemd_timer () {
 	local TIMER=$1
 
-    if [ -d /run/systemd/system ]; then
+    if test -d /run/systemd/system ; then
         if ! systemctl is-enabled $TIMER 1>/dev/null  2>/dev/null; then
 		    echo "CRITICAL - Systemd timer $TIMER is not enabled."
 		    exit $STATE_CRITICAL
