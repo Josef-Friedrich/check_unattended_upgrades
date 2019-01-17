@@ -238,6 +238,17 @@ but it should have the value “$DEBIT”."
 	fi
 }
 
+_check_systemd_timer () {
+	local TIMER=$1
+
+    if [ -d /run/systemd/system ]; then
+        if ! systemctl is-enabled $TIMER &>/dev/null ; then
+		    echo "CRITICAL - Systemd timer $TIMER is not enabled."
+		    exit $STATE_CRITICAL
+	    fi
+    fi
+}
+
 _performance_data() {
 	echo "| \
 last_ago=$DIFF \
@@ -289,6 +300,7 @@ if which apt-config > /dev/null 2>&1; then
 	# -u
 	if [ -n "$OPT_UNATTENDED" ]; then
 		_check_config "APT::Periodic::Unattended-Upgrade" $OPT_UNATTENDED
+        _check_systemd_timer apt-daily-upgrade.timer
 	fi
 
 	# -m
@@ -314,6 +326,7 @@ if which apt-config > /dev/null 2>&1; then
 	# -l
 	if [ -n "$OPT_LISTS" ]; then
 		_check_config "APT::Periodic::Update-Package-Lists" $OPT_LISTS
+        _check_systemd_timer apt-daily.timer
 	fi
 
 	# -a
