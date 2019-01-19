@@ -194,6 +194,23 @@ setup() {
 	[ "$status" -eq 3 ]
 }
 
+# -n
+
+@test "_getopts -n" {
+	_getopts -n
+	[ "$OPT_DRY_RUN" -eq 1 ]
+}
+
+@test "_getopts --dry-run" {
+	_getopts --dry-run
+	[ "$OPT_DRY_RUN" -eq 1 ]
+}
+
+@test "_getopts --dry-run=123" {
+	run _getopts --dry-run=123
+	[ "$status" -eq 4 ]
+}
+
 # -p
 
 @test "_getopts -p 123" {

@@ -169,7 +169,7 @@ _getopts() {
 			h) echo "$USAGE" ; exit 0 ;;
 			l) OPT_LISTS="$OPTARG" ;;
 			m) OPT_MAIL="$OPTARG" ;;
-			n) OPT_DRYRUN=1 ;;
+			n) OPT_DRY_RUN=1 ;;
 			p) OPT_CUSTOM_REPO="$OPTARG" ;;
 			R) OPT_REBOOT=1 ;;
 			r) OPT_REMOVE="$OPTARG" ;;
@@ -191,7 +191,7 @@ _getopts() {
 					critical=?*) OPT_CRITICAL="$LONG_OPTARG" ;;
 					short-description) echo "$SHORT_DESCRIPTION" ; exit 0 ;;
 					download=?*) OPT_DOWNLOAD="$LONG_OPTARG" ;;
-					dry-run) OPT_DRYRUN=1 ;;
+					dry-run) OPT_DRY_RUN=1 ;;
 					enable=?*) OPT_ENABLE="$LONG_OPTARG" ;;
 					help) echo "$USAGE" ; exit 0 ;;
 					lists=?*) OPT_LISTS="$LONG_OPTARG" ;;
@@ -211,7 +211,7 @@ _getopts() {
 						exit 3
 						;;
 
-					anacron*|short-description*|help*|reboot*|security*|systemd-timers*|version*)
+					anacron*|short-description*|dry-run*|help*|reboot*|security*|systemd-timers*|version*)
 						echo "No argument allowed for the option “--$OPTARG”!" >&2
 						exit 4
 						;;
@@ -271,7 +271,7 @@ _getopts $@
 [ -z "$OPT_CRITICAL" ] && OPT_CRITICAL=187200
 
 
-if [ -n "$OPT_DRYRUN" ]; then
+if [ -n "$OPT_DRY_RUN" ]; then
     unattended-upgrades --dry-run > /dev/null 2>&1
     DRY_RUN=$?
     if [ "$DRY_RUN" -ne 0 ]; then
