@@ -20,59 +20,59 @@ Usage: check_unattended_upgrades <options>
 
 Options:
  -A, --anacron
-    Check if the package 'anacron' is installed.
+	Check if the package 'anacron' is installed.
  -a, --autoclean
-    Check if the configuration 'APT::Periodic::AutocleanInterval' is set
-    properly.
+	Check if the configuration 'APT::Periodic::AutocleanInterval' is set
+	properly.
  -c, --critical
-    Time interval since the last execution to result in a critical state
-    (seconds).
+	Time interval since the last execution to result in a critical state
+	(seconds).
  -D, --short-description
-    Show a short description of this check plugin.
+	Show a short description of this check plugin.
  -d, --download
-    Check if the configuration 'APT::Periodic:Download-Upgradeable-Packages'
-    is set properly.
+	Check if the configuration 'APT::Periodic:Download-Upgradeable-Packages'
+	is set properly.
  -e, --enable
-    Check if the configuration 'APT::Periodic::Enable' is set properly.
+	Check if the configuration 'APT::Periodic::Enable' is set properly.
  -h, --help
-    Show this help message.
+	Show this help message.
  -l, --lists
-    Check if the configuration 'APT::Periodic::Update-Package-Lists' is set
-    properly.
+	Check if the configuration 'APT::Periodic::Update-Package-Lists' is set
+	properly.
  -m, --mail
-    Check if the configuration 'Unattended-Upgrade::Mail' is set properly.
+	Check if the configuration 'Unattended-Upgrade::Mail' is set properly.
  -n, --dry-run
-    Check if 'unattended-upgrades --dry-run' is working
+	Check if 'unattended-upgrades --dry-run' is working.
  -p, --repo
-    Check if 'Unattended-upgrades' is configured to include the specified
-    custom repository.
+	Check if 'Unattended-upgrades' is configured to include the specified
+	custom repository.
  -R, --reboot
-    Check if the machine needs a reboot.
+	Check if the machine needs a reboot.
  -r, --remove
-    Check if the configuration 'Unattended-Upgrade::Remove-Unused-
-    Dependencies' is set properly.
+	Check if the configuration 'Unattended-Upgrade::Remove-Unused-
+	Dependencies' is set properly.
  -S, --security
-    Check if 'Unattended-upgrades' is configured to handle security updates.
+	Check if 'Unattended-upgrades' is configured to handle security updates.
  -s, --sleep
-    Check if the configuration 'APT::Periodic::RandomSleep' is set properly.
+	Check if the configuration 'APT::Periodic::RandomSleep' is set properly.
  -t, --systemd-timers
-    Check if appropriate Systemd Timers are enabled ( apt-daily-upgrade.timer, apt-daily.timer ).
+	Check if the appropriate Systemd timers are enabled ( apt-daily-upgrade.timer, apt-daily.timer ).
  -u, --unattended
-    Check if the configuration 'APT::Periodic::Unattended-Upgrade' is set
-    properly.
+	Check if the configuration 'APT::Periodic::Unattended-Upgrade' is set
+	properly.
  -v, --version
-    Show the version number.
+	Show the version number.
  -w, --warning
-    Time interval since the last execution to result in a warning state
-    (seconds).
+	Time interval since the last execution to result in a warning state
+	(seconds).
 
 Performance data:
   - last_ago
-      Time interval in seconds for last unattended-upgrades execution.
+	  Time interval in seconds for last unattended-upgrades execution.
   - warning
-      Interval in seconds.
+	  Interval in seconds.
   - critical
-      Interval in seconds.
+	  Interval in seconds.
 
 ```
 
