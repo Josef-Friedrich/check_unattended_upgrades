@@ -294,6 +294,23 @@ setup() {
 	[ "$status" -eq 3 ]
 }
 
+# -t
+
+@test "_getopts -t" {
+	_getopts -t
+	[ "$OPT_SYSTEMD_TIMERS" -eq 1 ]
+}
+
+@test "_getopts --systemd-timers" {
+	_getopts --systemd-timers
+	[ "$OPT_SYSTEMD_TIMERS" -eq 1 ]
+}
+
+@test "_getopts --systemd-timers=123" {
+	run _getopts --systemd-timers=123
+	[ "$status" -eq 4 ]
+}
+
 # -u
 
 @test "_getopts -u 123" {

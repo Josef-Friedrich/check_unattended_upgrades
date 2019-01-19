@@ -131,8 +131,8 @@ Options:
     Check if 'Unattended-upgrades' is configured to handle security updates.
  -s, --sleep
     Check if the configuration 'APT::Periodic::RandomSleep' is set properly.
- --systemd-timers
-    Check if appropriate Systemd Timers are enabled ( apt-daily-upgrade.timer, apt-daily.timer ). 
+ -t, --systemd-timers
+    Check if appropriate Systemd Timers are enabled ( apt-daily-upgrade.timer, apt-daily.timer ).
  -u, --unattended
     Check if the configuration 'APT::Periodic::Unattended-Upgrade' is set
     properly.
@@ -158,7 +158,7 @@ STATE_CRITICAL=2
 STATE_UNKNOWN=3
 
 _getopts() {
-	while getopts ":Aa:c:Dd:e:hl:m:np:Rr:Ss:u:vw:-:" OPT; do
+	while getopts ":Aa:c:Dd:e:hl:m:np:Rr:Ss:tu:vw:-:" OPT; do
 		case $OPT in
 			A) OPT_ANACRON=1 ;;
 			a) OPT_AUTOCLEAN="$OPTARG" ;;
@@ -175,6 +175,7 @@ _getopts() {
 			r) OPT_REMOVE="$OPTARG" ;;
 			S) OPT_SECURITY=1 ;;
 			s) OPT_SLEEP="$OPTARG" ;;
+			t) OPT_SYSTEMD_TIMERS=1 ;;
 			u) OPT_UNATTENDED="$OPTARG" ;;
 			v) echo "$VERSION" ; exit 0 ;;
 			w) OPT_WARNING="$OPTARG" ;;
@@ -199,7 +200,7 @@ _getopts() {
 					reboot) OPT_REBOOT=1 ;;
 					remove=?*) OPT_REMOVE="$LONG_OPTARG" ;;
 					security) OPT_SECURITY=1 ;;
-                    systemd-timers) OPT_SYSTEMD_TIMERS=1 ;;
+					systemd-timers) OPT_SYSTEMD_TIMERS=1 ;;
 					sleep=?*) OPT_SLEEP="$LONG_OPTARG" ;;
 					unattended=?*) OPT_UNATTENDED="$LONG_OPTARG" ;;
 					version) echo "$VERSION" ; exit 0 ;;
@@ -210,7 +211,7 @@ _getopts() {
 						exit 3
 						;;
 
-					anacron*|short-description*|help*|reboot*|security*|version*)
+					anacron*|short-description*|help*|reboot*|security*|systemd-timers*|version*)
 						echo "No argument allowed for the option “--$OPTARG”!" >&2
 						exit 4
 						;;

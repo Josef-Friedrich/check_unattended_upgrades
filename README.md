@@ -11,7 +11,7 @@
 
 ```
 check_unattended_upgrades v1.2
-Copyright (c) 2015-2018 Josef Friedrich <josef@friedrich.rocks>
+Copyright (c) 2015-2019 Josef Friedrich <josef@friedrich.rocks>
 
 Monitoring plugin to check automatic updates (unattended-upgrades) on Debian / Ubuntu.
 
@@ -55,6 +55,8 @@ Options:
     Check if 'Unattended-upgrades' is configured to handle security updates.
  -s, --sleep
     Check if the configuration 'APT::Periodic::RandomSleep' is set properly.
+ -t, --systemd-timers
+    Check if appropriate Systemd Timers are enabled ( apt-daily-upgrade.timer, apt-daily.timer ).
  -u, --unattended
     Check if the configuration 'APT::Periodic::Unattended-Upgrade' is set
     properly.
