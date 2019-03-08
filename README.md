@@ -10,7 +10,7 @@
 ## Usage
 
 ```
-check_unattended_upgrades v1.2
+check_unattended_upgrades v1.3
 Copyright (c) 2015-2019 Josef Friedrich <josef@friedrich.rocks>
 
 Monitoring plugin to check automatic updates (unattended-upgrades) on Debian / Ubuntu.
