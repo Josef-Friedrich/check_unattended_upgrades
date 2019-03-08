@@ -20,9 +20,9 @@ setup() {
 	run ./check_unattended_upgrades_patched -a 1
 	[ "$status" -eq 2 ]
 	[ "${lines[0]}" = "CRITICAL - The configuration \
-“APT::Periodic::AutocleanInterval” is not \
-configured properly. It has the value “7”, \
-but it should have the value “1”." ]
+'APT::Periodic::AutocleanInterval' is not \
+configured properly. It has the value '7', \
+but it should have the value '1'." ]
 }
 
 ##
@@ -39,9 +39,9 @@ but it should have the value “1”." ]
 	run ./check_unattended_upgrades_patched -d 7
 	[ "$status" -eq 2 ]
 	[ "${lines[0]}" = "CRITICAL - The configuration \
-“APT::Periodic::Download-Upgradeable-Packages” is not \
-configured properly. It has the value “1”, \
-but it should have the value “7”." ]
+'APT::Periodic::Download-Upgradeable-Packages' is not \
+configured properly. It has the value '1', \
+but it should have the value '7'." ]
 }
 
 ##
@@ -58,9 +58,9 @@ but it should have the value “7”." ]
 	run ./check_unattended_upgrades_patched -e 7
 	[ "$status" -eq 2 ]
 	[ "${lines[0]}" = "CRITICAL - The configuration \
-“APT::Periodic::Enable” is not \
-configured properly. It has the value “1”, \
-but it should have the value “7”." ]
+'APT::Periodic::Enable' is not \
+configured properly. It has the value '1', \
+but it should have the value '7'." ]
 }
 
 ##
@@ -77,9 +77,9 @@ but it should have the value “7”." ]
 	run ./check_unattended_upgrades_patched -l 7
 	[ "$status" -eq 2 ]
 	[ "${lines[0]}" = "CRITICAL - The configuration \
-“APT::Periodic::Update-Package-Lists” is not \
-configured properly. It has the value “1”, \
-but it should have the value “7”." ]
+'APT::Periodic::Update-Package-Lists' is not \
+configured properly. It has the value '1', \
+but it should have the value '7'." ]
 }
 
 ##
@@ -96,9 +96,9 @@ but it should have the value “7”." ]
 	run ./check_unattended_upgrades_patched -m i@example.com
 	[ "$status" -eq 2 ]
 	[ "${lines[0]}" = "CRITICAL - The configuration \
-“Unattended-Upgrade::Mail” is not \
-configured properly. It has the value “you@example.com”, \
-but it should have the value “i@example.com”." ]
+'Unattended-Upgrade::Mail' is not \
+configured properly. It has the value 'you@example.com', \
+but it should have the value 'i@example.com'." ]
 }
 
 ##
@@ -115,9 +115,9 @@ but it should have the value “i@example.com”." ]
 	run ./check_unattended_upgrades_patched -r false
 	[ "$status" -eq 2 ]
 	[ "${lines[0]}" = "CRITICAL - The configuration \
-“Unattended-Upgrade::Remove-Unused-Dependencies” is not \
-configured properly. It has the value “true”, \
-but it should have the value “false”." ]
+'Unattended-Upgrade::Remove-Unused-Dependencies' is not \
+configured properly. It has the value 'true', \
+but it should have the value 'false'." ]
 }
 
 ##
@@ -134,9 +134,9 @@ but it should have the value “false”." ]
 	run ./check_unattended_upgrades_patched -s 1
 	[ "$status" -eq 2 ]
 	[ "${lines[0]}" = "CRITICAL - The configuration \
-“APT::Periodic::RandomSleep” is not \
-configured properly. It has the value “0”, \
-but it should have the value “1”." ]
+'APT::Periodic::RandomSleep' is not \
+configured properly. It has the value '0', \
+but it should have the value '1'." ]
 }
 
 ##
@@ -153,7 +153,7 @@ but it should have the value “1”." ]
 	run ./check_unattended_upgrades_patched -u 7
 	[ "$status" -eq 2 ]
 	[ "${lines[0]}" = "CRITICAL - The configuration \
-“APT::Periodic::Unattended-Upgrade” is not \
-configured properly. It has the value “1”, \
-but it should have the value “7”." ]
+'APT::Periodic::Unattended-Upgrade' is not \
+configured properly. It has the value '1', \
+but it should have the value '7'." ]
 }

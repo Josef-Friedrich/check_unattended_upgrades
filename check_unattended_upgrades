@@ -186,8 +186,8 @@ _getopts() {
 			u) OPT_UNATTENDED="$OPTARG" ;;
 			v) echo "$VERSION" ; exit 0 ;;
 			w) OPT_WARNING="$OPTARG" ;;
-			\?) echo "Invalid option “-$OPTARG”!" >&2 ; exit 2 ;;
-			:) echo "Option “-$OPTARG” requires an argument!" >&2 ; exit 3 ;;
+			\?) echo "Invalid option '-$OPTARG'!" >&2 ; exit 2 ;;
+			:) echo "Option '-$OPTARG' requires an argument!" >&2 ; exit 3 ;;
 
 			-)
 				LONG_OPTARG="${OPTARG#*=}"
@@ -214,17 +214,17 @@ _getopts() {
 					warning=?*) OPT_WARNING="$LONG_OPTARG" ;;
 
 					autoclean*|critical*|download*|enable*|lists*|mail*|repo*|remove*|sleep*|unattended*|warning*)
-						echo "Option “--$OPTARG” requires an argument!" >&2
+						echo "Option '--$OPTARG' requires an argument!" >&2
 						exit 3
 						;;
 
 					anacron*|short-description*|dry-run*|help*|reboot*|security*|systemd-timers*|version*)
-						echo "No argument allowed for the option “--$OPTARG”!" >&2
+						echo "No argument allowed for the option '--$OPTARG'!" >&2
 						exit 4
 						;;
 
 					'') break ;; # "--" terminates argument processing
-					*) echo "Invalid option “--$OPTARG”!" >&2 ; exit 2 ;;
+					*) echo "Invalid option '--$OPTARG'!" >&2 ; exit 2 ;;
 
 				esac
 				;;
@@ -242,9 +242,9 @@ _check_config() {
 
 	_get_config $CONFIG "CREDIT"
 	if [ "$DEBIT" != "$CREDIT" ]; then
-		echo "CRITICAL - The configuration “$CONFIG” is not \
-configured properly. It has the value “$CREDIT”, \
-but it should have the value “$DEBIT”."
+		echo "CRITICAL - The configuration '$CONFIG' is not \
+configured properly. It has the value '$CREDIT', \
+but it should have the value '$DEBIT'."
 		exit $STATE_CRITICAL
 	fi
 }
@@ -293,7 +293,7 @@ fi
 
 # -A
 if [ -n "$OPT_ANACRON" ] && ! test -x /usr/sbin/anacron ; then
-	echo 'CRITICAL - Package “anacron” is not installed.'
+	echo "CRITICAL - Package 'anacron' is not installed."
 	exit $STATE_CRITICAL
 fi
 
@@ -358,7 +358,7 @@ configured to handle security updates."
 			| grep 'Unattended-Upgrade::Allowed-Origins\|Unattended-Upgrade::Origins-Pattern' \
 			| grep -i "${OPT_CUSTOM_REPO}" > /dev/null ; then
 			echo "CRITICAL - Unattended-upgrades is not \
-configured to handle updates for custom repository “${OPT_CUSTOM_REPO}”."
+configured to handle updates for custom repository '${OPT_CUSTOM_REPO}'."
 			exit $STATE_CRITICAL
 		fi
 	fi
@@ -416,8 +416,8 @@ LAST_RUN_DATE=$(echo $LAST_LOG_LINE | cut -d "," -f 1)
 
 if [ -z "$LAST_RUN_DATE" ]; then
 	echo "CRITICAL - The date on which the command \
-“unattended-upgrades” ran for the last time, could not be determined. \
-The log file “$LOG_FILE” is empty."
+'unattended-upgrades' ran for the last time, could not be determined. \
+The log file '$LOG_FILE' is empty."
 	exit $STATE_CRITICAL
 fi
 
@@ -425,7 +425,7 @@ LAST_RUN=$(date +%s -d "$LAST_RUN_DATE")
 CURRENT=$(date +%s)
 DIFF=$((CURRENT - LAST_RUN))
 
-MESSAGE="- The last execution of “unattended-upgrades” was at \
+MESSAGE="- The last execution of 'unattended-upgrades' was at \
 $LAST_RUN_DATE. $(_performance_data)"
 
 # Critical

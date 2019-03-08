@@ -16,7 +16,7 @@ setup() {
 @test "run ./check_unattended_upgrades_patched -A" {
 	run ./check_unattended_upgrades_patched -A
 	[ "$status" -eq 2 ]
-	[ "${lines[0]}" = 'CRITICAL - Package “anacron” is not installed.' ]
+	[ "${lines[0]}" = "CRITICAL - Package 'anacron' is not installed." ]
 }
 
 @test "run ./check_unattended_upgrades_patched -R" {
@@ -42,5 +42,5 @@ setup() {
 	run ./check_unattended_upgrades_patched -p some-obscure-repo
 	[ "$status" -eq 2 ]
 	[ "${lines[0]}" = "CRITICAL - Unattended-upgrades is not \
-configured to handle updates for custom repository “some-obscure-repo”." ]
+configured to handle updates for custom repository 'some-obscure-repo'." ]
 }
