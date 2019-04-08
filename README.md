@@ -42,7 +42,8 @@ Options:
  -m, --mail
 	Check if the configuration 'Unattended-Upgrade::Mail' is set properly.
  -n, --dry-run
-	Check if 'unattended-upgrades --dry-run' is working.
+	Check if 'unattended-upgrades --dry-run' is working. Warning: If you use
+	this option the performance data last_ago is always 0 or near to 0.
  -p, --repo
 	Check if 'Unattended-upgrades' is configured to include the specified
 	custom repository.
