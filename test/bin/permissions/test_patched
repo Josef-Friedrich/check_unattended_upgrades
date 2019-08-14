@@ -1,0 +1,15 @@
+#! /bin/sh
+
+case $@ in
+	'-f /var/run/reboot-required')
+		exit 0
+		;;
+
+	'-f /var/log/unattended-upgrades/unattended-upgrades.log')
+		exit 1
+		;;
+
+	'-x /usr/sbin/anacron')
+		exit 1
+		;;
+esac
