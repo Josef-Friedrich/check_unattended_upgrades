@@ -87,7 +87,7 @@
 #OPT_WARNING=93600
 
 FIRST_RELEASE=2015-04-25
-VERSION=1.3
+VERSION=1.4
 PROJECT_PAGES='https://github.com/Josef-Friedrich/check_unattended_upgrades
 https://exchange.icinga.com/joseffriedrich/check_unattended_upgrades
 https://exchange.nagios.org/directory/Plugins/Software/check_unattended_upgrades/details'
