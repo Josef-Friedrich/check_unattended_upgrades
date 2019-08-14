@@ -33,3 +33,10 @@ setup() {
 	[ "$status" -eq 1 ]
 	[ "${lines[0]}" = 'WARNING - The last line in the log file is a WARNING message.' ]
 }
+
+@test "CRITICAL log file doesn't exist. Insufficient permissions" {
+	mock_path test/bin/permissions
+	run ./check_unattended_upgrades_patched
+	[ "$status" -eq 2 ]
+	[ "${lines[0]}" = "CRITICAL - The log file (/var/log/unattended-upgrades/unattended-upgrades.log) doesn't exist or you haven't sufficient read permissions." ]
+}

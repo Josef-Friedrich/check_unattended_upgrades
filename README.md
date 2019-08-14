@@ -75,6 +75,18 @@ Performance data:
   - critical
 	  Interval in seconds.
 
+About file system permissions:
+	The user which executes this plugin must have read permissions to this
+	log file:
+
+		/var/log/unattended-upgrades/unattended-upgrades.log
+
+	To allow every user on your system to read the mentioned log file this
+	permissions are recommended:
+
+		751 (drwxr-x--x) /var/log/unattended-upgrades
+		644 (-rw-r--r--) /var/log/unattended-upgrades/unattended-upgrades.log
+
 ```
 
 ## Project pages
