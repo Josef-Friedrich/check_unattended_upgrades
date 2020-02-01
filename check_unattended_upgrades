@@ -412,13 +412,13 @@ if [ -z "$LOG_TEXT" ]; then
 fi
 
 # added -s check because it returns error on an empty file
-if [ -n "$LOG_TEXT" ] && [ -z "$(cat $LOG_FILE | tail -n 1 | grep -v ' ERROR ')" ]; then
+if [ -n "$LOG_TEXT" ] && [ -z "$(echo "$LOG_TEXT" | tail -n 1 | grep -v ' ERROR ')" ]; then
 	echo "CRITICAL - The last line in the log file is an ERROR message."
 	exit $STATE_CRITICAL
 fi
 
 # added -s check because it returns error on an empty file
-if [ -n "$LOG_TEXT" ] && [ -z "$(cat $LOG_FILE | tail -n 1 | grep -v ' WARNING ')" ]; then
+if [ -n "$LOG_TEXT" ] && [ -z "$(echo "$LOG_TEXT" | tail -n 1 | grep -v ' WARNING ')" ]; then
 	echo "WARNING - The last line in the log file is a WARNING message."
 	exit $STATE_WARNING
 fi
