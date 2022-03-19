@@ -25,6 +25,7 @@ setup() {
 	run ./check_unattended_upgrades_patched
 	[ "$status" -eq 2 ]
 	[ "${lines[0]}" = 'CRITICAL - The last line in the log file is an ERROR message.' ]
+	[ "${lines[1]}" = '2019-01-12 14:35:58,860 ERROR Cache has broken packages, exiting' ]
 }
 
 @test "WARNING last log line WARNING" {
@@ -32,6 +33,7 @@ setup() {
 	run ./check_unattended_upgrades_patched
 	[ "$status" -eq 1 ]
 	[ "${lines[0]}" = 'WARNING - The last line in the log file is a WARNING message.' ]
+	[ "${lines[1]}" = '2019-01-12 14:35:58,860 WARNING lol' ]
 }
 
 @test "CRITICAL log file doesn't exist. Insufficient permissions" {
