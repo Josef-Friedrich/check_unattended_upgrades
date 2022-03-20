@@ -411,15 +411,17 @@ if [ -z "$LOG_TEXT" ]; then
 	LOG_TEXT="$(zcat $LATEST_COMPRESSED_LOG)"
 fi
 
+LAST_LOG_WARNING_ERROR=$(echo "$LOG_TEXT" | tail -n 1 | grep -E ' (WARNING|ERROR) ')
+
 # added -s check because it returns error on an empty file
-if [ -n "$LOG_TEXT" ] && [ -z "$(echo "$LOG_TEXT" | tail -n 1 | grep -v ' ERROR ')" ]; then
-	echo "CRITICAL - The last line in the log file is an ERROR message."
+if [ -n "$LOG_TEXT" ] && [ ! -z "$(echo "$LAST_LOG_WARNING_ERROR" | grep ' ERROR ')" ]; then
+	echo "CRITICAL - The last line in the log file is an ERROR message.\n${LAST_LOG_WARNING_ERROR}"
 	exit $STATE_CRITICAL
 fi
 
 # added -s check because it returns error on an empty file
-if [ -n "$LOG_TEXT" ] && [ -z "$(echo "$LOG_TEXT" | tail -n 1 | grep -v ' WARNING ')" ]; then
-	echo "WARNING - The last line in the log file is a WARNING message."
+if [ -n "$LOG_TEXT" ] && [ ! -z "$(echo "$LAST_LOG_WARNING_ERROR" | grep ' WARNING ')" ]; then
+	echo "WARNING - The last line in the log file is a WARNING message.\n${LAST_LOG_WARNING_ERROR}"
 	exit $STATE_WARNING
 fi
 
