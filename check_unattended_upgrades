@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/zsh
 
 # MIT License
 #
@@ -411,19 +411,21 @@ if [ -z "$LOG_TEXT" ]; then
 	LOG_TEXT="$(zcat $LATEST_COMPRESSED_LOG)"
 fi
 
-LAST_LOG_WARNING_ERROR=$(echo "$LOG_TEXT" | tail -n 1 | grep -E ' (WARNING|ERROR) ')
+while IFS= read -r line; do
+    if [ ! -z "$(echo "$line" | grep -E ' (WARNING|ERROR) ')" ]; then
+        # added -s check because it returns error on an empty file
+        if [ ! -z "$(echo "$line" | grep ' ERROR ')" ]; then
+            printf "CRITICAL - In the log file is an ERROR message.\n${line}"
+            exit $STATE_CRITICAL
+        fi
 
-# added -s check because it returns error on an empty file
-if [ -n "$LOG_TEXT" ] && [ ! -z "$(echo "$LAST_LOG_WARNING_ERROR" | grep ' ERROR ')" ]; then
-	echo "CRITICAL - The last line in the log file is an ERROR message.\n${LAST_LOG_WARNING_ERROR}"
-	exit $STATE_CRITICAL
-fi
-
-# added -s check because it returns error on an empty file
-if [ -n "$LOG_TEXT" ] && [ ! -z "$(echo "$LAST_LOG_WARNING_ERROR" | grep ' WARNING ')" ]; then
-	echo "WARNING - The last line in the log file is a WARNING message.\n${LAST_LOG_WARNING_ERROR}"
-	exit $STATE_WARNING
-fi
+        # added -s check because it returns error on an empty file
+        if [ ! -z "$(echo "$line" | grep ' WARNING ')" ]; then
+            printf "WARNING - In the log file is a WARNING message.\n${line}"
+            exit $STATE_WARNING
+        fi
+    fi
+done < <(printf $LOG_TEXT | tail -n "+$(echo $LOG_TEXT | grep -n 'Starting unattended upgrades script' | tail -n1 | cut -d: -f1)")
 
 LAST_LOG_LINE=$(echo "$LOG_TEXT" | grep -v ' WARNING ' | grep -v ' ERROR ' | tail -n 1)
 
