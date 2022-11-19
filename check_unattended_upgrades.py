@@ -4,6 +4,7 @@ import argparse
 from argparse import ArgumentParser
 import nagiosplugin
 
+
 class OptionContainer:
     pass
 

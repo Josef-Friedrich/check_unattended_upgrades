@@ -254,21 +254,14 @@ python-versions = "*"
 
 [[package]]
 name = "nagiosplugin-stubs"
-version = "0.1.0"
+version = "0.2.0"
 description = "Type stubs for the nagiosplugin package."
 category = "dev"
 optional = false
-python-versions = "^3.8"
-develop = false
+python-versions = ">=3.8,<4.0"
 
 [package.dependencies]
-typing-extensions = "^4.3.0"
-
-[package.source]
-type = "git"
-url = "https://github.com/Josef-Friedrich/nagiosplugin-stubs.git"
-reference = "main"
-resolved_reference = "a2f1e91a5d43ad439429853ac9587a5d2689bcd9"
+typing-extensions = ">=4.3.0,<5.0.0"
 
 [[package]]
 name = "natsort"
@@ -535,7 +528,7 @@ testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "4dcedb1ddc272761d7c8e181cd0badd2a4c9ca677894af49099f05094d404f17"
+content-hash = "1bf94ae358c6fbddf37af3da2f55a30c12812989ff0e504114556da879510263"
 
 [metadata.files]
 apeye = [
@@ -679,7 +672,10 @@ nagiosplugin = [
     {file = "nagiosplugin-1.3.3-py3-none-any.whl", hash = "sha256:e46b21c0d5e4ca80883a63c2732640df2ceb58743f6a021f9a59ba3ec7f8cd89"},
     {file = "nagiosplugin-1.3.3.tar.gz", hash = "sha256:bceafaec359f032393ddd560ae2cc8d163613833ec63c93ce7189f85904e53d6"},
 ]
-nagiosplugin-stubs = []
+nagiosplugin-stubs = [
+    {file = "nagiosplugin_stubs-0.2.0-py3-none-any.whl", hash = "sha256:b88f59ac9354d0873631236d74e1ebcf28fc081a3137620bba4fd9affdb0ad38"},
+    {file = "nagiosplugin_stubs-0.2.0.tar.gz", hash = "sha256:a35e35d22dfb4c1d9f59637acc432596975e6933df8bdfcabbf94e5442275ddc"},
+]
 natsort = [
     {file = "natsort-8.2.0-py3-none-any.whl", hash = "sha256:04fe18fdd2b9e5957f19f687eb117f102ef8dde6b574764e536e91194bed4f5f"},
     {file = "natsort-8.2.0.tar.gz", hash = "sha256:57f85b72c688b09e053cdac302dd5b5b53df5f73ae20b4874fcbffd8bf783d11"},
