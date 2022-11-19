@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "check_unattended_upgrades"
+version = "0.1.0"
+description = ""
+authors = ["Josef Friedrich <josef@friedrich.rocks>"]
+readme = "README.md"
+repository = "https://github.com/Josef-Friedrich/check_unattended_upgrades"
+license = "MIT"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3",
+    "Topic :: Utilities",
+    "License :: OSI Approved :: MIT License",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+nagiosplugin = "^1.2"
+
+[tool.poetry.group.dev.dependencies]
+readme-patcher = "^0.5.0"
+# readme-patcher = { path = "../readme_patcher", develop = true }
+tox = "^3.25.1"
+black = "^22.6.0"
+isort = "^5.10.1"
+
+[build-system]
+requires = ["poetry>=1.2.0b2"]
+build-backend = "poetry.masonry.api"
+
+[tool.poetry.scripts]
+"check_unattended_upgrades.py" = "check_unattended_upgrades:main"
