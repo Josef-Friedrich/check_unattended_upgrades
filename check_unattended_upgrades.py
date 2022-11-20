@@ -16,6 +16,31 @@ opts: OptionContainer = OptionContainer()
 def get_argparser() -> ArgumentParser:
     parser: ArgumentParser = argparse.ArgumentParser(
         prog="check_unattended_upgrades",  # To get the right command name in the README.
+        formatter_class=lambda prog: argparse.RawDescriptionHelpFormatter(
+            prog, width=80
+        ),  # noqa: E501
+        description="Copyright (c) 2015-22 Josef Friedrich <josef@friedrich.rocks>\n"
+        "\n"
+        "Monitoring plugin to check automatic updates (unattended-upgrades) on Debian / Ubuntu.\n",  # noqa: E501
+        epilog="Performance data:\n"
+        "  - last_ago\n"
+        "       Time interval in seconds for last unattended-upgrades execution.\n"
+        "  - warning\n"
+        "       Interval in seconds.\n"
+        "  - critical\n"
+        "       Interval in seconds.\n"
+        "\n"
+        "About file system permissions:\n"
+        "   The user which executes this plugin must have read permissions to this\n"
+        "   log file:\n"
+        "\n"
+        "       /var/log/unattended-upgrades/unattended-upgrades.log\n"
+        "\n"
+        "   To allow every user on your system to read the mentioned log file this\n"
+        "   permissions are recommended:\n"
+        "\n"
+        "       751 (drwxr-x--x) /var/log/unattended-upgrades\n"
+        "       644 (-rw-r--r--) /var/log/unattended-upgrades/unattended-upgrades.log\n",
     )
 
     parser.add_argument(
