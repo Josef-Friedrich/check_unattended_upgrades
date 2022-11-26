@@ -6,6 +6,7 @@ import typing
 import re
 import datetime
 import gzip
+import subprocess
 
 __version__: str = "1.4"
 
@@ -22,7 +23,7 @@ class OptionContainer:
     reboot: bool
     remove: str
     security: bool
-    sleep: bool
+    sleep: str
     systemd_timers: bool
     unattended: str
     warning: int
@@ -189,6 +190,32 @@ def get_argparser() -> argparse.ArgumentParser:
     return parser
 
 
+class AptConfig:
+
+    __cache: dict[str, str] | None = None
+
+    @staticmethod
+    def __read_all_config_values() -> dict[str, str]:
+        process: subprocess.CompletedProcess[str] = subprocess.run(
+            ("apt-config", "dump"), encoding="utf-8", stdout=subprocess.PIPE
+        )
+
+        cache: dict[str, str] = {}
+
+        for line in process.stdout.splitlines():
+            match: re.Match[str] | None = re.match(r'(.*) "(.*)";', line)
+            if match:
+                cache[match[1]] = match[2]
+
+        return cache
+
+    @staticmethod
+    def get(key: str) -> str:
+        if not AptConfig.__cache:
+            AptConfig.__cache = AptConfig.__read_all_config_values()
+        return AptConfig.__cache[key]
+
+
 def read_zipped_log_file() -> None:
     # with ZipFile(LOG_FILE + ".1.gz") as zip_file:
     #     with zip_file.open('unattended-upgrades.log.1') as file:
@@ -198,6 +225,42 @@ def read_zipped_log_file() -> None:
     with gzip.open(LOG_FILE + ".1.gz", "r") as f:
         file_content = f.read()
         print(file_content.decode("utf-8"))
+
+
+class Config(nagiosplugin.Resource):
+
+    key: str
+
+    def __init__(self, key: str) -> None:
+        self.key = key
+
+    def probe(self) -> nagiosplugin.Metric:
+        value = AptConfig.get(self.key)
+        return nagiosplugin.Metric("config", value)
+
+
+class ConfigContext(nagiosplugin.Context):
+
+    expected: str
+
+    def __init__(self, expected: str) -> None:
+        super(ConfigContext, self).__init__("config")
+        self.expected = expected
+
+    def evaluate(
+        self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
+    ) -> nagiosplugin.Result:
+        r: Config = typing.cast(Config, resource)
+        if metric.value == self.expected:
+            return self.result_cls(nagiosplugin.Ok, metric=metric)
+        else:
+            return self.result_cls(
+                nagiosplugin.Critical,
+                metric=metric,
+                hint="{} actual: {} expected: {}".format(
+                    r.key, metric.value, self.expected
+                ),
+            )
 
 
 class LogFile(nagiosplugin.Resource):
@@ -224,11 +287,15 @@ class LogFile(nagiosplugin.Resource):
 def main() -> None:
     global opts
 
-    read_zipped_log_file()
-
     opts = typing.cast(OptionContainer, get_argparser().parse_args())
 
-    check = nagiosplugin.Check(LogFile(), nagiosplugin.Context("log"))
+    checks: list[nagiosplugin.Resource | nagiosplugin.Context] = []
+
+    if opts.sleep:
+        checks.append(Config("APT::Periodic::RandomSleep"))
+        checks.append(ConfigContext(opts.sleep))
+
+    check: nagiosplugin.Check = nagiosplugin.Check(*checks)
     check.main()
 
 
