@@ -28,6 +28,11 @@ tox = "^3.25.1"
 black = "^22.6.0"
 isort = "^5.10.1"
 nagiosplugin-stubs = "^0.2.0"
+mypy = "^0.991"
+
+[tool.mypy]
+files = "check_unattended_upgrades.py"
+strict = true
 
 [build-system]
 requires = ["poetry>=1.2.0b2"]
