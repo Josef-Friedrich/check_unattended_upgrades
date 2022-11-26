@@ -1,12 +1,13 @@
 #! /usr/bin/env python3
 
 import argparse
-import nagiosplugin
-import typing
-import re
 import datetime
 import gzip
+import nagiosplugin
+import re
+import shutil
 import subprocess
+import typing
 
 __version__: str = "1.4"
 
@@ -191,6 +192,37 @@ def get_argparser() -> argparse.ArgumentParser:
     return parser
 
 
+# anacron #####################################################################
+
+
+class AnacronResource(nagiosplugin.Resource):
+    name: typing.Literal["anacron"] = "anacron"
+
+    def probe(self) -> nagiosplugin.Metric:
+        return nagiosplugin.Metric("anacron", shutil.which("anacron"))
+
+
+class AnacronContext(nagiosplugin.Context):
+    def __init__(self) -> None:
+        super(AnacronContext, self).__init__("anacron")
+
+    def evaluate(
+        self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
+    ) -> nagiosplugin.Result:
+        if metric.value is not None:
+            return self.result_cls(
+                nagiosplugin.Ok,
+                metric=metric,
+                hint="Package 'anacron' is installed in: " + metric.value,
+            )
+        else:
+            return self.result_cls(
+                nagiosplugin.Critical,
+                metric=metric,
+                hint="Package 'anacron' is not installed.",
+            )
+
+
 # dry-run #####################################################################
 
 
@@ -329,6 +361,9 @@ class ChecksCollection:
     def __init__(self, opts: OptionContainer):
         if opts.dry_run:
             self.checks += [DryRunResource(), DryRunContext()]
+
+        if opts.anacron:
+            self.checks += [AnacronResource(), AnacronContext()]
 
         self.check_config("APT::Periodic::AutocleanInterval", opts.autoclean)
         self.check_config("APT::Periodic::Download-Upgradeable-Packages", opts.download)
