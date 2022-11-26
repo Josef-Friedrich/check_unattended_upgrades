@@ -1,11 +1,14 @@
-[![Build Status](https://travis-ci.org/Josef-Friedrich/check_unattended_upgrades.svg?branch=master)](https://travis-ci.org/Josef-Friedrich/check_unattended_upgrades)
-
 # check_unattended_upgrades
 
+Note: The monitoring plugin is currently being rewritten from
+Shell
+([check_unattended_upgrades](https://github.com/Josef-Friedrich/check_unattended_upgrades/blob/master/check_unattended_upgrades)) to
+Python
+([check_unattended_upgrades.py](https://github.com/Josef-Friedrich/check_unattended_upgrades/blob/master/check_unattended_upgrades.py)). Use the Shell version until further notice.
 
 ## Summary / Short description
 
-> Monitoring plugin to check automatic updates (unattended-upgrades) on Debian / Ubuntu.
+> Monitoring plugin to check automatic updates ([unattended-upgrades](https://github.com/mvo5/unattended-upgrades)) on Debian / Ubuntu.
 
 ## Usage
 
@@ -100,4 +103,3 @@ About file system permissions:
 ```
 make test
 ```
-
