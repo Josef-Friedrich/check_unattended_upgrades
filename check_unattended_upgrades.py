@@ -187,7 +187,7 @@ def read_zipped_log_file():
         print(file_content.decode("utf-8"))
 
 
-class LogFile(nagiosplugin.resource.Resource):
+class LogFile(nagiosplugin.Resource):
     def probe(self):
         with open(LOG_FILE, "r") as log_file:
             for line in log_file.readlines():
@@ -204,7 +204,7 @@ class LogFile(nagiosplugin.resource.Resource):
                     print(time, log_level, message)
 
                     print(datetime.strptime(time, "%Y-%m-%d %H:%M:%S"))
-        return nagiosplugin.metric.Metric('log', 0)
+        return nagiosplugin.Metric("log", 0)
 
 
 # @guarded(verbose=0)
@@ -215,8 +215,7 @@ def main():
 
     opts = cast(OptionContainer, get_argparser().parse_args())
 
-    check = nagiosplugin.check.Check(
-        LogFile(), nagiosplugin.context.Context('log'))
+    check = nagiosplugin.Check(LogFile(), nagiosplugin.Context("log"))
     check.main()
 
 
