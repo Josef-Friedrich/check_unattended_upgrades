@@ -227,9 +227,11 @@ def read_zipped_log_file() -> None:
         print(file_content.decode("utf-8"))
 
 
-class Config(nagiosplugin.Resource):
+class ConfigResource(nagiosplugin.Resource):
 
     key: str
+
+    name: typing.Literal['config'] = "config"
 
     def __init__(self, key: str) -> None:
         self.key = key
@@ -250,7 +252,7 @@ class ConfigContext(nagiosplugin.Context):
     def evaluate(
         self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
     ) -> nagiosplugin.Result:
-        r: Config = typing.cast(Config, resource)
+        r: ConfigResource = typing.cast(ConfigResource, resource)
         if metric.value == self.expected:
             return self.result_cls(nagiosplugin.Ok, metric=metric)
         else:
@@ -292,7 +294,7 @@ def main() -> None:
     checks: list[nagiosplugin.Resource | nagiosplugin.Context] = []
 
     if opts.sleep:
-        checks.append(Config("APT::Periodic::RandomSleep"))
+        checks.append(ConfigResource("APT::Periodic::RandomSleep"))
         checks.append(ConfigContext(opts.sleep))
 
     check: nagiosplugin.Check = nagiosplugin.Check(*checks)
