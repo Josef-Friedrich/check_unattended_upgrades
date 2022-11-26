@@ -191,6 +191,39 @@ def get_argparser() -> argparse.ArgumentParser:
     return parser
 
 
+# dry-run #####################################################################
+
+
+class DryRunResource(nagiosplugin.Resource):
+    name: typing.Literal["dry-run"] = "dry-run"
+
+    def probe(self) -> nagiosplugin.Metric:
+        process: subprocess.CompletedProcess[bytes] = subprocess.run(
+            ("unattended-upgrades", "--dry-run")
+        )
+        return nagiosplugin.Metric("dry-run", process.returncode)
+
+
+class DryRunContext(nagiosplugin.Context):
+    def __init__(self) -> None:
+        super(DryRunContext, self).__init__("dry-run")
+
+    def evaluate(
+        self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
+    ) -> nagiosplugin.Result:
+        if metric.value == 0:
+            return self.result_cls(nagiosplugin.Ok, metric=metric)
+        else:
+            return self.result_cls(
+                nagiosplugin.Critical,
+                metric=metric,
+                hint="unattended-upgrades --dry-run exits with a non-zero status.",
+            )
+
+
+# config ######################################################################
+
+
 class AptConfig:
 
     __cache: dict[str, str] | None = None
@@ -266,6 +299,9 @@ class ConfigContext(nagiosplugin.Context):
             )
 
 
+# log #########################################################################
+
+
 class LogFile(nagiosplugin.Resource):
     def probe(self) -> nagiosplugin.Metric:
         with open(LOG_FILE, "r") as log_file:
@@ -291,6 +327,9 @@ class ChecksCollection:
     checks: list[nagiosplugin.Resource | nagiosplugin.Context] = []
 
     def __init__(self, opts: OptionContainer):
+        if opts.dry_run:
+            self.checks += [DryRunResource(), DryRunContext()]
+
         self.check_config("APT::Periodic::AutocleanInterval", opts.autoclean)
         self.check_config("APT::Periodic::Download-Upgradeable-Packages", opts.download)
         self.check_config("APT::Periodic::Enable", opts.enable)
