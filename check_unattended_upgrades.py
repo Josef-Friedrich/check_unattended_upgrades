@@ -13,19 +13,20 @@ __version__: str = "1.4"
 
 class OptionContainer:
     anacron: bool
+    autoclean: str | None
     critical: int
-    download: str
-    enable: str
-    lists: str
-    mail: str
+    download: str | None
+    enable: str | None
+    lists: str | None
+    mail: str | None
     dry_run: bool
     repo: str
     reboot: bool
-    remove: str
+    remove: str | None
     security: bool
-    sleep: str
+    sleep: str | None
     systemd_timers: bool
-    unattended: str
+    unattended: str | None
     warning: int
 
 
@@ -231,7 +232,7 @@ class ConfigResource(nagiosplugin.Resource):
 
     key: str
 
-    name: typing.Literal['config'] = "config"
+    name: typing.Literal["config"] = "config"
 
     def __init__(self, key: str) -> None:
         self.key = key
@@ -285,19 +286,34 @@ class LogFile(nagiosplugin.Resource):
         return nagiosplugin.Metric("log", 0)
 
 
+class ChecksCollection:
+
+    checks: list[nagiosplugin.Resource | nagiosplugin.Context] = []
+
+    def __init__(self, opts: OptionContainer):
+        self.check_config("APT::Periodic::AutocleanInterval", opts.autoclean)
+        self.check_config("APT::Periodic::Download-Upgradeable-Packages", opts.download)
+        self.check_config("APT::Periodic::Enable", opts.enable)
+        self.check_config("APT::Periodic::RandomSleep", opts.sleep)
+        self.check_config("APT::Periodic::Unattended-Upgrade", opts.unattended)
+        self.check_config("APT::Periodic::Update-Package-Lists", opts.lists)
+        self.check_config("Unattended-Upgrade::Mail", opts.mail)
+        self.check_config("Unattended-Upgrade::Remove-Unused-Dependencies", opts.remove)
+
+    def check_config(self, key: str, expected: str | None):
+        if expected:
+            self.checks.append(ConfigResource(key))
+            self.checks.append(ConfigContext(expected))
+
+
 # @guarded(verbose=0)
 def main() -> None:
     global opts
 
     opts = typing.cast(OptionContainer, get_argparser().parse_args())
 
-    checks: list[nagiosplugin.Resource | nagiosplugin.Context] = []
-
-    if opts.sleep:
-        checks.append(ConfigResource("APT::Periodic::RandomSleep"))
-        checks.append(ConfigContext(opts.sleep))
-
-    check: nagiosplugin.Check = nagiosplugin.Check(*checks)
+    checks: ChecksCollection = ChecksCollection(opts)
+    check: nagiosplugin.Check = nagiosplugin.Check(*checks.checks)
     check.main()
 
 
