@@ -1,18 +1,31 @@
 #! /usr/bin/env python3
 
 import argparse
-from argparse import ArgumentParser
 import nagiosplugin
-from typing import cast
+import typing
 import re
-from datetime import datetime
+import datetime
 import gzip
 
 __version__: str = "1.4"
 
 
 class OptionContainer:
-    pass
+    anacron: bool
+    critical: int
+    download: str
+    enable: str
+    lists: str
+    mail: str
+    dry_run: bool
+    repo: str
+    reboot: bool
+    remove: str
+    security: bool
+    sleep: bool
+    systemd_timers: bool
+    unattended: str
+    warning: int
 
 
 opts: OptionContainer = OptionContainer()
@@ -20,8 +33,8 @@ opts: OptionContainer = OptionContainer()
 LOG_FILE = "/var/log/unattended-upgrades/unattended-upgrades.log"
 
 
-def get_argparser() -> ArgumentParser:
-    parser: ArgumentParser = argparse.ArgumentParser(
+def get_argparser() -> argparse.ArgumentParser:
+    parser: argparse.ArgumentParser = argparse.ArgumentParser(
         prog="check_unattended_upgrades",  # To get the right command name in the README.
         formatter_class=lambda prog: argparse.RawDescriptionHelpFormatter(
             prog, width=80
@@ -176,7 +189,7 @@ def get_argparser() -> ArgumentParser:
     return parser
 
 
-def read_zipped_log_file():
+def read_zipped_log_file() -> None:
     # with ZipFile(LOG_FILE + ".1.gz") as zip_file:
     #     with zip_file.open('unattended-upgrades.log.1') as file:
     #         for line in file.readlines():
@@ -188,7 +201,7 @@ def read_zipped_log_file():
 
 
 class LogFile(nagiosplugin.Resource):
-    def probe(self):
+    def probe(self) -> nagiosplugin.Metric:
         with open(LOG_FILE, "r") as log_file:
             for line in log_file.readlines():
                 line.find(" ")
@@ -203,17 +216,17 @@ class LogFile(nagiosplugin.Resource):
 
                     print(time, log_level, message)
 
-                    print(datetime.strptime(time, "%Y-%m-%d %H:%M:%S"))
+                    print(datetime.datetime.strptime(time, "%Y-%m-%d %H:%M:%S"))
         return nagiosplugin.Metric("log", 0)
 
 
 # @guarded(verbose=0)
-def main():
+def main() -> None:
     global opts
 
     read_zipped_log_file()
 
-    opts = cast(OptionContainer, get_argparser().parse_args())
+    opts = typing.cast(OptionContainer, get_argparser().parse_args())
 
     check = nagiosplugin.Check(LogFile(), nagiosplugin.Context("log"))
     check.main()
