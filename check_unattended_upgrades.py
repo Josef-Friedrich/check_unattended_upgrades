@@ -8,6 +8,7 @@ import re
 import shutil
 import subprocess
 import typing
+import pathlib
 
 __version__: str = "1.4"
 
@@ -192,6 +193,37 @@ def get_argparser() -> argparse.ArgumentParser:
     return parser
 
 
+# reboot ######################################################################
+
+
+class RebootResource(nagiosplugin.Resource):
+    name: typing.Literal["reboot"] = "reboot"
+
+    def probe(self) -> nagiosplugin.Metric:
+        path = pathlib.Path("/var/run/reboot-required")
+        return nagiosplugin.Metric("reboot", path.exists())
+
+
+class RebootContext(nagiosplugin.Context):
+    def __init__(self) -> None:
+        super(RebootContext, self).__init__("reboot")
+
+    def evaluate(
+        self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
+    ) -> nagiosplugin.Result:
+        if metric.value:
+            return self.result_cls(
+                nagiosplugin.Ok,
+                metric=metric,
+            )
+        else:
+            return self.result_cls(
+                nagiosplugin.Critical,
+                metric=metric,
+                hint="The machine requires a reboot.",
+            )
+
+
 # anacron #####################################################################
 
 
@@ -358,10 +390,11 @@ class ChecksCollection:
 
     checks: list[nagiosplugin.Resource | nagiosplugin.Context] = []
 
-    def __init__(self, opts: OptionContainer):
+    def __init__(self, opts: OptionContainer) -> None:
+        if opts.reboot:
+            self.checks += [RebootResource(), RebootContext()]
         if opts.dry_run:
             self.checks += [DryRunResource(), DryRunContext()]
-
         if opts.anacron:
             self.checks += [AnacronResource(), AnacronContext()]
 
@@ -374,7 +407,7 @@ class ChecksCollection:
         self.check_config("Unattended-Upgrade::Mail", opts.mail)
         self.check_config("Unattended-Upgrade::Remove-Unused-Dependencies", opts.remove)
 
-    def check_config(self, key: str, expected: str | None):
+    def check_config(self, key: str, expected: str | None) -> None:
         if expected:
             self.checks.append(ConfigResource(key))
             self.checks.append(ConfigContext(expected))
