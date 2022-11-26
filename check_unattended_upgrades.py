@@ -2,11 +2,11 @@
 
 import argparse
 from argparse import ArgumentParser
-from nagiosplugin.runtime import guarded
+import nagiosplugin
 from typing import cast
 import re
 from datetime import datetime
-
+import gzip
 
 __version__: str = "1.4"
 
@@ -176,31 +176,48 @@ def get_argparser() -> ArgumentParser:
     return parser
 
 
-def read_log_file():
-    with open(LOG_FILE, "r") as log_file:
-        for line in log_file.readlines():
-            line.find(" ")
-            match = re.match(
-                r"(\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d),\d\d\d (DEBUG|INFO|WARNING|ERROR|EXCEPTION) (.*)\n$",
-                line,
-            )
-            if match:
-                time = match[1]
-                log_level = match[2]
-                message = match[3]
+def read_zipped_log_file():
+    # with ZipFile(LOG_FILE + ".1.gz") as zip_file:
+    #     with zip_file.open('unattended-upgrades.log.1') as file:
+    #         for line in file.readlines():
+    #             print(line)
 
-                print(time, log_level, message)
+    with gzip.open(LOG_FILE + ".1.gz", "r") as f:
+        file_content = f.read()
+        print(file_content.decode("utf-8"))
 
-                print(datetime.strptime(time, "%Y-%m-%d %H:%M:%S"))
+
+class LogFile(nagiosplugin.resource.Resource):
+    def probe(self):
+        with open(LOG_FILE, "r") as log_file:
+            for line in log_file.readlines():
+                line.find(" ")
+                match = re.match(
+                    r"(\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d),\d\d\d (DEBUG|INFO|WARNING|ERROR|EXCEPTION) (.*)\n$",
+                    line,
+                )
+                if match:
+                    time = match[1]
+                    log_level = match[2]
+                    message = match[3]
+
+                    print(time, log_level, message)
+
+                    print(datetime.strptime(time, "%Y-%m-%d %H:%M:%S"))
+        return nagiosplugin.metric.Metric('log', 0)
 
 
 # @guarded(verbose=0)
 def main():
     global opts
 
-    read_log_file()
+    read_zipped_log_file()
 
     opts = cast(OptionContainer, get_argparser().parse_args())
+
+    check = nagiosplugin.check.Check(
+        LogFile(), nagiosplugin.context.Context('log'))
+    check.main()
 
 
 if __name__ == "__main__":
