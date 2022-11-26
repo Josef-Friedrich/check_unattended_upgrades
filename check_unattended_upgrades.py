@@ -4,6 +4,9 @@ import argparse
 from argparse import ArgumentParser
 from nagiosplugin.runtime import guarded
 from typing import cast
+import re
+from datetime import datetime
+
 
 __version__: str = "1.4"
 
@@ -13,6 +16,8 @@ class OptionContainer:
 
 
 opts: OptionContainer = OptionContainer()
+
+LOG_FILE = "/var/log/unattended-upgrades/unattended-upgrades.log"
 
 
 def get_argparser() -> ArgumentParser:
@@ -171,10 +176,30 @@ def get_argparser() -> ArgumentParser:
     return parser
 
 
+def read_log_file():
+    with open(LOG_FILE, "r") as log_file:
+        for line in log_file.readlines():
+            line.find(" ")
+            match = re.match(
+                r"(\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d),\d\d\d (DEBUG|INFO|WARNING|ERROR|EXCEPTION) (.*)\n$",
+                line,
+            )
+            if match:
+                time = match[1]
+                log_level = match[2]
+                message = match[3]
+
+                print(time, log_level, message)
+
+                print(datetime.strptime(time, "%Y-%m-%d %H:%M:%S"))
+
+
 # @guarded(verbose=0)
 def main():
-    pass
     global opts
+
+    read_log_file()
+
     opts = cast(OptionContainer, get_argparser().parse_args())
 
 
