@@ -234,7 +234,7 @@ class RebootContext(nagiosplugin.Context):
 
 
 class AnacronResource(nagiosplugin.Resource):
-    name: typing.Literal["anacron"] = "anacron"
+    name = "anacron"
 
     def probe(self) -> nagiosplugin.Metric:
         return nagiosplugin.Metric("anacron", shutil.which("anacron"))
@@ -265,7 +265,7 @@ class AnacronContext(nagiosplugin.Context):
 
 
 class DryRunResource(nagiosplugin.Resource):
-    name: typing.Literal["dry-run"] = "dry-run"
+    name = "dry-run"
 
     def probe(self) -> nagiosplugin.Metric:
         process: subprocess.CompletedProcess[bytes] = subprocess.run(
@@ -324,7 +324,7 @@ class ConfigResource(nagiosplugin.Resource):
 
     key: str
 
-    name: typing.Literal["config"] = "config"
+    name = "config"
 
     def __init__(self, key: str) -> None:
         self.key = key
@@ -377,6 +377,14 @@ class LogMessage:
     @property
     def time(self) -> float:
         return self.__time.timestamp()
+
+    @property
+    def level(self) -> LogLevel:
+        return self.__level
+
+    @property
+    def message(self) -> str:
+        return self.__message
 
 
 class Run:
@@ -470,8 +478,11 @@ class LogParser:
         return runs
 
 
+# last-run ####################################################################
+
+
 class LastRunResource(nagiosplugin.Resource):
-    name: typing.Literal["last-run"] = "last-run"
+    name = "last-run"
 
     def probe(self) -> nagiosplugin.Metric:
         runs = LogParser.parse()
@@ -504,12 +515,56 @@ class LastRunContext(nagiosplugin.Context):
             )
 
 
+# warnings-in-log #############################################################
+
+
+class WarningsInLogResource(nagiosplugin.Resource):
+    name = "warnings-in-log"
+
+    def probe(self) -> typing.Generator[nagiosplugin.Metric, None, None]:
+        runs = LogParser.parse()
+        if len(runs) > 0:
+            last_run = runs[-1]
+            for message in last_run.log_messages:
+                if (
+                    message.level == "WARNING"
+                    or message.level == "ERROR"
+                    or message.level == "EXCEPTION"
+                ):
+                    yield nagiosplugin.Metric("warnings-in-log", message)
+
+
+class WarningsInLogContext(nagiosplugin.Context):
+    def __init__(self) -> None:
+        super(WarningsInLogContext, self).__init__("warnings-in-log")
+
+    def evaluate(
+        self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
+    ) -> nagiosplugin.Result:
+
+        message: LogMessage = metric.value
+
+        state = nagiosplugin.Ok
+
+        if message.level == "ERROR" or message.level == "EXCEPTION":
+            state = nagiosplugin.Critical
+        elif message.level == "WARNING":
+            state = nagiosplugin.Warn
+
+        return self.result_cls(state, metric=metric, hint=message.message)
+
+
 class ChecksCollection:
 
     checks: list[nagiosplugin.Resource | nagiosplugin.Context] = []
 
     def __init__(self, opts: OptionContainer) -> None:
-        self.checks += [LastRunResource(), LastRunContext()]
+        self.checks += [
+            LastRunResource(),
+            LastRunContext(),
+            WarningsInLogResource(),
+            WarningsInLogContext(),
+        ]
 
         if opts.reboot:
             self.checks += [RebootResource(), RebootContext()]
