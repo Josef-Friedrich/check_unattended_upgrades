@@ -84,6 +84,9 @@ def get_argparser() -> argparse.ArgumentParser:
     parser.add_argument(
         "-c",
         "--critical",
+        default=187200,  # 52h = 2d + 4h
+        type=int,
+        metavar="SECONDS",
         help="Time interval since the last execution to result in a critical state (seconds).",
     )
 
@@ -187,6 +190,9 @@ def get_argparser() -> argparse.ArgumentParser:
     parser.add_argument(
         "-w",
         "--warning",
+        default=93600,  # 26h = 1d + 2h
+        type=int,
+        metavar="SECONDS",
         help="Time interval since the last execution to result in a warning state (seconds).",
     )
 
@@ -373,7 +379,8 @@ class LogMessage:
         return self.__time.timestamp()
 
 
-class Execution:
+class Run:
+    """Collection of all log messages of an execution of the unattended-upgrades script."""
 
     log_messages: list[LogMessage]
 
@@ -398,6 +405,9 @@ class Execution:
 
 
 class LogParser:
+
+    runs: list[Run] = []
+
     @staticmethod
     def __read_lines(content: str) -> list[LogMessage]:
         messages: list[LogMessage] = []
@@ -433,7 +443,9 @@ class LogParser:
             return LogParser.__read_lines(log_file.read())
 
     @staticmethod
-    def parse() -> list[Execution]:
+    def parse() -> list[Run]:
+        if len(LogParser.runs) > 0:
+            return LogParser.runs
         main_log_file: pathlib.Path = pathlib.Path(LOG_FILE)
         zipped_log_file: pathlib.Path = pathlib.Path(LOG_FILE + ".1.gz")
 
@@ -446,36 +458,50 @@ class LogParser:
             if zipped_log_file.exists():
                 messages = LogParser.__parse_zipped(zipped_log_file)
 
-        executions: list[Execution] = []
+        runs: list[Run] = []
         if len(messages) > 0:
-            execution: Execution = Execution()
+            run: Run = Run()
             for message in messages:
-                if message.time - execution.end_time > 500:
-                    execution = Execution()
-                    executions.append(execution)
-                execution.add_message(message)
+                if message.time - run.end_time > 500:
+                    run = Run()
+                    runs.append(run)
+                run.add_message(message)
+        LogParser.runs = runs
+        return runs
 
-        return executions
 
+class LastRunResource(nagiosplugin.Resource):
+    name: typing.Literal["last-run"] = "last-run"
 
-class LogResource(nagiosplugin.Resource):
     def probe(self) -> nagiosplugin.Metric:
-        with open(LOG_FILE, "r") as log_file:
-            for line in log_file.readlines():
-                line.find(" ")
-                match = re.match(
-                    r"(\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d),\d\d\d (DEBUG|INFO|WARNING|ERROR|EXCEPTION) (.*)\n$",
-                    line,
-                )
-                if match:
-                    time = match[1]
-                    log_level = match[2]
-                    message = match[3]
+        runs = LogParser.parse()
+        if len(runs) == 0:
+            return nagiosplugin.Metric("last-run", 0)
+        return nagiosplugin.Metric("last-run", runs[-1].end_time)
 
-                    print(time, log_level, message)
 
-                    print(datetime.datetime.strptime(time, "%Y-%m-%d %H:%M:%S"))
-        return nagiosplugin.Metric("log", 0)
+class LastRunContext(nagiosplugin.Context):
+    def __init__(self) -> None:
+        super(LastRunContext, self).__init__("last-run")
+
+    def evaluate(
+        self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
+    ) -> nagiosplugin.Result:
+
+        interval: float = datetime.datetime.now().timestamp() - metric.value
+
+        if interval > opts.critical:
+            return self.result_cls(nagiosplugin.Critical, metric=metric)
+        elif interval > opts.warning:
+            return self.result_cls(
+                nagiosplugin.Warn,
+                metric=metric,
+            )
+        else:
+            return self.result_cls(
+                nagiosplugin.Ok,
+                metric=metric,
+            )
 
 
 class ChecksCollection:
@@ -483,6 +509,8 @@ class ChecksCollection:
     checks: list[nagiosplugin.Resource | nagiosplugin.Context] = []
 
     def __init__(self, opts: OptionContainer) -> None:
+        self.checks += [LastRunResource(), LastRunContext()]
+
         if opts.reboot:
             self.checks += [RebootResource(), RebootContext()]
         if opts.dry_run:
