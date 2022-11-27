@@ -314,17 +314,6 @@ class AptConfig:
         return AptConfig.__cache[key]
 
 
-def read_zipped_log_file() -> None:
-    # with ZipFile(LOG_FILE + ".1.gz") as zip_file:
-    #     with zip_file.open('unattended-upgrades.log.1') as file:
-    #         for line in file.readlines():
-    #             print(line)
-
-    with gzip.open(LOG_FILE + ".1.gz", "r") as f:
-        file_content = f.read()
-        print(file_content.decode("utf-8"))
-
-
 class ConfigResource(nagiosplugin.Resource):
 
     key: str
@@ -365,8 +354,111 @@ class ConfigContext(nagiosplugin.Context):
 
 # log #########################################################################
 
+LogLevel = typing.Literal["DEBUG", "INFO", "WARNING", "ERROR", "EXCEPTION"]
 
-class LogFile(nagiosplugin.Resource):
+
+class LogMessage:
+
+    __time: datetime.datetime
+    __level: LogLevel
+    __message: str
+
+    def __init__(self, time: datetime.datetime, level: LogLevel, message: str) -> None:
+        self.__time = time
+        self.__level = level
+        self.__message = message
+
+    @property
+    def time(self) -> float:
+        return self.__time.timestamp()
+
+
+class Execution:
+
+    log_messages: list[LogMessage]
+
+    def __init__(self) -> None:
+        self.log_messages = []
+
+    @property
+    def start_time(self) -> float:
+        if len(self.log_messages) > 0:
+            return self.log_messages[0].time
+        return 0
+
+    @property
+    def end_time(self) -> float:
+        if len(self.log_messages) > 0:
+            return self.log_messages[-1].time
+
+        return 0
+
+    def add_message(self, message: LogMessage) -> None:
+        self.log_messages.append(message)
+
+
+class LogParser:
+    @staticmethod
+    def __read_lines(content: str) -> list[LogMessage]:
+        messages: list[LogMessage] = []
+        for line in content.splitlines():
+            message = LogParser.__read_log_line(line)
+            if message:
+                messages.append(message)
+        return messages
+
+    @staticmethod
+    def __read_log_line(line: str) -> LogMessage | None:
+        match = re.match(
+            r"(\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d),\d\d\d (DEBUG|INFO|WARNING|ERROR|EXCEPTION) (.*)\n?$",
+            line,
+        )
+        if match:
+            message: LogMessage = LogMessage(
+                time=datetime.datetime.strptime(match[1], "%Y-%m-%d %H:%M:%S"),
+                level=typing.cast(LogLevel, match[2]),
+                message=match[3],
+            )
+            return message
+
+    @staticmethod
+    def __parse_zipped(path: pathlib.Path) -> list[LogMessage]:
+        with gzip.open(path, "r") as f:
+            file_content: bytes = f.read()
+            return LogParser.__read_lines(file_content.decode("utf-8"))
+
+    @staticmethod
+    def __parsed_main(path: pathlib.Path) -> list[LogMessage]:
+        with open(path, "r") as log_file:
+            return LogParser.__read_lines(log_file.read())
+
+    @staticmethod
+    def parse() -> list[Execution]:
+        main_log_file: pathlib.Path = pathlib.Path(LOG_FILE)
+        zipped_log_file: pathlib.Path = pathlib.Path(LOG_FILE + ".1.gz")
+
+        messages: list[LogMessage] = []
+
+        if main_log_file.exists():
+            messages = LogParser.__parsed_main(main_log_file)
+
+        if len(messages) == 0:
+            if zipped_log_file.exists():
+                messages = LogParser.__parse_zipped(zipped_log_file)
+
+        executions: list[Execution] = []
+        if len(messages) > 0:
+            execution: Execution = Execution()
+            for message in messages:
+                if message.time - execution.end_time > 500:
+                    execution = Execution()
+                    executions.append(execution)
+                execution.add_message(message)
+
+        return executions
+
+
+class LogResource(nagiosplugin.Resource):
     def probe(self) -> nagiosplugin.Metric:
         with open(LOG_FILE, "r") as log_file:
             for line in log_file.readlines():
@@ -418,6 +510,8 @@ def main() -> None:
     global opts
 
     opts = typing.cast(OptionContainer, get_argparser().parse_args())
+
+    LogParser.parse()
 
     checks: ChecksCollection = ChecksCollection(opts)
     check: nagiosplugin.Check = nagiosplugin.Check(*checks.checks)
