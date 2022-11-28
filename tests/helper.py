@@ -2,8 +2,19 @@ import io
 from contextlib import redirect_stderr, redirect_stdout
 from unittest import mock
 from unittest.mock import Mock
-
+import os
 import check_unattended_upgrades
+
+
+def read_text_file(file_name: str) -> str | None:
+    file: str = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)), "files", file_name
+    )
+    if os.path.exists(file):
+        with open(file, "r") as f:
+            content = f.read()
+
+        return content
 
 
 class MockResult:
@@ -78,7 +89,12 @@ class MockResult:
             return self.output.split("\n", 1)[0]
 
 
-def perform_subprocess_run_side_effect(arg1, **kwargs):
+class CompletedProcess:
+    returncode: int = 0
+    stdout: str
+
+
+def perform_subprocess_run_side_effect(args: list[str], **kwargs):
     print(arg1)
 
 
