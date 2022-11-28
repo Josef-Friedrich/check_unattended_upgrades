@@ -78,21 +78,16 @@ class MockResult:
             return self.output.split("\n", 1)[0]
 
 
-def perform_subprocess_run_side_effect(arg1, arg2, arg3):
+def perform_subprocess_run_side_effect(arg1, **kwargs):
     print(arg1)
-    print(arg2)
-    print(arg3)
+
 
 def execute_main(argv: list[str] = ["check_unattended_upgrades.py"]) -> MockResult:
     if not argv or argv[0] != "check_unattended_upgrades.py":
         argv.insert(0, "check_unattended_upgrades.py")
     with mock.patch("sys.exit") as sys_exit, mock.patch(
-        "check_unattended_upgrades.subprocess.run"
-    ) as subprocess_run, mock.patch("sys.argv", argv), mock.patch(
-        "builtins.print"
-    ) as mocked_print:
-
-        subprocess_run.side_effect = perform_subprocess_run_side_effect
+        "subprocess.run", side_effect=perform_subprocess_run_side_effect
+    ), mock.patch("sys.argv", argv), mock.patch("builtins.print") as mocked_print:
 
         file_stdout: io.StringIO = io.StringIO()
         file_stderr: io.StringIO = io.StringIO()
