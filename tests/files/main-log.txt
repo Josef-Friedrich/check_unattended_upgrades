@@ -1,0 +1,951 @@
+2022-11-01 08:36:55,419 INFO Skript für automatische Systemaktualisierung wird gestartet
+2022-11-01 08:36:55,420 INFO Erlaubte Ursprünge sind: origin=*
+2022-11-01 08:36:55,420 INFO Anfangsnegativliste: 
+2022-11-01 08:36:55,420 INFO Anfangspositivliste (not strict): 
+2022-11-01 08:36:55,748 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-11-01 08:36:55,748 DEBUG Using (^linux-.*-5\.15\.0\-52\-generic$|^linux-.*-5\.15\.0\-52$|^kfreebsd-.*-5\.15\.0\-52\-generic$|^kfreebsd-.*-5\.15\.0\-52$|^gnumach-.*-5\.15\.0\-52\-generic$|^gnumach-.*-5\.15\.0\-52$|^.*-modules-5\.15\.0\-52\-generic$|^.*-modules-5\.15\.0\-52$|^.*-kernel-5\.15\.0\-52\-generic$|^.*-kernel-5\.15\.0\-52$|^linux-.*-5\.15\.0\-52\-generic$|^linux-.*-5\.15\.0\-52$|^kfreebsd-.*-5\.15\.0\-52\-generic$|^kfreebsd-.*-5\.15\.0\-52$|^gnumach-.*-5\.15\.0\-52\-generic$|^gnumach-.*-5\.15\.0\-52$|^.*-modules-5\.15\.0\-52\-generic$|^.*-modules-5\.15\.0\-52$|^.*-kernel-5\.15\.0\-52\-generic$|^.*-kernel-5\.15\.0\-52$) regexp to find running kernel packages
+2022-11-01 08:36:56,114 DEBUG pkgs that look like they should be upgraded: 
+2022-11-01 08:36:56,144 DEBUG fetch.run() result: 0
+2022-11-01 08:36:56,169 DEBUG dpkg is configured not to cause conffile prompts
+2022-11-01 08:36:56,170 INFO Es wurden keine Pakete gefunden, von denen eine automatische Systemaktualisierung durchgeführt werden kann und kein ausstehendes automatisches Entfernen.
+2022-11-01 08:36:56,207 DEBUG Package libdebuginfod-common has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-01 08:36:56,207 DEBUG Package libdebuginfod1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-01 08:36:56,208 DEBUG Package libdw1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-01 08:36:56,209 DEBUG Package libelf1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-01 08:36:56,296 DEBUG Extracting content from /var/log/unattended-upgrades/unattended-upgrades-dpkg.log since 2022-11-01 08:36:55
+2022-11-02 08:00:55,288 INFO Skript für automatische Systemaktualisierung wird gestartet
+2022-11-02 08:00:55,289 INFO Erlaubte Ursprünge sind: origin=*
+2022-11-02 08:00:55,289 INFO Anfangsnegativliste: 
+2022-11-02 08:00:55,289 INFO Anfangspositivliste (not strict): 
+2022-11-02 08:00:55,570 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-11-02 08:00:55,570 DEBUG Using (^linux-.*-5\.15\.0\-52\-generic$|^linux-.*-5\.15\.0\-52$|^kfreebsd-.*-5\.15\.0\-52\-generic$|^kfreebsd-.*-5\.15\.0\-52$|^gnumach-.*-5\.15\.0\-52\-generic$|^gnumach-.*-5\.15\.0\-52$|^.*-modules-5\.15\.0\-52\-generic$|^.*-modules-5\.15\.0\-52$|^.*-kernel-5\.15\.0\-52\-generic$|^.*-kernel-5\.15\.0\-52$|^linux-.*-5\.15\.0\-52\-generic$|^linux-.*-5\.15\.0\-52$|^kfreebsd-.*-5\.15\.0\-52\-generic$|^kfreebsd-.*-5\.15\.0\-52$|^gnumach-.*-5\.15\.0\-52\-generic$|^gnumach-.*-5\.15\.0\-52$|^.*-modules-5\.15\.0\-52\-generic$|^.*-modules-5\.15\.0\-52$|^.*-kernel-5\.15\.0\-52\-generic$|^.*-kernel-5\.15\.0\-52$) regexp to find running kernel packages
+2022-11-02 08:00:55,756 DEBUG Checking: gir1.2-mutter-10 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-02 08:00:55,816 DEBUG Checking: gnome-shell ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-02 08:00:55,872 DEBUG Checking: gnome-shell-common ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-02 08:00:55,925 DEBUG Checking: gnome-shell-extension-prefs ([<Origin component:'universe' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-02 08:00:56,022 DEBUG Checking: libmutter-10-0 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-02 08:00:56,087 DEBUG Checking: libssl3 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-02 08:00:56,163 DEBUG Checking: mutter-common ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-02 08:00:56,218 DEBUG Checking: openssl ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-02 08:00:56,574 DEBUG pkgs that look like they should be upgraded: gir1.2-mutter-10
+gnome-shell
+gnome-shell-common
+gnome-shell-extension-prefs
+libmutter-10-0
+libssl3
+mutter-common
+openssl
+2022-11-02 08:00:57,392 DEBUG fetch.run() result: 0
+2022-11-02 08:00:57,615 DEBUG dpkg is configured not to cause conffile prompts
+2022-11-02 08:00:57,616 INFO Pakete, welche aktualisiert werden: gir1.2-mutter-10 gnome-shell gnome-shell-common gnome-shell-extension-prefs libmutter-10-0 libssl3 mutter-common openssl
+2022-11-02 08:00:57,616 INFO dpkg-Protokoll wird nach /var/log/unattended-upgrades/unattended-upgrades-dpkg.log geschrieben
+2022-11-02 08:00:57,702 DEBUG applying set ['libmutter-10-0', 'mutter-common', 'gir1.2-mutter-10']
+2022-11-02 08:01:00,648 DEBUG left to upgrade {'gnome-shell-extension-prefs', 'gnome-shell', 'gnome-shell-common', 'libssl3', 'openssl'}
+2022-11-02 08:01:00,763 DEBUG applying set ['gnome-shell', 'gnome-shell-common', 'gnome-shell-extension-prefs']
+2022-11-02 08:01:02,880 DEBUG left to upgrade {'openssl', 'libssl3'}
+2022-11-02 08:01:02,974 DEBUG applying set ['libssl3']
+2022-11-02 08:01:04,570 DEBUG left to upgrade {'openssl'}
+2022-11-02 08:01:04,651 DEBUG applying set ['openssl']
+2022-11-02 08:01:06,288 DEBUG left to upgrade set()
+2022-11-02 08:01:06,288 INFO Alle Systemaktualisierungen installiert
+2022-11-02 08:01:06,493 DEBUG InstCount=0 DelCount=0 BrokenCount=0
+2022-11-02 08:01:06,529 DEBUG Package libdebuginfod-common has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-02 08:01:06,529 DEBUG Package libdebuginfod1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-02 08:01:06,530 DEBUG Package libdw1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-02 08:01:06,530 DEBUG Package libelf1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-02 08:01:06,621 DEBUG Extracting content from /var/log/unattended-upgrades/unattended-upgrades-dpkg.log since 2022-11-02 08:00:55
+2022-11-02 08:01:06,622 DEBUG Sending mail to logs@josef-friedrich.de
+2022-11-02 08:01:08,064 DEBUG mail returned: 0
+2022-11-02 08:01:08,065 WARNING Found /var/run/reboot-required, rebooting
+2022-11-02 08:01:08,067 WARNING Shutdown msg: b"Reboot scheduled for Thu 2022-11-03 04:00:00 CET, use 'shutdown -c' to cancel."
+2022-11-03 07:53:14,730 INFO Skript für automatische Systemaktualisierung wird gestartet
+2022-11-03 07:53:14,731 INFO Erlaubte Ursprünge sind: origin=*
+2022-11-03 07:53:14,731 INFO Anfangsnegativliste: 
+2022-11-03 07:53:14,731 INFO Anfangspositivliste (not strict): 
+2022-11-03 07:53:15,150 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-11-03 07:53:15,150 DEBUG Using (^linux-.*-5\.15\.0\-52\-generic$|^linux-.*-5\.15\.0\-52$|^kfreebsd-.*-5\.15\.0\-52\-generic$|^kfreebsd-.*-5\.15\.0\-52$|^gnumach-.*-5\.15\.0\-52\-generic$|^gnumach-.*-5\.15\.0\-52$|^.*-modules-5\.15\.0\-52\-generic$|^.*-modules-5\.15\.0\-52$|^.*-kernel-5\.15\.0\-52\-generic$|^.*-kernel-5\.15\.0\-52$|^linux-.*-5\.15\.0\-52\-generic$|^linux-.*-5\.15\.0\-52$|^kfreebsd-.*-5\.15\.0\-52\-generic$|^kfreebsd-.*-5\.15\.0\-52$|^gnumach-.*-5\.15\.0\-52\-generic$|^gnumach-.*-5\.15\.0\-52$|^.*-modules-5\.15\.0\-52\-generic$|^.*-modules-5\.15\.0\-52$|^.*-kernel-5\.15\.0\-52\-generic$|^.*-kernel-5\.15\.0\-52$) regexp to find running kernel packages
+2022-11-03 07:53:15,514 DEBUG pkgs that look like they should be upgraded: 
+2022-11-03 07:53:15,543 DEBUG fetch.run() result: 0
+2022-11-03 07:53:15,559 DEBUG dpkg is configured not to cause conffile prompts
+2022-11-03 07:53:15,559 INFO Es wurden keine Pakete gefunden, von denen eine automatische Systemaktualisierung durchgeführt werden kann und kein ausstehendes automatisches Entfernen.
+2022-11-03 07:53:15,595 DEBUG Package libdebuginfod-common has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-03 07:53:15,595 DEBUG Package libdebuginfod1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-03 07:53:15,596 DEBUG Package libdw1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-03 07:53:15,597 DEBUG Package libelf1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-03 07:53:15,680 DEBUG Extracting content from /var/log/unattended-upgrades/unattended-upgrades-dpkg.log since 2022-11-03 07:53:14
+2022-11-04 10:06:15,985 INFO Skript für automatische Systemaktualisierung wird gestartet
+2022-11-04 10:06:15,985 INFO Erlaubte Ursprünge sind: origin=*
+2022-11-04 10:06:15,985 INFO Anfangsnegativliste: 
+2022-11-04 10:06:15,985 INFO Anfangspositivliste (not strict): 
+2022-11-04 10:06:16,461 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-11-04 10:06:16,462 DEBUG Using (^linux-.*-5\.15\.0\-52\-generic$|^linux-.*-5\.15\.0\-52$|^kfreebsd-.*-5\.15\.0\-52\-generic$|^kfreebsd-.*-5\.15\.0\-52$|^gnumach-.*-5\.15\.0\-52\-generic$|^gnumach-.*-5\.15\.0\-52$|^.*-modules-5\.15\.0\-52\-generic$|^.*-modules-5\.15\.0\-52$|^.*-kernel-5\.15\.0\-52\-generic$|^.*-kernel-5\.15\.0\-52$|^linux-.*-5\.15\.0\-52\-generic$|^linux-.*-5\.15\.0\-52$|^kfreebsd-.*-5\.15\.0\-52\-generic$|^kfreebsd-.*-5\.15\.0\-52$|^gnumach-.*-5\.15\.0\-52\-generic$|^gnumach-.*-5\.15\.0\-52$|^.*-modules-5\.15\.0\-52\-generic$|^.*-modules-5\.15\.0\-52$|^.*-kernel-5\.15\.0\-52\-generic$|^.*-kernel-5\.15\.0\-52$) regexp to find running kernel packages
+2022-11-04 10:06:16,707 DEBUG Checking: distro-info-data ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-04 10:06:16,936 DEBUG Checking: libpython3.10 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-04 10:06:17,088 DEBUG Checking: libpython3.10-dev ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-04 10:06:17,186 DEBUG Checking: libpython3.10-minimal ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-04 10:06:17,310 DEBUG Checking: libpython3.10-stdlib ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-04 10:06:17,496 DEBUG Checking: python3.10 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-04 10:06:17,601 DEBUG Checking: python3.10-dev ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-04 10:06:17,716 DEBUG Checking: python3.10-minimal ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-04 10:06:17,825 DEBUG Checking: python3.10-venv ([<Origin component:'universe' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-04 10:06:17,946 DEBUG Checking: tzdata ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-04 10:06:18,425 DEBUG pkgs that look like they should be upgraded: distro-info-data
+libpython3.10
+libpython3.10-dev
+libpython3.10-minimal
+libpython3.10-stdlib
+python3.10
+python3.10-dev
+python3.10-minimal
+python3.10-venv
+tzdata
+2022-11-04 10:06:19,487 DEBUG fetch.run() result: 0
+2022-11-04 10:06:19,891 DEBUG dpkg is configured not to cause conffile prompts
+2022-11-04 10:06:19,891 INFO Pakete, welche aktualisiert werden: distro-info-data libpython3.10 libpython3.10-dev libpython3.10-minimal libpython3.10-stdlib python3.10 python3.10-dev python3.10-minimal python3.10-venv tzdata
+2022-11-04 10:06:19,892 INFO dpkg-Protokoll wird nach /var/log/unattended-upgrades/unattended-upgrades-dpkg.log geschrieben
+2022-11-04 10:06:20,033 DEBUG applying set ['distro-info-data']
+2022-11-04 10:06:22,548 DEBUG left to upgrade {'python3.10', 'libpython3.10-stdlib', 'python3.10-minimal', 'python3.10-venv', 'libpython3.10-dev', 'libpython3.10-minimal', 'tzdata', 'libpython3.10', 'python3.10-dev'}
+2022-11-04 10:06:22,727 DEBUG applying set ['python3.10', 'libpython3.10-minimal', 'libpython3.10-stdlib', 'python3.10-venv', 'libpython3.10', 'libpython3.10-dev', 'python3.10-dev', 'python3.10-minimal']
+2022-11-04 10:06:27,978 DEBUG left to upgrade {'tzdata'}
+2022-11-04 10:06:28,193 DEBUG applying set ['tzdata']
+2022-11-04 10:06:31,007 DEBUG left to upgrade set()
+2022-11-04 10:06:31,007 INFO Alle Systemaktualisierungen installiert
+2022-11-04 10:06:31,350 DEBUG InstCount=0 DelCount=0 BrokenCount=0
+2022-11-04 10:06:31,402 DEBUG Package libdebuginfod-common has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-04 10:06:31,402 DEBUG Package libdebuginfod1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-04 10:06:31,403 DEBUG Package libdw1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-04 10:06:31,404 DEBUG Package libelf1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-04 10:06:31,524 DEBUG Extracting content from /var/log/unattended-upgrades/unattended-upgrades-dpkg.log since 2022-11-04 10:06:15
+2022-11-04 10:06:31,530 DEBUG Sending mail to logs@josef-friedrich.de
+2022-11-04 10:06:32,841 DEBUG mail returned: 0
+2022-11-05 09:11:00,767 INFO Skript für automatische Systemaktualisierung wird gestartet
+2022-11-05 09:11:00,767 INFO Erlaubte Ursprünge sind: origin=*
+2022-11-05 09:11:00,768 INFO Anfangsnegativliste: 
+2022-11-05 09:11:00,768 INFO Anfangspositivliste (not strict): 
+2022-11-05 09:11:01,214 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-11-05 09:11:01,214 DEBUG Using (^linux-.*-5\.15\.0\-52\-generic$|^linux-.*-5\.15\.0\-52$|^kfreebsd-.*-5\.15\.0\-52\-generic$|^kfreebsd-.*-5\.15\.0\-52$|^gnumach-.*-5\.15\.0\-52\-generic$|^gnumach-.*-5\.15\.0\-52$|^.*-modules-5\.15\.0\-52\-generic$|^.*-modules-5\.15\.0\-52$|^.*-kernel-5\.15\.0\-52\-generic$|^.*-kernel-5\.15\.0\-52$|^linux-.*-5\.15\.0\-52\-generic$|^linux-.*-5\.15\.0\-52$|^kfreebsd-.*-5\.15\.0\-52\-generic$|^kfreebsd-.*-5\.15\.0\-52$|^gnumach-.*-5\.15\.0\-52\-generic$|^gnumach-.*-5\.15\.0\-52$|^.*-modules-5\.15\.0\-52\-generic$|^.*-modules-5\.15\.0\-52$|^.*-kernel-5\.15\.0\-52\-generic$|^.*-kernel-5\.15\.0\-52$) regexp to find running kernel packages
+2022-11-05 09:11:01,520 DEBUG Checking: nodejs ([<Origin component:'main' archive:'' origin:'Node Source' label:'Node Source' site:'deb.nodesource.com' isTrusted:True>])
+2022-11-05 09:11:01,920 DEBUG pkgs that look like they should be upgraded: nodejs
+2022-11-05 09:11:01,992 DEBUG fetch.run() result: 0
+2022-11-05 09:11:02,314 DEBUG dpkg is configured not to cause conffile prompts
+2022-11-05 09:11:02,315 INFO Pakete, welche aktualisiert werden: nodejs
+2022-11-05 09:11:02,315 INFO dpkg-Protokoll wird nach /var/log/unattended-upgrades/unattended-upgrades-dpkg.log geschrieben
+2022-11-05 09:11:02,455 DEBUG applying set ['nodejs']
+2022-11-05 09:11:10,662 DEBUG left to upgrade set()
+2022-11-05 09:11:10,662 INFO Alle Systemaktualisierungen installiert
+2022-11-05 09:11:10,872 DEBUG InstCount=0 DelCount=0 BrokenCount=0
+2022-11-05 09:11:10,908 DEBUG Package libdebuginfod-common has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-05 09:11:10,908 DEBUG Package libdebuginfod1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-05 09:11:10,909 DEBUG Package libdw1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-05 09:11:10,910 DEBUG Package libelf1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-05 09:11:10,994 DEBUG Extracting content from /var/log/unattended-upgrades/unattended-upgrades-dpkg.log since 2022-11-05 09:11:00
+2022-11-05 09:11:11,000 DEBUG Sending mail to logs@josef-friedrich.de
+2022-11-05 09:11:12,434 DEBUG mail returned: 0
+2022-11-06 09:27:39,099 INFO Skript für automatische Systemaktualisierung wird gestartet
+2022-11-06 09:27:39,099 INFO Erlaubte Ursprünge sind: origin=*
+2022-11-06 09:27:39,099 INFO Anfangsnegativliste: 
+2022-11-06 09:27:39,099 INFO Anfangspositivliste (not strict): 
+2022-11-06 09:27:39,477 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-11-06 09:27:39,477 DEBUG Using (^linux-.*-5\.15\.0\-52\-generic$|^linux-.*-5\.15\.0\-52$|^kfreebsd-.*-5\.15\.0\-52\-generic$|^kfreebsd-.*-5\.15\.0\-52$|^gnumach-.*-5\.15\.0\-52\-generic$|^gnumach-.*-5\.15\.0\-52$|^.*-modules-5\.15\.0\-52\-generic$|^.*-modules-5\.15\.0\-52$|^.*-kernel-5\.15\.0\-52\-generic$|^.*-kernel-5\.15\.0\-52$|^linux-.*-5\.15\.0\-52\-generic$|^linux-.*-5\.15\.0\-52$|^kfreebsd-.*-5\.15\.0\-52\-generic$|^kfreebsd-.*-5\.15\.0\-52$|^gnumach-.*-5\.15\.0\-52\-generic$|^gnumach-.*-5\.15\.0\-52$|^.*-modules-5\.15\.0\-52\-generic$|^.*-modules-5\.15\.0\-52$|^.*-kernel-5\.15\.0\-52\-generic$|^.*-kernel-5\.15\.0\-52$) regexp to find running kernel packages
+2022-11-06 09:27:39,822 DEBUG pkgs that look like they should be upgraded: 
+2022-11-06 09:27:39,851 DEBUG fetch.run() result: 0
+2022-11-06 09:27:39,866 DEBUG dpkg is configured not to cause conffile prompts
+2022-11-06 09:27:39,866 INFO Es wurden keine Pakete gefunden, von denen eine automatische Systemaktualisierung durchgeführt werden kann und kein ausstehendes automatisches Entfernen.
+2022-11-06 09:27:39,901 DEBUG Package libdebuginfod-common has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-06 09:27:39,901 DEBUG Package libdebuginfod1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-06 09:27:39,902 DEBUG Package libdw1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-06 09:27:39,903 DEBUG Package libelf1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-06 09:27:39,986 DEBUG Extracting content from /var/log/unattended-upgrades/unattended-upgrades-dpkg.log since 2022-11-06 09:27:39
+2022-11-07 09:16:43,700 INFO Skript für automatische Systemaktualisierung wird gestartet
+2022-11-07 09:16:43,700 INFO Erlaubte Ursprünge sind: origin=*
+2022-11-07 09:16:43,701 INFO Anfangsnegativliste: 
+2022-11-07 09:16:43,701 INFO Anfangspositivliste (not strict): 
+2022-11-07 09:16:44,184 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-11-07 09:16:44,184 DEBUG Using (^linux-.*-5\.15\.0\-52\-generic$|^linux-.*-5\.15\.0\-52$|^kfreebsd-.*-5\.15\.0\-52\-generic$|^kfreebsd-.*-5\.15\.0\-52$|^gnumach-.*-5\.15\.0\-52\-generic$|^gnumach-.*-5\.15\.0\-52$|^.*-modules-5\.15\.0\-52\-generic$|^.*-modules-5\.15\.0\-52$|^.*-kernel-5\.15\.0\-52\-generic$|^.*-kernel-5\.15\.0\-52$|^linux-.*-5\.15\.0\-52\-generic$|^linux-.*-5\.15\.0\-52$|^kfreebsd-.*-5\.15\.0\-52\-generic$|^kfreebsd-.*-5\.15\.0\-52$|^gnumach-.*-5\.15\.0\-52\-generic$|^gnumach-.*-5\.15\.0\-52$|^.*-modules-5\.15\.0\-52\-generic$|^.*-modules-5\.15\.0\-52$|^.*-kernel-5\.15\.0\-52\-generic$|^.*-kernel-5\.15\.0\-52$) regexp to find running kernel packages
+2022-11-07 09:16:44,528 DEBUG pkgs that look like they should be upgraded: 
+2022-11-07 09:16:44,556 DEBUG fetch.run() result: 0
+2022-11-07 09:16:44,573 DEBUG dpkg is configured not to cause conffile prompts
+2022-11-07 09:16:44,573 INFO Es wurden keine Pakete gefunden, von denen eine automatische Systemaktualisierung durchgeführt werden kann und kein ausstehendes automatisches Entfernen.
+2022-11-07 09:16:44,614 DEBUG Package libdebuginfod-common has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-07 09:16:44,614 DEBUG Package libdebuginfod1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-07 09:16:44,615 DEBUG Package libdw1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-07 09:16:44,616 DEBUG Package libelf1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-07 09:16:44,711 DEBUG Extracting content from /var/log/unattended-upgrades/unattended-upgrades-dpkg.log since 2022-11-07 09:16:43
+2022-11-08 17:00:13,532 INFO Skript für automatische Systemaktualisierung wird gestartet
+2022-11-08 17:00:13,533 INFO Erlaubte Ursprünge sind: origin=*
+2022-11-08 17:00:13,533 INFO Anfangsnegativliste: 
+2022-11-08 17:00:13,533 INFO Anfangspositivliste (not strict): 
+2022-11-08 17:00:13,938 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-11-08 17:00:13,938 DEBUG Using (^linux-.*-5\.15\.0\-52\-generic$|^linux-.*-5\.15\.0\-52$|^kfreebsd-.*-5\.15\.0\-52\-generic$|^kfreebsd-.*-5\.15\.0\-52$|^gnumach-.*-5\.15\.0\-52\-generic$|^gnumach-.*-5\.15\.0\-52$|^.*-modules-5\.15\.0\-52\-generic$|^.*-modules-5\.15\.0\-52$|^.*-kernel-5\.15\.0\-52\-generic$|^.*-kernel-5\.15\.0\-52$|^linux-.*-5\.15\.0\-52\-generic$|^linux-.*-5\.15\.0\-52$|^kfreebsd-.*-5\.15\.0\-52\-generic$|^kfreebsd-.*-5\.15\.0\-52$|^gnumach-.*-5\.15\.0\-52\-generic$|^gnumach-.*-5\.15\.0\-52$|^.*-modules-5\.15\.0\-52\-generic$|^.*-modules-5\.15\.0\-52$|^.*-kernel-5\.15\.0\-52\-generic$|^.*-kernel-5\.15\.0\-52$) regexp to find running kernel packages
+2022-11-08 17:00:14,150 DEBUG Checking: libfprint-2-2 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-08 17:00:14,234 DEBUG Checking: libpixman-1-0 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-08 17:00:14,293 DEBUG Checking: libpixman-1-dev ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-08 17:00:14,355 DEBUG Checking: libsqlite3-0 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-08 17:00:14,423 DEBUG Checking: libtiff-dev ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-08 17:00:14,487 DEBUG Checking: libtiff5 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-08 17:00:14,553 DEBUG Checking: libtiff5-dev ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-08 17:00:14,623 DEBUG Checking: libtiffxx5 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-08 17:00:14,730 DEBUG Checking: sqlite3 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-08 17:00:14,793 DEBUG Checking: ubuntu-advantage-tools ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-08 17:00:15,170 DEBUG pkgs that look like they should be upgraded: libfprint-2-2
+libpixman-1-0
+libpixman-1-dev
+libsqlite3-0
+libtiff-dev
+libtiff5
+libtiff5-dev
+libtiffxx5
+sqlite3
+ubuntu-advantage-tools
+2022-11-08 17:00:15,864 DEBUG fetch.run() result: 0
+2022-11-08 17:00:16,176 DEBUG dpkg is configured not to cause conffile prompts
+2022-11-08 17:00:16,176 INFO Pakete, welche aktualisiert werden: libfprint-2-2 libpixman-1-0 libpixman-1-dev libsqlite3-0 libtiff-dev libtiff5 libtiff5-dev libtiffxx5 sqlite3 ubuntu-advantage-tools
+2022-11-08 17:00:16,176 INFO dpkg-Protokoll wird nach /var/log/unattended-upgrades/unattended-upgrades-dpkg.log geschrieben
+2022-11-08 17:00:16,264 DEBUG applying set ['ubuntu-advantage-tools']
+2022-11-08 17:00:20,148 DEBUG left to upgrade {'libtiffxx5', 'libtiff5-dev', 'libtiff5', 'libfprint-2-2', 'libtiff-dev', 'libsqlite3-0', 'sqlite3', 'libpixman-1-0', 'libpixman-1-dev'}
+2022-11-08 17:00:20,243 DEBUG applying set ['libtiffxx5', 'libtiff5', 'libtiff-dev']
+2022-11-08 17:00:22,100 DEBUG left to upgrade {'libtiff5-dev', 'libfprint-2-2', 'libsqlite3-0', 'sqlite3', 'libpixman-1-0', 'libpixman-1-dev'}
+2022-11-08 17:00:22,177 DEBUG applying set ['libtiff5-dev']
+2022-11-08 17:00:23,522 DEBUG left to upgrade {'libfprint-2-2', 'libsqlite3-0', 'sqlite3', 'libpixman-1-0', 'libpixman-1-dev'}
+2022-11-08 17:00:23,595 DEBUG applying set ['libfprint-2-2']
+2022-11-08 17:00:33,777 DEBUG left to upgrade {'libsqlite3-0', 'sqlite3', 'libpixman-1-0', 'libpixman-1-dev'}
+2022-11-08 17:00:33,852 DEBUG applying set ['libsqlite3-0', 'sqlite3']
+2022-11-08 17:00:35,549 DEBUG left to upgrade {'libpixman-1-0', 'libpixman-1-dev'}
+2022-11-08 17:00:35,625 DEBUG applying set ['libpixman-1-0', 'libpixman-1-dev']
+2022-11-08 17:00:37,209 DEBUG left to upgrade set()
+2022-11-08 17:00:37,209 INFO Alle Systemaktualisierungen installiert
+2022-11-08 17:00:37,394 DEBUG InstCount=0 DelCount=0 BrokenCount=0
+2022-11-08 17:00:37,429 DEBUG Package libdebuginfod-common has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-08 17:00:37,429 DEBUG Package libdebuginfod1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-08 17:00:37,430 DEBUG Package libdw1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-08 17:00:37,431 DEBUG Package libelf1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-08 17:00:37,517 DEBUG Extracting content from /var/log/unattended-upgrades/unattended-upgrades-dpkg.log since 2022-11-08 17:00:13
+2022-11-08 17:00:37,523 DEBUG Sending mail to logs@josef-friedrich.de
+2022-11-08 17:00:38,967 DEBUG mail returned: 0
+2022-11-09 15:53:25,142 INFO Skript für automatische Systemaktualisierung wird gestartet
+2022-11-09 15:53:25,142 INFO Erlaubte Ursprünge sind: origin=*
+2022-11-09 15:53:25,142 INFO Anfangsnegativliste: 
+2022-11-09 15:53:25,142 INFO Anfangspositivliste (not strict): 
+2022-11-09 15:53:25,507 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-11-09 15:53:25,507 DEBUG Using (^linux-.*-5\.15\.0\-52\-generic$|^linux-.*-5\.15\.0\-52$|^kfreebsd-.*-5\.15\.0\-52\-generic$|^kfreebsd-.*-5\.15\.0\-52$|^gnumach-.*-5\.15\.0\-52\-generic$|^gnumach-.*-5\.15\.0\-52$|^.*-modules-5\.15\.0\-52\-generic$|^.*-modules-5\.15\.0\-52$|^.*-kernel-5\.15\.0\-52\-generic$|^.*-kernel-5\.15\.0\-52$|^linux-.*-5\.15\.0\-52\-generic$|^linux-.*-5\.15\.0\-52$|^kfreebsd-.*-5\.15\.0\-52\-generic$|^kfreebsd-.*-5\.15\.0\-52$|^gnumach-.*-5\.15\.0\-52\-generic$|^gnumach-.*-5\.15\.0\-52$|^.*-modules-5\.15\.0\-52\-generic$|^.*-modules-5\.15\.0\-52$|^.*-kernel-5\.15\.0\-52\-generic$|^.*-kernel-5\.15\.0\-52$) regexp to find running kernel packages
+2022-11-09 15:53:25,787 DEBUG Checking: openjdk-11-jdk ([<Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-09 15:53:25,845 DEBUG Checking: openjdk-11-jdk-headless ([<Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-09 15:53:25,895 DEBUG Checking: openjdk-11-jre ([<Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-09 15:53:25,943 DEBUG Checking: openjdk-11-jre-headless ([<Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-09 15:53:25,992 DEBUG Checking: openjdk-17-jdk ([<Origin component:'universe' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-09 15:53:26,054 DEBUG Checking: openjdk-17-jdk-headless ([<Origin component:'universe' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-09 15:53:26,110 DEBUG Checking: openjdk-17-jre ([<Origin component:'universe' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-09 15:53:26,168 DEBUG Checking: openjdk-17-jre-headless ([<Origin component:'universe' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-09 15:53:26,222 DEBUG Checking: openjdk-17-source ([<Origin component:'universe' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-09 15:53:26,287 DEBUG Checking: openjdk-8-jdk ([<Origin component:'universe' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-09 15:53:26,359 DEBUG Checking: openjdk-8-jdk-headless ([<Origin component:'universe' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-09 15:53:26,424 DEBUG Checking: openjdk-8-jre ([<Origin component:'universe' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-09 15:53:26,488 DEBUG Checking: openjdk-8-jre-headless ([<Origin component:'universe' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-09 15:53:26,553 DEBUG Checking: php8.1-cli ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-09 15:53:26,635 DEBUG Checking: php8.1-common ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-09 15:53:26,707 DEBUG Checking: php8.1-opcache ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-09 15:53:26,777 DEBUG Checking: php8.1-readline ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-09 15:53:26,849 DEBUG Checking: php8.1-xml ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-09 15:53:27,259 DEBUG pkgs that look like they should be upgraded: openjdk-11-jdk
+openjdk-11-jdk-headless
+openjdk-11-jre
+openjdk-11-jre-headless
+openjdk-17-jdk
+openjdk-17-jdk-headless
+openjdk-17-jre
+openjdk-17-jre-headless
+openjdk-17-source
+openjdk-8-jdk
+openjdk-8-jdk-headless
+openjdk-8-jre
+openjdk-8-jre-headless
+php8.1-cli
+php8.1-common
+php8.1-opcache
+php8.1-readline
+php8.1-xml
+2022-11-09 15:53:28,024 DEBUG fetch.run() result: 0
+2022-11-09 15:53:28,325 DEBUG dpkg is configured not to cause conffile prompts
+2022-11-09 15:53:28,326 INFO Pakete, welche aktualisiert werden: openjdk-11-jdk openjdk-11-jdk-headless openjdk-11-jre openjdk-11-jre-headless openjdk-17-jdk openjdk-17-jdk-headless openjdk-17-jre openjdk-17-jre-headless openjdk-17-source openjdk-8-jdk openjdk-8-jdk-headless openjdk-8-jre openjdk-8-jre-headless php8.1-cli php8.1-common php8.1-opcache php8.1-readline php8.1-xml
+2022-11-09 15:53:28,326 INFO dpkg-Protokoll wird nach /var/log/unattended-upgrades/unattended-upgrades-dpkg.log geschrieben
+2022-11-09 15:53:28,416 DEBUG applying set ['php8.1-opcache', 'php8.1-common', 'php8.1-readline', 'php8.1-cli', 'php8.1-xml']
+2022-11-09 15:53:37,976 DEBUG left to upgrade {'openjdk-17-source', 'openjdk-11-jre-headless', 'openjdk-11-jre', 'openjdk-17-jre', 'openjdk-17-jdk-headless', 'openjdk-8-jdk', 'openjdk-8-jre-headless', 'openjdk-17-jre-headless', 'openjdk-8-jdk-headless', 'openjdk-11-jdk', 'openjdk-8-jre', 'openjdk-11-jdk-headless', 'openjdk-17-jdk'}
+2022-11-09 15:53:38,055 DEBUG applying set ['openjdk-8-jdk', 'openjdk-8-jre', 'openjdk-8-jre-headless', 'openjdk-8-jdk-headless']
+2022-11-09 15:53:42,848 DEBUG left to upgrade {'openjdk-17-source', 'openjdk-11-jre-headless', 'openjdk-11-jre', 'openjdk-17-jre', 'openjdk-17-jdk-headless', 'openjdk-17-jre-headless', 'openjdk-11-jdk', 'openjdk-11-jdk-headless', 'openjdk-17-jdk'}
+2022-11-09 15:53:42,965 DEBUG applying set ['openjdk-17-jdk', 'openjdk-17-jre', 'openjdk-17-jdk-headless', 'openjdk-17-source', 'openjdk-17-jre-headless']
+2022-11-09 15:53:48,648 DEBUG left to upgrade {'openjdk-11-jdk', 'openjdk-11-jre-headless', 'openjdk-11-jre', 'openjdk-11-jdk-headless'}
+2022-11-09 15:53:48,722 DEBUG applying set ['openjdk-11-jdk', 'openjdk-11-jre', 'openjdk-11-jre-headless', 'openjdk-11-jdk-headless']
+2022-11-09 15:53:53,925 DEBUG left to upgrade set()
+2022-11-09 15:53:53,925 INFO Alle Systemaktualisierungen installiert
+2022-11-09 15:53:54,109 DEBUG InstCount=0 DelCount=0 BrokenCount=0
+2022-11-09 15:53:54,189 DEBUG Package libdebuginfod-common has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-09 15:53:54,189 DEBUG Package libdebuginfod1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-09 15:53:54,190 DEBUG Package libdw1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-09 15:53:54,191 DEBUG Package libelf1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-09 15:53:54,275 DEBUG Extracting content from /var/log/unattended-upgrades/unattended-upgrades-dpkg.log since 2022-11-09 15:53:25
+2022-11-09 15:53:54,281 DEBUG Sending mail to logs@josef-friedrich.de
+2022-11-09 15:53:55,635 DEBUG mail returned: 0
+2022-11-10 14:35:17,589 INFO Skript für automatische Systemaktualisierung wird gestartet
+2022-11-10 14:35:17,594 INFO Erlaubte Ursprünge sind: origin=*
+2022-11-10 14:35:17,594 INFO Anfangsnegativliste: 
+2022-11-10 14:35:17,594 INFO Anfangspositivliste (not strict): 
+2022-11-10 14:35:18,008 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-11-10 14:35:18,008 DEBUG Using (^linux-.*-5\.15\.0\-52\-generic$|^linux-.*-5\.15\.0\-52$|^kfreebsd-.*-5\.15\.0\-52\-generic$|^kfreebsd-.*-5\.15\.0\-52$|^gnumach-.*-5\.15\.0\-52\-generic$|^gnumach-.*-5\.15\.0\-52$|^.*-modules-5\.15\.0\-52\-generic$|^.*-modules-5\.15\.0\-52$|^.*-kernel-5\.15\.0\-52\-generic$|^.*-kernel-5\.15\.0\-52$|^linux-.*-5\.15\.0\-52\-generic$|^linux-.*-5\.15\.0\-52$|^kfreebsd-.*-5\.15\.0\-52\-generic$|^kfreebsd-.*-5\.15\.0\-52$|^gnumach-.*-5\.15\.0\-52\-generic$|^gnumach-.*-5\.15\.0\-52$|^.*-modules-5\.15\.0\-52\-generic$|^.*-modules-5\.15\.0\-52$|^.*-kernel-5\.15\.0\-52\-generic$|^.*-kernel-5\.15\.0\-52$) regexp to find running kernel packages
+2022-11-10 14:35:18,188 DEBUG Checking: code ([<Origin component:'main' archive:'stable' origin:'vscode stable' label:'vscode stable' site:'packages.microsoft.com' isTrusted:True>, <Origin component:'main' archive:'stable' origin:'code stable' label:'code stable' site:'packages.microsoft.com' isTrusted:True>])
+2022-11-10 14:35:18,700 DEBUG pkgs that look like they should be upgraded: code
+2022-11-10 14:35:18,781 DEBUG fetch.run() result: 0
+2022-11-10 14:35:19,151 DEBUG dpkg is configured not to cause conffile prompts
+2022-11-10 14:35:19,152 INFO Pakete, welche aktualisiert werden: code
+2022-11-10 14:35:19,152 INFO dpkg-Protokoll wird nach /var/log/unattended-upgrades/unattended-upgrades-dpkg.log geschrieben
+2022-11-10 14:35:19,250 DEBUG applying set ['code']
+2022-11-10 14:35:45,148 DEBUG left to upgrade set()
+2022-11-10 14:35:45,148 INFO Alle Systemaktualisierungen installiert
+2022-11-10 14:35:45,332 DEBUG InstCount=0 DelCount=0 BrokenCount=0
+2022-11-10 14:35:45,374 DEBUG Package libdebuginfod-common has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-10 14:35:45,374 DEBUG Package libdebuginfod1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-10 14:35:45,375 DEBUG Package libdw1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-10 14:35:45,376 DEBUG Package libelf1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-10 14:35:45,461 DEBUG Extracting content from /var/log/unattended-upgrades/unattended-upgrades-dpkg.log since 2022-11-10 14:35:17
+2022-11-10 14:35:45,467 DEBUG Sending mail to logs@josef-friedrich.de
+2022-11-10 14:35:46,807 DEBUG mail returned: 0
+2022-11-11 16:41:15,988 INFO Skript für automatische Systemaktualisierung wird gestartet
+2022-11-11 16:41:15,988 INFO Erlaubte Ursprünge sind: origin=*
+2022-11-11 16:41:15,989 INFO Anfangsnegativliste: 
+2022-11-11 16:41:15,989 INFO Anfangspositivliste (not strict): 
+2022-11-11 16:41:16,498 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-11-11 16:41:16,498 DEBUG Using (^linux-.*-5\.15\.0\-52\-generic$|^linux-.*-5\.15\.0\-52$|^kfreebsd-.*-5\.15\.0\-52\-generic$|^kfreebsd-.*-5\.15\.0\-52$|^gnumach-.*-5\.15\.0\-52\-generic$|^gnumach-.*-5\.15\.0\-52$|^.*-modules-5\.15\.0\-52\-generic$|^.*-modules-5\.15\.0\-52$|^.*-kernel-5\.15\.0\-52\-generic$|^.*-kernel-5\.15\.0\-52$|^linux-.*-5\.15\.0\-52\-generic$|^linux-.*-5\.15\.0\-52$|^kfreebsd-.*-5\.15\.0\-52\-generic$|^kfreebsd-.*-5\.15\.0\-52$|^gnumach-.*-5\.15\.0\-52\-generic$|^gnumach-.*-5\.15\.0\-52$|^.*-modules-5\.15\.0\-52\-generic$|^.*-modules-5\.15\.0\-52$|^.*-kernel-5\.15\.0\-52\-generic$|^.*-kernel-5\.15\.0\-52$) regexp to find running kernel packages
+2022-11-11 16:41:16,835 DEBUG Checking: thunderbird ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-11 16:41:17,323 DEBUG pkgs that look like they should be upgraded: thunderbird
+2022-11-11 16:41:17,422 DEBUG fetch.run() result: 0
+2022-11-11 16:41:17,735 DEBUG dpkg is configured not to cause conffile prompts
+2022-11-11 16:41:17,735 INFO Pakete, welche aktualisiert werden: thunderbird
+2022-11-11 16:41:17,735 INFO dpkg-Protokoll wird nach /var/log/unattended-upgrades/unattended-upgrades-dpkg.log geschrieben
+2022-11-11 16:41:17,833 DEBUG applying set ['thunderbird']
+2022-11-11 16:41:22,824 DEBUG left to upgrade set()
+2022-11-11 16:41:22,824 INFO Alle Systemaktualisierungen installiert
+2022-11-11 16:41:23,044 DEBUG InstCount=0 DelCount=0 BrokenCount=0
+2022-11-11 16:41:23,083 DEBUG Package libdebuginfod-common has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-11 16:41:23,084 DEBUG Package libdebuginfod1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-11 16:41:23,085 DEBUG Package libdw1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-11 16:41:23,085 DEBUG Package libelf1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-11 16:41:23,174 DEBUG Extracting content from /var/log/unattended-upgrades/unattended-upgrades-dpkg.log since 2022-11-11 16:41:15
+2022-11-11 16:41:23,175 DEBUG Sending mail to logs@josef-friedrich.de
+2022-11-11 16:41:24,504 DEBUG mail returned: 0
+2022-11-12 08:13:54,767 INFO Skript für automatische Systemaktualisierung wird gestartet
+2022-11-12 08:13:54,768 INFO Erlaubte Ursprünge sind: origin=*
+2022-11-12 08:13:54,768 INFO Anfangsnegativliste: 
+2022-11-12 08:13:54,768 INFO Anfangspositivliste (not strict): 
+2022-11-12 08:13:55,154 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-11-12 08:13:55,154 DEBUG Using (^linux-.*-5\.15\.0\-52\-generic$|^linux-.*-5\.15\.0\-52$|^kfreebsd-.*-5\.15\.0\-52\-generic$|^kfreebsd-.*-5\.15\.0\-52$|^gnumach-.*-5\.15\.0\-52\-generic$|^gnumach-.*-5\.15\.0\-52$|^.*-modules-5\.15\.0\-52\-generic$|^.*-modules-5\.15\.0\-52$|^.*-kernel-5\.15\.0\-52\-generic$|^.*-kernel-5\.15\.0\-52$|^linux-.*-5\.15\.0\-52\-generic$|^linux-.*-5\.15\.0\-52$|^kfreebsd-.*-5\.15\.0\-52\-generic$|^kfreebsd-.*-5\.15\.0\-52$|^gnumach-.*-5\.15\.0\-52\-generic$|^gnumach-.*-5\.15\.0\-52$|^.*-modules-5\.15\.0\-52\-generic$|^.*-modules-5\.15\.0\-52$|^.*-kernel-5\.15\.0\-52\-generic$|^.*-kernel-5\.15\.0\-52$) regexp to find running kernel packages
+2022-11-12 08:13:55,507 DEBUG pkgs that look like they should be upgraded: 
+2022-11-12 08:13:55,539 DEBUG fetch.run() result: 0
+2022-11-12 08:13:55,555 DEBUG dpkg is configured not to cause conffile prompts
+2022-11-12 08:13:55,555 INFO Es wurden keine Pakete gefunden, von denen eine automatische Systemaktualisierung durchgeführt werden kann und kein ausstehendes automatisches Entfernen.
+2022-11-12 08:13:55,592 DEBUG Package libdebuginfod-common has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-12 08:13:55,592 DEBUG Package libdebuginfod1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-12 08:13:55,593 DEBUG Package libdw1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-12 08:13:55,594 DEBUG Package libelf1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-12 08:13:55,677 DEBUG Extracting content from /var/log/unattended-upgrades/unattended-upgrades-dpkg.log since 2022-11-12 08:13:54
+2022-11-13 08:07:22,176 INFO Skript für automatische Systemaktualisierung wird gestartet
+2022-11-13 08:07:22,181 INFO Erlaubte Ursprünge sind: origin=*
+2022-11-13 08:07:22,182 INFO Anfangsnegativliste: 
+2022-11-13 08:07:22,182 INFO Anfangspositivliste (not strict): 
+2022-11-13 08:07:22,615 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-11-13 08:07:22,615 DEBUG Using (^linux-.*-5\.15\.0\-52\-generic$|^linux-.*-5\.15\.0\-52$|^kfreebsd-.*-5\.15\.0\-52\-generic$|^kfreebsd-.*-5\.15\.0\-52$|^gnumach-.*-5\.15\.0\-52\-generic$|^gnumach-.*-5\.15\.0\-52$|^.*-modules-5\.15\.0\-52\-generic$|^.*-modules-5\.15\.0\-52$|^.*-kernel-5\.15\.0\-52\-generic$|^.*-kernel-5\.15\.0\-52$|^linux-.*-5\.15\.0\-52\-generic$|^linux-.*-5\.15\.0\-52$|^kfreebsd-.*-5\.15\.0\-52\-generic$|^kfreebsd-.*-5\.15\.0\-52$|^gnumach-.*-5\.15\.0\-52\-generic$|^gnumach-.*-5\.15\.0\-52$|^.*-modules-5\.15\.0\-52\-generic$|^.*-modules-5\.15\.0\-52$|^.*-kernel-5\.15\.0\-52\-generic$|^.*-kernel-5\.15\.0\-52$) regexp to find running kernel packages
+2022-11-13 08:07:23,006 DEBUG pkgs that look like they should be upgraded: 
+2022-11-13 08:07:23,035 DEBUG fetch.run() result: 0
+2022-11-13 08:07:23,050 DEBUG dpkg is configured not to cause conffile prompts
+2022-11-13 08:07:23,050 INFO Es wurden keine Pakete gefunden, von denen eine automatische Systemaktualisierung durchgeführt werden kann und kein ausstehendes automatisches Entfernen.
+2022-11-13 08:07:23,086 DEBUG Package libdebuginfod-common has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-13 08:07:23,086 DEBUG Package libdebuginfod1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-13 08:07:23,087 DEBUG Package libdw1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-13 08:07:23,088 DEBUG Package libelf1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-13 08:07:23,172 DEBUG Extracting content from /var/log/unattended-upgrades/unattended-upgrades-dpkg.log since 2022-11-13 08:07:22
+2022-11-14 08:29:09,193 INFO Skript für automatische Systemaktualisierung wird gestartet
+2022-11-14 08:29:09,194 INFO Erlaubte Ursprünge sind: origin=*
+2022-11-14 08:29:09,194 INFO Anfangsnegativliste: 
+2022-11-14 08:29:09,194 INFO Anfangspositivliste (not strict): 
+2022-11-14 08:29:09,620 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-11-14 08:29:09,620 DEBUG Using (^linux-.*-5\.15\.0\-52\-generic$|^linux-.*-5\.15\.0\-52$|^kfreebsd-.*-5\.15\.0\-52\-generic$|^kfreebsd-.*-5\.15\.0\-52$|^gnumach-.*-5\.15\.0\-52\-generic$|^gnumach-.*-5\.15\.0\-52$|^.*-modules-5\.15\.0\-52\-generic$|^.*-modules-5\.15\.0\-52$|^.*-kernel-5\.15\.0\-52\-generic$|^.*-kernel-5\.15\.0\-52$|^linux-.*-5\.15\.0\-52\-generic$|^linux-.*-5\.15\.0\-52$|^kfreebsd-.*-5\.15\.0\-52\-generic$|^kfreebsd-.*-5\.15\.0\-52$|^gnumach-.*-5\.15\.0\-52\-generic$|^gnumach-.*-5\.15\.0\-52$|^.*-modules-5\.15\.0\-52\-generic$|^.*-modules-5\.15\.0\-52$|^.*-kernel-5\.15\.0\-52\-generic$|^.*-kernel-5\.15\.0\-52$) regexp to find running kernel packages
+2022-11-14 08:29:09,998 DEBUG pkgs that look like they should be upgraded: 
+2022-11-14 08:29:10,029 DEBUG fetch.run() result: 0
+2022-11-14 08:29:10,046 DEBUG dpkg is configured not to cause conffile prompts
+2022-11-14 08:29:10,046 INFO Es wurden keine Pakete gefunden, von denen eine automatische Systemaktualisierung durchgeführt werden kann und kein ausstehendes automatisches Entfernen.
+2022-11-14 08:29:10,083 DEBUG Package libdebuginfod-common has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-14 08:29:10,083 DEBUG Package libdebuginfod1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-14 08:29:10,084 DEBUG Package libdw1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-14 08:29:10,085 DEBUG Package libelf1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-14 08:29:10,172 DEBUG Extracting content from /var/log/unattended-upgrades/unattended-upgrades-dpkg.log since 2022-11-14 08:29:09
+2022-11-15 15:45:03,610 INFO Skript für automatische Systemaktualisierung wird gestartet
+2022-11-15 15:45:03,611 INFO Erlaubte Ursprünge sind: origin=*
+2022-11-15 15:45:03,611 INFO Anfangsnegativliste: 
+2022-11-15 15:45:03,611 INFO Anfangspositivliste (not strict): 
+2022-11-15 15:45:03,981 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-11-15 15:45:03,982 DEBUG Using (^linux-.*-5\.15\.0\-52\-generic$|^linux-.*-5\.15\.0\-52$|^kfreebsd-.*-5\.15\.0\-52\-generic$|^kfreebsd-.*-5\.15\.0\-52$|^gnumach-.*-5\.15\.0\-52\-generic$|^gnumach-.*-5\.15\.0\-52$|^.*-modules-5\.15\.0\-52\-generic$|^.*-modules-5\.15\.0\-52$|^.*-kernel-5\.15\.0\-52\-generic$|^.*-kernel-5\.15\.0\-52$|^linux-.*-5\.15\.0\-52\-generic$|^linux-.*-5\.15\.0\-52$|^kfreebsd-.*-5\.15\.0\-52\-generic$|^kfreebsd-.*-5\.15\.0\-52$|^gnumach-.*-5\.15\.0\-52\-generic$|^gnumach-.*-5\.15\.0\-52$|^.*-modules-5\.15\.0\-52\-generic$|^.*-modules-5\.15\.0\-52$|^.*-kernel-5\.15\.0\-52\-generic$|^.*-kernel-5\.15\.0\-52$) regexp to find running kernel packages
+2022-11-15 15:45:04,308 DEBUG pkgs that look like they should be upgraded: 
+2022-11-15 15:45:04,335 DEBUG fetch.run() result: 0
+2022-11-15 15:45:04,349 DEBUG dpkg is configured not to cause conffile prompts
+2022-11-15 15:45:04,349 INFO Es wurden keine Pakete gefunden, von denen eine automatische Systemaktualisierung durchgeführt werden kann und kein ausstehendes automatisches Entfernen.
+2022-11-15 15:45:04,383 DEBUG Package libdebuginfod-common has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-15 15:45:04,383 DEBUG Package libdebuginfod1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-15 15:45:04,384 DEBUG Package libdw1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-15 15:45:04,385 DEBUG Package libelf1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-15 15:45:04,465 DEBUG Extracting content from /var/log/unattended-upgrades/unattended-upgrades-dpkg.log since 2022-11-15 15:45:03
+2022-11-16 16:06:42,708 INFO Skript für automatische Systemaktualisierung wird gestartet
+2022-11-16 16:06:42,708 INFO Erlaubte Ursprünge sind: origin=*
+2022-11-16 16:06:42,708 INFO Anfangsnegativliste: 
+2022-11-16 16:06:42,709 INFO Anfangspositivliste (not strict): 
+2022-11-16 16:06:43,114 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-11-16 16:06:43,114 DEBUG Using (^linux-.*-5\.15\.0\-52\-generic$|^linux-.*-5\.15\.0\-52$|^kfreebsd-.*-5\.15\.0\-52\-generic$|^kfreebsd-.*-5\.15\.0\-52$|^gnumach-.*-5\.15\.0\-52\-generic$|^gnumach-.*-5\.15\.0\-52$|^.*-modules-5\.15\.0\-52\-generic$|^.*-modules-5\.15\.0\-52$|^.*-kernel-5\.15\.0\-52\-generic$|^.*-kernel-5\.15\.0\-52$|^linux-.*-5\.15\.0\-52\-generic$|^linux-.*-5\.15\.0\-52$|^kfreebsd-.*-5\.15\.0\-52\-generic$|^kfreebsd-.*-5\.15\.0\-52$|^gnumach-.*-5\.15\.0\-52\-generic$|^gnumach-.*-5\.15\.0\-52$|^.*-modules-5\.15\.0\-52\-generic$|^.*-modules-5\.15\.0\-52$|^.*-kernel-5\.15\.0\-52\-generic$|^.*-kernel-5\.15\.0\-52$) regexp to find running kernel packages
+2022-11-16 16:06:43,298 DEBUG Checking: apache2-utils ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:43,403 DEBUG Checking: fonts-opensymbol ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:43,467 DEBUG Checking: gir1.2-gdkpixbuf-2.0 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:43,536 DEBUG Checking: gir1.2-gnomedesktop-3.0 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:43,640 DEBUG Checking: gnome-desktop3-data ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:43,729 DEBUG Checking: libgdk-pixbuf-2.0-0 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:43,805 DEBUG Checking: libgdk-pixbuf-2.0-dev ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:43,887 DEBUG Checking: libgdk-pixbuf2.0-bin ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:43,942 DEBUG Checking: libgdk-pixbuf2.0-common ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:44,059 DEBUG Checking: libgnome-bg-4-1 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:44,159 DEBUG Checking: libgnome-desktop-3-19 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:44,226 DEBUG Checking: libgnome-desktop-4-1 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:44,332 DEBUG Checking: liblibreoffice-java ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:44,440 DEBUG Checking: libnetplan0 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:44,500 DEBUG Checking: libnginx-mod-http-geoip2 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:44,616 DEBUG Checking: libnginx-mod-http-image-filter ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:44,729 DEBUG Checking: libnginx-mod-http-xslt-filter ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:44,835 DEBUG Checking: libnginx-mod-mail ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:44,905 DEBUG Checking: libnginx-mod-stream ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:44,992 DEBUG Checking: libnginx-mod-stream-geoip2 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:45,072 DEBUG Checking: libreoffice ([<Origin component:'universe' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:45,194 DEBUG Checking: libreoffice-base ([<Origin component:'universe' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:45,301 DEBUG Checking: libreoffice-base-core ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:45,386 DEBUG Checking: libreoffice-base-drivers ([<Origin component:'universe' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:45,491 DEBUG Checking: libreoffice-calc ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:45,568 DEBUG Checking: libreoffice-common ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:45,664 DEBUG Checking: libreoffice-core ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:45,741 DEBUG Checking: libreoffice-draw ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:45,841 DEBUG Checking: libreoffice-gnome ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:45,949 DEBUG Checking: libreoffice-gtk3 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:46,052 DEBUG Checking: libreoffice-impress ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:46,160 DEBUG Checking: libreoffice-java-common ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:46,244 DEBUG Checking: libreoffice-math ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:46,349 DEBUG Checking: libreoffice-nlpsolver ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:46,466 DEBUG Checking: libreoffice-report-builder ([<Origin component:'universe' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:46,551 DEBUG Checking: libreoffice-report-builder-bin ([<Origin component:'universe' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:46,647 DEBUG Checking: libreoffice-script-provider-bsh ([<Origin component:'universe' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:46,741 DEBUG Checking: libreoffice-script-provider-js ([<Origin component:'universe' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:46,830 DEBUG Checking: libreoffice-script-provider-python ([<Origin component:'universe' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:46,932 DEBUG Checking: libreoffice-sdbc-firebird ([<Origin component:'universe' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:47,032 DEBUG Checking: libreoffice-sdbc-hsqldb ([<Origin component:'universe' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:47,125 DEBUG Checking: libreoffice-sdbc-mysql ([<Origin component:'universe' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:47,217 DEBUG Checking: libreoffice-sdbc-postgresql ([<Origin component:'universe' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:47,308 DEBUG Checking: libreoffice-style-colibre ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:47,450 DEBUG Checking: libreoffice-style-elementary ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:47,543 DEBUG Checking: libreoffice-style-yaru ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:47,670 DEBUG Checking: libreoffice-wiki-publisher ([<Origin component:'universe' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:47,779 DEBUG Checking: libreoffice-writer ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:47,888 DEBUG Checking: libuno-cppu3 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:47,986 DEBUG Checking: libuno-cppuhelpergcc3-3 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:48,084 DEBUG Checking: libuno-purpenvhelpergcc3-3 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:48,182 DEBUG Checking: libuno-sal3 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:48,279 DEBUG Checking: libuno-salhelpergcc3-3 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:48,384 DEBUG Checking: libunoloader-java ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:48,490 DEBUG Checking: linux-generic-hwe-22.04 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:48,610 DEBUG Checking: linux-headers-generic-hwe-22.04 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:48,718 DEBUG Checking: linux-image-generic-hwe-22.04 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:48,827 DEBUG Checking: linux-libc-dev ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:49,004 DEBUG Checking: netplan.io ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:49,189 DEBUG Checking: nginx ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:49,326 DEBUG Checking: nginx-common ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:49,460 DEBUG Checking: nginx-core ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:49,588 DEBUG Checking: openvpn ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:49,739 DEBUG Checking: python3-uno ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:49,888 DEBUG Checking: tzdata ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:50,022 DEBUG Checking: uno-libs-private ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:50,150 DEBUG Checking: ure ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:50,266 DEBUG Checking: ure-java ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-16 16:06:50,762 DEBUG pkgs that look like they should be upgraded: apache2-utils
+fonts-opensymbol
+gir1.2-gdkpixbuf-2.0
+gir1.2-gnomedesktop-3.0
+gnome-desktop3-data
+libgdk-pixbuf-2.0-0
+libgdk-pixbuf-2.0-dev
+libgdk-pixbuf2.0-bin
+libgdk-pixbuf2.0-common
+libgnome-bg-4-1
+libgnome-desktop-3-19
+libgnome-desktop-4-1
+liblibreoffice-java
+libnetplan0
+libnginx-mod-http-geoip2
+libnginx-mod-http-image-filter
+libnginx-mod-http-xslt-filter
+libnginx-mod-mail
+libnginx-mod-stream
+libnginx-mod-stream-geoip2
+libreoffice
+libreoffice-base
+libreoffice-base-core
+libreoffice-base-drivers
+libreoffice-calc
+libreoffice-common
+libreoffice-core
+libreoffice-draw
+libreoffice-gnome
+libreoffice-gtk3
+libreoffice-impress
+libreoffice-java-common
+libreoffice-math
+libreoffice-nlpsolver
+libreoffice-report-builder
+libreoffice-report-builder-bin
+libreoffice-script-provider-bsh
+libreoffice-script-provider-js
+libreoffice-script-provider-python
+libreoffice-sdbc-firebird
+libreoffice-sdbc-hsqldb
+libreoffice-sdbc-mysql
+libreoffice-sdbc-postgresql
+libreoffice-style-colibre
+libreoffice-style-elementary
+libreoffice-style-yaru
+libreoffice-wiki-publisher
+libreoffice-writer
+libuno-cppu3
+libuno-cppuhelpergcc3-3
+libuno-purpenvhelpergcc3-3
+libuno-sal3
+libuno-salhelpergcc3-3
+libunoloader-java
+linux-generic-hwe-22.04
+linux-headers-generic-hwe-22.04
+linux-image-generic-hwe-22.04
+linux-libc-dev
+netplan.io
+nginx
+nginx-common
+nginx-core
+openvpn
+python3-uno
+tzdata
+uno-libs-private
+ure
+ure-java
+2022-11-16 16:07:16,029 DEBUG fetch.run() result: 0
+2022-11-16 16:07:16,344 DEBUG dpkg is configured not to cause conffile prompts
+2022-11-16 16:07:16,344 INFO Pakete, welche aktualisiert werden: apache2-utils fonts-opensymbol gir1.2-gdkpixbuf-2.0 gir1.2-gnomedesktop-3.0 gnome-desktop3-data libgdk-pixbuf-2.0-0 libgdk-pixbuf-2.0-dev libgdk-pixbuf2.0-bin libgdk-pixbuf2.0-common libgnome-bg-4-1 libgnome-desktop-3-19 libgnome-desktop-4-1 liblibreoffice-java libnetplan0 libnginx-mod-http-geoip2 libnginx-mod-http-image-filter libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream libnginx-mod-stream-geoip2 libreoffice libreoffice-base libreoffice-base-core libreoffice-base-drivers libreoffice-calc libreoffice-common libreoffice-core libreoffice-draw libreoffice-gnome libreoffice-gtk3 libreoffice-impress libreoffice-java-common libreoffice-math libreoffice-nlpsolver libreoffice-report-builder libreoffice-report-builder-bin libreoffice-script-provider-bsh libreoffice-script-provider-js libreoffice-script-provider-python libreoffice-sdbc-firebird libreoffice-sdbc-hsqldb libreoffice-sdbc-mysql libreoffice-sdbc-postgresql libreoffice-style-colibre libreoffice-style-elementary libreoffice-style-yaru libreoffice-wiki-publisher libreoffice-writer libuno-cppu3 libuno-cppuhelpergcc3-3 libuno-purpenvhelpergcc3-3 libuno-sal3 libuno-salhelpergcc3-3 libunoloader-java linux-generic-hwe-22.04 linux-headers-generic-hwe-22.04 linux-image-generic-hwe-22.04 linux-libc-dev netplan.io nginx nginx-common nginx-core openvpn python3-uno tzdata uno-libs-private ure ure-java
+2022-11-16 16:07:16,344 INFO dpkg-Protokoll wird nach /var/log/unattended-upgrades/unattended-upgrades-dpkg.log geschrieben
+2022-11-16 16:07:16,444 DEBUG applying set ['libreoffice-calc', 'libreoffice-gnome', 'libreoffice-base-core', 'libreoffice-core', 'libreoffice-common', 'libreoffice-draw', 'libreoffice-impress', 'libreoffice-writer', 'libreoffice-base-drivers', 'libreoffice', 'python3-uno', 'libreoffice-base', 'libreoffice-math', 'libreoffice-gtk3', 'libreoffice-java-common']
+2022-11-16 16:07:32,628 DEBUG left to upgrade {'libreoffice-script-provider-python', 'libreoffice-style-colibre', 'libuno-salhelpergcc3-3', 'libreoffice-wiki-publisher', 'libgnome-bg-4-1', 'libgnome-desktop-4-1', 'libreoffice-sdbc-mysql', 'libreoffice-sdbc-postgresql', 'openvpn', 'libreoffice-sdbc-hsqldb', 'libreoffice-report-builder', 'liblibreoffice-java', 'fonts-opensymbol', 'libnginx-mod-mail', 'libnginx-mod-stream-geoip2', 'tzdata', 'linux-image-generic-hwe-22.04', 'libgnome-desktop-3-19', 'libuno-cppu3', 'gir1.2-gnomedesktop-3.0', 'libreoffice-style-yaru', 'libgdk-pixbuf-2.0-dev', 'gnome-desktop3-data', 'libgdk-pixbuf2.0-common', 'linux-libc-dev', 'libnginx-mod-http-xslt-filter', 'apache2-utils', 'libnginx-mod-stream', 'libuno-purpenvhelpergcc3-3', 'linux-generic-hwe-22.04', 'libnetplan0', 'netplan.io', 'ure', 'nginx-common', 'libreoffice-sdbc-firebird', 'libreoffice-nlpsolver', 'libreoffice-report-builder-bin', 'libgdk-pixbuf-2.0-0', 'ure-java', 'linux-headers-generic-hwe-22.04', 'nginx', 'uno-libs-private', 'gir1.2-gdkpixbuf-2.0', 'libgdk-pixbuf2.0-bin', 'libreoffice-script-provider-js', 'libuno-sal3', 'libnginx-mod-http-image-filter', 'libuno-cppuhelpergcc3-3', 'libunoloader-java', 'libreoffice-script-provider-bsh', 'libnginx-mod-http-geoip2', 'libreoffice-style-elementary', 'nginx-core'}
+2022-11-16 16:07:32,695 DEBUG applying set ['libreoffice-script-provider-python']
+2022-11-16 16:07:34,086 DEBUG left to upgrade {'libnginx-mod-http-xslt-filter', 'libreoffice-style-colibre', 'libuno-salhelpergcc3-3', 'apache2-utils', 'libnginx-mod-stream', 'libreoffice-wiki-publisher', 'libuno-purpenvhelpergcc3-3', 'linux-generic-hwe-22.04', 'libnetplan0', 'netplan.io', 'libgnome-bg-4-1', 'libgnome-desktop-4-1', 'ure', 'libreoffice-sdbc-mysql', 'nginx-common', 'libreoffice-sdbc-postgresql', 'libreoffice-sdbc-firebird', 'openvpn', 'libreoffice-sdbc-hsqldb', 'libreoffice-report-builder', 'libreoffice-nlpsolver', 'libreoffice-report-builder-bin', 'liblibreoffice-java', 'libgdk-pixbuf-2.0-0', 'ure-java', 'linux-headers-generic-hwe-22.04', 'nginx', 'fonts-opensymbol', 'libnginx-mod-mail', 'libnginx-mod-stream-geoip2', 'uno-libs-private', 'tzdata', 'gir1.2-gdkpixbuf-2.0', 'linux-image-generic-hwe-22.04', 'libgdk-pixbuf2.0-bin', 'libreoffice-script-provider-js', 'libuno-sal3', 'libgnome-desktop-3-19', 'libnginx-mod-http-image-filter', 'libuno-cppuhelpergcc3-3', 'libuno-cppu3', 'gir1.2-gnomedesktop-3.0', 'libreoffice-style-yaru', 'libgdk-pixbuf-2.0-dev', 'gnome-desktop3-data', 'libgdk-pixbuf2.0-common', 'libunoloader-java', 'libreoffice-script-provider-bsh', 'linux-libc-dev', 'libnginx-mod-http-geoip2', 'libreoffice-style-elementary', 'nginx-core'}
+2022-11-16 16:07:34,180 DEBUG applying set ['libnginx-mod-http-image-filter', 'libnginx-mod-stream-geoip2', 'libnginx-mod-http-geoip2', 'nginx', 'nginx-common', 'nginx-core', 'libnginx-mod-http-xslt-filter', 'libnginx-mod-mail', 'libnginx-mod-stream']
+2022-11-16 16:07:38,422 DEBUG left to upgrade {'libreoffice-style-colibre', 'libuno-salhelpergcc3-3', 'apache2-utils', 'libreoffice-wiki-publisher', 'libuno-purpenvhelpergcc3-3', 'linux-generic-hwe-22.04', 'libnetplan0', 'netplan.io', 'libgnome-bg-4-1', 'libgnome-desktop-4-1', 'ure', 'libreoffice-sdbc-mysql', 'libreoffice-sdbc-postgresql', 'libreoffice-sdbc-firebird', 'openvpn', 'libreoffice-sdbc-hsqldb', 'libreoffice-report-builder', 'libreoffice-nlpsolver', 'libreoffice-report-builder-bin', 'liblibreoffice-java', 'libgdk-pixbuf-2.0-0', 'ure-java', 'linux-headers-generic-hwe-22.04', 'fonts-opensymbol', 'uno-libs-private', 'tzdata', 'gir1.2-gdkpixbuf-2.0', 'linux-image-generic-hwe-22.04', 'libgdk-pixbuf2.0-bin', 'libreoffice-script-provider-js', 'libuno-sal3', 'libgnome-desktop-3-19', 'libuno-cppuhelpergcc3-3', 'libuno-cppu3', 'gir1.2-gnomedesktop-3.0', 'libreoffice-style-yaru', 'libgdk-pixbuf-2.0-dev', 'gnome-desktop3-data', 'libgdk-pixbuf2.0-common', 'libunoloader-java', 'libreoffice-script-provider-bsh', 'linux-libc-dev', 'libreoffice-style-elementary'}
+2022-11-16 16:07:38,492 DEBUG applying set ['libreoffice-style-colibre']
+2022-11-16 16:07:39,917 DEBUG left to upgrade {'libuno-salhelpergcc3-3', 'apache2-utils', 'libreoffice-wiki-publisher', 'libuno-purpenvhelpergcc3-3', 'linux-generic-hwe-22.04', 'libnetplan0', 'netplan.io', 'libgnome-bg-4-1', 'libgnome-desktop-4-1', 'ure', 'libreoffice-sdbc-mysql', 'libreoffice-sdbc-postgresql', 'libreoffice-sdbc-firebird', 'openvpn', 'libreoffice-sdbc-hsqldb', 'libreoffice-report-builder', 'libreoffice-nlpsolver', 'libreoffice-report-builder-bin', 'liblibreoffice-java', 'libgdk-pixbuf-2.0-0', 'ure-java', 'linux-headers-generic-hwe-22.04', 'fonts-opensymbol', 'uno-libs-private', 'tzdata', 'gir1.2-gdkpixbuf-2.0', 'linux-image-generic-hwe-22.04', 'libgdk-pixbuf2.0-bin', 'libreoffice-script-provider-js', 'libuno-sal3', 'libgnome-desktop-3-19', 'libuno-cppuhelpergcc3-3', 'libuno-cppu3', 'gir1.2-gnomedesktop-3.0', 'libreoffice-style-yaru', 'libgdk-pixbuf-2.0-dev', 'gnome-desktop3-data', 'libgdk-pixbuf2.0-common', 'libunoloader-java', 'libreoffice-script-provider-bsh', 'linux-libc-dev', 'libreoffice-style-elementary'}
+2022-11-16 16:07:39,987 DEBUG applying set ['libuno-salhelpergcc3-3']
+2022-11-16 16:07:41,449 DEBUG left to upgrade {'apache2-utils', 'libreoffice-wiki-publisher', 'libuno-purpenvhelpergcc3-3', 'linux-generic-hwe-22.04', 'libnetplan0', 'netplan.io', 'libgnome-bg-4-1', 'libgnome-desktop-4-1', 'ure', 'libreoffice-sdbc-mysql', 'libreoffice-sdbc-postgresql', 'libreoffice-sdbc-firebird', 'openvpn', 'libreoffice-sdbc-hsqldb', 'libreoffice-report-builder', 'libreoffice-nlpsolver', 'libreoffice-report-builder-bin', 'liblibreoffice-java', 'libgdk-pixbuf-2.0-0', 'ure-java', 'linux-headers-generic-hwe-22.04', 'fonts-opensymbol', 'uno-libs-private', 'tzdata', 'gir1.2-gdkpixbuf-2.0', 'linux-image-generic-hwe-22.04', 'libgdk-pixbuf2.0-bin', 'libreoffice-script-provider-js', 'libuno-sal3', 'libgnome-desktop-3-19', 'libuno-cppuhelpergcc3-3', 'libuno-cppu3', 'gir1.2-gnomedesktop-3.0', 'libreoffice-style-yaru', 'libgdk-pixbuf-2.0-dev', 'gnome-desktop3-data', 'libgdk-pixbuf2.0-common', 'libunoloader-java', 'libreoffice-script-provider-bsh', 'linux-libc-dev', 'libreoffice-style-elementary'}
+2022-11-16 16:07:41,519 DEBUG applying set ['apache2-utils']
+2022-11-16 16:07:43,103 DEBUG left to upgrade {'libreoffice-wiki-publisher', 'libuno-purpenvhelpergcc3-3', 'linux-generic-hwe-22.04', 'libnetplan0', 'netplan.io', 'libgnome-bg-4-1', 'libgnome-desktop-4-1', 'ure', 'libreoffice-sdbc-mysql', 'libreoffice-sdbc-postgresql', 'libreoffice-sdbc-firebird', 'openvpn', 'libreoffice-sdbc-hsqldb', 'libreoffice-report-builder', 'libreoffice-nlpsolver', 'libreoffice-report-builder-bin', 'liblibreoffice-java', 'libgdk-pixbuf-2.0-0', 'ure-java', 'linux-headers-generic-hwe-22.04', 'fonts-opensymbol', 'uno-libs-private', 'tzdata', 'gir1.2-gdkpixbuf-2.0', 'linux-image-generic-hwe-22.04', 'libgdk-pixbuf2.0-bin', 'libreoffice-script-provider-js', 'libuno-sal3', 'libgnome-desktop-3-19', 'libuno-cppuhelpergcc3-3', 'libuno-cppu3', 'gir1.2-gnomedesktop-3.0', 'libreoffice-style-yaru', 'libgdk-pixbuf-2.0-dev', 'gnome-desktop3-data', 'libgdk-pixbuf2.0-common', 'libunoloader-java', 'libreoffice-script-provider-bsh', 'linux-libc-dev', 'libreoffice-style-elementary'}
+2022-11-16 16:07:43,177 DEBUG applying set ['libreoffice-wiki-publisher']
+2022-11-16 16:07:44,599 DEBUG left to upgrade {'libuno-purpenvhelpergcc3-3', 'linux-generic-hwe-22.04', 'libnetplan0', 'netplan.io', 'libgnome-bg-4-1', 'libgnome-desktop-4-1', 'ure', 'libreoffice-sdbc-mysql', 'libreoffice-sdbc-postgresql', 'libreoffice-sdbc-firebird', 'openvpn', 'libreoffice-sdbc-hsqldb', 'libreoffice-report-builder', 'libreoffice-nlpsolver', 'libreoffice-report-builder-bin', 'liblibreoffice-java', 'libgdk-pixbuf-2.0-0', 'ure-java', 'linux-headers-generic-hwe-22.04', 'fonts-opensymbol', 'uno-libs-private', 'tzdata', 'gir1.2-gdkpixbuf-2.0', 'linux-image-generic-hwe-22.04', 'libgdk-pixbuf2.0-bin', 'libreoffice-script-provider-js', 'libuno-sal3', 'libgnome-desktop-3-19', 'libuno-cppuhelpergcc3-3', 'libuno-cppu3', 'gir1.2-gnomedesktop-3.0', 'libreoffice-style-yaru', 'libgdk-pixbuf-2.0-dev', 'gnome-desktop3-data', 'libgdk-pixbuf2.0-common', 'libunoloader-java', 'libreoffice-script-provider-bsh', 'linux-libc-dev', 'libreoffice-style-elementary'}
+2022-11-16 16:07:44,670 DEBUG applying set ['libuno-purpenvhelpergcc3-3']
+2022-11-16 16:07:46,053 DEBUG left to upgrade {'linux-generic-hwe-22.04', 'libnetplan0', 'netplan.io', 'libgnome-bg-4-1', 'libgnome-desktop-4-1', 'ure', 'libreoffice-sdbc-mysql', 'libreoffice-sdbc-postgresql', 'libreoffice-sdbc-firebird', 'openvpn', 'libreoffice-sdbc-hsqldb', 'libreoffice-report-builder', 'libreoffice-nlpsolver', 'libreoffice-report-builder-bin', 'liblibreoffice-java', 'libgdk-pixbuf-2.0-0', 'ure-java', 'linux-headers-generic-hwe-22.04', 'fonts-opensymbol', 'uno-libs-private', 'tzdata', 'gir1.2-gdkpixbuf-2.0', 'linux-image-generic-hwe-22.04', 'libgdk-pixbuf2.0-bin', 'libreoffice-script-provider-js', 'libuno-sal3', 'libgnome-desktop-3-19', 'libuno-cppuhelpergcc3-3', 'libuno-cppu3', 'gir1.2-gnomedesktop-3.0', 'libreoffice-style-yaru', 'libgdk-pixbuf-2.0-dev', 'gnome-desktop3-data', 'libgdk-pixbuf2.0-common', 'libunoloader-java', 'libreoffice-script-provider-bsh', 'linux-libc-dev', 'libreoffice-style-elementary'}
+2022-11-16 16:07:46,156 DEBUG applying set ['linux-image-generic-hwe-22.04', 'linux-headers-5.15.0-53-generic', 'linux-modules-5.15.0-53-generic', 'linux-headers-generic-hwe-22.04', 'linux-generic-hwe-22.04', 'linux-modules-extra-5.15.0-53-generic', 'linux-headers-5.15.0-53', 'linux-image-5.15.0-53-generic']
+2022-11-16 16:08:11,759 DEBUG left to upgrade {'libnetplan0', 'netplan.io', 'libgnome-bg-4-1', 'libgnome-desktop-4-1', 'ure', 'libreoffice-sdbc-mysql', 'libreoffice-sdbc-postgresql', 'libreoffice-sdbc-firebird', 'openvpn', 'libreoffice-sdbc-hsqldb', 'libreoffice-report-builder', 'libreoffice-nlpsolver', 'libreoffice-report-builder-bin', 'liblibreoffice-java', 'libgdk-pixbuf-2.0-0', 'ure-java', 'fonts-opensymbol', 'uno-libs-private', 'tzdata', 'gir1.2-gdkpixbuf-2.0', 'libgdk-pixbuf2.0-bin', 'libreoffice-script-provider-js', 'libuno-sal3', 'libgnome-desktop-3-19', 'libuno-cppuhelpergcc3-3', 'libuno-cppu3', 'gir1.2-gnomedesktop-3.0', 'libreoffice-style-yaru', 'libgdk-pixbuf-2.0-dev', 'gnome-desktop3-data', 'libgdk-pixbuf2.0-common', 'libunoloader-java', 'libreoffice-script-provider-bsh', 'linux-libc-dev', 'libreoffice-style-elementary'}
+2022-11-16 16:08:11,831 DEBUG applying set ['netplan.io', 'libnetplan0']
+2022-11-16 16:08:13,665 DEBUG left to upgrade {'libgnome-bg-4-1', 'libgnome-desktop-4-1', 'ure', 'libreoffice-sdbc-mysql', 'libreoffice-sdbc-postgresql', 'libreoffice-sdbc-firebird', 'openvpn', 'libreoffice-sdbc-hsqldb', 'libreoffice-report-builder', 'libreoffice-nlpsolver', 'libreoffice-report-builder-bin', 'liblibreoffice-java', 'libgdk-pixbuf-2.0-0', 'ure-java', 'fonts-opensymbol', 'uno-libs-private', 'tzdata', 'gir1.2-gdkpixbuf-2.0', 'libgdk-pixbuf2.0-bin', 'libreoffice-script-provider-js', 'libuno-sal3', 'libgnome-desktop-3-19', 'libuno-cppuhelpergcc3-3', 'libuno-cppu3', 'gir1.2-gnomedesktop-3.0', 'libreoffice-style-yaru', 'libgdk-pixbuf-2.0-dev', 'gnome-desktop3-data', 'libgdk-pixbuf2.0-common', 'libunoloader-java', 'libreoffice-script-provider-bsh', 'linux-libc-dev', 'libreoffice-style-elementary'}
+2022-11-16 16:08:13,736 DEBUG applying set ['libgnome-bg-4-1']
+2022-11-16 16:08:15,163 DEBUG left to upgrade {'libgnome-desktop-4-1', 'ure', 'libreoffice-sdbc-mysql', 'libreoffice-sdbc-postgresql', 'libreoffice-sdbc-firebird', 'openvpn', 'libreoffice-sdbc-hsqldb', 'libreoffice-report-builder', 'libreoffice-nlpsolver', 'libreoffice-report-builder-bin', 'liblibreoffice-java', 'libgdk-pixbuf-2.0-0', 'ure-java', 'fonts-opensymbol', 'uno-libs-private', 'tzdata', 'gir1.2-gdkpixbuf-2.0', 'libgdk-pixbuf2.0-bin', 'libreoffice-script-provider-js', 'libuno-sal3', 'libgnome-desktop-3-19', 'libuno-cppuhelpergcc3-3', 'libuno-cppu3', 'gir1.2-gnomedesktop-3.0', 'libreoffice-style-yaru', 'libgdk-pixbuf-2.0-dev', 'gnome-desktop3-data', 'libgdk-pixbuf2.0-common', 'libunoloader-java', 'libreoffice-script-provider-bsh', 'linux-libc-dev', 'libreoffice-style-elementary'}
+2022-11-16 16:08:15,238 DEBUG applying set ['gnome-desktop3-data', 'libgnome-desktop-4-1']
+2022-11-16 16:08:16,811 DEBUG left to upgrade {'ure', 'libreoffice-sdbc-mysql', 'libreoffice-sdbc-postgresql', 'libreoffice-sdbc-firebird', 'openvpn', 'libreoffice-sdbc-hsqldb', 'libreoffice-report-builder', 'libreoffice-nlpsolver', 'libreoffice-report-builder-bin', 'liblibreoffice-java', 'libgdk-pixbuf-2.0-0', 'ure-java', 'fonts-opensymbol', 'uno-libs-private', 'tzdata', 'gir1.2-gdkpixbuf-2.0', 'libgdk-pixbuf2.0-bin', 'libreoffice-script-provider-js', 'libuno-sal3', 'libgnome-desktop-3-19', 'libuno-cppuhelpergcc3-3', 'libuno-cppu3', 'gir1.2-gnomedesktop-3.0', 'libreoffice-style-yaru', 'libgdk-pixbuf-2.0-dev', 'libgdk-pixbuf2.0-common', 'libunoloader-java', 'libreoffice-script-provider-bsh', 'linux-libc-dev', 'libreoffice-style-elementary'}
+2022-11-16 16:08:16,887 DEBUG applying set ['libreoffice-sdbc-mysql']
+2022-11-16 16:08:18,304 DEBUG left to upgrade {'fonts-opensymbol', 'uno-libs-private', 'tzdata', 'gir1.2-gdkpixbuf-2.0', 'libgdk-pixbuf2.0-bin', 'libreoffice-script-provider-js', 'libuno-sal3', 'libgnome-desktop-3-19', 'libuno-cppuhelpergcc3-3', 'ure', 'libuno-cppu3', 'libreoffice-sdbc-postgresql', 'libreoffice-sdbc-firebird', 'openvpn', 'gir1.2-gnomedesktop-3.0', 'libreoffice-sdbc-hsqldb', 'libreoffice-style-yaru', 'libreoffice-report-builder', 'libreoffice-nlpsolver', 'libgdk-pixbuf-2.0-dev', 'libgdk-pixbuf2.0-common', 'libreoffice-report-builder-bin', 'libunoloader-java', 'liblibreoffice-java', 'libreoffice-script-provider-bsh', 'linux-libc-dev', 'libgdk-pixbuf-2.0-0', 'ure-java', 'libreoffice-style-elementary'}
+2022-11-16 16:08:18,386 DEBUG applying set ['uno-libs-private', 'ure', 'libuno-cppuhelpergcc3-3', 'ure-java']
+2022-11-16 16:08:20,270 DEBUG left to upgrade {'fonts-opensymbol', 'tzdata', 'gir1.2-gdkpixbuf-2.0', 'libgdk-pixbuf2.0-bin', 'libreoffice-script-provider-js', 'libuno-sal3', 'libgnome-desktop-3-19', 'libuno-cppu3', 'libreoffice-sdbc-postgresql', 'libreoffice-sdbc-firebird', 'openvpn', 'gir1.2-gnomedesktop-3.0', 'libreoffice-sdbc-hsqldb', 'libreoffice-style-yaru', 'libreoffice-report-builder', 'libreoffice-nlpsolver', 'libgdk-pixbuf-2.0-dev', 'libgdk-pixbuf2.0-common', 'libreoffice-report-builder-bin', 'libunoloader-java', 'liblibreoffice-java', 'libreoffice-script-provider-bsh', 'linux-libc-dev', 'libgdk-pixbuf-2.0-0', 'libreoffice-style-elementary'}
+2022-11-16 16:08:20,341 DEBUG applying set ['libreoffice-sdbc-firebird']
+2022-11-16 16:08:21,752 DEBUG left to upgrade {'fonts-opensymbol', 'tzdata', 'gir1.2-gdkpixbuf-2.0', 'libgdk-pixbuf2.0-bin', 'libreoffice-script-provider-js', 'libuno-sal3', 'libgnome-desktop-3-19', 'libuno-cppu3', 'libreoffice-sdbc-postgresql', 'openvpn', 'gir1.2-gnomedesktop-3.0', 'libreoffice-sdbc-hsqldb', 'libreoffice-style-yaru', 'libreoffice-report-builder', 'libreoffice-nlpsolver', 'libgdk-pixbuf-2.0-dev', 'libgdk-pixbuf2.0-common', 'libreoffice-report-builder-bin', 'libunoloader-java', 'liblibreoffice-java', 'libreoffice-script-provider-bsh', 'linux-libc-dev', 'libgdk-pixbuf-2.0-0', 'libreoffice-style-elementary'}
+2022-11-16 16:08:21,828 DEBUG applying set ['libreoffice-sdbc-postgresql']
+2022-11-16 16:08:23,454 DEBUG left to upgrade {'fonts-opensymbol', 'tzdata', 'gir1.2-gdkpixbuf-2.0', 'libgdk-pixbuf2.0-bin', 'libreoffice-script-provider-js', 'libuno-sal3', 'libgnome-desktop-3-19', 'libuno-cppu3', 'openvpn', 'gir1.2-gnomedesktop-3.0', 'libreoffice-sdbc-hsqldb', 'libreoffice-style-yaru', 'libreoffice-report-builder', 'libreoffice-nlpsolver', 'libgdk-pixbuf-2.0-dev', 'libgdk-pixbuf2.0-common', 'libreoffice-report-builder-bin', 'libunoloader-java', 'liblibreoffice-java', 'libreoffice-script-provider-bsh', 'linux-libc-dev', 'libgdk-pixbuf-2.0-0', 'libreoffice-style-elementary'}
+2022-11-16 16:08:23,530 DEBUG applying set ['openvpn']
+2022-11-16 16:08:25,800 DEBUG left to upgrade {'fonts-opensymbol', 'tzdata', 'gir1.2-gdkpixbuf-2.0', 'libgdk-pixbuf2.0-bin', 'libreoffice-script-provider-js', 'libuno-sal3', 'libgnome-desktop-3-19', 'libuno-cppu3', 'gir1.2-gnomedesktop-3.0', 'libreoffice-sdbc-hsqldb', 'libreoffice-style-yaru', 'libreoffice-report-builder', 'libreoffice-nlpsolver', 'libgdk-pixbuf-2.0-dev', 'libgdk-pixbuf2.0-common', 'libreoffice-report-builder-bin', 'libunoloader-java', 'liblibreoffice-java', 'libreoffice-script-provider-bsh', 'linux-libc-dev', 'libgdk-pixbuf-2.0-0', 'libreoffice-style-elementary'}
+2022-11-16 16:08:25,879 DEBUG applying set ['libreoffice-sdbc-hsqldb']
+2022-11-16 16:08:27,303 DEBUG left to upgrade {'fonts-opensymbol', 'tzdata', 'gir1.2-gdkpixbuf-2.0', 'libgdk-pixbuf2.0-bin', 'libreoffice-script-provider-js', 'libuno-sal3', 'libgnome-desktop-3-19', 'libuno-cppu3', 'gir1.2-gnomedesktop-3.0', 'libreoffice-style-yaru', 'libreoffice-report-builder', 'libreoffice-nlpsolver', 'libgdk-pixbuf-2.0-dev', 'libgdk-pixbuf2.0-common', 'libreoffice-report-builder-bin', 'libunoloader-java', 'liblibreoffice-java', 'libreoffice-script-provider-bsh', 'linux-libc-dev', 'libgdk-pixbuf-2.0-0', 'libreoffice-style-elementary'}
+2022-11-16 16:08:27,390 DEBUG applying set ['libreoffice-nlpsolver']
+2022-11-16 16:08:28,844 DEBUG left to upgrade {'fonts-opensymbol', 'tzdata', 'gir1.2-gdkpixbuf-2.0', 'libgdk-pixbuf2.0-bin', 'libreoffice-script-provider-js', 'libuno-sal3', 'libgnome-desktop-3-19', 'libuno-cppu3', 'gir1.2-gnomedesktop-3.0', 'libreoffice-style-yaru', 'libreoffice-report-builder', 'libgdk-pixbuf-2.0-dev', 'libgdk-pixbuf2.0-common', 'libreoffice-report-builder-bin', 'libunoloader-java', 'liblibreoffice-java', 'libreoffice-script-provider-bsh', 'linux-libc-dev', 'libgdk-pixbuf-2.0-0', 'libreoffice-style-elementary'}
+2022-11-16 16:08:28,914 DEBUG applying set ['libreoffice-report-builder-bin', 'libreoffice-report-builder']
+2022-11-16 16:08:30,705 DEBUG left to upgrade {'fonts-opensymbol', 'tzdata', 'gir1.2-gdkpixbuf-2.0', 'libgdk-pixbuf2.0-bin', 'libreoffice-script-provider-js', 'libuno-sal3', 'libgnome-desktop-3-19', 'libuno-cppu3', 'gir1.2-gnomedesktop-3.0', 'libreoffice-style-yaru', 'libgdk-pixbuf-2.0-dev', 'libgdk-pixbuf2.0-common', 'libunoloader-java', 'libreoffice-script-provider-bsh', 'liblibreoffice-java', 'linux-libc-dev', 'libgdk-pixbuf-2.0-0', 'libreoffice-style-elementary'}
+2022-11-16 16:08:30,784 DEBUG applying set ['liblibreoffice-java']
+2022-11-16 16:08:32,266 DEBUG left to upgrade {'fonts-opensymbol', 'tzdata', 'gir1.2-gdkpixbuf-2.0', 'libgdk-pixbuf2.0-bin', 'libreoffice-script-provider-js', 'libuno-sal3', 'libgnome-desktop-3-19', 'libuno-cppu3', 'gir1.2-gnomedesktop-3.0', 'libreoffice-style-yaru', 'libgdk-pixbuf-2.0-dev', 'libgdk-pixbuf2.0-common', 'libunoloader-java', 'libreoffice-script-provider-bsh', 'linux-libc-dev', 'libgdk-pixbuf-2.0-0', 'libreoffice-style-elementary'}
+2022-11-16 16:08:32,343 DEBUG applying set ['libgdk-pixbuf2.0-bin', 'gir1.2-gdkpixbuf-2.0', 'libgdk-pixbuf-2.0-0', 'libgdk-pixbuf-2.0-dev', 'libgdk-pixbuf2.0-common']
+2022-11-16 16:08:34,446 DEBUG left to upgrade {'fonts-opensymbol', 'gir1.2-gnomedesktop-3.0', 'tzdata', 'libreoffice-style-yaru', 'libunoloader-java', 'libreoffice-script-provider-bsh', 'libreoffice-script-provider-js', 'linux-libc-dev', 'libuno-sal3', 'libgnome-desktop-3-19', 'libreoffice-style-elementary', 'libuno-cppu3'}
+2022-11-16 16:08:34,522 DEBUG applying set ['fonts-opensymbol']
+2022-11-16 16:08:35,927 DEBUG left to upgrade {'gir1.2-gnomedesktop-3.0', 'tzdata', 'libreoffice-style-yaru', 'libunoloader-java', 'libreoffice-script-provider-bsh', 'libreoffice-script-provider-js', 'linux-libc-dev', 'libuno-sal3', 'libgnome-desktop-3-19', 'libreoffice-style-elementary', 'libuno-cppu3'}
+2022-11-16 16:08:36,002 DEBUG applying set ['tzdata']
+2022-11-16 16:08:38,000 DEBUG left to upgrade {'gir1.2-gnomedesktop-3.0', 'libreoffice-style-yaru', 'libunoloader-java', 'libreoffice-script-provider-bsh', 'libreoffice-script-provider-js', 'linux-libc-dev', 'libuno-sal3', 'libgnome-desktop-3-19', 'libreoffice-style-elementary', 'libuno-cppu3'}
+2022-11-16 16:08:38,082 DEBUG applying set ['libreoffice-script-provider-js']
+2022-11-16 16:08:39,522 DEBUG left to upgrade {'gir1.2-gnomedesktop-3.0', 'libreoffice-style-yaru', 'libunoloader-java', 'libreoffice-script-provider-bsh', 'linux-libc-dev', 'libuno-sal3', 'libgnome-desktop-3-19', 'libreoffice-style-elementary', 'libuno-cppu3'}
+2022-11-16 16:08:39,604 DEBUG applying set ['libuno-sal3']
+2022-11-16 16:08:41,116 DEBUG left to upgrade {'gir1.2-gnomedesktop-3.0', 'libreoffice-style-yaru', 'libunoloader-java', 'libreoffice-script-provider-bsh', 'linux-libc-dev', 'libgnome-desktop-3-19', 'libreoffice-style-elementary', 'libuno-cppu3'}
+2022-11-16 16:08:41,188 DEBUG applying set ['libgnome-desktop-3-19']
+2022-11-16 16:08:42,594 DEBUG left to upgrade {'gir1.2-gnomedesktop-3.0', 'libreoffice-style-yaru', 'libunoloader-java', 'libreoffice-script-provider-bsh', 'linux-libc-dev', 'libreoffice-style-elementary', 'libuno-cppu3'}
+2022-11-16 16:08:42,667 DEBUG applying set ['libuno-cppu3']
+2022-11-16 16:08:44,186 DEBUG left to upgrade {'gir1.2-gnomedesktop-3.0', 'libreoffice-style-yaru', 'libunoloader-java', 'libreoffice-script-provider-bsh', 'linux-libc-dev', 'libreoffice-style-elementary'}
+2022-11-16 16:08:44,268 DEBUG applying set ['gir1.2-gnomedesktop-3.0']
+2022-11-16 16:08:45,642 DEBUG left to upgrade {'libreoffice-style-yaru', 'libunoloader-java', 'libreoffice-script-provider-bsh', 'linux-libc-dev', 'libreoffice-style-elementary'}
+2022-11-16 16:08:45,719 DEBUG applying set ['libreoffice-style-yaru']
+2022-11-16 16:08:47,215 DEBUG left to upgrade {'libreoffice-script-provider-bsh', 'libreoffice-style-elementary', 'linux-libc-dev', 'libunoloader-java'}
+2022-11-16 16:08:47,299 DEBUG applying set ['libreoffice-script-provider-bsh']
+2022-11-16 16:08:48,743 DEBUG left to upgrade {'libreoffice-style-elementary', 'linux-libc-dev', 'libunoloader-java'}
+2022-11-16 16:08:48,818 DEBUG applying set ['libunoloader-java']
+2022-11-16 16:08:50,206 DEBUG left to upgrade {'libreoffice-style-elementary', 'linux-libc-dev'}
+2022-11-16 16:08:50,289 DEBUG applying set ['linux-libc-dev']
+2022-11-16 16:08:52,015 DEBUG left to upgrade {'libreoffice-style-elementary'}
+2022-11-16 16:08:52,109 DEBUG applying set ['libreoffice-style-elementary']
+2022-11-16 16:08:53,811 DEBUG left to upgrade set()
+2022-11-16 16:08:53,811 INFO Alle Systemaktualisierungen installiert
+2022-11-16 16:08:54,014 DEBUG marking linux-headers-5.15.0-50 for removal
+2022-11-16 16:08:57,677 DEBUG marking linux-headers-5.15.0-50-generic for removal
+2022-11-16 16:08:57,677 DEBUG marking linux-modules-5.15.0-50-generic for removal
+2022-11-16 16:09:02,463 DEBUG marking linux-image-5.15.0-50-generic for removal
+2022-11-16 16:09:02,464 DEBUG marking linux-modules-extra-5.15.0-50-generic for removal
+2022-11-16 16:09:02,464 INFO Pakete welche erfolgreich automatisch entfernt wurden: linux-headers-5.15.0-50 linux-headers-5.15.0-50-generic linux-image-5.15.0-50-generic linux-modules-5.15.0-50-generic linux-modules-extra-5.15.0-50-generic
+2022-11-16 16:09:02,464 INFO Pakete die zurückgehalten wurden: 
+2022-11-16 16:09:02,464 DEBUG InstCount=0 DelCount=0 BrokenCount=0
+2022-11-16 16:09:02,582 DEBUG Package libdebuginfod-common has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-16 16:09:02,582 DEBUG Package libdebuginfod1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-16 16:09:02,583 DEBUG Package libdw1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-16 16:09:02,584 DEBUG Package libelf1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-16 16:09:02,675 DEBUG Extracting content from /var/log/unattended-upgrades/unattended-upgrades-dpkg.log since 2022-11-16 16:06:42
+2022-11-16 16:09:02,678 DEBUG Sending mail to logs@josef-friedrich.de
+2022-11-16 16:09:04,121 DEBUG mail returned: 0
+2022-11-16 16:09:04,121 WARNING Found /var/run/reboot-required, rebooting
+2022-11-16 16:09:04,129 WARNING Shutdown msg: b"Reboot scheduled for Thu 2022-11-17 04:00:00 CET, use 'shutdown -c' to cancel."
+2022-11-17 13:26:19,636 INFO Skript für automatische Systemaktualisierung wird gestartet
+2022-11-17 13:26:19,636 INFO Erlaubte Ursprünge sind: origin=*
+2022-11-17 13:26:19,637 INFO Anfangsnegativliste: 
+2022-11-17 13:26:19,637 INFO Anfangspositivliste (not strict): 
+2022-11-17 13:26:20,004 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-11-17 13:26:20,004 DEBUG Using (^linux-.*-5\.15\.0\-53\-generic$|^linux-.*-5\.15\.0\-53$|^kfreebsd-.*-5\.15\.0\-53\-generic$|^kfreebsd-.*-5\.15\.0\-53$|^gnumach-.*-5\.15\.0\-53\-generic$|^gnumach-.*-5\.15\.0\-53$|^.*-modules-5\.15\.0\-53\-generic$|^.*-modules-5\.15\.0\-53$|^.*-kernel-5\.15\.0\-53\-generic$|^.*-kernel-5\.15\.0\-53$|^linux-.*-5\.15\.0\-53\-generic$|^linux-.*-5\.15\.0\-53$|^kfreebsd-.*-5\.15\.0\-53\-generic$|^kfreebsd-.*-5\.15\.0\-53$|^gnumach-.*-5\.15\.0\-53\-generic$|^gnumach-.*-5\.15\.0\-53$|^.*-modules-5\.15\.0\-53\-generic$|^.*-modules-5\.15\.0\-53$|^.*-kernel-5\.15\.0\-53\-generic$|^.*-kernel-5\.15\.0\-53$) regexp to find running kernel packages
+2022-11-17 13:26:20,223 DEBUG Checking: libexpat1 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-17 13:26:20,282 DEBUG Checking: libexpat1-dev ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-17 13:26:20,729 DEBUG pkgs that look like they should be upgraded: libexpat1
+libexpat1-dev
+2022-11-17 13:26:20,834 DEBUG fetch.run() result: 0
+2022-11-17 13:26:21,127 DEBUG dpkg is configured not to cause conffile prompts
+2022-11-17 13:26:21,127 INFO Pakete, welche aktualisiert werden: libexpat1 libexpat1-dev
+2022-11-17 13:26:21,127 INFO dpkg-Protokoll wird nach /var/log/unattended-upgrades/unattended-upgrades-dpkg.log geschrieben
+2022-11-17 13:26:21,218 DEBUG applying set ['libexpat1', 'libexpat1-dev']
+2022-11-17 13:26:23,655 DEBUG left to upgrade set()
+2022-11-17 13:26:23,656 INFO Alle Systemaktualisierungen installiert
+2022-11-17 13:26:23,849 DEBUG InstCount=0 DelCount=0 BrokenCount=0
+2022-11-17 13:26:23,883 DEBUG Package libdebuginfod-common has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-17 13:26:23,883 DEBUG Package libdebuginfod1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-17 13:26:23,884 DEBUG Package libdw1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-17 13:26:23,885 DEBUG Package libelf1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-17 13:26:23,971 DEBUG Extracting content from /var/log/unattended-upgrades/unattended-upgrades-dpkg.log since 2022-11-17 13:26:19
+2022-11-17 13:26:23,973 DEBUG Sending mail to logs@josef-friedrich.de
+2022-11-17 13:26:25,322 DEBUG mail returned: 0
+2022-11-18 16:32:21,443 INFO Skript für automatische Systemaktualisierung wird gestartet
+2022-11-18 16:32:21,443 INFO Erlaubte Ursprünge sind: origin=*
+2022-11-18 16:32:21,443 INFO Anfangsnegativliste: 
+2022-11-18 16:32:21,443 INFO Anfangspositivliste (not strict): 
+2022-11-18 16:32:21,954 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-11-18 16:32:21,954 DEBUG Using (^linux-.*-5\.15\.0\-53\-generic$|^linux-.*-5\.15\.0\-53$|^kfreebsd-.*-5\.15\.0\-53\-generic$|^kfreebsd-.*-5\.15\.0\-53$|^gnumach-.*-5\.15\.0\-53\-generic$|^gnumach-.*-5\.15\.0\-53$|^.*-modules-5\.15\.0\-53\-generic$|^.*-modules-5\.15\.0\-53$|^.*-kernel-5\.15\.0\-53\-generic$|^.*-kernel-5\.15\.0\-53$|^linux-.*-5\.15\.0\-53\-generic$|^linux-.*-5\.15\.0\-53$|^kfreebsd-.*-5\.15\.0\-53\-generic$|^kfreebsd-.*-5\.15\.0\-53$|^gnumach-.*-5\.15\.0\-53\-generic$|^gnumach-.*-5\.15\.0\-53$|^.*-modules-5\.15\.0\-53\-generic$|^.*-modules-5\.15\.0\-53$|^.*-kernel-5\.15\.0\-53\-generic$|^.*-kernel-5\.15\.0\-53$) regexp to find running kernel packages
+2022-11-18 16:32:22,181 DEBUG Checking: containerd.io ([<Origin component:'stable' archive:'jammy' origin:'Docker' label:'Docker CE' site:'download.docker.com' isTrusted:True>])
+2022-11-18 16:32:22,315 DEBUG Checking: gir1.2-javascriptcoregtk-4.0 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-18 16:32:22,460 DEBUG Checking: gir1.2-webkit2-4.0 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-18 16:32:22,638 DEBUG Checking: libjavascriptcoregtk-4.0-18 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-18 16:32:22,805 DEBUG Checking: libwebkit2gtk-4.0-37 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-18 16:32:23,416 DEBUG pkgs that look like they should be upgraded: containerd.io
+gir1.2-javascriptcoregtk-4.0
+gir1.2-webkit2-4.0
+libjavascriptcoregtk-4.0-18
+libwebkit2gtk-4.0-37
+2022-11-18 16:32:23,819 DEBUG fetch.run() result: 0
+2022-11-18 16:32:24,239 DEBUG dpkg is configured not to cause conffile prompts
+2022-11-18 16:32:24,239 INFO Pakete, welche aktualisiert werden: containerd.io gir1.2-javascriptcoregtk-4.0 gir1.2-webkit2-4.0 libjavascriptcoregtk-4.0-18 libwebkit2gtk-4.0-37
+2022-11-18 16:32:24,240 INFO dpkg-Protokoll wird nach /var/log/unattended-upgrades/unattended-upgrades-dpkg.log geschrieben
+2022-11-18 16:32:24,425 DEBUG applying set ['gir1.2-javascriptcoregtk-4.0', 'gir1.2-webkit2-4.0', 'libjavascriptcoregtk-4.0-18', 'libwebkit2gtk-4.0-37']
+2022-11-18 16:32:27,906 DEBUG left to upgrade {'containerd.io'}
+2022-11-18 16:32:27,997 DEBUG applying set ['containerd.io']
+2022-11-18 16:32:36,684 DEBUG left to upgrade set()
+2022-11-18 16:32:36,685 INFO Alle Systemaktualisierungen installiert
+2022-11-18 16:32:37,011 DEBUG InstCount=0 DelCount=0 BrokenCount=0
+2022-11-18 16:32:37,075 DEBUG Package libdebuginfod-common has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-18 16:32:37,075 DEBUG Package libdebuginfod1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-18 16:32:37,076 DEBUG Package libdw1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-18 16:32:37,077 DEBUG Package libelf1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-18 16:32:37,221 DEBUG Extracting content from /var/log/unattended-upgrades/unattended-upgrades-dpkg.log since 2022-11-18 16:32:21
+2022-11-18 16:32:37,225 DEBUG Sending mail to logs@josef-friedrich.de
+2022-11-18 16:32:38,613 DEBUG mail returned: 0
+2022-11-19 10:17:19,314 INFO Skript für automatische Systemaktualisierung wird gestartet
+2022-11-19 10:17:19,319 INFO Erlaubte Ursprünge sind: origin=*
+2022-11-19 10:17:19,319 INFO Anfangsnegativliste: 
+2022-11-19 10:17:19,319 INFO Anfangspositivliste (not strict): 
+2022-11-19 10:17:19,708 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-11-19 10:17:19,708 DEBUG Using (^linux-.*-5\.15\.0\-53\-generic$|^linux-.*-5\.15\.0\-53$|^kfreebsd-.*-5\.15\.0\-53\-generic$|^kfreebsd-.*-5\.15\.0\-53$|^gnumach-.*-5\.15\.0\-53\-generic$|^gnumach-.*-5\.15\.0\-53$|^.*-modules-5\.15\.0\-53\-generic$|^.*-modules-5\.15\.0\-53$|^.*-kernel-5\.15\.0\-53\-generic$|^.*-kernel-5\.15\.0\-53$|^linux-.*-5\.15\.0\-53\-generic$|^linux-.*-5\.15\.0\-53$|^kfreebsd-.*-5\.15\.0\-53\-generic$|^kfreebsd-.*-5\.15\.0\-53$|^gnumach-.*-5\.15\.0\-53\-generic$|^gnumach-.*-5\.15\.0\-53$|^.*-modules-5\.15\.0\-53\-generic$|^.*-modules-5\.15\.0\-53$|^.*-kernel-5\.15\.0\-53\-generic$|^.*-kernel-5\.15\.0\-53$) regexp to find running kernel packages
+2022-11-19 10:17:20,055 DEBUG pkgs that look like they should be upgraded: 
+2022-11-19 10:17:20,083 DEBUG fetch.run() result: 0
+2022-11-19 10:17:20,104 DEBUG dpkg is configured not to cause conffile prompts
+2022-11-19 10:17:20,104 INFO Es wurden keine Pakete gefunden, von denen eine automatische Systemaktualisierung durchgeführt werden kann und kein ausstehendes automatisches Entfernen.
+2022-11-19 10:17:20,141 DEBUG Package libdebuginfod-common has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-19 10:17:20,141 DEBUG Package libdebuginfod1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-19 10:17:20,142 DEBUG Package libdw1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-19 10:17:20,142 DEBUG Package libelf1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-19 10:17:20,222 DEBUG Extracting content from /var/log/unattended-upgrades/unattended-upgrades-dpkg.log since 2022-11-19 10:17:19
+2022-11-20 10:10:22,211 INFO Skript für automatische Systemaktualisierung wird gestartet
+2022-11-20 10:10:22,212 INFO Erlaubte Ursprünge sind: origin=*
+2022-11-20 10:10:22,212 INFO Anfangsnegativliste: 
+2022-11-20 10:10:22,212 INFO Anfangspositivliste (not strict): 
+2022-11-20 10:10:22,584 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-11-20 10:10:22,584 DEBUG Using (^linux-.*-5\.15\.0\-53\-generic$|^linux-.*-5\.15\.0\-53$|^kfreebsd-.*-5\.15\.0\-53\-generic$|^kfreebsd-.*-5\.15\.0\-53$|^gnumach-.*-5\.15\.0\-53\-generic$|^gnumach-.*-5\.15\.0\-53$|^.*-modules-5\.15\.0\-53\-generic$|^.*-modules-5\.15\.0\-53$|^.*-kernel-5\.15\.0\-53\-generic$|^.*-kernel-5\.15\.0\-53$|^linux-.*-5\.15\.0\-53\-generic$|^linux-.*-5\.15\.0\-53$|^kfreebsd-.*-5\.15\.0\-53\-generic$|^kfreebsd-.*-5\.15\.0\-53$|^gnumach-.*-5\.15\.0\-53\-generic$|^gnumach-.*-5\.15\.0\-53$|^.*-modules-5\.15\.0\-53\-generic$|^.*-modules-5\.15\.0\-53$|^.*-kernel-5\.15\.0\-53\-generic$|^.*-kernel-5\.15\.0\-53$) regexp to find running kernel packages
+2022-11-20 10:10:22,920 DEBUG pkgs that look like they should be upgraded: 
+2022-11-20 10:10:22,948 DEBUG fetch.run() result: 0
+2022-11-20 10:10:22,963 DEBUG dpkg is configured not to cause conffile prompts
+2022-11-20 10:10:22,963 INFO Es wurden keine Pakete gefunden, von denen eine automatische Systemaktualisierung durchgeführt werden kann und kein ausstehendes automatisches Entfernen.
+2022-11-20 10:10:22,997 DEBUG Package libdebuginfod-common has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-20 10:10:22,997 DEBUG Package libdebuginfod1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-20 10:10:22,998 DEBUG Package libdw1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-20 10:10:22,999 DEBUG Package libelf1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-20 10:10:23,080 DEBUG Extracting content from /var/log/unattended-upgrades/unattended-upgrades-dpkg.log since 2022-11-20 10:10:22
+2022-11-21 10:19:44,423 INFO Skript für automatische Systemaktualisierung wird gestartet
+2022-11-21 10:19:44,424 INFO Erlaubte Ursprünge sind: origin=*
+2022-11-21 10:19:44,424 INFO Anfangsnegativliste: 
+2022-11-21 10:19:44,424 INFO Anfangspositivliste (not strict): 
+2022-11-21 10:19:44,893 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-11-21 10:19:44,893 DEBUG Using (^linux-.*-5\.15\.0\-53\-generic$|^linux-.*-5\.15\.0\-53$|^kfreebsd-.*-5\.15\.0\-53\-generic$|^kfreebsd-.*-5\.15\.0\-53$|^gnumach-.*-5\.15\.0\-53\-generic$|^gnumach-.*-5\.15\.0\-53$|^.*-modules-5\.15\.0\-53\-generic$|^.*-modules-5\.15\.0\-53$|^.*-kernel-5\.15\.0\-53\-generic$|^.*-kernel-5\.15\.0\-53$|^linux-.*-5\.15\.0\-53\-generic$|^linux-.*-5\.15\.0\-53$|^kfreebsd-.*-5\.15\.0\-53\-generic$|^kfreebsd-.*-5\.15\.0\-53$|^gnumach-.*-5\.15\.0\-53\-generic$|^gnumach-.*-5\.15\.0\-53$|^.*-modules-5\.15\.0\-53\-generic$|^.*-modules-5\.15\.0\-53$|^.*-kernel-5\.15\.0\-53\-generic$|^.*-kernel-5\.15\.0\-53$) regexp to find running kernel packages
+2022-11-21 10:19:45,227 DEBUG pkgs that look like they should be upgraded: 
+2022-11-21 10:19:45,255 DEBUG fetch.run() result: 0
+2022-11-21 10:19:45,270 DEBUG dpkg is configured not to cause conffile prompts
+2022-11-21 10:19:45,271 INFO Es wurden keine Pakete gefunden, von denen eine automatische Systemaktualisierung durchgeführt werden kann und kein ausstehendes automatisches Entfernen.
+2022-11-21 10:19:45,305 DEBUG Package libdebuginfod-common has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-21 10:19:45,305 DEBUG Package libdebuginfod1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-21 10:19:45,306 DEBUG Package libdw1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-21 10:19:45,307 DEBUG Package libelf1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-21 10:19:45,391 DEBUG Extracting content from /var/log/unattended-upgrades/unattended-upgrades-dpkg.log since 2022-11-21 10:19:44
+2022-11-22 15:49:12,647 INFO Skript für automatische Systemaktualisierung wird gestartet
+2022-11-22 15:49:12,647 INFO Erlaubte Ursprünge sind: origin=*
+2022-11-22 15:49:12,647 INFO Anfangsnegativliste: 
+2022-11-22 15:49:12,647 INFO Anfangspositivliste (not strict): 
+2022-11-22 15:49:13,068 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-11-22 15:49:13,068 DEBUG Using (^linux-.*-5\.15\.0\-53\-generic$|^linux-.*-5\.15\.0\-53$|^kfreebsd-.*-5\.15\.0\-53\-generic$|^kfreebsd-.*-5\.15\.0\-53$|^gnumach-.*-5\.15\.0\-53\-generic$|^gnumach-.*-5\.15\.0\-53$|^.*-modules-5\.15\.0\-53\-generic$|^.*-modules-5\.15\.0\-53$|^.*-kernel-5\.15\.0\-53\-generic$|^.*-kernel-5\.15\.0\-53$|^linux-.*-5\.15\.0\-53\-generic$|^linux-.*-5\.15\.0\-53$|^kfreebsd-.*-5\.15\.0\-53\-generic$|^kfreebsd-.*-5\.15\.0\-53$|^gnumach-.*-5\.15\.0\-53\-generic$|^gnumach-.*-5\.15\.0\-53$|^.*-modules-5\.15\.0\-53\-generic$|^.*-modules-5\.15\.0\-53$|^.*-kernel-5\.15\.0\-53\-generic$|^.*-kernel-5\.15\.0\-53$) regexp to find running kernel packages
+2022-11-22 15:49:13,267 DEBUG Checking: firmware-sof-signed ([<Origin component:'restricted' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'restricted' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-22 15:49:13,349 DEBUG Checking: flac ([<Origin component:'universe' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-22 15:49:13,466 DEBUG Checking: libflac++6v5 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-22 15:49:13,548 DEBUG Checking: libflac8 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-22 15:49:13,704 DEBUG Checking: rsync ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-22 15:49:13,807 DEBUG Checking: teamviewer ([<Origin component:'main' archive:'stable' origin:'TeamViewer GmbH' label:'TeamViewer' site:'linux.teamviewer.com' isTrusted:True>])
+2022-11-22 15:49:14,193 DEBUG pkgs that look like they should be upgraded: firmware-sof-signed
+flac
+libflac++6v5
+libflac8
+rsync
+teamviewer
+2022-11-22 15:49:14,903 DEBUG fetch.run() result: 0
+2022-11-22 15:49:15,219 DEBUG dpkg is configured not to cause conffile prompts
+2022-11-22 15:49:15,219 INFO Pakete, welche aktualisiert werden: firmware-sof-signed flac libflac++6v5 libflac8 rsync teamviewer
+2022-11-22 15:49:15,220 INFO dpkg-Protokoll wird nach /var/log/unattended-upgrades/unattended-upgrades-dpkg.log geschrieben
+2022-11-22 15:49:15,307 DEBUG applying set ['libflac8']
+2022-11-22 15:49:17,638 DEBUG left to upgrade {'flac', 'libflac++6v5', 'teamviewer', 'rsync', 'firmware-sof-signed'}
+2022-11-22 15:49:17,706 DEBUG applying set ['flac']
+2022-11-22 15:49:19,244 DEBUG left to upgrade {'libflac++6v5', 'teamviewer', 'rsync', 'firmware-sof-signed'}
+2022-11-22 15:49:19,316 DEBUG applying set ['libflac++6v5']
+2022-11-22 15:49:20,683 DEBUG left to upgrade {'firmware-sof-signed', 'teamviewer', 'rsync'}
+2022-11-22 15:49:20,753 DEBUG applying set ['teamviewer']
+2022-11-22 15:49:36,829 DEBUG left to upgrade {'firmware-sof-signed', 'rsync'}
+2022-11-22 15:49:36,896 DEBUG applying set ['rsync']
+2022-11-22 15:49:38,892 DEBUG left to upgrade {'firmware-sof-signed'}
+2022-11-22 15:49:38,960 DEBUG applying set ['firmware-sof-signed']
+2022-11-22 15:49:40,470 DEBUG left to upgrade set()
+2022-11-22 15:49:40,470 INFO Alle Systemaktualisierungen installiert
+2022-11-22 15:49:40,657 DEBUG InstCount=0 DelCount=0 BrokenCount=0
+2022-11-22 15:49:40,696 DEBUG Package libdebuginfod-common has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-22 15:49:40,697 DEBUG Package libdebuginfod1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-22 15:49:40,698 DEBUG Package libdw1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-22 15:49:40,698 DEBUG Package libelf1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-22 15:49:40,783 DEBUG Extracting content from /var/log/unattended-upgrades/unattended-upgrades-dpkg.log since 2022-11-22 15:49:12
+2022-11-22 15:49:40,791 DEBUG Sending mail to logs@josef-friedrich.de
+2022-11-22 15:49:42,102 DEBUG mail returned: 0
+2022-11-23 16:36:47,026 INFO Skript für automatische Systemaktualisierung wird gestartet
+2022-11-23 16:36:47,027 INFO Erlaubte Ursprünge sind: origin=*
+2022-11-23 16:36:47,027 INFO Anfangsnegativliste: 
+2022-11-23 16:36:47,027 INFO Anfangspositivliste (not strict): 
+2022-11-23 16:36:47,481 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-11-23 16:36:47,481 DEBUG Using (^linux-.*-5\.15\.0\-53\-generic$|^linux-.*-5\.15\.0\-53$|^kfreebsd-.*-5\.15\.0\-53\-generic$|^kfreebsd-.*-5\.15\.0\-53$|^gnumach-.*-5\.15\.0\-53\-generic$|^gnumach-.*-5\.15\.0\-53$|^.*-modules-5\.15\.0\-53\-generic$|^.*-modules-5\.15\.0\-53$|^.*-kernel-5\.15\.0\-53\-generic$|^.*-kernel-5\.15\.0\-53$|^linux-.*-5\.15\.0\-53\-generic$|^linux-.*-5\.15\.0\-53$|^kfreebsd-.*-5\.15\.0\-53\-generic$|^kfreebsd-.*-5\.15\.0\-53$|^gnumach-.*-5\.15\.0\-53\-generic$|^gnumach-.*-5\.15\.0\-53$|^.*-modules-5\.15\.0\-53\-generic$|^.*-modules-5\.15\.0\-53$|^.*-kernel-5\.15\.0\-53\-generic$|^.*-kernel-5\.15\.0\-53$) regexp to find running kernel packages
+2022-11-23 16:36:47,678 DEBUG Checking: apport ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-23 16:36:47,742 DEBUG Checking: apport-gtk ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-23 16:36:47,904 DEBUG Checking: libexpat1 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-23 16:36:48,011 DEBUG Checking: libexpat1-dev ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-23 16:36:48,107 DEBUG Checking: libfreerdp-client2-2 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-23 16:36:48,221 DEBUG Checking: libfreerdp-server2-2 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-23 16:36:48,284 DEBUG Checking: libfreerdp2-2 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-23 16:36:48,394 DEBUG Checking: libwinpr2-2 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-23 16:36:48,484 DEBUG Checking: python3-apport ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-23 16:36:48,593 DEBUG Checking: python3-problem-report ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-23 16:36:49,046 DEBUG pkgs that look like they should be upgraded: apport
+apport-gtk
+libexpat1
+libexpat1-dev
+libfreerdp-client2-2
+libfreerdp-server2-2
+libfreerdp2-2
+libwinpr2-2
+python3-apport
+python3-problem-report
+2022-11-23 16:36:49,741 DEBUG fetch.run() result: 0
+2022-11-23 16:36:50,105 DEBUG dpkg is configured not to cause conffile prompts
+2022-11-23 16:36:50,105 INFO Pakete, welche aktualisiert werden: apport apport-gtk libexpat1 libexpat1-dev libfreerdp-client2-2 libfreerdp-server2-2 libfreerdp2-2 libwinpr2-2 python3-apport python3-problem-report
+2022-11-23 16:36:50,106 INFO dpkg-Protokoll wird nach /var/log/unattended-upgrades/unattended-upgrades-dpkg.log geschrieben
+2022-11-23 16:36:50,208 DEBUG applying set ['libfreerdp2-2', 'libwinpr2-2', 'libfreerdp-server2-2', 'libfreerdp-client2-2']
+2022-11-23 16:36:53,186 DEBUG left to upgrade {'libexpat1-dev', 'apport-gtk', 'python3-problem-report', 'libexpat1', 'python3-apport', 'apport'}
+2022-11-23 16:36:53,300 DEBUG applying set ['libexpat1', 'libexpat1-dev']
+2022-11-23 16:36:54,883 DEBUG left to upgrade {'apport-gtk', 'python3-apport', 'python3-problem-report', 'apport'}
+2022-11-23 16:36:54,970 DEBUG applying set ['apport-gtk', 'python3-apport']
+2022-11-23 16:36:56,794 DEBUG left to upgrade {'python3-problem-report', 'apport'}
+2022-11-23 16:36:56,927 DEBUG applying set ['python3-problem-report']
+2022-11-23 16:36:58,486 DEBUG left to upgrade {'apport'}
+2022-11-23 16:36:58,583 DEBUG applying set ['apport']
+2022-11-23 16:37:01,358 DEBUG left to upgrade set()
+2022-11-23 16:37:01,358 INFO Alle Systemaktualisierungen installiert
+2022-11-23 16:37:01,567 DEBUG InstCount=0 DelCount=0 BrokenCount=0
+2022-11-23 16:37:01,604 DEBUG Package libdebuginfod-common has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-23 16:37:01,604 DEBUG Package libdebuginfod1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-23 16:37:01,605 DEBUG Package libdw1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-23 16:37:01,606 DEBUG Package libelf1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-23 16:37:01,700 DEBUG Extracting content from /var/log/unattended-upgrades/unattended-upgrades-dpkg.log since 2022-11-23 16:36:47
+2022-11-23 16:37:01,704 DEBUG Sending mail to logs@josef-friedrich.de
+2022-11-23 16:37:03,024 DEBUG mail returned: 0
+2022-11-24 15:58:01,660 INFO Skript für automatische Systemaktualisierung wird gestartet
+2022-11-24 15:58:01,661 INFO Erlaubte Ursprünge sind: origin=*
+2022-11-24 15:58:01,661 INFO Anfangsnegativliste: 
+2022-11-24 15:58:01,661 INFO Anfangspositivliste (not strict): 
+2022-11-24 15:58:02,040 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-11-24 15:58:02,040 DEBUG Using (^linux-.*-5\.15\.0\-53\-generic$|^linux-.*-5\.15\.0\-53$|^kfreebsd-.*-5\.15\.0\-53\-generic$|^kfreebsd-.*-5\.15\.0\-53$|^gnumach-.*-5\.15\.0\-53\-generic$|^gnumach-.*-5\.15\.0\-53$|^.*-modules-5\.15\.0\-53\-generic$|^.*-modules-5\.15\.0\-53$|^.*-kernel-5\.15\.0\-53\-generic$|^.*-kernel-5\.15\.0\-53$|^linux-.*-5\.15\.0\-53\-generic$|^linux-.*-5\.15\.0\-53$|^kfreebsd-.*-5\.15\.0\-53\-generic$|^kfreebsd-.*-5\.15\.0\-53$|^gnumach-.*-5\.15\.0\-53\-generic$|^gnumach-.*-5\.15\.0\-53$|^.*-modules-5\.15\.0\-53\-generic$|^.*-modules-5\.15\.0\-53$|^.*-kernel-5\.15\.0\-53\-generic$|^.*-kernel-5\.15\.0\-53$) regexp to find running kernel packages
+2022-11-24 15:58:02,249 DEBUG Checking: intellij-idea-community ([<Origin component:'main' archive:'jammy' origin:'LP-PPA-mmk2410-intellij-idea' label:'IntelliJ IDEA' site:'ppa.launchpad.net' isTrusted:True>, <Origin component:'main' archive:'jammy' origin:'LP-PPA-mmk2410-intellij-idea' label:'IntelliJ IDEA' site:'ppa.launchpad.net' isTrusted:True>])
+2022-11-24 15:58:02,433 DEBUG Checking: teamviewer ([<Origin component:'main' archive:'stable' origin:'TeamViewer GmbH' label:'TeamViewer' site:'linux.teamviewer.com' isTrusted:True>])
+2022-11-24 15:58:02,570 DEBUG Checking: xserver-common ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-24 15:58:02,666 DEBUG Checking: xserver-xephyr ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-24 15:58:02,765 DEBUG Checking: xserver-xorg-core ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-24 15:58:02,867 DEBUG Checking: xserver-xorg-dev ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-24 15:58:02,968 DEBUG Checking: xserver-xorg-legacy ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-24 15:58:03,043 DEBUG Checking: xwayland ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-24 15:58:03,435 DEBUG pkgs that look like they should be upgraded: intellij-idea-community
+teamviewer
+xserver-common
+xserver-xephyr
+xserver-xorg-core
+xserver-xorg-dev
+xserver-xorg-legacy
+xwayland
+2022-11-24 15:58:04,036 DEBUG fetch.run() result: 0
+2022-11-24 15:58:04,374 DEBUG dpkg is configured not to cause conffile prompts
+2022-11-24 15:58:04,374 INFO Pakete, welche aktualisiert werden: intellij-idea-community teamviewer xserver-common xserver-xephyr xserver-xorg-core xserver-xorg-dev xserver-xorg-legacy xwayland
+2022-11-24 15:58:04,374 INFO dpkg-Protokoll wird nach /var/log/unattended-upgrades/unattended-upgrades-dpkg.log geschrieben
+2022-11-24 15:58:04,467 DEBUG applying set ['intellij-idea-community']
+2022-11-24 16:00:25,775 DEBUG left to upgrade {'xserver-xephyr', 'xserver-xorg-dev', 'teamviewer', 'xwayland', 'xserver-xorg-legacy', 'xserver-xorg-core', 'xserver-common'}
+2022-11-24 16:00:26,038 DEBUG applying set ['xserver-common', 'xserver-xephyr']
+2022-11-24 16:00:28,794 DEBUG left to upgrade {'xserver-xorg-dev', 'teamviewer', 'xwayland', 'xserver-xorg-legacy', 'xserver-xorg-core'}
+2022-11-24 16:00:28,883 DEBUG applying set ['xserver-xorg-dev']
+2022-11-24 16:00:30,424 DEBUG left to upgrade {'xserver-xorg-legacy', 'xserver-xorg-core', 'teamviewer', 'xwayland'}
+2022-11-24 16:00:30,517 DEBUG applying set ['teamviewer']
+2022-11-24 16:00:45,883 DEBUG left to upgrade {'xserver-xorg-legacy', 'xserver-xorg-core', 'xwayland'}
+2022-11-24 16:00:45,957 DEBUG applying set ['xwayland']
+2022-11-24 16:00:47,513 DEBUG left to upgrade {'xserver-xorg-legacy', 'xserver-xorg-core'}
+2022-11-24 16:00:47,587 DEBUG applying set ['xserver-xorg-legacy']
+2022-11-24 16:00:49,293 DEBUG left to upgrade {'xserver-xorg-core'}
+2022-11-24 16:00:49,398 DEBUG applying set ['xserver-xorg-core']
+2022-11-24 16:00:50,962 DEBUG left to upgrade set()
+2022-11-24 16:00:50,962 INFO Alle Systemaktualisierungen installiert
+2022-11-24 16:00:51,156 DEBUG InstCount=0 DelCount=0 BrokenCount=0
+2022-11-24 16:00:51,199 DEBUG Package libdebuginfod-common has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-24 16:00:51,199 DEBUG Package libdebuginfod1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-24 16:00:51,200 DEBUG Package libdw1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-24 16:00:51,200 DEBUG Package libelf1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-24 16:00:51,286 DEBUG Extracting content from /var/log/unattended-upgrades/unattended-upgrades-dpkg.log since 2022-11-24 15:58:01
+2022-11-24 16:00:51,289 DEBUG Sending mail to logs@josef-friedrich.de
+2022-11-24 16:00:52,713 DEBUG mail returned: 0
+2022-11-25 17:49:09,831 INFO Skript für automatische Systemaktualisierung wird gestartet
+2022-11-25 17:49:09,831 INFO Erlaubte Ursprünge sind: origin=*
+2022-11-25 17:49:09,831 INFO Anfangsnegativliste: 
+2022-11-25 17:49:09,831 INFO Anfangspositivliste (not strict): 
+2022-11-25 17:49:10,359 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-11-25 17:49:10,359 DEBUG Using (^linux-.*-5\.15\.0\-53\-generic$|^linux-.*-5\.15\.0\-53$|^kfreebsd-.*-5\.15\.0\-53\-generic$|^kfreebsd-.*-5\.15\.0\-53$|^gnumach-.*-5\.15\.0\-53\-generic$|^gnumach-.*-5\.15\.0\-53$|^.*-modules-5\.15\.0\-53\-generic$|^.*-modules-5\.15\.0\-53$|^.*-kernel-5\.15\.0\-53\-generic$|^.*-kernel-5\.15\.0\-53$|^linux-.*-5\.15\.0\-53\-generic$|^linux-.*-5\.15\.0\-53$|^kfreebsd-.*-5\.15\.0\-53\-generic$|^kfreebsd-.*-5\.15\.0\-53$|^gnumach-.*-5\.15\.0\-53\-generic$|^gnumach-.*-5\.15\.0\-53$|^.*-modules-5\.15\.0\-53\-generic$|^.*-modules-5\.15\.0\-53$|^.*-kernel-5\.15\.0\-53\-generic$|^.*-kernel-5\.15\.0\-53$) regexp to find running kernel packages
+2022-11-25 17:49:10,629 DEBUG Checking: libjbig-dev ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-25 17:49:10,718 DEBUG Checking: libjbig0 ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'jammy-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-11-25 17:49:10,854 DEBUG Checking: php8.1-cli ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-25 17:49:10,952 DEBUG Checking: php8.1-common ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-25 17:49:11,064 DEBUG Checking: php8.1-opcache ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-25 17:49:11,175 DEBUG Checking: php8.1-readline ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-25 17:49:11,249 DEBUG Checking: php8.1-xml ([<Origin component:'main' archive:'jammy-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-11-25 17:49:11,755 DEBUG pkgs that look like they should be upgraded: libjbig-dev
+libjbig0
+php8.1-cli
+php8.1-common
+php8.1-opcache
+php8.1-readline
+php8.1-xml
+2022-11-25 17:49:12,825 DEBUG fetch.run() result: 0
+2022-11-25 17:49:13,138 DEBUG dpkg is configured not to cause conffile prompts
+2022-11-25 17:49:13,138 INFO Pakete, welche aktualisiert werden: libjbig-dev libjbig0 php8.1-cli php8.1-common php8.1-opcache php8.1-readline php8.1-xml
+2022-11-25 17:49:13,138 INFO dpkg-Protokoll wird nach /var/log/unattended-upgrades/unattended-upgrades-dpkg.log geschrieben
+2022-11-25 17:49:13,223 DEBUG applying set ['php8.1-opcache', 'php8.1-common', 'php8.1-readline', 'php8.1-cli', 'php8.1-xml']
+2022-11-25 17:49:22,824 DEBUG left to upgrade {'libjbig0', 'libjbig-dev'}
+2022-11-25 17:49:22,918 DEBUG applying set ['libjbig-dev', 'libjbig0']
+2022-11-25 17:49:24,379 DEBUG left to upgrade set()
+2022-11-25 17:49:24,379 INFO Alle Systemaktualisierungen installiert
+2022-11-25 17:49:24,569 DEBUG InstCount=0 DelCount=0 BrokenCount=0
+2022-11-25 17:49:24,603 DEBUG Package libdebuginfod-common has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-25 17:49:24,603 DEBUG Package libdebuginfod1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-25 17:49:24,604 DEBUG Package libdw1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-25 17:49:24,605 DEBUG Package libelf1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-25 17:49:24,706 DEBUG Extracting content from /var/log/unattended-upgrades/unattended-upgrades-dpkg.log since 2022-11-25 17:49:09
+2022-11-25 17:49:24,716 DEBUG Sending mail to logs@josef-friedrich.de
+2022-11-25 17:49:26,104 DEBUG mail returned: 0
+2022-11-26 11:31:49,397 INFO Skript für automatische Systemaktualisierung wird gestartet
+2022-11-26 11:31:49,397 INFO Erlaubte Ursprünge sind: origin=*
+2022-11-26 11:31:49,397 INFO Anfangsnegativliste: 
+2022-11-26 11:31:49,398 INFO Anfangspositivliste (not strict): 
+2022-11-26 11:31:49,772 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-11-26 11:31:49,772 DEBUG Using (^linux-.*-5\.15\.0\-53\-generic$|^linux-.*-5\.15\.0\-53$|^kfreebsd-.*-5\.15\.0\-53\-generic$|^kfreebsd-.*-5\.15\.0\-53$|^gnumach-.*-5\.15\.0\-53\-generic$|^gnumach-.*-5\.15\.0\-53$|^.*-modules-5\.15\.0\-53\-generic$|^.*-modules-5\.15\.0\-53$|^.*-kernel-5\.15\.0\-53\-generic$|^.*-kernel-5\.15\.0\-53$|^linux-.*-5\.15\.0\-53\-generic$|^linux-.*-5\.15\.0\-53$|^kfreebsd-.*-5\.15\.0\-53\-generic$|^kfreebsd-.*-5\.15\.0\-53$|^gnumach-.*-5\.15\.0\-53\-generic$|^gnumach-.*-5\.15\.0\-53$|^.*-modules-5\.15\.0\-53\-generic$|^.*-modules-5\.15\.0\-53$|^.*-kernel-5\.15\.0\-53\-generic$|^.*-kernel-5\.15\.0\-53$) regexp to find running kernel packages
+2022-11-26 11:31:50,118 DEBUG pkgs that look like they should be upgraded: 
+2022-11-26 11:31:50,147 DEBUG fetch.run() result: 0
+2022-11-26 11:31:50,169 DEBUG dpkg is configured not to cause conffile prompts
+2022-11-26 11:31:50,169 INFO Es wurden keine Pakete gefunden, von denen eine automatische Systemaktualisierung durchgeführt werden kann und kein ausstehendes automatisches Entfernen.
+2022-11-26 11:31:50,206 DEBUG Package libdebuginfod-common has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-26 11:31:50,206 DEBUG Package libdebuginfod1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-26 11:31:50,207 DEBUG Package libdw1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-26 11:31:50,208 DEBUG Package libelf1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-26 11:31:50,288 DEBUG Extracting content from /var/log/unattended-upgrades/unattended-upgrades-dpkg.log since 2022-11-26 11:31:49
+2022-11-27 15:59:33,148 INFO Skript für automatische Systemaktualisierung wird gestartet
+2022-11-27 15:59:33,148 INFO Erlaubte Ursprünge sind: origin=*
+2022-11-27 15:59:33,148 INFO Anfangsnegativliste: 
+2022-11-27 15:59:33,148 INFO Anfangspositivliste (not strict): 
+2022-11-27 15:59:33,575 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-11-27 15:59:33,575 DEBUG Using (^linux-.*-5\.15\.0\-53\-generic$|^linux-.*-5\.15\.0\-53$|^kfreebsd-.*-5\.15\.0\-53\-generic$|^kfreebsd-.*-5\.15\.0\-53$|^gnumach-.*-5\.15\.0\-53\-generic$|^gnumach-.*-5\.15\.0\-53$|^.*-modules-5\.15\.0\-53\-generic$|^.*-modules-5\.15\.0\-53$|^.*-kernel-5\.15\.0\-53\-generic$|^.*-kernel-5\.15\.0\-53$|^linux-.*-5\.15\.0\-53\-generic$|^linux-.*-5\.15\.0\-53$|^kfreebsd-.*-5\.15\.0\-53\-generic$|^kfreebsd-.*-5\.15\.0\-53$|^gnumach-.*-5\.15\.0\-53\-generic$|^gnumach-.*-5\.15\.0\-53$|^.*-modules-5\.15\.0\-53\-generic$|^.*-modules-5\.15\.0\-53$|^.*-kernel-5\.15\.0\-53\-generic$|^.*-kernel-5\.15\.0\-53$) regexp to find running kernel packages
+2022-11-27 15:59:33,954 DEBUG pkgs that look like they should be upgraded: 
+2022-11-27 15:59:33,983 DEBUG fetch.run() result: 0
+2022-11-27 15:59:34,000 DEBUG dpkg is configured not to cause conffile prompts
+2022-11-27 15:59:34,000 INFO Es wurden keine Pakete gefunden, von denen eine automatische Systemaktualisierung durchgeführt werden kann und kein ausstehendes automatisches Entfernen.
+2022-11-27 15:59:34,038 DEBUG Package libdebuginfod-common has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-27 15:59:34,039 DEBUG Package libdebuginfod1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-27 15:59:34,040 DEBUG Package libdw1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-27 15:59:34,040 DEBUG Package libelf1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-27 15:59:34,136 DEBUG Extracting content from /var/log/unattended-upgrades/unattended-upgrades-dpkg.log since 2022-11-27 15:59:33
+2022-11-28 08:05:57,848 INFO Skript für automatische Systemaktualisierung wird gestartet
+2022-11-28 08:05:57,853 INFO Erlaubte Ursprünge sind: origin=*
+2022-11-28 08:05:57,853 INFO Anfangsnegativliste: 
+2022-11-28 08:05:57,853 INFO Anfangspositivliste (not strict): 
+2022-11-28 08:05:58,228 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-11-28 08:05:58,228 DEBUG Using (^linux-.*-5\.15\.0\-53\-generic$|^linux-.*-5\.15\.0\-53$|^kfreebsd-.*-5\.15\.0\-53\-generic$|^kfreebsd-.*-5\.15\.0\-53$|^gnumach-.*-5\.15\.0\-53\-generic$|^gnumach-.*-5\.15\.0\-53$|^.*-modules-5\.15\.0\-53\-generic$|^.*-modules-5\.15\.0\-53$|^.*-kernel-5\.15\.0\-53\-generic$|^.*-kernel-5\.15\.0\-53$|^linux-.*-5\.15\.0\-53\-generic$|^linux-.*-5\.15\.0\-53$|^kfreebsd-.*-5\.15\.0\-53\-generic$|^kfreebsd-.*-5\.15\.0\-53$|^gnumach-.*-5\.15\.0\-53\-generic$|^gnumach-.*-5\.15\.0\-53$|^.*-modules-5\.15\.0\-53\-generic$|^.*-modules-5\.15\.0\-53$|^.*-kernel-5\.15\.0\-53\-generic$|^.*-kernel-5\.15\.0\-53$) regexp to find running kernel packages
+2022-11-28 08:05:58,569 DEBUG pkgs that look like they should be upgraded: 
+2022-11-28 08:05:58,597 DEBUG fetch.run() result: 0
+2022-11-28 08:05:58,611 DEBUG dpkg is configured not to cause conffile prompts
+2022-11-28 08:05:58,611 INFO Es wurden keine Pakete gefunden, von denen eine automatische Systemaktualisierung durchgeführt werden kann und kein ausstehendes automatisches Entfernen.
+2022-11-28 08:05:58,646 DEBUG Package libdebuginfod-common has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-28 08:05:58,646 DEBUG Package libdebuginfod1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-28 08:05:58,647 DEBUG Package libdw1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-28 08:05:58,648 DEBUG Package libelf1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-11-28 08:05:58,727 DEBUG Extracting content from /var/log/unattended-upgrades/unattended-upgrades-dpkg.log since 2022-11-28 08:05:57

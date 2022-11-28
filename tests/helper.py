@@ -6,15 +6,12 @@ import os
 import check_unattended_upgrades
 
 
-def read_text_file(file_name: str) -> str | None:
+def read_text_file(file_name: str) -> str:
     file: str = os.path.join(
         os.path.dirname(os.path.abspath(__file__)), "files", file_name
     )
-    if os.path.exists(file):
-        with open(file, "r") as f:
-            content = f.read()
-
-        return content
+    with open(file, "r") as f:
+        return f.read()
 
 
 class MockResult:
@@ -88,6 +85,16 @@ class MockResult:
         if self.output:
             return self.output.split("\n", 1)[0]
 
+    def assert_exitcode(self, exitcode: int) -> None:
+        assert self.exitcode == exitcode, "exitcode {} != {}".format(
+            self.exitcode, exitcode
+        )
+
+    def assert_first_line(self, first_line: str) -> None:
+        assert self.first_line == first_line, "first_line “{}” != “{}”".format(
+            self.first_line, first_line
+        )
+
 
 class CompletedProcess:
     returncode: int = 0
@@ -95,15 +102,25 @@ class CompletedProcess:
 
 
 def perform_subprocess_run_side_effect(args: list[str], **kwargs):
-    print(arg1)
+    process = CompletedProcess()
+    process.returncode = 0
+    process.stdout = read_text_file("apt-config.txt")
+    return process
 
 
-def execute_main(argv: list[str] = ["check_unattended_upgrades.py"]) -> MockResult:
+def execute_main(
+    argv: list[str] = ["check_unattended_upgrades.py"],
+    main_log_file: str = "main-log.txt",
+) -> MockResult:
     if not argv or argv[0] != "check_unattended_upgrades.py":
         argv.insert(0, "check_unattended_upgrades.py")
     with mock.patch("sys.exit") as sys_exit, mock.patch(
         "subprocess.run", side_effect=perform_subprocess_run_side_effect
-    ), mock.patch("sys.argv", argv), mock.patch("builtins.print") as mocked_print:
+    ), mock.patch("sys.argv", argv), mock.patch(
+        "builtins.print"
+    ) as mocked_print, mock.patch(
+        "__main__.open", mock.mock_open(read_data=read_text_file(main_log_file))
+    ):
 
         file_stdout: io.StringIO = io.StringIO()
         file_stderr: io.StringIO = io.StringIO()

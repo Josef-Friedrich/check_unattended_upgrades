@@ -26,6 +26,7 @@ class OptionContainer:
     repo: str
     reboot: bool
     remove: str | None
+    verbose: int
     security: bool
     sleep: str | None
     systemd_timers: bool
@@ -181,8 +182,10 @@ def get_argparser() -> argparse.ArgumentParser:
         help="Check if the configuration 'APT::Periodic::Unattended-Upgrade' is set properly.",
     )
 
+    parser.add_argument("-v", "--verbose", action="store_true", default=False)
+
     parser.add_argument(
-        "-v",
+        "-V",
         "--version",
         action="version",
         version="%(prog)s {}".format(__version__),
@@ -353,7 +356,7 @@ class ConfigContext(nagiosplugin.Context):
             return self.result_cls(
                 nagiosplugin.Critical,
                 metric=metric,
-                hint="{} actual: {} expected: {}".format(
+                hint="Configuration value for “{}” unexpected! actual: {} expected: {}".format(
                     r.key, metric.value, self.expected
                 ),
             )
@@ -557,7 +560,9 @@ class WarningsInLogContext(nagiosplugin.Context):
 
 class ChecksCollection:
 
-    checks: list[nagiosplugin.Resource | nagiosplugin.Context] = []
+    checks: list[
+        nagiosplugin.Resource | nagiosplugin.Context | nagiosplugin.Summary
+    ] = []
 
     def __init__(self, opts: OptionContainer) -> None:
         self.checks += [
@@ -599,7 +604,7 @@ def main() -> None:
 
     checks: ChecksCollection = ChecksCollection(opts)
     check: nagiosplugin.Check = nagiosplugin.Check(*checks.checks)
-    check.main()
+    check.main(opts.verbose)
 
 
 if __name__ == "__main__":
