@@ -3,12 +3,13 @@
 import argparse
 import datetime
 import gzip
-import nagiosplugin
+import pathlib
 import re
 import shutil
 import subprocess
 import typing
-import pathlib
+
+import nagiosplugin
 
 __version__: str = "1.4"
 

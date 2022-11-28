@@ -1,2 +1,7 @@
 check_unattended_upgrades_patched
 *_patched
+
+*.pyc
+.package.lock
+.tox/
+__pycache__/
