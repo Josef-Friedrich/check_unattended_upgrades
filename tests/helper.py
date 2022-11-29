@@ -91,6 +91,18 @@ class MockResult:
             self.exitcode, exitcode
         )
 
+    def assert_ok(self) -> None:
+        self.assert_exitcode(0)
+
+    def assert_warn(self) -> None:
+        self.assert_exitcode(1)
+
+    def assert_critical(self) -> None:
+        self.assert_exitcode(2)
+
+    def assert_unknown(self) -> None:
+        self.assert_exitcode(3)
+
     def assert_first_line(self, first_line: str) -> None:
         assert self.first_line == first_line, "first_line “{}” != “{}”".format(
             self.first_line, first_line
