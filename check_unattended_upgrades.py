@@ -604,6 +604,7 @@ def main() -> None:
 
     checks: ChecksCollection = ChecksCollection(opts)
     check: nagiosplugin.Check = nagiosplugin.Check(*checks.checks)
+    check.name = "unattended_upgrades"
     check.main(opts.verbose)
 
 

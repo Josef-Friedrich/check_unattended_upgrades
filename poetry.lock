@@ -517,7 +517,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 
 [[package]]
 name = "virtualenv"
-version = "20.16.7"
+version = "20.17.0"
 description = "Virtual Python Environment builder"
 category = "dev"
 optional = false
@@ -547,7 +547,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "flake8 (<5)", "pytest-co
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "2309deba5b5345e3d9d0e0275ca461b9b4eddc5165b918485292ef61cf940959"
+content-hash = "e5d0c4e3d0be0e45975927bc33d260c08458546af83113d12fdf82082a67f2cc"
 
 [metadata.files]
 apeye = []
