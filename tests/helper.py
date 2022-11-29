@@ -1,8 +1,9 @@
 import io
+import os
 from contextlib import redirect_stderr, redirect_stdout
 from unittest import mock
 from unittest.mock import Mock
-import os
+
 import check_unattended_upgrades
 
 
