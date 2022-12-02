@@ -61,26 +61,24 @@ class MockResult:
 
     @property
     def output(self) -> str:
-        """A combined string of the captured stdout, stderr and the print
+        """A combined string of the captured stderr, stdout  and the print
         calls. Somehow the whole stdout couldn’t be read. The help text could
         be read, but not the plugin output using the function
         ``redirect_stdout()``."""
         out: str = ""
 
-        if self.print_calls:
-            out += "\n".join(self.print_calls)
-
-        if self.__stdout:
-            out += self.__stdout
-
         if self.__stderr:
             out += self.__stderr
+        if self.__stdout:
+            out += self.__stdout
+        if self.print_calls:
+            out += "\n".join(self.print_calls)
 
         return out
 
     @property
     def first_line(self) -> str | None:
-        """The first line of the stdout output without a newline break at the
+        """The first line of the output without a newline break at the
         end as a string.
         """
         if self.output:

@@ -26,7 +26,7 @@ class OptionContainer:
     repo: str
     reboot: bool
     remove: str | None
-    verbose: int
+    verbose: bool
     security: bool
     sleep: str | None
     systemd_timers: bool
@@ -599,8 +599,6 @@ def main() -> None:
     global opts
 
     opts = typing.cast(OptionContainer, get_argparser().parse_args())
-
-    LogParser.parse()
 
     checks: ChecksCollection = ChecksCollection(opts)
     check: nagiosplugin.Check = nagiosplugin.Check(*checks.checks)
