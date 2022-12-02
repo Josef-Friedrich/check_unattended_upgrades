@@ -562,10 +562,10 @@ class ChecksCollection:
 
     checks: list[
         nagiosplugin.Resource | nagiosplugin.Context | nagiosplugin.Summary
-    ] = []
+    ]
 
     def __init__(self, opts: OptionContainer) -> None:
-        self.checks += [
+        self.checks = [
             LastRunResource(),
             LastRunContext(),
             WarningsInLogResource(),
