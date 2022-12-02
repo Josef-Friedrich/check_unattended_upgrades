@@ -1,0 +1,411 @@
+2017-05-02 18:31:54,892 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-05-02 18:31:54,892 INFO Erst-Pakete der Positivliste:  
+2017-05-02 18:31:54,892 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-05-02 18:31:54,893 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-05-02 18:31:57,073 DEBUG pkgs that look like they should be upgraded: 
+2017-05-02 18:31:57,145 DEBUG fetch.run() result: 0
+2017-05-02 18:31:57,146 DEBUG blacklist: []
+2017-05-02 18:31:57,146 DEBUG whitelist: []
+2017-05-02 18:31:57,949 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-05-03 08:27:39,300 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-05-03 08:27:39,301 INFO Erst-Pakete der Positivliste:  
+2017-05-03 08:27:39,301 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-05-03 08:27:39,302 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-05-03 08:27:43,390 DEBUG pkgs that look like they should be upgraded: 
+2017-05-03 08:27:43,480 DEBUG fetch.run() result: 0
+2017-05-03 08:27:43,480 DEBUG blacklist: []
+2017-05-03 08:27:43,481 DEBUG whitelist: []
+2017-05-03 08:27:44,987 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-05-04 16:41:07,877 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-05-04 16:41:07,879 INFO Erst-Pakete der Positivliste:  
+2017-05-04 16:41:07,879 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-05-04 16:41:07,879 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-05-04 16:41:10,534 DEBUG pkgs that look like they should be upgraded: 
+2017-05-04 16:41:10,593 DEBUG fetch.run() result: 0
+2017-05-04 16:41:10,593 DEBUG blacklist: []
+2017-05-04 16:41:10,593 DEBUG whitelist: []
+2017-05-04 16:41:11,488 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-05-06 17:04:16,134 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-05-06 17:04:16,134 INFO Erst-Pakete der Positivliste:  
+2017-05-06 17:04:16,135 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-05-06 17:04:16,135 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-05-06 17:04:19,403 DEBUG Checking: login ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-05-06 17:04:21,251 DEBUG Checking: passwd ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-05-06 17:04:23,163 DEBUG pkgs that look like they should be upgraded: login
+passwd
+2017-05-06 17:04:23,325 DEBUG fetch.run() result: 0
+2017-05-06 17:04:23,326 DEBUG <apt_pkg.AcquireItem object:Status: 3 Complete: 0 Local: 0 IsTrusted: 1 FileSize: 303300 DestFile:'/var/cache/apt/archives/partial/login_1%3a4.2-3.2ubuntu1.17.04.1_amd64.deb' DescURI: 'http://security.ubuntu.com/ubuntu/pool/main/s/shadow/login_4.2-3.2ubuntu1.17.04.1_amd64.deb' ID:0 ErrorText: '»de.archive.ubuntu.com« konnte nicht aufgelöst werden.'>
+2017-05-06 17:04:23,326 ERROR Es ist ein Fehler aufgetreten: »»de.archive.ubuntu.com« konnte nicht aufgelöst werden.«
+2017-05-06 17:04:23,327 ERROR Herunterladen von der URI »http://security.ubuntu.com/ubuntu/pool/main/s/shadow/login_4.2-3.2ubuntu1.17.04.1_amd64.deb« fehlgeschlagen, wird abgebrochen
+2017-05-06 18:24:49,930 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-05-06 18:24:49,930 INFO Erst-Pakete der Positivliste:  
+2017-05-06 18:24:49,931 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-05-06 18:24:49,931 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-05-06 18:24:51,890 DEBUG Checking: login ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-05-06 18:24:52,860 DEBUG Checking: passwd ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-05-06 18:24:54,037 DEBUG pkgs that look like they should be upgraded: login
+passwd
+2017-05-06 18:24:54,165 DEBUG fetch.run() result: 0
+2017-05-06 18:24:54,166 DEBUG <apt_pkg.AcquireItem object:Status: 3 Complete: 0 Local: 0 IsTrusted: 1 FileSize: 303300 DestFile:'/var/cache/apt/archives/partial/login_1%3a4.2-3.2ubuntu1.17.04.1_amd64.deb' DescURI: 'http://security.ubuntu.com/ubuntu/pool/main/s/shadow/login_4.2-3.2ubuntu1.17.04.1_amd64.deb' ID:0 ErrorText: '»de.archive.ubuntu.com« konnte nicht aufgelöst werden.'>
+2017-05-06 18:24:54,167 ERROR Es ist ein Fehler aufgetreten: »»de.archive.ubuntu.com« konnte nicht aufgelöst werden.«
+2017-05-06 18:24:54,167 ERROR Herunterladen von der URI »http://security.ubuntu.com/ubuntu/pool/main/s/shadow/login_4.2-3.2ubuntu1.17.04.1_amd64.deb« fehlgeschlagen, wird abgebrochen
+2017-05-06 21:26:24,135 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-05-06 21:26:24,136 INFO Erst-Pakete der Positivliste:  
+2017-05-06 21:26:24,137 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-05-06 21:26:24,137 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-05-06 21:26:27,617 DEBUG Checking: login ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-05-06 21:26:29,199 DEBUG Checking: passwd ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-05-06 21:26:30,922 DEBUG pkgs that look like they should be upgraded: login
+passwd
+2017-05-06 21:26:31,687 DEBUG fetch.run() result: 0
+2017-05-06 21:26:31,688 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 303300 DestFile:'/var/cache/apt/archives/login_1%3a4.2-3.2ubuntu1.17.04.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/s/shadow/login_4.2-3.2ubuntu1.17.04.1_amd64.deb' ID:1 ErrorText: ''>
+2017-05-06 21:26:31,688 DEBUG check_conffile_prompt('/var/cache/apt/archives/login_1%3a4.2-3.2ubuntu1.17.04.1_amd64.deb')
+2017-05-06 21:26:31,825 DEBUG found pkg: login
+2017-05-06 21:26:31,826 DEBUG conffile line: '/etc/login.defs be0977c1c1c84c62823c7d7d4e099067'
+2017-05-06 21:26:31,826 DEBUG current md5: be0977c1c1c84c62823c7d7d4e099067
+2017-05-06 21:26:31,826 DEBUG conffile line: '/etc/pam.d/login e796fb1e78dbb9fbaf52b972e91634b9'
+2017-05-06 21:26:31,827 DEBUG current md5: e796fb1e78dbb9fbaf52b972e91634b9
+2017-05-06 21:26:31,827 DEBUG conffile line: '/etc/pam.d/su ce6dcfda3b190a27a455bb38a45ff34a'
+2017-05-06 21:26:31,827 DEBUG current md5: ce6dcfda3b190a27a455bb38a45ff34a
+2017-05-06 21:26:31,827 DEBUG conffile line: '/etc/securetty d9e5bf5e6bfa00ddd273a3bcf1a49bec'
+2017-05-06 21:26:31,827 DEBUG current md5: d9e5bf5e6bfa00ddd273a3bcf1a49bec
+2017-05-06 21:26:31,827 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 779768 DestFile:'/var/cache/apt/archives/passwd_1%3a4.2-3.2ubuntu1.17.04.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/s/shadow/passwd_4.2-3.2ubuntu1.17.04.1_amd64.deb' ID:2 ErrorText: ''>
+2017-05-06 21:26:31,828 DEBUG check_conffile_prompt('/var/cache/apt/archives/passwd_1%3a4.2-3.2ubuntu1.17.04.1_amd64.deb')
+2017-05-06 21:26:31,928 DEBUG found pkg: passwd
+2017-05-06 21:26:31,928 DEBUG conffile line: '/etc/cron.daily/passwd db990990933b6f56322725223f13c2bc'
+2017-05-06 21:26:31,929 DEBUG current md5: db990990933b6f56322725223f13c2bc
+2017-05-06 21:26:31,929 DEBUG conffile line: '/etc/default/useradd cc9f9a7713ab62a32cd38363d958f396'
+2017-05-06 21:26:31,929 DEBUG current md5: cc9f9a7713ab62a32cd38363d958f396
+2017-05-06 21:26:31,929 DEBUG conffile line: '/etc/init/passwd.conf 948960f10233ae11ffad9027ef430c3d'
+2017-05-06 21:26:31,930 DEBUG current md5: 948960f10233ae11ffad9027ef430c3d
+2017-05-06 21:26:31,930 DEBUG conffile line: '/etc/pam.d/chfn 4d466e00a348ba426130664d795e8afa'
+2017-05-06 21:26:31,930 DEBUG current md5: 4d466e00a348ba426130664d795e8afa
+2017-05-06 21:26:31,930 DEBUG conffile line: '/etc/pam.d/chpasswd 9900720564cb4ee98b7da29e2d183cb2'
+2017-05-06 21:26:31,931 DEBUG current md5: 9900720564cb4ee98b7da29e2d183cb2
+2017-05-06 21:26:31,931 DEBUG conffile line: '/etc/pam.d/chsh a6e9b589e90009334ffd030d819290a6'
+2017-05-06 21:26:31,931 DEBUG current md5: a6e9b589e90009334ffd030d819290a6
+2017-05-06 21:26:31,931 DEBUG conffile line: '/etc/pam.d/newusers 1454e29bfa9f2a10836563e76936cea5'
+2017-05-06 21:26:31,932 DEBUG current md5: 1454e29bfa9f2a10836563e76936cea5
+2017-05-06 21:26:31,932 DEBUG conffile line: '/etc/pam.d/passwd eaf2ad85b5ccd06cceb19a3e75f40c63'
+2017-05-06 21:26:31,932 DEBUG current md5: eaf2ad85b5ccd06cceb19a3e75f40c63
+2017-05-06 21:26:31,932 DEBUG blacklist: []
+2017-05-06 21:26:31,932 DEBUG whitelist: []
+2017-05-06 21:26:33,023 INFO Pakete, von denen ein Upgrade durchgeführt wird: login passwd
+2017-05-06 21:26:33,023 INFO Dpkg-Protokoll wird nach »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« geschrieben
+2017-05-06 21:26:39,926 INFO alle Upgrades installiert
+2017-05-06 21:26:43,214 DEBUG InstCount=0 DelCount=0 BrokenCount=0
+2017-05-06 21:26:43,214 DEBUG Extracting content from '/var/log/unattended-upgrades/unattended-upgrades-dpkg.log' since '2017-05-06 21:26:24'
+2017-05-06 21:26:43,222 DEBUG Sending mail to 'logs@josef-friedrich.de'
+2017-05-06 21:26:44,965 DEBUG mail returned: 0
+2017-05-07 04:48:53,278 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-05-07 04:48:53,279 INFO Erst-Pakete der Positivliste:  
+2017-05-07 04:48:53,279 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-05-07 04:48:53,279 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-05-07 04:48:56,630 DEBUG pkgs that look like they should be upgraded: 
+2017-05-07 04:48:56,720 DEBUG fetch.run() result: 0
+2017-05-07 04:48:56,721 DEBUG blacklist: []
+2017-05-07 04:48:56,721 DEBUG whitelist: []
+2017-05-07 04:48:57,987 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-05-08 08:53:36,947 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-05-08 08:53:36,948 INFO Erst-Pakete der Positivliste:  
+2017-05-08 08:53:36,949 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-05-08 08:53:36,949 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-05-08 08:53:39,569 DEBUG pkgs that look like they should be upgraded: 
+2017-05-08 08:53:39,635 DEBUG fetch.run() result: 0
+2017-05-08 08:53:39,636 DEBUG blacklist: []
+2017-05-08 08:53:39,636 DEBUG whitelist: []
+2017-05-08 08:53:40,481 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-05-09 14:05:17,145 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-05-09 14:05:17,145 INFO Erst-Pakete der Positivliste:  
+2017-05-09 14:05:17,146 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-05-09 14:05:17,146 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-05-09 14:05:21,185 DEBUG Checking: unattended-upgrades ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-05-09 14:05:22,809 DEBUG pkgs that look like they should be upgraded: unattended-upgrades
+2017-05-09 14:05:22,910 DEBUG fetch.run() result: 0
+2017-05-09 14:05:22,911 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 34804 DestFile:'/var/cache/apt/archives/unattended-upgrades_0.93.1ubuntu2.1_all.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/u/unattended-upgrades/unattended-upgrades_0.93.1ubuntu2.1_all.deb' ID:0 ErrorText: ''>
+2017-05-09 14:05:22,911 DEBUG check_conffile_prompt('/var/cache/apt/archives/unattended-upgrades_0.93.1ubuntu2.1_all.deb')
+2017-05-09 14:05:23,098 DEBUG found pkg: unattended-upgrades
+2017-05-09 14:05:23,098 DEBUG conffile line: '/etc/init.d/unattended-upgrades 2aaee39d0f93e520048efcbadfcf7fe1'
+2017-05-09 14:05:23,099 DEBUG current md5: 2aaee39d0f93e520048efcbadfcf7fe1
+2017-05-09 14:05:23,099 DEBUG conffile line: '/etc/kernel/postinst.d/unattended-upgrades b74a4f1a1fe2e350aec97f472c25e0bb'
+2017-05-09 14:05:23,100 DEBUG current md5: b74a4f1a1fe2e350aec97f472c25e0bb
+2017-05-09 14:05:23,100 DEBUG conffile line: '/etc/logrotate.d/unattended-upgrades e45049ee847f069a99e3e6ec39155d4a'
+2017-05-09 14:05:23,101 DEBUG current md5: e45049ee847f069a99e3e6ec39155d4a
+2017-05-09 14:05:23,101 DEBUG conffile line: '/etc/pm/sleep.d/10_unattended-upgrades-hibernate d4ebdc2a2fdfeea33e6cd39812a85c3a'
+2017-05-09 14:05:23,101 DEBUG current md5: d4ebdc2a2fdfeea33e6cd39812a85c3a
+2017-05-09 14:05:23,102 DEBUG blacklist: []
+2017-05-09 14:05:23,102 DEBUG whitelist: []
+2017-05-09 14:05:24,481 INFO Pakete, von denen ein Upgrade durchgeführt wird: unattended-upgrades
+2017-05-09 14:05:24,482 INFO Dpkg-Protokoll wird nach »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« geschrieben
+2017-05-09 14:05:26,090 ERROR Exception happened during upgrade.
+Traceback (most recent call last):
+  File "/usr/bin/unattended-upgrade", line 412, in cache_commit
+    res = cache.commit(install_progress=iprogress)
+  File "/usr/lib/python3/dist-packages/apt/cache.py", line 529, in commit
+    raise SystemError("installArchives() failed")
+SystemError: installArchives() failed
+2017-05-09 14:05:26,092 ERROR Installation der Upgrades fehlgeschlagen!
+2017-05-09 14:05:26,093 ERROR Fehlermeldung: »installArchives() failed«
+2017-05-09 14:05:26,094 ERROR Dpkg gab einen Fehler zurück. Siehe »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« für Einzelheiten
+2017-05-09 14:05:34,257 DEBUG InstCount=0 DelCount=0 BrokenCount=0
+2017-05-09 14:05:34,258 DEBUG Extracting content from '/var/log/unattended-upgrades/unattended-upgrades-dpkg.log' since '2017-05-09 14:05:17'
+2017-05-09 14:05:34,266 DEBUG Sending mail to 'logs@josef-friedrich.de'
+2017-05-09 14:05:36,083 DEBUG mail returned: 0
+2017-05-10 18:33:41,526 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-05-10 18:33:41,526 INFO Erst-Pakete der Positivliste:  
+2017-05-10 18:33:41,527 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-05-10 18:33:41,527 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-05-10 18:33:43,386 DEBUG Checking: libnextcloudsync0 ([<Origin component:'main' archive:'zesty' origin:'LP-PPA-nextcloud-devs-client' label:'Desktop client' site:'ppa.launchpad.net' isTrusted:True>])
+2017-05-10 18:33:43,549 DEBUG Checking: nextcloud-client ([<Origin component:'main' archive:'zesty' origin:'LP-PPA-nextcloud-devs-client' label:'Desktop client' site:'ppa.launchpad.net' isTrusted:True>])
+2017-05-10 18:33:43,797 DEBUG pkgs that look like they should be upgraded: 
+2017-05-10 18:33:43,866 DEBUG fetch.run() result: 0
+2017-05-10 18:33:43,866 DEBUG blacklist: []
+2017-05-10 18:33:43,866 DEBUG whitelist: []
+2017-05-10 18:33:44,702 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-05-11 12:24:29,533 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-05-11 12:24:29,533 INFO Erst-Pakete der Positivliste:  
+2017-05-11 12:24:29,534 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-05-11 12:24:29,534 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-05-11 12:24:33,535 DEBUG pkgs that look like they should be upgraded: 
+2017-05-11 12:24:33,632 DEBUG fetch.run() result: 0
+2017-05-11 12:24:33,633 DEBUG blacklist: []
+2017-05-11 12:24:33,633 DEBUG whitelist: []
+2017-05-11 12:24:34,920 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-05-12 16:03:56,794 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-05-12 16:03:56,795 INFO Erst-Pakete der Positivliste:  
+2017-05-12 16:03:56,796 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-05-12 16:03:56,796 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-05-12 16:04:00,754 DEBUG pkgs that look like they should be upgraded: 
+2017-05-12 16:04:00,976 DEBUG fetch.run() result: 0
+2017-05-12 16:04:00,977 DEBUG blacklist: []
+2017-05-12 16:04:00,978 DEBUG whitelist: []
+2017-05-12 16:04:02,572 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-05-13 15:25:12,981 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-05-13 15:25:12,982 INFO Erst-Pakete der Positivliste:  
+2017-05-13 15:25:12,982 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-05-13 15:25:12,982 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-05-13 15:25:16,663 DEBUG pkgs that look like they should be upgraded: 
+2017-05-13 15:25:16,763 DEBUG fetch.run() result: 0
+2017-05-13 15:25:16,763 DEBUG blacklist: []
+2017-05-13 15:25:16,763 DEBUG whitelist: []
+2017-05-13 15:25:18,882 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-05-14 15:24:18,533 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-05-14 15:24:18,535 INFO Erst-Pakete der Positivliste:  
+2017-05-14 15:24:18,536 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-05-14 15:24:18,536 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-05-14 15:24:22,403 DEBUG pkgs that look like they should be upgraded: 
+2017-05-14 15:24:22,491 DEBUG fetch.run() result: 0
+2017-05-14 15:24:22,492 DEBUG blacklist: []
+2017-05-14 15:24:22,492 DEBUG whitelist: []
+2017-05-14 15:24:23,731 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-05-15 00:28:42,494 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-05-15 00:28:42,497 INFO Erst-Pakete der Positivliste:  
+2017-05-15 00:28:42,498 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-05-15 00:28:42,499 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-05-15 00:28:45,700 DEBUG Checking: libnextcloudsync0 ([<Origin component:'main' archive:'zesty' origin:'LP-PPA-nextcloud-devs-client' label:'Desktop client' site:'ppa.launchpad.net' isTrusted:True>])
+2017-05-15 00:28:45,976 DEBUG Checking: nextcloud-client ([<Origin component:'main' archive:'zesty' origin:'LP-PPA-nextcloud-devs-client' label:'Desktop client' site:'ppa.launchpad.net' isTrusted:True>])
+2017-05-15 00:28:45,982 DEBUG Checking: nextcloud-client-l10n ([<Origin component:'main' archive:'zesty' origin:'LP-PPA-nextcloud-devs-client' label:'Desktop client' site:'ppa.launchpad.net' isTrusted:True>, <Origin component:'main' archive:'zesty' origin:'LP-PPA-nextcloud-devs-client' label:'Desktop client' site:'ppa.launchpad.net' isTrusted:True>])
+2017-05-15 00:28:46,368 DEBUG pkgs that look like they should be upgraded: 
+2017-05-15 00:28:46,463 DEBUG fetch.run() result: 0
+2017-05-15 00:28:46,464 DEBUG blacklist: []
+2017-05-15 00:28:46,464 DEBUG whitelist: []
+2017-05-15 00:28:48,026 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-05-17 16:12:29,584 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-05-17 16:12:29,585 INFO Erst-Pakete der Positivliste:  
+2017-05-17 16:12:29,586 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-05-17 16:12:29,586 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-05-17 16:12:32,667 DEBUG Checking: gdm3 ([<Origin component:'universe' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-05-17 16:12:34,208 DEBUG Checking: gir1.2-gdm-1.0 ([<Origin component:'universe' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-05-17 16:12:35,758 DEBUG Checking: git ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-05-17 16:12:37,278 DEBUG Checking: git-man ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-05-17 16:12:39,185 DEBUG Checking: libgdm1 ([<Origin component:'universe' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-05-17 16:12:41,479 DEBUG Checking: libnextcloudsync0 ([<Origin component:'main' archive:'zesty' origin:'LP-PPA-nextcloud-devs-client' label:'Desktop client' site:'ppa.launchpad.net' isTrusted:True>])
+2017-05-17 16:12:41,747 DEBUG Checking: libxen-4.8 ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-05-17 16:12:44,042 DEBUG pkg 'libxen-4.8' is untrusted
+2017-05-17 16:12:44,044 DEBUG sanity check failed
+2017-05-17 16:12:47,628 DEBUG Checking: libxenstore3.0 ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:False>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:False>])
+2017-05-17 16:12:47,972 DEBUG pkg 'gdm3' is untrusted
+2017-05-17 16:12:47,975 DEBUG sanity check failed
+2017-05-17 16:12:50,989 DEBUG Checking: linux-generic ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:False>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:False>])
+2017-05-17 16:12:51,276 DEBUG pkg 'gdm3' is untrusted
+2017-05-17 16:12:51,278 DEBUG sanity check failed
+2017-05-17 16:12:53,761 DEBUG Checking: linux-headers-generic ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:False>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:False>])
+2017-05-17 16:12:54,196 DEBUG pkg 'gdm3' is untrusted
+2017-05-17 16:12:54,198 DEBUG sanity check failed
+2017-05-17 16:12:56,446 DEBUG Checking: linux-image-generic ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:False>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:False>])
+2017-05-17 16:12:57,023 DEBUG pkg 'gdm3' is untrusted
+2017-05-17 16:12:57,025 DEBUG sanity check failed
+2017-05-17 16:12:59,098 DEBUG Checking: linux-libc-dev ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:False>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:False>])
+2017-05-17 16:12:59,299 DEBUG pkg 'gdm3' is untrusted
+2017-05-17 16:12:59,301 DEBUG sanity check failed
+2017-05-17 16:13:01,172 DEBUG Checking: nextcloud-client ([<Origin component:'main' archive:'zesty' origin:'LP-PPA-nextcloud-devs-client' label:'Desktop client' site:'ppa.launchpad.net' isTrusted:True>])
+2017-05-17 16:13:01,177 DEBUG Checking: nextcloud-client-l10n ([<Origin component:'main' archive:'zesty' origin:'LP-PPA-nextcloud-devs-client' label:'Desktop client' site:'ppa.launchpad.net' isTrusted:True>, <Origin component:'main' archive:'zesty' origin:'LP-PPA-nextcloud-devs-client' label:'Desktop client' site:'ppa.launchpad.net' isTrusted:True>])
+2017-05-17 16:13:01,409 DEBUG Checking: qemu-block-extra ([<Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:False>])
+2017-05-17 16:13:01,764 DEBUG pkg 'gdm3' is untrusted
+2017-05-17 16:13:01,766 DEBUG sanity check failed
+2017-05-17 16:13:03,518 DEBUG Checking: qemu-kvm ([<Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:False>])
+2017-05-17 16:13:03,783 DEBUG pkg 'gdm3' is untrusted
+2017-05-17 16:13:03,785 DEBUG sanity check failed
+2017-05-17 16:13:05,532 DEBUG Checking: qemu-system ([<Origin component:'universe' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:False>])
+2017-05-17 16:13:05,731 DEBUG pkg 'gdm3' is untrusted
+2017-05-17 16:13:05,732 DEBUG sanity check failed
+2017-05-17 16:13:07,323 DEBUG Checking: qemu-system-arm ([<Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:False>])
+2017-05-17 16:13:07,522 DEBUG pkg 'gdm3' is untrusted
+2017-05-17 16:13:07,523 DEBUG sanity check failed
+2017-05-17 16:13:09,226 DEBUG Checking: qemu-system-common ([<Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:False>])
+2017-05-17 16:13:09,565 DEBUG pkg 'gdm3' is untrusted
+2017-05-17 16:13:09,567 DEBUG sanity check failed
+2017-05-17 16:13:11,207 DEBUG Checking: qemu-system-mips ([<Origin component:'universe' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:False>])
+2017-05-17 16:13:11,412 DEBUG pkg 'gdm3' is untrusted
+2017-05-17 16:13:11,413 DEBUG sanity check failed
+2017-05-17 16:13:13,083 DEBUG Checking: qemu-system-misc ([<Origin component:'universe' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:False>])
+2017-05-17 16:13:13,286 DEBUG pkg 'gdm3' is untrusted
+2017-05-17 16:13:13,288 DEBUG sanity check failed
+2017-05-17 16:13:15,468 DEBUG Checking: qemu-system-ppc ([<Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:False>])
+2017-05-17 16:13:15,763 DEBUG pkg 'gdm3' is untrusted
+2017-05-17 16:13:15,765 DEBUG sanity check failed
+2017-05-17 16:13:17,998 DEBUG Checking: qemu-system-sparc ([<Origin component:'universe' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:False>])
+2017-05-17 16:13:18,263 DEBUG pkg 'gdm3' is untrusted
+2017-05-17 16:13:18,265 DEBUG sanity check failed
+2017-05-17 16:13:20,320 DEBUG Checking: qemu-system-x86 ([<Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:False>])
+2017-05-17 16:13:20,622 DEBUG pkg 'gdm3' is untrusted
+2017-05-17 16:13:20,624 DEBUG sanity check failed
+2017-05-17 16:13:22,208 DEBUG Checking: qemu-utils ([<Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:False>])
+2017-05-17 16:13:22,525 DEBUG pkg 'gdm3' is untrusted
+2017-05-17 16:13:22,527 DEBUG sanity check failed
+2017-05-17 16:13:24,271 DEBUG Checking: snap-confine ([<Origin component:'universe' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:False>])
+2017-05-17 16:13:24,610 DEBUG pkg 'gdm3' is untrusted
+2017-05-17 16:13:24,612 DEBUG sanity check failed
+2017-05-17 16:13:26,296 DEBUG Checking: snapd ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:False>])
+2017-05-17 16:13:26,605 DEBUG pkg 'gdm3' is untrusted
+2017-05-17 16:13:26,607 DEBUG sanity check failed
+2017-05-17 16:13:28,235 DEBUG Checking: ubuntu-core-launcher ([<Origin component:'universe' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:False>])
+2017-05-17 16:13:28,538 DEBUG pkg 'gdm3' is untrusted
+2017-05-17 16:13:28,540 DEBUG sanity check failed
+2017-05-17 16:13:30,195 DEBUG pkgs that look like they should be upgraded: gdm3
+gir1.2-gdm-1.0
+git
+git-man
+libgdm1
+2017-05-17 16:13:30,301 ERROR GetArchives() fehlgeschlagen: »E:Can't find a source to download version '1:2.11.0-2ubuntu0.1' of 'git-man:amd64'«
+2017-05-17 16:13:30,302 DEBUG fetch.run() result: 0
+2017-05-17 16:13:30,302 DEBUG <apt_pkg.AcquireItem object:Status: 0 Complete: 0 Local: 0 IsTrusted: 0 FileSize: 0 DestFile:'' DescURI: '' ID:0 ErrorText: ''>
+2017-05-17 16:13:30,302 ERROR Herunterladen von der URI »« fehlgeschlagen, wird abgebrochen
+2017-05-21 20:00:51,943 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-05-21 20:00:51,944 INFO Erst-Pakete der Positivliste:  
+2017-05-21 20:00:51,944 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-05-21 20:00:51,944 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-05-21 20:00:54,459 DEBUG Checking: atom ([<Origin component:'main' archive:'zesty' origin:'LP-PPA-webupd8team-atom' label:'Atom text editor' site:'ppa.launchpad.net' isTrusted:True>])
+2017-05-21 20:00:55,635 DEBUG Checking: unattended-upgrades ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-05-21 20:00:57,215 DEBUG pkgs that look like they should be upgraded: unattended-upgrades
+2017-05-21 20:00:57,351 DEBUG fetch.run() result: 0
+2017-05-21 20:00:57,352 DEBUG <apt_pkg.AcquireItem object:Status: 3 Complete: 0 Local: 0 IsTrusted: 1 FileSize: 34632 DestFile:'/var/cache/apt/archives/partial/unattended-upgrades_0.93.1ubuntu2.2_all.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/u/unattended-upgrades/unattended-upgrades_0.93.1ubuntu2.2_all.deb' ID:0 ErrorText: '»de.archive.ubuntu.com« konnte nicht aufgelöst werden.'>
+2017-05-21 20:00:57,352 ERROR Es ist ein Fehler aufgetreten: »»de.archive.ubuntu.com« konnte nicht aufgelöst werden.«
+2017-05-21 20:00:57,353 ERROR Herunterladen von der URI »http://de.archive.ubuntu.com/ubuntu/pool/main/u/unattended-upgrades/unattended-upgrades_0.93.1ubuntu2.2_all.deb« fehlgeschlagen, wird abgebrochen
+2017-05-21 23:29:22,657 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-05-21 23:29:22,659 INFO Erst-Pakete der Positivliste:  
+2017-05-21 23:29:22,660 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-05-21 23:29:22,661 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-05-21 23:29:25,325 DEBUG Checking: atom ([<Origin component:'main' archive:'zesty' origin:'LP-PPA-webupd8team-atom' label:'Atom text editor' site:'ppa.launchpad.net' isTrusted:True>])
+2017-05-21 23:29:26,732 DEBUG Checking: unattended-upgrades ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-05-21 23:29:28,278 DEBUG pkgs that look like they should be upgraded: unattended-upgrades
+2017-05-21 23:29:28,608 DEBUG fetch.run() result: 0
+2017-05-21 23:29:28,609 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 34632 DestFile:'/var/cache/apt/archives/unattended-upgrades_0.93.1ubuntu2.2_all.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/u/unattended-upgrades/unattended-upgrades_0.93.1ubuntu2.2_all.deb' ID:1 ErrorText: ''>
+2017-05-21 23:29:28,610 DEBUG check_conffile_prompt('/var/cache/apt/archives/unattended-upgrades_0.93.1ubuntu2.2_all.deb')
+2017-05-21 23:29:28,859 DEBUG found pkg: unattended-upgrades
+2017-05-21 23:29:28,860 DEBUG conffile line: '/etc/init.d/unattended-upgrades 290829a5efc55b7c435de0bb769f217b'
+2017-05-21 23:29:28,861 DEBUG current md5: 290829a5efc55b7c435de0bb769f217b
+2017-05-21 23:29:28,861 DEBUG conffile line: '/etc/kernel/postinst.d/unattended-upgrades b74a4f1a1fe2e350aec97f472c25e0bb'
+2017-05-21 23:29:28,862 DEBUG current md5: b74a4f1a1fe2e350aec97f472c25e0bb
+2017-05-21 23:29:28,862 DEBUG conffile line: '/etc/logrotate.d/unattended-upgrades e45049ee847f069a99e3e6ec39155d4a'
+2017-05-21 23:29:28,863 DEBUG current md5: e45049ee847f069a99e3e6ec39155d4a
+2017-05-21 23:29:28,864 DEBUG conffile line: '/etc/pm/sleep.d/10_unattended-upgrades-hibernate d4ebdc2a2fdfeea33e6cd39812a85c3a'
+2017-05-21 23:29:28,865 DEBUG current md5: d4ebdc2a2fdfeea33e6cd39812a85c3a
+2017-05-21 23:29:28,865 DEBUG blacklist: []
+2017-05-21 23:29:28,865 DEBUG whitelist: []
+2017-05-21 23:29:30,523 INFO Pakete, von denen ein Upgrade durchgeführt wird: unattended-upgrades
+2017-05-21 23:29:30,525 INFO Dpkg-Protokoll wird nach »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« geschrieben
+2017-05-21 23:36:16,273 ERROR Exception happened during upgrade.
+Traceback (most recent call last):
+  File "/usr/bin/unattended-upgrade", line 412, in cache_commit
+    res = cache.commit(install_progress=iprogress)
+  File "/usr/lib/python3/dist-packages/apt/cache.py", line 529, in commit
+    raise SystemError("installArchives() failed")
+SystemError: installArchives() failed
+2017-05-21 23:36:16,275 ERROR Installation der Upgrades fehlgeschlagen!
+2017-05-21 23:36:16,275 ERROR Fehlermeldung: »installArchives() failed«
+2017-05-21 23:36:16,276 ERROR Dpkg gab einen Fehler zurück. Siehe »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« für Einzelheiten
+2017-05-21 23:36:18,729 DEBUG InstCount=0 DelCount=0 BrokenCount=0
+2017-05-21 23:36:18,729 DEBUG Extracting content from '/var/log/unattended-upgrades/unattended-upgrades-dpkg.log' since '2017-05-21 23:29:22'
+2017-05-21 23:36:18,732 DEBUG Sending mail to 'logs@josef-friedrich.de'
+2017-05-21 23:36:21,301 DEBUG mail returned: 0
+2017-05-22 08:24:25,694 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-05-22 08:24:25,695 INFO Erst-Pakete der Positivliste:  
+2017-05-22 08:24:25,695 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-05-22 08:24:25,696 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-05-22 08:24:28,881 DEBUG pkgs that look like they should be upgraded: 
+2017-05-22 08:24:28,942 DEBUG fetch.run() result: 0
+2017-05-22 08:24:28,942 DEBUG blacklist: []
+2017-05-22 08:24:28,942 DEBUG whitelist: []
+2017-05-22 08:24:29,837 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-05-23 18:44:48,991 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-05-23 18:44:48,992 INFO Erst-Pakete der Positivliste:  
+2017-05-23 18:44:48,993 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-05-23 18:44:48,995 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-05-23 18:44:48,996 ERROR Sperrung konnte nicht erreicht werden (läuft eine weitere Paketverwaltung?)
+2017-05-26 15:59:45,210 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-05-26 15:59:45,211 INFO Erst-Pakete der Positivliste:  
+2017-05-26 15:59:45,212 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-05-26 15:59:45,213 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-05-26 15:59:49,232 DEBUG pkgs that look like they should be upgraded: 
+2017-05-26 15:59:49,339 DEBUG fetch.run() result: 0
+2017-05-26 15:59:49,340 DEBUG blacklist: []
+2017-05-26 15:59:49,340 DEBUG whitelist: []
+2017-05-26 15:59:50,703 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-05-27 07:09:10,131 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-05-27 07:09:10,133 INFO Erst-Pakete der Positivliste:  
+2017-05-27 07:09:10,134 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-05-27 07:09:10,134 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-05-27 07:09:10,138 ERROR Sperrung konnte nicht erreicht werden (läuft eine weitere Paketverwaltung?)
+2017-05-27 09:14:48,932 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-05-27 09:14:48,938 INFO Erst-Pakete der Positivliste:  
+2017-05-27 09:14:48,938 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-05-27 09:14:48,939 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-05-27 09:14:57,946 DEBUG pkgs that look like they should be upgraded: 
+2017-05-27 09:14:58,176 DEBUG fetch.run() result: 0
+2017-05-27 09:14:58,177 DEBUG blacklist: []
+2017-05-27 09:14:58,177 DEBUG whitelist: []
+2017-05-27 09:14:59,859 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-05-28 08:35:49,431 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-05-28 08:35:49,432 INFO Erst-Pakete der Positivliste:  
+2017-05-28 08:35:49,433 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-05-28 08:35:49,436 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-05-28 08:35:52,139 DEBUG pkgs that look like they should be upgraded: 
+2017-05-28 08:35:52,200 DEBUG fetch.run() result: 0
+2017-05-28 08:35:52,200 DEBUG blacklist: []
+2017-05-28 08:35:52,200 DEBUG whitelist: []
+2017-05-28 08:35:53,059 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-05-31 08:36:50,968 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-05-31 08:36:50,969 INFO Erst-Pakete der Positivliste:  
+2017-05-31 08:36:50,970 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-05-31 08:36:50,970 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-05-31 08:36:50,971 ERROR Sperrung konnte nicht erreicht werden (läuft eine weitere Paketverwaltung?)
+2017-05-31 08:38:18,064 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-05-31 08:38:18,065 INFO Erst-Pakete der Positivliste:  
+2017-05-31 08:38:18,065 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-05-31 08:38:18,065 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-05-31 08:38:21,191 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-05-31 09:09:00,817 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-05-31 09:09:00,817 INFO Erst-Pakete der Positivliste:  
+2017-05-31 09:09:00,818 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-05-31 09:09:00,818 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-05-31 09:09:03,099 DEBUG pkgs that look like they should be upgraded: 
+2017-05-31 09:09:03,174 DEBUG fetch.run() result: 0
+2017-05-31 09:09:03,174 DEBUG blacklist: []
+2017-05-31 09:09:03,174 DEBUG whitelist: []
+2017-05-31 09:09:04,055 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-06-01 17:17:25,009 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-06-01 17:17:25,010 INFO Erst-Pakete der Positivliste:  
+2017-06-01 17:17:25,010 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-06-01 17:17:25,011 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-06-01 17:17:25,012 ERROR Sperrung konnte nicht erreicht werden (läuft eine weitere Paketverwaltung?)

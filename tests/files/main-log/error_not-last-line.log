@@ -1,0 +1,696 @@
+2017-06-01 20:16:30,880 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-06-01 20:16:30,881 INFO Erst-Pakete der Positivliste:  
+2017-06-01 20:16:30,882 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-06-01 20:16:30,882 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-06-01 20:16:34,590 DEBUG pkgs that look like they should be upgraded: 
+2017-06-01 20:16:34,681 DEBUG fetch.run() result: 0
+2017-06-01 20:16:34,681 DEBUG blacklist: []
+2017-06-01 20:16:34,681 DEBUG whitelist: []
+2017-06-01 20:16:35,991 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-06-04 09:31:52,538 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-06-04 09:31:52,542 INFO Erst-Pakete der Positivliste:  
+2017-06-04 09:31:52,543 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-06-04 09:31:52,544 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-06-04 09:31:52,546 ERROR Sperrung konnte nicht erreicht werden (läuft eine weitere Paketverwaltung?)
+2017-06-04 19:06:32,014 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-06-04 19:06:32,020 INFO Erst-Pakete der Positivliste:  
+2017-06-04 19:06:32,021 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-06-04 19:06:32,022 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-06-04 19:06:35,106 DEBUG Checking: chrome-gnome-shell ([<Origin component:'universe' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-06-04 19:06:38,535 DEBUG pkgs that look like they should be upgraded: chrome-gnome-shell
+2017-06-04 19:06:38,905 DEBUG fetch.run() result: 0
+2017-06-04 19:06:38,906 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 13450 DestFile:'/var/cache/apt/archives/chrome-gnome-shell_9-0ubuntu1~ubuntu17.04_all.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/universe/c/chrome-gnome-shell/chrome-gnome-shell_9-0ubuntu1~ubuntu17.04_all.deb' ID:1 ErrorText: ''>
+2017-06-04 19:06:38,906 DEBUG check_conffile_prompt('/var/cache/apt/archives/chrome-gnome-shell_9-0ubuntu1~ubuntu17.04_all.deb')
+2017-06-04 19:06:39,073 DEBUG found pkg: chrome-gnome-shell
+2017-06-04 19:06:39,073 DEBUG conffile line: '/etc/chromium/native-messaging-hosts/org.gnome.chrome_gnome_shell.json 332a7cffa69102648a83e6819cefe5e3'
+2017-06-04 19:06:39,075 DEBUG current md5: 332a7cffa69102648a83e6819cefe5e3
+2017-06-04 19:06:39,075 DEBUG conffile line: '/etc/chromium/policies/managed/chrome-gnome-shell.json dc9a890f1531d5bf080adc2ab1ac3103'
+2017-06-04 19:06:39,077 DEBUG current md5: dc9a890f1531d5bf080adc2ab1ac3103
+2017-06-04 19:06:39,077 DEBUG conffile line: '/etc/opt/chrome/native-messaging-hosts/org.gnome.chrome_gnome_shell.json 332a7cffa69102648a83e6819cefe5e3'
+2017-06-04 19:06:39,078 DEBUG current md5: 332a7cffa69102648a83e6819cefe5e3
+2017-06-04 19:06:39,079 DEBUG conffile line: '/etc/opt/chrome/policies/managed/chrome-gnome-shell.json dc9a890f1531d5bf080adc2ab1ac3103'
+2017-06-04 19:06:39,080 DEBUG current md5: dc9a890f1531d5bf080adc2ab1ac3103
+2017-06-04 19:06:39,080 DEBUG conffile line: '/etc/chromium/native-messaging-hosts/io.github.ne0sight.gs_chrome_connector.json b0fc34ed32f37ca4c838a73acfe98d17 obsolete'
+2017-06-04 19:06:39,080 DEBUG blacklist: []
+2017-06-04 19:06:39,080 DEBUG whitelist: []
+2017-06-04 19:06:40,412 INFO Pakete, von denen ein Upgrade durchgeführt wird: chrome-gnome-shell
+2017-06-04 19:06:40,413 INFO Dpkg-Protokoll wird nach »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« geschrieben
+2017-06-04 19:06:52,749 INFO alle Upgrades installiert
+2017-06-04 19:06:57,906 DEBUG InstCount=0 DelCount=0 BrokenCount=0
+2017-06-04 19:06:57,907 DEBUG Extracting content from '/var/log/unattended-upgrades/unattended-upgrades-dpkg.log' since '2017-06-04 19:06:32'
+2017-06-04 19:06:57,947 DEBUG Sending mail to 'logs@josef-friedrich.de'
+2017-06-04 19:06:59,698 DEBUG mail returned: 0
+2017-06-05 07:15:55,187 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-06-05 07:15:55,225 INFO Erst-Pakete der Positivliste:  
+2017-06-05 07:15:55,225 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-06-05 07:15:55,226 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-06-05 07:15:55,228 ERROR Sperrung konnte nicht erreicht werden (läuft eine weitere Paketverwaltung?)
+2017-06-08 11:21:15,269 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-06-08 11:21:15,269 INFO Erst-Pakete der Positivliste:  
+2017-06-08 11:21:15,270 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-06-08 11:21:15,270 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-06-08 11:21:16,111 DEBUG adjusting candidate version: 'kodi=2:17.1+dfsg1-1ubuntu0.1'
+2017-06-08 11:21:16,139 DEBUG adjusting candidate version: 'kodi-bin=2:17.1+dfsg1-1ubuntu0.1'
+2017-06-08 11:21:17,042 DEBUG Checking: kodi ([<Origin component:'universe' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-08 11:21:18,013 DEBUG Checking: kodi-bin ([<Origin component:'universe' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-08 11:21:19,000 DEBUG Checking: kodi-data ([<Origin component:'universe' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-08 11:21:20,036 DEBUG Checking: libcec4 ([<Origin component:'main' archive:'zesty' origin:'LP-PPA-team-xbmc' label:'Kodi stable' site:'ppa.launchpad.net' isTrusted:True>])
+2017-06-08 11:21:20,232 DEBUG Checking: libnl-3-200 ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-08 11:21:21,333 DEBUG Checking: libnl-genl-3-200 ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-08 11:21:22,311 DEBUG Checking: libnl-route-3-200 ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-08 11:21:23,342 DEBUG Checking: libtasn1-6 ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-08 11:21:24,325 DEBUG Checking: libwireshark-data ([<Origin component:'universe' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-08 11:21:25,299 DEBUG Checking: libwireshark8 ([<Origin component:'universe' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-08 11:21:26,262 DEBUG Checking: libwiretap6 ([<Origin component:'universe' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-08 11:21:27,237 DEBUG Checking: libwscodecs1 ([<Origin component:'universe' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-08 11:21:28,348 DEBUG Checking: libwsutil7 ([<Origin component:'universe' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-08 11:21:30,043 DEBUG Checking: lintian ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-08 11:21:31,648 DEBUG Checking: linux-generic ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-08 11:21:33,236 DEBUG Checking: linux-headers-generic ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-08 11:21:34,917 DEBUG Checking: linux-image-generic ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-08 11:21:36,499 DEBUG Checking: linux-libc-dev ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-08 11:21:38,525 DEBUG Checking: wireshark ([<Origin component:'universe' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-08 11:21:40,144 DEBUG Checking: wireshark-common ([<Origin component:'universe' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-08 11:21:41,885 DEBUG Checking: wireshark-qt ([<Origin component:'universe' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-08 11:21:43,664 DEBUG pkgs that look like they should be upgraded: kodi
+kodi-bin
+kodi-data
+libnl-3-200
+libnl-genl-3-200
+libnl-route-3-200
+libtasn1-6
+libwireshark-data
+libwireshark8
+libwiretap6
+libwscodecs1
+libwsutil7
+lintian
+linux-generic
+linux-headers-generic
+linux-image-generic
+linux-libc-dev
+wireshark
+wireshark-common
+wireshark-qt
+2017-06-08 11:21:47,667 DEBUG fetch.run() result: 0
+2017-06-08 11:21:47,668 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 35548 DestFile:'/var/cache/apt/archives/libtasn1-6_4.10-1ubuntu0.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/libt/libtasn1-6/libtasn1-6_4.10-1ubuntu0.1_amd64.deb' ID:0 ErrorText: ''>
+2017-06-08 11:21:47,668 DEBUG check_conffile_prompt('/var/cache/apt/archives/libtasn1-6_4.10-1ubuntu0.1_amd64.deb')
+2017-06-08 11:21:47,764 DEBUG found pkg: libtasn1-6
+2017-06-08 11:21:47,853 DEBUG No conffiles in deb '/var/cache/apt/archives/libtasn1-6_4.10-1ubuntu0.1_amd64.deb' (There is no member named 'conffiles')
+2017-06-08 11:21:47,853 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 17436358 DestFile:'/var/cache/apt/archives/kodi-data_2%3a17.1+dfsg1-1ubuntu0.1_all.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/universe/k/kodi/kodi-data_17.1+dfsg1-1ubuntu0.1_all.deb' ID:0 ErrorText: ''>
+2017-06-08 11:21:47,853 DEBUG check_conffile_prompt('/var/cache/apt/archives/kodi-data_2%3a17.1+dfsg1-1ubuntu0.1_all.deb')
+2017-06-08 11:21:47,948 DEBUG found pkg: kodi-data
+2017-06-08 11:21:48,037 DEBUG No conffiles in deb '/var/cache/apt/archives/kodi-data_2%3a17.1+dfsg1-1ubuntu0.1_all.deb' (There is no member named 'conffiles')
+2017-06-08 11:21:48,037 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 6226516 DestFile:'/var/cache/apt/archives/kodi-bin_2%3a17.1+dfsg1-1ubuntu0.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/universe/k/kodi/kodi-bin_17.1+dfsg1-1ubuntu0.1_amd64.deb' ID:1 ErrorText: ''>
+2017-06-08 11:21:48,037 DEBUG check_conffile_prompt('/var/cache/apt/archives/kodi-bin_2%3a17.1+dfsg1-1ubuntu0.1_amd64.deb')
+2017-06-08 11:21:48,137 DEBUG found pkg: kodi-bin
+2017-06-08 11:21:48,219 DEBUG No conffiles in deb '/var/cache/apt/archives/kodi-bin_2%3a17.1+dfsg1-1ubuntu0.1_amd64.deb' (There is no member named 'conffiles')
+2017-06-08 11:21:48,219 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 11022 DestFile:'/var/cache/apt/archives/kodi_2%3a17.1+dfsg1-1ubuntu0.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/universe/k/kodi/kodi_17.1+dfsg1-1ubuntu0.1_amd64.deb' ID:2 ErrorText: ''>
+2017-06-08 11:21:48,220 DEBUG check_conffile_prompt('/var/cache/apt/archives/kodi_2%3a17.1+dfsg1-1ubuntu0.1_amd64.deb')
+2017-06-08 11:21:48,342 DEBUG found pkg: kodi
+2017-06-08 11:21:48,342 DEBUG found pkg: kodi
+2017-06-08 11:21:48,405 DEBUG No conffiles in deb '/var/cache/apt/archives/kodi_2%3a17.1+dfsg1-1ubuntu0.1_amd64.deb' (There is no member named 'conffiles')
+2017-06-08 11:21:48,405 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 146262 DestFile:'/var/cache/apt/archives/libnl-route-3-200_3.2.29-0ubuntu2.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/libn/libnl3/libnl-route-3-200_3.2.29-0ubuntu2.1_amd64.deb' ID:0 ErrorText: ''>
+2017-06-08 11:21:48,406 DEBUG check_conffile_prompt('/var/cache/apt/archives/libnl-route-3-200_3.2.29-0ubuntu2.1_amd64.deb')
+2017-06-08 11:21:48,482 DEBUG found pkg: libnl-route-3-200
+2017-06-08 11:21:48,587 DEBUG No conffiles in deb '/var/cache/apt/archives/libnl-route-3-200_3.2.29-0ubuntu2.1_amd64.deb' (There is no member named 'conffiles')
+2017-06-08 11:21:48,588 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 11242 DestFile:'/var/cache/apt/archives/libnl-genl-3-200_3.2.29-0ubuntu2.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/libn/libnl3/libnl-genl-3-200_3.2.29-0ubuntu2.1_amd64.deb' ID:0 ErrorText: ''>
+2017-06-08 11:21:48,588 DEBUG check_conffile_prompt('/var/cache/apt/archives/libnl-genl-3-200_3.2.29-0ubuntu2.1_amd64.deb')
+2017-06-08 11:21:48,661 DEBUG found pkg: libnl-genl-3-200
+2017-06-08 11:21:48,769 DEBUG No conffiles in deb '/var/cache/apt/archives/libnl-genl-3-200_3.2.29-0ubuntu2.1_amd64.deb' (There is no member named 'conffiles')
+2017-06-08 11:21:48,769 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 52904 DestFile:'/var/cache/apt/archives/libnl-3-200_3.2.29-0ubuntu2.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/libn/libnl3/libnl-3-200_3.2.29-0ubuntu2.1_amd64.deb' ID:0 ErrorText: ''>
+2017-06-08 11:21:48,769 DEBUG check_conffile_prompt('/var/cache/apt/archives/libnl-3-200_3.2.29-0ubuntu2.1_amd64.deb')
+2017-06-08 11:21:48,925 DEBUG found pkg: libnl-3-200
+2017-06-08 11:21:48,926 DEBUG conffile line: '/etc/libnl-3/classid 3e07259e58674631830b152e983ca995'
+2017-06-08 11:21:48,926 DEBUG current md5: 3e07259e58674631830b152e983ca995
+2017-06-08 11:21:48,926 DEBUG conffile line: '/etc/libnl-3/pktloc 7613dbc41b2dc3258195b6b6abd0f179'
+2017-06-08 11:21:48,926 DEBUG current md5: 7613dbc41b2dc3258195b6b6abd0f179
+2017-06-08 11:21:48,927 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 915256 DestFile:'/var/cache/apt/archives/libwireshark-data_2.2.6+g32dac6a-2ubuntu0.17.04_all.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/universe/w/wireshark/libwireshark-data_2.2.6+g32dac6a-2ubuntu0.17.04_all.deb' ID:0 ErrorText: ''>
+2017-06-08 11:21:48,927 DEBUG check_conffile_prompt('/var/cache/apt/archives/libwireshark-data_2.2.6+g32dac6a-2ubuntu0.17.04_all.deb')
+2017-06-08 11:21:49,062 DEBUG found pkg: libwireshark-data
+2017-06-08 11:21:49,063 DEBUG conffile line: '/etc/wireshark/init.lua 2d9d7f1e7430ae4c1742c5707dafcb42'
+2017-06-08 11:21:49,063 DEBUG current md5: 2d9d7f1e7430ae4c1742c5707dafcb42
+2017-06-08 11:21:49,064 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 62132 DestFile:'/var/cache/apt/archives/libwsutil7_2.2.6+g32dac6a-2ubuntu0.17.04_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/universe/w/wireshark/libwsutil7_2.2.6+g32dac6a-2ubuntu0.17.04_amd64.deb' ID:0 ErrorText: ''>
+2017-06-08 11:21:49,064 DEBUG check_conffile_prompt('/var/cache/apt/archives/libwsutil7_2.2.6+g32dac6a-2ubuntu0.17.04_amd64.deb')
+2017-06-08 11:21:49,211 DEBUG found pkg: libwsutil7
+2017-06-08 11:21:49,246 DEBUG No conffiles in deb '/var/cache/apt/archives/libwsutil7_2.2.6+g32dac6a-2ubuntu0.17.04_amd64.deb' (There is no member named 'conffiles')
+2017-06-08 11:21:49,246 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 164496 DestFile:'/var/cache/apt/archives/libwiretap6_2.2.6+g32dac6a-2ubuntu0.17.04_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/universe/w/wireshark/libwiretap6_2.2.6+g32dac6a-2ubuntu0.17.04_amd64.deb' ID:0 ErrorText: ''>
+2017-06-08 11:21:49,246 DEBUG check_conffile_prompt('/var/cache/apt/archives/libwiretap6_2.2.6+g32dac6a-2ubuntu0.17.04_amd64.deb')
+2017-06-08 11:21:49,286 DEBUG found pkg: libwiretap6
+2017-06-08 11:21:49,427 DEBUG No conffiles in deb '/var/cache/apt/archives/libwiretap6_2.2.6+g32dac6a-2ubuntu0.17.04_amd64.deb' (There is no member named 'conffiles')
+2017-06-08 11:21:49,428 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 16800 DestFile:'/var/cache/apt/archives/libwscodecs1_2.2.6+g32dac6a-2ubuntu0.17.04_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/universe/w/wireshark/libwscodecs1_2.2.6+g32dac6a-2ubuntu0.17.04_amd64.deb' ID:0 ErrorText: ''>
+2017-06-08 11:21:49,428 DEBUG check_conffile_prompt('/var/cache/apt/archives/libwscodecs1_2.2.6+g32dac6a-2ubuntu0.17.04_amd64.deb')
+2017-06-08 11:21:49,588 DEBUG found pkg: libwscodecs1
+2017-06-08 11:21:49,609 DEBUG No conffiles in deb '/var/cache/apt/archives/libwscodecs1_2.2.6+g32dac6a-2ubuntu0.17.04_amd64.deb' (There is no member named 'conffiles')
+2017-06-08 11:21:49,609 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 12837976 DestFile:'/var/cache/apt/archives/libwireshark8_2.2.6+g32dac6a-2ubuntu0.17.04_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/universe/w/wireshark/libwireshark8_2.2.6+g32dac6a-2ubuntu0.17.04_amd64.deb' ID:0 ErrorText: ''>
+2017-06-08 11:21:49,609 DEBUG check_conffile_prompt('/var/cache/apt/archives/libwireshark8_2.2.6+g32dac6a-2ubuntu0.17.04_amd64.deb')
+2017-06-08 11:21:49,772 DEBUG found pkg: libwireshark8
+2017-06-08 11:21:49,793 DEBUG No conffiles in deb '/var/cache/apt/archives/libwireshark8_2.2.6+g32dac6a-2ubuntu0.17.04_amd64.deb' (There is no member named 'conffiles')
+2017-06-08 11:21:49,793 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 812040 DestFile:'/var/cache/apt/archives/lintian_2.5.50.1ubuntu0.1_all.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/l/lintian/lintian_2.5.50.1ubuntu0.1_all.deb' ID:0 ErrorText: ''>
+2017-06-08 11:21:49,793 DEBUG check_conffile_prompt('/var/cache/apt/archives/lintian_2.5.50.1ubuntu0.1_all.deb')
+2017-06-08 11:21:49,928 DEBUG found pkg: lintian
+2017-06-08 11:21:49,929 DEBUG conffile line: '/etc/lintianrc d5b00f3d9e2f7df6b62ef5e2d48c125a'
+2017-06-08 11:21:49,929 DEBUG current md5: d5b00f3d9e2f7df6b62ef5e2d48c125a
+2017-06-08 11:21:49,930 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 20247884 DestFile:'/var/cache/apt/archives/linux-image-4.10.0-22-generic_4.10.0-22.24_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/l/linux/linux-image-4.10.0-22-generic_4.10.0-22.24_amd64.deb' ID:0 ErrorText: ''>
+2017-06-08 11:21:49,930 DEBUG check_conffile_prompt('/var/cache/apt/archives/linux-image-4.10.0-22-generic_4.10.0-22.24_amd64.deb')
+2017-06-08 11:21:50,160 DEBUG No conffiles in deb '/var/cache/apt/archives/linux-image-4.10.0-22-generic_4.10.0-22.24_amd64.deb' (There is no member named 'conffiles')
+2017-06-08 11:21:50,160 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 30140308 DestFile:'/var/cache/apt/archives/linux-image-extra-4.10.0-22-generic_4.10.0-22.24_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/l/linux/linux-image-extra-4.10.0-22-generic_4.10.0-22.24_amd64.deb' ID:0 ErrorText: ''>
+2017-06-08 11:21:50,160 DEBUG check_conffile_prompt('/var/cache/apt/archives/linux-image-extra-4.10.0-22-generic_4.10.0-22.24_amd64.deb')
+2017-06-08 11:21:50,458 DEBUG No conffiles in deb '/var/cache/apt/archives/linux-image-extra-4.10.0-22-generic_4.10.0-22.24_amd64.deb' (There is no member named 'conffiles')
+2017-06-08 11:21:50,458 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 1782 DestFile:'/var/cache/apt/archives/linux-generic_4.10.0.22.24_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/l/linux-meta/linux-generic_4.10.0.22.24_amd64.deb' ID:0 ErrorText: ''>
+2017-06-08 11:21:50,458 DEBUG check_conffile_prompt('/var/cache/apt/archives/linux-generic_4.10.0.22.24_amd64.deb')
+2017-06-08 11:21:50,664 DEBUG found pkg: linux-generic
+2017-06-08 11:21:50,750 DEBUG No conffiles in deb '/var/cache/apt/archives/linux-generic_4.10.0.22.24_amd64.deb' (There is no member named 'conffiles')
+2017-06-08 11:21:50,750 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 2300 DestFile:'/var/cache/apt/archives/linux-image-generic_4.10.0.22.24_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/l/linux-meta/linux-image-generic_4.10.0.22.24_amd64.deb' ID:0 ErrorText: ''>
+2017-06-08 11:21:50,750 DEBUG check_conffile_prompt('/var/cache/apt/archives/linux-image-generic_4.10.0.22.24_amd64.deb')
+2017-06-08 11:21:51,011 DEBUG found pkg: linux-image-generic
+2017-06-08 11:21:51,040 DEBUG No conffiles in deb '/var/cache/apt/archives/linux-image-generic_4.10.0.22.24_amd64.deb' (There is no member named 'conffiles')
+2017-06-08 11:21:51,040 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 10590720 DestFile:'/var/cache/apt/archives/linux-headers-4.10.0-22_4.10.0-22.24_all.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/l/linux/linux-headers-4.10.0-22_4.10.0-22.24_all.deb' ID:0 ErrorText: ''>
+2017-06-08 11:21:51,041 DEBUG check_conffile_prompt('/var/cache/apt/archives/linux-headers-4.10.0-22_4.10.0-22.24_all.deb')
+2017-06-08 11:21:51,362 DEBUG No conffiles in deb '/var/cache/apt/archives/linux-headers-4.10.0-22_4.10.0-22.24_all.deb' (There is no member named 'conffiles')
+2017-06-08 11:21:51,363 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 692632 DestFile:'/var/cache/apt/archives/linux-headers-4.10.0-22-generic_4.10.0-22.24_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/l/linux/linux-headers-4.10.0-22-generic_4.10.0-22.24_amd64.deb' ID:0 ErrorText: ''>
+2017-06-08 11:21:51,363 DEBUG check_conffile_prompt('/var/cache/apt/archives/linux-headers-4.10.0-22-generic_4.10.0-22.24_amd64.deb')
+2017-06-08 11:21:51,662 DEBUG No conffiles in deb '/var/cache/apt/archives/linux-headers-4.10.0-22-generic_4.10.0-22.24_amd64.deb' (There is no member named 'conffiles')
+2017-06-08 11:21:51,662 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 2270 DestFile:'/var/cache/apt/archives/linux-headers-generic_4.10.0.22.24_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/l/linux-meta/linux-headers-generic_4.10.0.22.24_amd64.deb' ID:0 ErrorText: ''>
+2017-06-08 11:21:51,663 DEBUG check_conffile_prompt('/var/cache/apt/archives/linux-headers-generic_4.10.0.22.24_amd64.deb')
+2017-06-08 11:21:51,944 DEBUG found pkg: linux-headers-generic
+2017-06-08 11:21:51,947 DEBUG No conffiles in deb '/var/cache/apt/archives/linux-headers-generic_4.10.0.22.24_amd64.deb' (There is no member named 'conffiles')
+2017-06-08 11:21:51,947 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 918664 DestFile:'/var/cache/apt/archives/linux-libc-dev_4.10.0-22.24_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/l/linux/linux-libc-dev_4.10.0-22.24_amd64.deb' ID:0 ErrorText: ''>
+2017-06-08 11:21:51,947 DEBUG check_conffile_prompt('/var/cache/apt/archives/linux-libc-dev_4.10.0-22.24_amd64.deb')
+2017-06-08 11:21:52,050 DEBUG found pkg: linux-libc-dev
+2017-06-08 11:21:52,230 DEBUG No conffiles in deb '/var/cache/apt/archives/linux-libc-dev_4.10.0-22.24_amd64.deb' (There is no member named 'conffiles')
+2017-06-08 11:21:52,231 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 3250324 DestFile:'/var/cache/apt/archives/wireshark-qt_2.2.6+g32dac6a-2ubuntu0.17.04_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/universe/w/wireshark/wireshark-qt_2.2.6+g32dac6a-2ubuntu0.17.04_amd64.deb' ID:0 ErrorText: ''>
+2017-06-08 11:21:52,231 DEBUG check_conffile_prompt('/var/cache/apt/archives/wireshark-qt_2.2.6+g32dac6a-2ubuntu0.17.04_amd64.deb')
+2017-06-08 11:21:52,303 DEBUG found pkg: wireshark-qt
+2017-06-08 11:21:52,513 DEBUG No conffiles in deb '/var/cache/apt/archives/wireshark-qt_2.2.6+g32dac6a-2ubuntu0.17.04_amd64.deb' (There is no member named 'conffiles')
+2017-06-08 11:21:52,513 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 201406 DestFile:'/var/cache/apt/archives/wireshark-common_2.2.6+g32dac6a-2ubuntu0.17.04_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/universe/w/wireshark/wireshark-common_2.2.6+g32dac6a-2ubuntu0.17.04_amd64.deb' ID:0 ErrorText: ''>
+2017-06-08 11:21:52,514 DEBUG check_conffile_prompt('/var/cache/apt/archives/wireshark-common_2.2.6+g32dac6a-2ubuntu0.17.04_amd64.deb')
+2017-06-08 11:21:52,624 DEBUG found pkg: wireshark-common
+2017-06-08 11:21:52,796 DEBUG No conffiles in deb '/var/cache/apt/archives/wireshark-common_2.2.6+g32dac6a-2ubuntu0.17.04_amd64.deb' (There is no member named 'conffiles')
+2017-06-08 11:21:52,797 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 5496 DestFile:'/var/cache/apt/archives/wireshark_2.2.6+g32dac6a-2ubuntu0.17.04_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/universe/w/wireshark/wireshark_2.2.6+g32dac6a-2ubuntu0.17.04_amd64.deb' ID:0 ErrorText: ''>
+2017-06-08 11:21:52,797 DEBUG check_conffile_prompt('/var/cache/apt/archives/wireshark_2.2.6+g32dac6a-2ubuntu0.17.04_amd64.deb')
+2017-06-08 11:21:52,815 DEBUG found pkg: wireshark
+2017-06-08 11:21:53,079 DEBUG No conffiles in deb '/var/cache/apt/archives/wireshark_2.2.6+g32dac6a-2ubuntu0.17.04_amd64.deb' (There is no member named 'conffiles')
+2017-06-08 11:21:53,079 DEBUG blacklist: []
+2017-06-08 11:21:53,079 DEBUG whitelist: []
+2017-06-08 11:21:54,392 INFO Pakete, von denen ein Upgrade durchgeführt wird: kodi kodi-bin kodi-data libnl-3-200 libnl-genl-3-200 libnl-route-3-200 libtasn1-6 libwireshark-data libwireshark8 libwiretap6 libwscodecs1 libwsutil7 lintian linux-generic linux-headers-generic linux-image-generic linux-libc-dev wireshark wireshark-common wireshark-qt
+2017-06-08 11:21:54,393 INFO Dpkg-Protokoll wird nach »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« geschrieben
+2017-06-08 11:22:10,479 ERROR Exception happened during upgrade.
+Traceback (most recent call last):
+  File "/usr/bin/unattended-upgrade", line 412, in cache_commit
+    res = cache.commit(install_progress=iprogress)
+  File "/usr/lib/python3/dist-packages/apt/cache.py", line 529, in commit
+    raise SystemError("installArchives() failed")
+SystemError: installArchives() failed
+2017-06-08 11:22:10,482 ERROR Installation der Upgrades fehlgeschlagen!
+2017-06-08 11:22:10,483 ERROR Fehlermeldung: »installArchives() failed«
+2017-06-08 11:22:10,484 ERROR Dpkg gab einen Fehler zurück. Siehe »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« für Einzelheiten
+2017-06-08 11:22:12,194 DEBUG adjusting candidate version: 'kodi=2:17.1+dfsg1-1ubuntu0.1'
+2017-06-08 11:22:12,247 DEBUG adjusting candidate version: 'kodi-bin=2:17.1+dfsg1-1ubuntu0.1'
+2017-06-08 11:22:15,171 DEBUG InstCount=0 DelCount=0 BrokenCount=0
+2017-06-08 11:22:15,171 DEBUG Extracting content from '/var/log/unattended-upgrades/unattended-upgrades-dpkg.log' since '2017-06-08 11:21:15'
+2017-06-08 11:22:15,176 DEBUG Sending mail to 'logs@josef-friedrich.de'
+2017-06-08 11:22:19,537 DEBUG mail returned: 0
+2017-06-10 10:03:27,395 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-06-10 10:03:27,395 INFO Erst-Pakete der Positivliste:  
+2017-06-10 10:03:27,396 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-06-10 10:03:27,396 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-06-10 10:03:28,478 DEBUG adjusting candidate version: 'kodi=2:17.1+dfsg1-1ubuntu0.1'
+2017-06-10 10:03:28,515 DEBUG adjusting candidate version: 'kodi-bin=2:17.1+dfsg1-1ubuntu0.1'
+2017-06-10 10:03:30,184 DEBUG Checking: kodi ([<Origin component:'universe' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-10 10:03:31,792 DEBUG Checking: kodi-bin ([<Origin component:'universe' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-10 10:03:35,051 DEBUG pkgs that look like they should be upgraded: kodi
+kodi-bin
+2017-06-10 10:03:35,143 DEBUG fetch.run() result: 0
+2017-06-10 10:03:35,143 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 6226516 DestFile:'/var/cache/apt/archives/kodi-bin_2%3a17.1+dfsg1-1ubuntu0.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/universe/k/kodi/kodi-bin_17.1+dfsg1-1ubuntu0.1_amd64.deb' ID:0 ErrorText: ''>
+2017-06-10 10:03:35,143 DEBUG check_conffile_prompt('/var/cache/apt/archives/kodi-bin_2%3a17.1+dfsg1-1ubuntu0.1_amd64.deb')
+2017-06-10 10:03:35,288 DEBUG found pkg: kodi-bin
+2017-06-10 10:03:35,406 DEBUG No conffiles in deb '/var/cache/apt/archives/kodi-bin_2%3a17.1+dfsg1-1ubuntu0.1_amd64.deb' (There is no member named 'conffiles')
+2017-06-10 10:03:35,406 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 11022 DestFile:'/var/cache/apt/archives/kodi_2%3a17.1+dfsg1-1ubuntu0.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/universe/k/kodi/kodi_17.1+dfsg1-1ubuntu0.1_amd64.deb' ID:0 ErrorText: ''>
+2017-06-10 10:03:35,406 DEBUG check_conffile_prompt('/var/cache/apt/archives/kodi_2%3a17.1+dfsg1-1ubuntu0.1_amd64.deb')
+2017-06-10 10:03:35,584 DEBUG found pkg: kodi
+2017-06-10 10:03:35,585 DEBUG found pkg: kodi
+2017-06-10 10:03:35,675 DEBUG No conffiles in deb '/var/cache/apt/archives/kodi_2%3a17.1+dfsg1-1ubuntu0.1_amd64.deb' (There is no member named 'conffiles')
+2017-06-10 10:03:35,676 DEBUG blacklist: []
+2017-06-10 10:03:35,676 DEBUG whitelist: []
+2017-06-10 10:03:37,036 INFO Pakete, von denen ein Upgrade durchgeführt wird: kodi kodi-bin
+2017-06-10 10:03:37,037 INFO Dpkg-Protokoll wird nach »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« geschrieben
+2017-06-10 10:03:50,382 INFO alle Upgrades installiert
+2017-06-10 10:03:51,580 DEBUG adjusting candidate version: 'kodi=2:17.1+dfsg1-1ubuntu0.1'
+2017-06-10 10:03:51,624 DEBUG adjusting candidate version: 'kodi-bin=2:17.1+dfsg1-1ubuntu0.1'
+2017-06-10 10:03:54,772 DEBUG marking libshairplay0 for remove
+2017-06-10 10:03:54,807 DEBUG marking python-bluez for remove
+2017-06-10 10:03:54,842 DEBUG marking linux-image-extra-4.10.0-20-generic for remove
+2017-06-10 10:03:54,876 DEBUG marking linux-headers-4.10.0-20 for remove
+2017-06-10 10:03:55,128 DEBUG marking linux-image-4.10.0-20-generic for remove
+2017-06-10 10:03:55,161 DEBUG marking libssh-4 for remove
+2017-06-10 10:03:55,196 DEBUG marking linux-headers-4.10.0-20-generic for remove
+2017-06-10 10:03:55,197 INFO Pakete, die automatisch entfernt wurden: »libshairplay0 libssh-4 linux-headers-4.10.0-20 linux-headers-4.10.0-20-generic linux-image-4.10.0-20-generic linux-image-extra-4.10.0-20-generic python-bluez«
+2017-06-10 10:04:13,638 INFO Pakete wurden erfolgreich automatisch entfernt
+2017-06-10 10:04:13,638 DEBUG InstCount=0 DelCount=7 BrokenCount=0
+2017-06-10 10:04:13,638 DEBUG Extracting content from '/var/log/unattended-upgrades/unattended-upgrades-dpkg.log' since '2017-06-10 10:03:27'
+2017-06-10 10:04:13,647 DEBUG Sending mail to 'logs@josef-friedrich.de'
+2017-06-10 10:04:15,552 DEBUG mail returned: 0
+2017-06-10 10:04:15,555 WARNING Found /var/run/reboot-required, rebooting
+2017-06-15 21:07:22,482 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-06-15 21:07:22,483 INFO Erst-Pakete der Positivliste:  
+2017-06-15 21:07:22,483 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-06-15 21:07:22,483 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-06-15 21:07:24,103 DEBUG Checking: ebtables ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-06-15 21:07:25,116 DEBUG Checking: firefox ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-15 21:07:26,093 DEBUG Checking: firefox-locale-de ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-15 21:07:27,114 DEBUG Checking: firefox-locale-en ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-15 21:07:28,379 DEBUG Checking: libgnutls-openssl27 ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-15 21:07:29,955 DEBUG Checking: libgnutls30 ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-15 21:07:31,418 DEBUG Checking: libmwaw-0.3-3 ([<Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-15 21:07:33,600 DEBUG pkgs that look like they should be upgraded: ebtables
+firefox
+firefox-locale-de
+firefox-locale-en
+libgnutls-openssl27
+libgnutls30
+libmwaw-0.3-3
+2017-06-15 21:07:33,707 DEBUG fetch.run() result: 0
+2017-06-15 21:07:33,707 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 20564 DestFile:'/var/cache/apt/archives/libgnutls-openssl27_3.5.6-4ubuntu4.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/libgnutls-openssl27_3.5.6-4ubuntu4.1_amd64.deb' ID:0 ErrorText: ''>
+2017-06-15 21:07:33,708 DEBUG check_conffile_prompt('/var/cache/apt/archives/libgnutls-openssl27_3.5.6-4ubuntu4.1_amd64.deb')
+2017-06-15 21:07:33,897 DEBUG found pkg: libgnutls-openssl27
+2017-06-15 21:07:33,974 DEBUG No conffiles in deb '/var/cache/apt/archives/libgnutls-openssl27_3.5.6-4ubuntu4.1_amd64.deb' (There is no member named 'conffiles')
+2017-06-15 21:07:33,974 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 626318 DestFile:'/var/cache/apt/archives/libgnutls30_3.5.6-4ubuntu4.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/libgnutls30_3.5.6-4ubuntu4.1_amd64.deb' ID:0 ErrorText: ''>
+2017-06-15 21:07:33,974 DEBUG check_conffile_prompt('/var/cache/apt/archives/libgnutls30_3.5.6-4ubuntu4.1_amd64.deb')
+2017-06-15 21:07:34,073 DEBUG found pkg: libgnutls30
+2017-06-15 21:07:34,257 DEBUG No conffiles in deb '/var/cache/apt/archives/libgnutls30_3.5.6-4ubuntu4.1_amd64.deb' (There is no member named 'conffiles')
+2017-06-15 21:07:34,257 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 80042 DestFile:'/var/cache/apt/archives/ebtables_2.0.10.4-3.5ubuntu1.17.04.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/e/ebtables/ebtables_2.0.10.4-3.5ubuntu1.17.04.1_amd64.deb' ID:0 ErrorText: ''>
+2017-06-15 21:07:34,257 DEBUG check_conffile_prompt('/var/cache/apt/archives/ebtables_2.0.10.4-3.5ubuntu1.17.04.1_amd64.deb')
+2017-06-15 21:07:34,465 DEBUG found pkg: ebtables
+2017-06-15 21:07:34,466 DEBUG conffile line: '/etc/default/ebtables 4b49d534ccce3c32252e3ac080b8997a'
+2017-06-15 21:07:34,466 DEBUG current md5: 4b49d534ccce3c32252e3ac080b8997a
+2017-06-15 21:07:34,467 DEBUG conffile line: '/etc/ethertypes 94bffde8f75a1b8f891fb780bfe15ca2'
+2017-06-15 21:07:34,467 DEBUG current md5: 94bffde8f75a1b8f891fb780bfe15ca2
+2017-06-15 21:07:34,467 DEBUG conffile line: '/etc/init.d/ebtables cd1448421fb5e6dd9b9b875018061194'
+2017-06-15 21:07:34,467 DEBUG current md5: cd1448421fb5e6dd9b9b875018061194
+2017-06-15 21:07:34,468 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 47570546 DestFile:'/var/cache/apt/archives/firefox_54.0+build3-0ubuntu0.17.04.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/f/firefox/firefox_54.0+build3-0ubuntu0.17.04.1_amd64.deb' ID:0 ErrorText: ''>
+2017-06-15 21:07:34,468 DEBUG check_conffile_prompt('/var/cache/apt/archives/firefox_54.0+build3-0ubuntu0.17.04.1_amd64.deb')
+2017-06-15 21:07:34,673 DEBUG found pkg: firefox
+2017-06-15 21:07:34,674 DEBUG conffile line: '/etc/apparmor.d/usr.bin.firefox c7396f11a6d44205963d7fabb02313e7'
+2017-06-15 21:07:34,674 DEBUG current md5: c7396f11a6d44205963d7fabb02313e7
+2017-06-15 21:07:34,675 DEBUG conffile line: '/etc/apport/blacklist.d/firefox ee63264f847e671832d42255912ce144'
+2017-06-15 21:07:34,675 DEBUG current md5: ee63264f847e671832d42255912ce144
+2017-06-15 21:07:34,676 DEBUG conffile line: '/etc/apport/native-origins.d/firefox 7c26b75c7c2b715c89cc6d85338252a4'
+2017-06-15 21:07:34,676 DEBUG current md5: 7c26b75c7c2b715c89cc6d85338252a4
+2017-06-15 21:07:34,676 DEBUG conffile line: '/etc/firefox/syspref.js 09e457e65435a1a043521f2bd19cd2a1'
+2017-06-15 21:07:34,677 DEBUG current md5: 09e457e65435a1a043521f2bd19cd2a1
+2017-06-15 21:07:34,677 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 414872 DestFile:'/var/cache/apt/archives/firefox-locale-de_54.0+build3-0ubuntu0.17.04.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/f/firefox/firefox-locale-de_54.0+build3-0ubuntu0.17.04.1_amd64.deb' ID:0 ErrorText: ''>
+2017-06-15 21:07:34,677 DEBUG check_conffile_prompt('/var/cache/apt/archives/firefox-locale-de_54.0+build3-0ubuntu0.17.04.1_amd64.deb')
+2017-06-15 21:07:34,917 DEBUG found pkg: firefox-locale-de
+2017-06-15 21:07:34,950 DEBUG No conffiles in deb '/var/cache/apt/archives/firefox-locale-de_54.0+build3-0ubuntu0.17.04.1_amd64.deb' (There is no member named 'conffiles')
+2017-06-15 21:07:34,950 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 662128 DestFile:'/var/cache/apt/archives/firefox-locale-en_54.0+build3-0ubuntu0.17.04.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/f/firefox/firefox-locale-en_54.0+build3-0ubuntu0.17.04.1_amd64.deb' ID:0 ErrorText: ''>
+2017-06-15 21:07:34,950 DEBUG check_conffile_prompt('/var/cache/apt/archives/firefox-locale-en_54.0+build3-0ubuntu0.17.04.1_amd64.deb')
+2017-06-15 21:07:34,991 DEBUG found pkg: firefox-locale-en
+2017-06-15 21:07:35,247 DEBUG No conffiles in deb '/var/cache/apt/archives/firefox-locale-en_54.0+build3-0ubuntu0.17.04.1_amd64.deb' (There is no member named 'conffiles')
+2017-06-15 21:07:35,247 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 2120774 DestFile:'/var/cache/apt/archives/libmwaw-0.3-3_0.3.9-1ubuntu0.1_amd64.deb' DescURI: 'http://security.ubuntu.com/ubuntu/pool/main/libm/libmwaw/libmwaw-0.3-3_0.3.9-1ubuntu0.1_amd64.deb' ID:0 ErrorText: ''>
+2017-06-15 21:07:35,247 DEBUG check_conffile_prompt('/var/cache/apt/archives/libmwaw-0.3-3_0.3.9-1ubuntu0.1_amd64.deb')
+2017-06-15 21:07:35,278 DEBUG found pkg: libmwaw-0.3-3
+2017-06-15 21:07:35,521 DEBUG No conffiles in deb '/var/cache/apt/archives/libmwaw-0.3-3_0.3.9-1ubuntu0.1_amd64.deb' (There is no member named 'conffiles')
+2017-06-15 21:07:35,521 DEBUG blacklist: []
+2017-06-15 21:07:35,521 DEBUG whitelist: []
+2017-06-15 21:07:36,792 INFO Pakete, von denen ein Upgrade durchgeführt wird: ebtables firefox firefox-locale-de firefox-locale-en libgnutls-openssl27 libgnutls30 libmwaw-0.3-3
+2017-06-15 21:07:36,793 INFO Dpkg-Protokoll wird nach »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« geschrieben
+2017-06-15 21:07:59,777 INFO alle Upgrades installiert
+2017-06-15 21:08:03,261 DEBUG InstCount=0 DelCount=0 BrokenCount=0
+2017-06-15 21:08:03,262 DEBUG Extracting content from '/var/log/unattended-upgrades/unattended-upgrades-dpkg.log' since '2017-06-15 21:07:22'
+2017-06-15 21:08:03,269 DEBUG Sending mail to 'logs@josef-friedrich.de'
+2017-06-15 21:08:05,661 DEBUG mail returned: 0
+2017-06-18 09:00:35,364 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-06-18 09:00:35,365 INFO Erst-Pakete der Positivliste:  
+2017-06-18 09:00:35,365 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-06-18 09:00:35,365 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-06-18 09:00:36,904 DEBUG Checking: gir1.2-gnomedesktop-3.0 ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-06-18 09:00:37,850 DEBUG Checking: gir1.2-networkmanager-1.0 ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-06-18 09:00:38,770 DEBUG Checking: gnome-desktop3-data ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-06-18 09:00:39,677 DEBUG Checking: gnome-shell ([<Origin component:'universe' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-06-18 09:00:39,713 DEBUG pkg 'caribou' not in allowed origin
+2017-06-18 09:00:39,715 DEBUG sanity check failed
+2017-06-18 09:00:40,744 DEBUG Checking: gnome-shell-common ([<Origin component:'universe' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-06-18 09:00:40,884 DEBUG pkg 'caribou' not in allowed origin
+2017-06-18 09:00:40,886 DEBUG sanity check failed
+2017-06-18 09:00:42,232 DEBUG Checking: libgnome-desktop-3-12 ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-06-18 09:00:43,713 DEBUG Checking: libmirclient-dev ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-06-18 09:00:45,374 DEBUG Checking: libmirclient9 ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-06-18 09:00:47,626 DEBUG Checking: libmircommon-dev ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-06-18 09:00:51,336 DEBUG Checking: libmircommon7 ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-06-18 09:00:55,356 DEBUG Checking: libmircookie-dev ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-06-18 09:00:58,372 DEBUG Checking: libmircookie2 ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-06-18 09:01:01,136 DEBUG Checking: libmircore-dev ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-06-18 09:01:02,691 DEBUG Checking: libmircore1 ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-06-18 09:01:04,254 DEBUG Checking: libmirprotobuf3 ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-06-18 09:01:06,426 DEBUG Checking: libnm-glib-vpn1 ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-06-18 09:01:08,600 DEBUG Checking: libnm-glib4 ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-06-18 09:01:10,999 DEBUG Checking: libnm-util2 ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-06-18 09:01:12,724 DEBUG Checking: libnm0 ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-06-18 09:01:14,964 DEBUG Checking: network-manager ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-06-18 09:01:17,311 DEBUG pkgs that look like they should be upgraded: gir1.2-gnomedesktop-3.0
+gir1.2-networkmanager-1.0
+gnome-desktop3-data
+libgnome-desktop-3-12
+libmirclient-dev
+libmirclient9
+libmircommon-dev
+libmircommon7
+libmircookie-dev
+libmircookie2
+libmircore-dev
+libmircore1
+libmirprotobuf3
+libnm-glib-vpn1
+libnm-glib4
+libnm-util2
+libnm0
+network-manager
+2017-06-18 09:01:26,547 DEBUG fetch.run() result: 0
+2017-06-18 09:01:26,548 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 21674 DestFile:'/var/cache/apt/archives/gnome-desktop3-data_3.24.2-0ubuntu0.1_all.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/g/gnome-desktop3/gnome-desktop3-data_3.24.2-0ubuntu0.1_all.deb' ID:1 ErrorText: ''>
+2017-06-18 09:01:26,549 DEBUG check_conffile_prompt('/var/cache/apt/archives/gnome-desktop3-data_3.24.2-0ubuntu0.1_all.deb')
+2017-06-18 09:01:26,743 DEBUG found pkg: gnome-desktop3-data
+2017-06-18 09:01:26,761 DEBUG No conffiles in deb '/var/cache/apt/archives/gnome-desktop3-data_3.24.2-0ubuntu0.1_all.deb' (There is no member named 'conffiles')
+2017-06-18 09:01:26,761 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 109020 DestFile:'/var/cache/apt/archives/libgnome-desktop-3-12_3.24.2-0ubuntu0.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/g/gnome-desktop3/libgnome-desktop-3-12_3.24.2-0ubuntu0.1_amd64.deb' ID:2 ErrorText: ''>
+2017-06-18 09:01:26,761 DEBUG check_conffile_prompt('/var/cache/apt/archives/libgnome-desktop-3-12_3.24.2-0ubuntu0.1_amd64.deb')
+2017-06-18 09:01:26,956 DEBUG found pkg: libgnome-desktop-3-12
+2017-06-18 09:01:26,966 DEBUG No conffiles in deb '/var/cache/apt/archives/libgnome-desktop-3-12_3.24.2-0ubuntu0.1_amd64.deb' (There is no member named 'conffiles')
+2017-06-18 09:01:26,967 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 8626 DestFile:'/var/cache/apt/archives/gir1.2-gnomedesktop-3.0_3.24.2-0ubuntu0.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/g/gnome-desktop3/gir1.2-gnomedesktop-3.0_3.24.2-0ubuntu0.1_amd64.deb' ID:3 ErrorText: ''>
+2017-06-18 09:01:26,967 DEBUG check_conffile_prompt('/var/cache/apt/archives/gir1.2-gnomedesktop-3.0_3.24.2-0ubuntu0.1_amd64.deb')
+2017-06-18 09:01:27,014 DEBUG found pkg: gir1.2-gnomedesktop-3.0
+2017-06-18 09:01:27,192 DEBUG No conffiles in deb '/var/cache/apt/archives/gir1.2-gnomedesktop-3.0_3.24.2-0ubuntu0.1_amd64.deb' (There is no member named 'conffiles')
+2017-06-18 09:01:27,193 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 116922 DestFile:'/var/cache/apt/archives/libnm-util2_1.4.4-1ubuntu3.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/n/network-manager/libnm-util2_1.4.4-1ubuntu3.1_amd64.deb' ID:4 ErrorText: ''>
+2017-06-18 09:01:27,193 DEBUG check_conffile_prompt('/var/cache/apt/archives/libnm-util2_1.4.4-1ubuntu3.1_amd64.deb')
+2017-06-18 09:01:27,212 DEBUG found pkg: libnm-util2
+2017-06-18 09:01:27,411 DEBUG No conffiles in deb '/var/cache/apt/archives/libnm-util2_1.4.4-1ubuntu3.1_amd64.deb' (There is no member named 'conffiles')
+2017-06-18 09:01:27,411 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 77508 DestFile:'/var/cache/apt/archives/libnm-glib4_1.4.4-1ubuntu3.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/n/network-manager/libnm-glib4_1.4.4-1ubuntu3.1_amd64.deb' ID:5 ErrorText: ''>
+2017-06-18 09:01:27,411 DEBUG check_conffile_prompt('/var/cache/apt/archives/libnm-glib4_1.4.4-1ubuntu3.1_amd64.deb')
+2017-06-18 09:01:27,456 DEBUG found pkg: libnm-glib4
+2017-06-18 09:01:27,638 DEBUG No conffiles in deb '/var/cache/apt/archives/libnm-glib4_1.4.4-1ubuntu3.1_amd64.deb' (There is no member named 'conffiles')
+2017-06-18 09:01:27,639 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 246772 DestFile:'/var/cache/apt/archives/libnm0_1.4.4-1ubuntu3.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/n/network-manager/libnm0_1.4.4-1ubuntu3.1_amd64.deb' ID:6 ErrorText: ''>
+2017-06-18 09:01:27,639 DEBUG check_conffile_prompt('/var/cache/apt/archives/libnm0_1.4.4-1ubuntu3.1_amd64.deb')
+2017-06-18 09:01:27,699 DEBUG found pkg: libnm0
+2017-06-18 09:01:27,832 DEBUG No conffiles in deb '/var/cache/apt/archives/libnm0_1.4.4-1ubuntu3.1_amd64.deb' (There is no member named 'conffiles')
+2017-06-18 09:01:27,832 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 71400 DestFile:'/var/cache/apt/archives/gir1.2-networkmanager-1.0_1.4.4-1ubuntu3.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/n/network-manager/gir1.2-networkmanager-1.0_1.4.4-1ubuntu3.1_amd64.deb' ID:7 ErrorText: ''>
+2017-06-18 09:01:27,832 DEBUG check_conffile_prompt('/var/cache/apt/archives/gir1.2-networkmanager-1.0_1.4.4-1ubuntu3.1_amd64.deb')
+2017-06-18 09:01:27,848 DEBUG found pkg: gir1.2-networkmanager-1.0
+2017-06-18 09:01:28,055 DEBUG No conffiles in deb '/var/cache/apt/archives/gir1.2-networkmanager-1.0_1.4.4-1ubuntu3.1_amd64.deb' (There is no member named 'conffiles')
+2017-06-18 09:01:28,055 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 42528 DestFile:'/var/cache/apt/archives/libmirclient-dev_0.26.3+17.04.20170605-0ubuntu1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/m/mir/libmirclient-dev_0.26.3+17.04.20170605-0ubuntu1_amd64.deb' ID:8 ErrorText: ''>
+2017-06-18 09:01:28,055 DEBUG check_conffile_prompt('/var/cache/apt/archives/libmirclient-dev_0.26.3+17.04.20170605-0ubuntu1_amd64.deb')
+2017-06-18 09:01:28,124 DEBUG found pkg: libmirclient-dev
+2017-06-18 09:01:28,264 DEBUG No conffiles in deb '/var/cache/apt/archives/libmirclient-dev_0.26.3+17.04.20170605-0ubuntu1_amd64.deb' (There is no member named 'conffiles')
+2017-06-18 09:01:28,264 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 14778 DestFile:'/var/cache/apt/archives/libmircommon-dev_0.26.3+17.04.20170605-0ubuntu1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/m/mir/libmircommon-dev_0.26.3+17.04.20170605-0ubuntu1_amd64.deb' ID:9 ErrorText: ''>
+2017-06-18 09:01:28,264 DEBUG check_conffile_prompt('/var/cache/apt/archives/libmircommon-dev_0.26.3+17.04.20170605-0ubuntu1_amd64.deb')
+2017-06-18 09:01:28,396 DEBUG found pkg: libmircommon-dev
+2017-06-18 09:01:28,455 DEBUG No conffiles in deb '/var/cache/apt/archives/libmircommon-dev_0.26.3+17.04.20170605-0ubuntu1_amd64.deb' (There is no member named 'conffiles')
+2017-06-18 09:01:28,455 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 23948 DestFile:'/var/cache/apt/archives/libmircore-dev_0.26.3+17.04.20170605-0ubuntu1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/m/mir/libmircore-dev_0.26.3+17.04.20170605-0ubuntu1_amd64.deb' ID:10 ErrorText: ''>
+2017-06-18 09:01:28,455 DEBUG check_conffile_prompt('/var/cache/apt/archives/libmircore-dev_0.26.3+17.04.20170605-0ubuntu1_amd64.deb')
+2017-06-18 09:01:28,494 DEBUG found pkg: libmircore-dev
+2017-06-18 09:01:28,646 DEBUG No conffiles in deb '/var/cache/apt/archives/libmircore-dev_0.26.3+17.04.20170605-0ubuntu1_amd64.deb' (There is no member named 'conffiles')
+2017-06-18 09:01:28,646 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 24852 DestFile:'/var/cache/apt/archives/libmircore1_0.26.3+17.04.20170605-0ubuntu1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/m/mir/libmircore1_0.26.3+17.04.20170605-0ubuntu1_amd64.deb' ID:11 ErrorText: ''>
+2017-06-18 09:01:28,646 DEBUG check_conffile_prompt('/var/cache/apt/archives/libmircore1_0.26.3+17.04.20170605-0ubuntu1_amd64.deb')
+2017-06-18 09:01:28,861 DEBUG found pkg: libmircore1
+2017-06-18 09:01:28,919 DEBUG No conffiles in deb '/var/cache/apt/archives/libmircore1_0.26.3+17.04.20170605-0ubuntu1_amd64.deb' (There is no member named 'conffiles')
+2017-06-18 09:01:28,920 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 90584 DestFile:'/var/cache/apt/archives/libmircommon7_0.26.3+17.04.20170605-0ubuntu1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/m/mir/libmircommon7_0.26.3+17.04.20170605-0ubuntu1_amd64.deb' ID:12 ErrorText: ''>
+2017-06-18 09:01:28,920 DEBUG check_conffile_prompt('/var/cache/apt/archives/libmircommon7_0.26.3+17.04.20170605-0ubuntu1_amd64.deb')
+2017-06-18 09:01:29,287 DEBUG found pkg: libmircommon7
+2017-06-18 09:01:29,410 DEBUG No conffiles in deb '/var/cache/apt/archives/libmircommon7_0.26.3+17.04.20170605-0ubuntu1_amd64.deb' (There is no member named 'conffiles')
+2017-06-18 09:01:29,410 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 127310 DestFile:'/var/cache/apt/archives/libmirprotobuf3_0.26.3+17.04.20170605-0ubuntu1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/m/mir/libmirprotobuf3_0.26.3+17.04.20170605-0ubuntu1_amd64.deb' ID:13 ErrorText: ''>
+2017-06-18 09:01:29,411 DEBUG check_conffile_prompt('/var/cache/apt/archives/libmirprotobuf3_0.26.3+17.04.20170605-0ubuntu1_amd64.deb')
+2017-06-18 09:01:29,651 DEBUG found pkg: libmirprotobuf3
+2017-06-18 09:01:30,091 DEBUG No conffiles in deb '/var/cache/apt/archives/libmirprotobuf3_0.26.3+17.04.20170605-0ubuntu1_amd64.deb' (There is no member named 'conffiles')
+2017-06-18 09:01:30,091 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 197148 DestFile:'/var/cache/apt/archives/libmirclient9_0.26.3+17.04.20170605-0ubuntu1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/m/mir/libmirclient9_0.26.3+17.04.20170605-0ubuntu1_amd64.deb' ID:14 ErrorText: ''>
+2017-06-18 09:01:30,091 DEBUG check_conffile_prompt('/var/cache/apt/archives/libmirclient9_0.26.3+17.04.20170605-0ubuntu1_amd64.deb')
+2017-06-18 09:01:30,215 DEBUG found pkg: libmirclient9
+2017-06-18 09:01:30,367 DEBUG No conffiles in deb '/var/cache/apt/archives/libmirclient9_0.26.3+17.04.20170605-0ubuntu1_amd64.deb' (There is no member named 'conffiles')
+2017-06-18 09:01:30,367 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 5114 DestFile:'/var/cache/apt/archives/libmircookie-dev_0.26.3+17.04.20170605-0ubuntu1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/m/mir/libmircookie-dev_0.26.3+17.04.20170605-0ubuntu1_amd64.deb' ID:15 ErrorText: ''>
+2017-06-18 09:01:30,367 DEBUG check_conffile_prompt('/var/cache/apt/archives/libmircookie-dev_0.26.3+17.04.20170605-0ubuntu1_amd64.deb')
+2017-06-18 09:01:30,525 DEBUG found pkg: libmircookie-dev
+2017-06-18 09:01:30,713 DEBUG No conffiles in deb '/var/cache/apt/archives/libmircookie-dev_0.26.3+17.04.20170605-0ubuntu1_amd64.deb' (There is no member named 'conffiles')
+2017-06-18 09:01:30,714 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 22436 DestFile:'/var/cache/apt/archives/libmircookie2_0.26.3+17.04.20170605-0ubuntu1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/m/mir/libmircookie2_0.26.3+17.04.20170605-0ubuntu1_amd64.deb' ID:16 ErrorText: ''>
+2017-06-18 09:01:30,714 DEBUG check_conffile_prompt('/var/cache/apt/archives/libmircookie2_0.26.3+17.04.20170605-0ubuntu1_amd64.deb')
+2017-06-18 09:01:30,939 DEBUG found pkg: libmircookie2
+2017-06-18 09:01:31,096 DEBUG No conffiles in deb '/var/cache/apt/archives/libmircookie2_0.26.3+17.04.20170605-0ubuntu1_amd64.deb' (There is no member named 'conffiles')
+2017-06-18 09:01:31,096 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 13792 DestFile:'/var/cache/apt/archives/libnm-glib-vpn1_1.4.4-1ubuntu3.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/n/network-manager/libnm-glib-vpn1_1.4.4-1ubuntu3.1_amd64.deb' ID:17 ErrorText: ''>
+2017-06-18 09:01:31,097 DEBUG check_conffile_prompt('/var/cache/apt/archives/libnm-glib-vpn1_1.4.4-1ubuntu3.1_amd64.deb')
+2017-06-18 09:01:31,116 DEBUG found pkg: libnm-glib-vpn1
+2017-06-18 09:01:31,533 DEBUG No conffiles in deb '/var/cache/apt/archives/libnm-glib-vpn1_1.4.4-1ubuntu3.1_amd64.deb' (There is no member named 'conffiles')
+2017-06-18 09:01:31,533 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 1491898 DestFile:'/var/cache/apt/archives/network-manager_1.4.4-1ubuntu3.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/n/network-manager/network-manager_1.4.4-1ubuntu3.1_amd64.deb' ID:18 ErrorText: ''>
+2017-06-18 09:01:31,533 DEBUG check_conffile_prompt('/var/cache/apt/archives/network-manager_1.4.4-1ubuntu3.1_amd64.deb')
+2017-06-18 09:01:31,761 DEBUG found pkg: network-manager
+2017-06-18 09:01:31,762 DEBUG conffile line: '/etc/NetworkManager/NetworkManager.conf 914f22205f2ed4d4bc84f3682ecd3153'
+2017-06-18 09:01:31,763 DEBUG current md5: 488b878b7058c400515e3f1e950f27d0
+2017-06-18 09:01:32,062 DEBUG pkg_md5sum: 914f22205f2ed4d4bc84f3682ecd3153
+2017-06-18 09:01:32,062 DEBUG conffile line: '/etc/NetworkManager/conf.d/default-wifi-powersave-on.conf 4aa6a7dec60d395b4ada2f5137201fcd'
+2017-06-18 09:01:32,063 DEBUG current md5: 4aa6a7dec60d395b4ada2f5137201fcd
+2017-06-18 09:01:32,063 DEBUG conffile line: '/etc/NetworkManager/dispatcher.d/01ifupdown e6de81aa6aa1f472937fd99db343914f'
+2017-06-18 09:01:32,063 DEBUG current md5: e6de81aa6aa1f472937fd99db343914f
+2017-06-18 09:01:32,064 DEBUG conffile line: '/etc/dbus-1/system.d/nm-dispatcher.conf 5711a76c31a3763750fe2c331741f679'
+2017-06-18 09:01:32,064 DEBUG current md5: 5711a76c31a3763750fe2c331741f679
+2017-06-18 09:01:32,064 DEBUG conffile line: '/etc/dbus-1/system.d/org.freedesktop.NetworkManager.conf df75fd565f0b3a9099def2ed00a989b2'
+2017-06-18 09:01:32,065 DEBUG current md5: df75fd565f0b3a9099def2ed00a989b2
+2017-06-18 09:01:32,065 DEBUG conffile line: '/etc/dnsmasq.d/network-manager c1f294c4513fa544565d671dcba6a913'
+2017-06-18 09:01:32,066 DEBUG current md5: c1f294c4513fa544565d671dcba6a913
+2017-06-18 09:01:32,066 DEBUG conffile line: '/etc/init.d/network-manager 59b97edb8cc5f8db9882118fbf102a88'
+2017-06-18 09:01:32,067 DEBUG current md5: 59b97edb8cc5f8db9882118fbf102a88
+2017-06-18 09:01:32,067 DEBUG conffile line: '/etc/init/network-manager.conf 080b2a860317698f65f960687f5363cc'
+2017-06-18 09:01:32,067 DEBUG current md5: 080b2a860317698f65f960687f5363cc
+2017-06-18 09:01:32,068 DEBUG blacklist: []
+2017-06-18 09:01:32,068 DEBUG whitelist: []
+2017-06-18 09:01:34,110 INFO Pakete, von denen ein Upgrade durchgeführt wird: gir1.2-gnomedesktop-3.0 gir1.2-networkmanager-1.0 gnome-desktop3-data libgnome-desktop-3-12 libmirclient-dev libmirclient9 libmircommon-dev libmircommon7 libmircookie-dev libmircookie2 libmircore-dev libmircore1 libmirprotobuf3 libnm-glib-vpn1 libnm-glib4 libnm-util2 libnm0 network-manager
+2017-06-18 09:01:34,111 INFO Dpkg-Protokoll wird nach »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« geschrieben
+2017-06-18 09:01:50,184 INFO alle Upgrades installiert
+2017-06-18 09:01:55,935 DEBUG InstCount=0 DelCount=0 BrokenCount=0
+2017-06-18 09:01:55,935 DEBUG Extracting content from '/var/log/unattended-upgrades/unattended-upgrades-dpkg.log' since '2017-06-18 09:00:35'
+2017-06-18 09:01:55,949 DEBUG Sending mail to 'logs@josef-friedrich.de'
+2017-06-18 09:01:58,593 DEBUG mail returned: 0
+2017-06-18 09:01:58,595 WARNING Found /var/run/reboot-required, rebooting
+2017-06-25 09:47:38,291 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-06-25 09:47:38,292 INFO Erst-Pakete der Positivliste:  
+2017-06-25 09:47:38,293 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-06-25 09:47:38,293 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-06-25 09:47:40,404 DEBUG Checking: atom ([<Origin component:'main' archive:'zesty' origin:'LP-PPA-webupd8team-atom' label:'Atom text editor' site:'ppa.launchpad.net' isTrusted:True>])
+2017-06-25 09:47:40,553 DEBUG Checking: grub-common ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-06-25 09:47:41,635 DEBUG Checking: grub-pc ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-06-25 09:47:42,570 DEBUG Checking: grub-pc-bin ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-06-25 09:47:43,491 DEBUG Checking: grub2-common ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-06-25 09:47:44,965 DEBUG Checking: libc-bin ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-25 09:47:46,794 DEBUG Checking: libc-dev-bin ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-25 09:47:49,153 DEBUG Checking: libc6 ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-25 09:47:53,420 DEBUG Checking: libc6-dbg ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-25 09:47:57,561 DEBUG Checking: libc6-dev ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-25 09:48:02,352 DEBUG Checking: libnss3 ([<Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-25 09:48:01,409 DEBUG Checking: linux-generic ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-25 09:48:03,014 DEBUG Checking: linux-headers-generic ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-25 09:48:04,555 DEBUG Checking: linux-image-generic ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-25 09:48:07,430 DEBUG Checking: linux-libc-dev ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-25 09:48:08,966 DEBUG Checking: locales ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-25 09:48:10,516 DEBUG Checking: multiarch-support ([<Origin component:'main' archive:'zesty-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-06-25 09:48:12,495 DEBUG pkgs that look like they should be upgraded: grub-common
+grub-pc
+grub-pc-bin
+grub2-common
+libc-bin
+libc-dev-bin
+libc6
+libc6-dbg
+libc6-dev
+libnss3
+linux-generic
+linux-headers-generic
+linux-image-generic
+linux-libc-dev
+locales
+multiarch-support
+2017-06-25 09:48:49,210 DEBUG fetch.run() result: 0
+2017-06-25 09:48:49,210 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 2276446 DestFile:'/var/cache/apt/archives/libc6-dev_2.24-9ubuntu2.2_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/g/glibc/libc6-dev_2.24-9ubuntu2.2_amd64.deb' ID:1 ErrorText: ''>
+2017-06-25 09:48:49,210 DEBUG check_conffile_prompt('/var/cache/apt/archives/libc6-dev_2.24-9ubuntu2.2_amd64.deb')
+2017-06-25 09:48:49,379 DEBUG found pkg: libc6-dev
+2017-06-25 09:48:49,403 DEBUG No conffiles in deb '/var/cache/apt/archives/libc6-dev_2.24-9ubuntu2.2_amd64.deb' (There is no member named 'conffiles')
+2017-06-25 09:48:49,404 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 68582 DestFile:'/var/cache/apt/archives/libc-dev-bin_2.24-9ubuntu2.2_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/g/glibc/libc-dev-bin_2.24-9ubuntu2.2_amd64.deb' ID:3 ErrorText: ''>
+2017-06-25 09:48:49,404 DEBUG check_conffile_prompt('/var/cache/apt/archives/libc-dev-bin_2.24-9ubuntu2.2_amd64.deb')
+2017-06-25 09:48:49,572 DEBUG found pkg: libc-dev-bin
+2017-06-25 09:48:49,612 DEBUG No conffiles in deb '/var/cache/apt/archives/libc-dev-bin_2.24-9ubuntu2.2_amd64.deb' (There is no member named 'conffiles')
+2017-06-25 09:48:49,612 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 918326 DestFile:'/var/cache/apt/archives/linux-libc-dev_4.10.0-24.28_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/l/linux/linux-libc-dev_4.10.0-24.28_amd64.deb' ID:4 ErrorText: ''>
+2017-06-25 09:48:49,612 DEBUG check_conffile_prompt('/var/cache/apt/archives/linux-libc-dev_4.10.0-24.28_amd64.deb')
+2017-06-25 09:48:49,694 DEBUG found pkg: linux-libc-dev
+2017-06-25 09:48:49,914 DEBUG No conffiles in deb '/var/cache/apt/archives/linux-libc-dev_4.10.0-24.28_amd64.deb' (There is no member named 'conffiles')
+2017-06-25 09:48:49,914 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 4580448 DestFile:'/var/cache/apt/archives/libc6-dbg_2.24-9ubuntu2.2_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/g/glibc/libc6-dbg_2.24-9ubuntu2.2_amd64.deb' ID:5 ErrorText: ''>
+2017-06-25 09:48:49,914 DEBUG check_conffile_prompt('/var/cache/apt/archives/libc6-dbg_2.24-9ubuntu2.2_amd64.deb')
+2017-06-25 09:48:49,944 DEBUG found pkg: libc6-dbg
+2017-06-25 09:48:50,137 DEBUG No conffiles in deb '/var/cache/apt/archives/libc6-dbg_2.24-9ubuntu2.2_amd64.deb' (There is no member named 'conffiles')
+2017-06-25 09:48:50,137 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 2589804 DestFile:'/var/cache/apt/archives/libc6_2.24-9ubuntu2.2_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/g/glibc/libc6_2.24-9ubuntu2.2_amd64.deb' ID:6 ErrorText: ''>
+2017-06-25 09:48:50,138 DEBUG check_conffile_prompt('/var/cache/apt/archives/libc6_2.24-9ubuntu2.2_amd64.deb')
+2017-06-25 09:48:50,222 DEBUG found pkg: libc6
+2017-06-25 09:48:50,224 DEBUG conffile line: '/etc/ld.so.conf.d/x86_64-linux-gnu.conf 593ad12389ab2b6f952e7ede67b8fbbf'
+2017-06-25 09:48:50,225 DEBUG current md5: 593ad12389ab2b6f952e7ede67b8fbbf
+2017-06-25 09:48:50,225 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 3103508 DestFile:'/var/cache/apt/archives/locales_2.24-9ubuntu2.2_all.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/g/glibc/locales_2.24-9ubuntu2.2_all.deb' ID:7 ErrorText: ''>
+2017-06-25 09:48:50,225 DEBUG check_conffile_prompt('/var/cache/apt/archives/locales_2.24-9ubuntu2.2_all.deb')
+2017-06-25 09:48:50,426 DEBUG found pkg: locales
+2017-06-25 09:48:50,427 DEBUG conffile line: '/etc/locale.alias 53e10994fabc5169907e413b792785dd'
+2017-06-25 09:48:50,427 DEBUG current md5: 53e10994fabc5169907e413b792785dd
+2017-06-25 09:48:50,427 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 636052 DestFile:'/var/cache/apt/archives/libc-bin_2.24-9ubuntu2.2_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/g/glibc/libc-bin_2.24-9ubuntu2.2_amd64.deb' ID:8 ErrorText: ''>
+2017-06-25 09:48:50,427 DEBUG check_conffile_prompt('/var/cache/apt/archives/libc-bin_2.24-9ubuntu2.2_amd64.deb')
+2017-06-25 09:48:50,568 DEBUG found pkg: libc-bin
+2017-06-25 09:48:50,568 DEBUG conffile line: '/etc/bindresvport.blacklist 4c09213317e4e3dd3c71d74404e503c5'
+2017-06-25 09:48:50,569 DEBUG current md5: 4c09213317e4e3dd3c71d74404e503c5
+2017-06-25 09:48:50,569 DEBUG conffile line: '/etc/default/nss d6d5d6f621fb3ead2548076ce81e309c'
+2017-06-25 09:48:50,569 DEBUG current md5: d6d5d6f621fb3ead2548076ce81e309c
+2017-06-25 09:48:50,569 DEBUG conffile line: '/etc/gai.conf 28fa76ff5a9e0566eaa1e11f1ce51f09'
+2017-06-25 09:48:50,569 DEBUG current md5: 28fa76ff5a9e0566eaa1e11f1ce51f09
+2017-06-25 09:48:50,569 DEBUG conffile line: '/etc/ld.so.conf 4317c6de8564b68d628c21efa96b37e4'
+2017-06-25 09:48:50,570 DEBUG current md5: 4317c6de8564b68d628c21efa96b37e4
+2017-06-25 09:48:50,570 DEBUG conffile line: '/etc/ld.so.conf.d/libc.conf d4d833fd095fb7b90e1bb4a547f16de6'
+2017-06-25 09:48:50,570 DEBUG current md5: d4d833fd095fb7b90e1bb4a547f16de6
+2017-06-25 09:48:50,570 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 203778 DestFile:'/var/cache/apt/archives/grub-pc_2.02~beta3-4ubuntu2.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/g/grub2/grub-pc_2.02~beta3-4ubuntu2.1_amd64.deb' ID:9 ErrorText: ''>
+2017-06-25 09:48:50,570 DEBUG check_conffile_prompt('/var/cache/apt/archives/grub-pc_2.02~beta3-4ubuntu2.1_amd64.deb')
+2017-06-25 09:48:50,639 DEBUG found pkg: grub-pc
+2017-06-25 09:48:50,643 DEBUG conffile line: '/etc/kernel/postinst.d/zz-update-grub 536d9d45e3e547638db3c5d58a925b6c'
+2017-06-25 09:48:50,644 DEBUG current md5: 536d9d45e3e547638db3c5d58a925b6c
+2017-06-25 09:48:50,644 DEBUG conffile line: '/etc/kernel/postrm.d/zz-update-grub 536d9d45e3e547638db3c5d58a925b6c'
+2017-06-25 09:48:50,644 DEBUG current md5: 536d9d45e3e547638db3c5d58a925b6c
+2017-06-25 09:48:50,644 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 528916 DestFile:'/var/cache/apt/archives/grub2-common_2.02~beta3-4ubuntu2.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/g/grub2/grub2-common_2.02~beta3-4ubuntu2.1_amd64.deb' ID:10 ErrorText: ''>
+2017-06-25 09:48:50,645 DEBUG check_conffile_prompt('/var/cache/apt/archives/grub2-common_2.02~beta3-4ubuntu2.1_amd64.deb')
+2017-06-25 09:48:50,728 DEBUG found pkg: grub2-common
+2017-06-25 09:48:50,864 DEBUG No conffiles in deb '/var/cache/apt/archives/grub2-common_2.02~beta3-4ubuntu2.1_amd64.deb' (There is no member named 'conffiles')
+2017-06-25 09:48:50,865 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 897614 DestFile:'/var/cache/apt/archives/grub-pc-bin_2.02~beta3-4ubuntu2.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/g/grub2/grub-pc-bin_2.02~beta3-4ubuntu2.1_amd64.deb' ID:11 ErrorText: ''>
+2017-06-25 09:48:50,865 DEBUG check_conffile_prompt('/var/cache/apt/archives/grub-pc-bin_2.02~beta3-4ubuntu2.1_amd64.deb')
+2017-06-25 09:48:50,908 DEBUG found pkg: grub-pc-bin
+2017-06-25 09:48:51,085 DEBUG No conffiles in deb '/var/cache/apt/archives/grub-pc-bin_2.02~beta3-4ubuntu2.1_amd64.deb' (There is no member named 'conffiles')
+2017-06-25 09:48:51,085 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 1760080 DestFile:'/var/cache/apt/archives/grub-common_2.02~beta3-4ubuntu2.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/g/grub2/grub-common_2.02~beta3-4ubuntu2.1_amd64.deb' ID:12 ErrorText: ''>
+2017-06-25 09:48:51,085 DEBUG check_conffile_prompt('/var/cache/apt/archives/grub-common_2.02~beta3-4ubuntu2.1_amd64.deb')
+2017-06-25 09:48:51,261 DEBUG found pkg: grub-common
+2017-06-25 09:48:51,261 DEBUG conffile line: '/etc/bash_completion.d/grub b269c1383a87a7da2cc309c929ba35ca'
+2017-06-25 09:48:51,262 DEBUG current md5: b269c1383a87a7da2cc309c929ba35ca
+2017-06-25 09:48:51,262 DEBUG conffile line: '/etc/grub.d/00_header 21c6744e5b825d44c1a450696b92d254'
+2017-06-25 09:48:51,263 DEBUG current md5: 21c6744e5b825d44c1a450696b92d254
+2017-06-25 09:48:51,263 DEBUG conffile line: '/etc/grub.d/05_debian_theme 1b68d93d4dd2dacf7b62a7d0937baa74'
+2017-06-25 09:48:51,263 DEBUG current md5: 1b68d93d4dd2dacf7b62a7d0937baa74
+2017-06-25 09:48:51,263 DEBUG conffile line: '/etc/grub.d/10_linux ce5b42f42f2aa80f6b60d7f6f59da460'
+2017-06-25 09:48:51,264 DEBUG current md5: ce5b42f42f2aa80f6b60d7f6f59da460
+2017-06-25 09:48:51,264 DEBUG conffile line: '/etc/grub.d/20_linux_xen 3349563bb0909f3477d8a19f090ef847'
+2017-06-25 09:48:51,264 DEBUG current md5: 3349563bb0909f3477d8a19f090ef847
+2017-06-25 09:48:51,264 DEBUG conffile line: '/etc/grub.d/30_os-prober 3edebc4e0527e0c6e4d1f2e65c288d42'
+2017-06-25 09:48:51,265 DEBUG current md5: 3edebc4e0527e0c6e4d1f2e65c288d42
+2017-06-25 09:48:51,265 DEBUG conffile line: '/etc/grub.d/30_uefi-firmware f86dfa1725733e0f96436c0c7358004a'
+2017-06-25 09:48:51,265 DEBUG current md5: f86dfa1725733e0f96436c0c7358004a
+2017-06-25 09:48:51,265 DEBUG conffile line: '/etc/grub.d/40_custom babe7de352fe18de5a238569cf4b8a11'
+2017-06-25 09:48:51,266 DEBUG current md5: babe7de352fe18de5a238569cf4b8a11
+2017-06-25 09:48:51,266 DEBUG conffile line: '/etc/grub.d/41_custom 7bb4eb43ee7cb6d6f52df3dd2bde84e9'
+2017-06-25 09:48:51,266 DEBUG current md5: 7bb4eb43ee7cb6d6f52df3dd2bde84e9
+2017-06-25 09:48:51,266 DEBUG conffile line: '/etc/grub.d/README be58f42dfe74feb6eeb98c6a843c743f'
+2017-06-25 09:48:51,266 DEBUG current md5: be58f42dfe74feb6eeb98c6a843c743f
+2017-06-25 09:48:51,266 DEBUG conffile line: '/etc/init.d/grub-common 561b38cf0171ef9aa41954dad9ec6b3c'
+2017-06-25 09:48:51,267 DEBUG current md5: 561b38cf0171ef9aa41954dad9ec6b3c
+2017-06-25 09:48:51,267 DEBUG conffile line: '/etc/pm/sleep.d/10_grub-common bc63b0c6613e95979446d17a88875d6a'
+2017-06-25 09:48:51,268 DEBUG current md5: bc63b0c6613e95979446d17a88875d6a
+2017-06-25 09:48:51,268 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 6832 DestFile:'/var/cache/apt/archives/multiarch-support_2.24-9ubuntu2.2_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/g/glibc/multiarch-support_2.24-9ubuntu2.2_amd64.deb' ID:13 ErrorText: ''>
+2017-06-25 09:48:51,268 DEBUG check_conffile_prompt('/var/cache/apt/archives/multiarch-support_2.24-9ubuntu2.2_amd64.deb')
+2017-06-25 09:48:51,331 DEBUG found pkg: multiarch-support
+2017-06-25 09:48:51,479 DEBUG No conffiles in deb '/var/cache/apt/archives/multiarch-support_2.24-9ubuntu2.2_amd64.deb' (There is no member named 'conffiles')
+2017-06-25 09:48:51,479 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 1143142 DestFile:'/var/cache/apt/archives/libnss3_2%3a3.28.4-0ubuntu0.17.04.2_amd64.deb' DescURI: 'http://security.ubuntu.com/ubuntu/pool/main/n/nss/libnss3_3.28.4-0ubuntu0.17.04.2_amd64.deb' ID:2 ErrorText: ''>
+2017-06-25 09:48:51,480 DEBUG check_conffile_prompt('/var/cache/apt/archives/libnss3_2%3a3.28.4-0ubuntu0.17.04.2_amd64.deb')
+2017-06-25 09:48:51,562 DEBUG found pkg: libnss3
+2017-06-25 09:48:51,679 DEBUG No conffiles in deb '/var/cache/apt/archives/libnss3_2%3a3.28.4-0ubuntu0.17.04.2_amd64.deb' (There is no member named 'conffiles')
+2017-06-25 09:48:51,679 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 20246510 DestFile:'/var/cache/apt/archives/linux-image-4.10.0-24-generic_4.10.0-24.28_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/l/linux/linux-image-4.10.0-24-generic_4.10.0-24.28_amd64.deb' ID:14 ErrorText: ''>
+2017-06-25 09:48:51,681 DEBUG check_conffile_prompt('/var/cache/apt/archives/linux-image-4.10.0-24-generic_4.10.0-24.28_amd64.deb')
+2017-06-25 09:48:51,869 DEBUG No conffiles in deb '/var/cache/apt/archives/linux-image-4.10.0-24-generic_4.10.0-24.28_amd64.deb' (There is no member named 'conffiles')
+2017-06-25 09:48:51,869 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 30138962 DestFile:'/var/cache/apt/archives/linux-image-extra-4.10.0-24-generic_4.10.0-24.28_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/l/linux/linux-image-extra-4.10.0-24-generic_4.10.0-24.28_amd64.deb' ID:15 ErrorText: ''>
+2017-06-25 09:48:51,869 DEBUG check_conffile_prompt('/var/cache/apt/archives/linux-image-extra-4.10.0-24-generic_4.10.0-24.28_amd64.deb')
+2017-06-25 09:48:52,061 DEBUG No conffiles in deb '/var/cache/apt/archives/linux-image-extra-4.10.0-24-generic_4.10.0-24.28_amd64.deb' (There is no member named 'conffiles')
+2017-06-25 09:48:52,061 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 1788 DestFile:'/var/cache/apt/archives/linux-generic_4.10.0.24.26_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/l/linux-meta/linux-generic_4.10.0.24.26_amd64.deb' ID:16 ErrorText: ''>
+2017-06-25 09:48:52,061 DEBUG check_conffile_prompt('/var/cache/apt/archives/linux-generic_4.10.0.24.26_amd64.deb')
+2017-06-25 09:48:52,191 DEBUG found pkg: linux-generic
+2017-06-25 09:48:52,246 DEBUG No conffiles in deb '/var/cache/apt/archives/linux-generic_4.10.0.24.26_amd64.deb' (There is no member named 'conffiles')
+2017-06-25 09:48:52,246 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 2312 DestFile:'/var/cache/apt/archives/linux-image-generic_4.10.0.24.26_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/l/linux-meta/linux-image-generic_4.10.0.24.26_amd64.deb' ID:17 ErrorText: ''>
+2017-06-25 09:48:52,246 DEBUG check_conffile_prompt('/var/cache/apt/archives/linux-image-generic_4.10.0.24.26_amd64.deb')
+2017-06-25 09:48:52,411 DEBUG found pkg: linux-image-generic
+2017-06-25 09:48:52,430 DEBUG No conffiles in deb '/var/cache/apt/archives/linux-image-generic_4.10.0.24.26_amd64.deb' (There is no member named 'conffiles')
+2017-06-25 09:48:52,430 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 10590664 DestFile:'/var/cache/apt/archives/linux-headers-4.10.0-24_4.10.0-24.28_all.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/l/linux/linux-headers-4.10.0-24_4.10.0-24.28_all.deb' ID:18 ErrorText: ''>
+2017-06-25 09:48:52,430 DEBUG check_conffile_prompt('/var/cache/apt/archives/linux-headers-4.10.0-24_4.10.0-24.28_all.deb')
+2017-06-25 09:48:52,647 DEBUG No conffiles in deb '/var/cache/apt/archives/linux-headers-4.10.0-24_4.10.0-24.28_all.deb' (There is no member named 'conffiles')
+2017-06-25 09:48:52,647 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 691910 DestFile:'/var/cache/apt/archives/linux-headers-4.10.0-24-generic_4.10.0-24.28_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/l/linux/linux-headers-4.10.0-24-generic_4.10.0-24.28_amd64.deb' ID:19 ErrorText: ''>
+2017-06-25 09:48:52,648 DEBUG check_conffile_prompt('/var/cache/apt/archives/linux-headers-4.10.0-24-generic_4.10.0-24.28_amd64.deb')
+2017-06-25 09:48:52,860 DEBUG No conffiles in deb '/var/cache/apt/archives/linux-headers-4.10.0-24-generic_4.10.0-24.28_amd64.deb' (There is no member named 'conffiles')
+2017-06-25 09:48:52,860 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 2282 DestFile:'/var/cache/apt/archives/linux-headers-generic_4.10.0.24.26_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/l/linux-meta/linux-headers-generic_4.10.0.24.26_amd64.deb' ID:20 ErrorText: ''>
+2017-06-25 09:48:52,861 DEBUG check_conffile_prompt('/var/cache/apt/archives/linux-headers-generic_4.10.0.24.26_amd64.deb')
+2017-06-25 09:48:53,043 DEBUG found pkg: linux-headers-generic
+2017-06-25 09:48:53,045 DEBUG No conffiles in deb '/var/cache/apt/archives/linux-headers-generic_4.10.0.24.26_amd64.deb' (There is no member named 'conffiles')
+2017-06-25 09:48:53,045 DEBUG blacklist: []
+2017-06-25 09:48:53,045 DEBUG whitelist: []
+2017-06-25 09:48:53,899 INFO Pakete, von denen ein Upgrade durchgeführt wird: grub-common grub-pc grub-pc-bin grub2-common libc-bin libc-dev-bin libc6 libc6-dbg libc6-dev libnss3 linux-generic linux-headers-generic linux-image-generic linux-libc-dev locales multiarch-support
+2017-06-25 09:48:53,900 INFO Dpkg-Protokoll wird nach »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« geschrieben
+2017-06-25 09:50:35,989 INFO alle Upgrades installiert
+2017-06-25 09:50:40,619 DEBUG InstCount=0 DelCount=0 BrokenCount=0
+2017-06-25 09:50:40,619 DEBUG Extracting content from '/var/log/unattended-upgrades/unattended-upgrades-dpkg.log' since '2017-06-25 09:47:38'
+2017-06-25 09:50:40,635 DEBUG Sending mail to 'logs@josef-friedrich.de'
+2017-06-25 09:50:42,649 DEBUG mail returned: 0
+2017-06-25 09:50:42,702 WARNING Found /var/run/reboot-required, rebooting
+2017-06-28 15:00:21,444 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-06-28 15:00:21,450 INFO Erst-Pakete der Positivliste:  
+2017-06-28 15:00:21,450 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-06-28 15:00:21,450 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-06-28 15:00:25,215 DEBUG pkgs that look like they should be upgraded: 
+2017-06-28 15:00:25,282 DEBUG fetch.run() result: 0
+2017-06-28 15:00:25,283 DEBUG blacklist: []
+2017-06-28 15:00:25,283 DEBUG whitelist: []
+2017-06-28 15:00:26,254 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-07-01 13:33:19,144 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-07-01 13:33:19,145 INFO Erst-Pakete der Positivliste:  
+2017-07-01 13:33:19,146 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-07-01 13:33:19,146 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=zesty-security', 'o=Ubuntu,a=zesty-updates', 'o=Ubuntu,a=zesty-proposed', 'o=Ubuntu,a=zesty-backports', 'o=Docker,a=ubuntu-zesty']
+2017-07-01 13:33:21,356 DEBUG Checking: linux-generic ([<Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-07-01 13:33:22,283 DEBUG Checking: linux-headers-generic ([<Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-07-01 13:33:23,265 DEBUG Checking: linux-image-generic ([<Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-07-01 13:33:24,226 DEBUG Checking: linux-libc-dev ([<Origin component:'main' archive:'zesty-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-07-01 13:33:25,509 DEBUG pkgs that look like they should be upgraded: linux-generic
+linux-headers-generic
+linux-image-generic
+linux-libc-dev
+2017-07-01 13:33:25,593 DEBUG fetch.run() result: 0
+2017-07-01 13:33:25,594 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 20249394 DestFile:'/var/cache/apt/archives/linux-image-4.10.0-26-generic_4.10.0-26.30_amd64.deb' DescURI: 'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux-image-4.10.0-26-generic_4.10.0-26.30_amd64.deb' ID:0 ErrorText: ''>
+2017-07-01 13:33:25,594 DEBUG check_conffile_prompt('/var/cache/apt/archives/linux-image-4.10.0-26-generic_4.10.0-26.30_amd64.deb')
+2017-07-01 13:33:25,819 DEBUG No conffiles in deb '/var/cache/apt/archives/linux-image-4.10.0-26-generic_4.10.0-26.30_amd64.deb' (There is no member named 'conffiles')
+2017-07-01 13:33:25,819 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 29998488 DestFile:'/var/cache/apt/archives/linux-image-extra-4.10.0-26-generic_4.10.0-26.30_amd64.deb' DescURI: 'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux-image-extra-4.10.0-26-generic_4.10.0-26.30_amd64.deb' ID:0 ErrorText: ''>
+2017-07-01 13:33:25,819 DEBUG check_conffile_prompt('/var/cache/apt/archives/linux-image-extra-4.10.0-26-generic_4.10.0-26.30_amd64.deb')
+2017-07-01 13:33:26,014 DEBUG No conffiles in deb '/var/cache/apt/archives/linux-image-extra-4.10.0-26-generic_4.10.0-26.30_amd64.deb' (There is no member named 'conffiles')
+2017-07-01 13:33:26,014 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 1784 DestFile:'/var/cache/apt/archives/linux-generic_4.10.0.26.28_amd64.deb' DescURI: 'http://security.ubuntu.com/ubuntu/pool/main/l/linux-meta/linux-generic_4.10.0.26.28_amd64.deb' ID:0 ErrorText: ''>
+2017-07-01 13:33:26,014 DEBUG check_conffile_prompt('/var/cache/apt/archives/linux-generic_4.10.0.26.28_amd64.deb')
+2017-07-01 13:33:26,156 DEBUG found pkg: linux-generic
+2017-07-01 13:33:26,211 DEBUG No conffiles in deb '/var/cache/apt/archives/linux-generic_4.10.0.26.28_amd64.deb' (There is no member named 'conffiles')
+2017-07-01 13:33:26,211 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 2318 DestFile:'/var/cache/apt/archives/linux-image-generic_4.10.0.26.28_amd64.deb' DescURI: 'http://security.ubuntu.com/ubuntu/pool/main/l/linux-meta/linux-image-generic_4.10.0.26.28_amd64.deb' ID:0 ErrorText: ''>
+2017-07-01 13:33:26,212 DEBUG check_conffile_prompt('/var/cache/apt/archives/linux-image-generic_4.10.0.26.28_amd64.deb')
+2017-07-01 13:33:26,391 DEBUG found pkg: linux-image-generic
+2017-07-01 13:33:26,411 DEBUG No conffiles in deb '/var/cache/apt/archives/linux-image-generic_4.10.0.26.28_amd64.deb' (There is no member named 'conffiles')
+2017-07-01 13:33:26,411 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 10591530 DestFile:'/var/cache/apt/archives/linux-headers-4.10.0-26_4.10.0-26.30_all.deb' DescURI: 'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux-headers-4.10.0-26_4.10.0-26.30_all.deb' ID:0 ErrorText: ''>
+2017-07-01 13:33:26,411 DEBUG check_conffile_prompt('/var/cache/apt/archives/linux-headers-4.10.0-26_4.10.0-26.30_all.deb')
+2017-07-01 13:33:26,634 DEBUG No conffiles in deb '/var/cache/apt/archives/linux-headers-4.10.0-26_4.10.0-26.30_all.deb' (There is no member named 'conffiles')
+2017-07-01 13:33:26,634 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 689460 DestFile:'/var/cache/apt/archives/linux-headers-4.10.0-26-generic_4.10.0-26.30_amd64.deb' DescURI: 'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux-headers-4.10.0-26-generic_4.10.0-26.30_amd64.deb' ID:0 ErrorText: ''>
+2017-07-01 13:33:26,634 DEBUG check_conffile_prompt('/var/cache/apt/archives/linux-headers-4.10.0-26-generic_4.10.0-26.30_amd64.deb')
+2017-07-01 13:33:26,954 DEBUG No conffiles in deb '/var/cache/apt/archives/linux-headers-4.10.0-26-generic_4.10.0-26.30_amd64.deb' (There is no member named 'conffiles')
+2017-07-01 13:33:26,954 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 2294 DestFile:'/var/cache/apt/archives/linux-headers-generic_4.10.0.26.28_amd64.deb' DescURI: 'http://security.ubuntu.com/ubuntu/pool/main/l/linux-meta/linux-headers-generic_4.10.0.26.28_amd64.deb' ID:0 ErrorText: ''>
+2017-07-01 13:33:26,955 DEBUG check_conffile_prompt('/var/cache/apt/archives/linux-headers-generic_4.10.0.26.28_amd64.deb')
+2017-07-01 13:33:27,264 DEBUG found pkg: linux-headers-generic
+2017-07-01 13:33:27,267 DEBUG No conffiles in deb '/var/cache/apt/archives/linux-headers-generic_4.10.0.26.28_amd64.deb' (There is no member named 'conffiles')
+2017-07-01 13:33:27,267 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 915744 DestFile:'/var/cache/apt/archives/linux-libc-dev_4.10.0-26.30_amd64.deb' DescURI: 'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux-libc-dev_4.10.0-26.30_amd64.deb' ID:0 ErrorText: ''>
+2017-07-01 13:33:27,267 DEBUG check_conffile_prompt('/var/cache/apt/archives/linux-libc-dev_4.10.0-26.30_amd64.deb')
+2017-07-01 13:33:27,370 DEBUG found pkg: linux-libc-dev
+2017-07-01 13:33:27,602 DEBUG No conffiles in deb '/var/cache/apt/archives/linux-libc-dev_4.10.0-26.30_amd64.deb' (There is no member named 'conffiles')
+2017-07-01 13:33:27,603 DEBUG blacklist: []
+2017-07-01 13:33:27,603 DEBUG whitelist: []
+2017-07-01 13:33:29,006 INFO Pakete, von denen ein Upgrade durchgeführt wird: linux-generic linux-headers-generic linux-image-generic linux-libc-dev
+2017-07-01 13:33:29,007 INFO Dpkg-Protokoll wird nach »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« geschrieben
+2017-07-01 13:33:38,655 ERROR Exception happened during upgrade.
+Traceback (most recent call last):
+  File "/usr/bin/unattended-upgrade", line 412, in cache_commit
+    res = cache.commit(install_progress=iprogress)
+  File "/usr/lib/python3/dist-packages/apt/cache.py", line 529, in commit
+    raise SystemError("installArchives() failed")
+SystemError: installArchives() failed
+2017-07-01 13:33:38,659 ERROR Installation der Upgrades fehlgeschlagen!
+2017-07-01 13:33:38,660 ERROR Fehlermeldung: »installArchives() failed«
+2017-07-01 13:33:38,661 ERROR Dpkg gab einen Fehler zurück. Siehe »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« für Einzelheiten
+2017-07-01 13:33:44,197 DEBUG InstCount=0 DelCount=0 BrokenCount=0
+2017-07-01 13:33:44,197 DEBUG Extracting content from '/var/log/unattended-upgrades/unattended-upgrades-dpkg.log' since '2017-07-01 13:33:19'
+2017-07-01 13:33:44,205 DEBUG Sending mail to 'logs@josef-friedrich.de'
+2017-07-01 13:33:46,085 DEBUG mail returned: 0

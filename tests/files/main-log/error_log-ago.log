@@ -1,0 +1,560 @@
+2017-04-02 09:26:09,245 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-04-02 09:26:09,246 INFO Erst-Pakete der Positivliste:  
+2017-04-02 09:26:09,246 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-04-02 09:26:09,246 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-04-02 09:26:14,379 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-04-03 19:26:23,511 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-04-03 19:26:23,512 INFO Erst-Pakete der Positivliste:  
+2017-04-03 19:26:23,512 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-04-03 19:26:23,512 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-04-03 19:26:28,504 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-04-04 06:38:32,153 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-04-04 06:38:32,153 INFO Erst-Pakete der Positivliste:  
+2017-04-04 06:38:32,154 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-04-04 06:38:32,154 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-04-04 06:38:37,064 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-04-05 08:33:10,737 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-04-05 08:33:10,738 INFO Erst-Pakete der Positivliste:  
+2017-04-05 08:33:10,739 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-04-05 08:33:10,739 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-04-05 08:33:16,219 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-04-06 16:39:02,175 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-04-06 16:39:02,177 INFO Erst-Pakete der Positivliste:  
+2017-04-06 16:39:02,177 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-04-06 16:39:02,178 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-04-06 16:39:02,180 ERROR Sperrung konnte nicht erreicht werden (läuft eine weitere Paketverwaltung?)
+2017-04-07 16:39:12,925 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-04-07 16:39:12,926 INFO Erst-Pakete der Positivliste:  
+2017-04-07 16:39:12,926 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-04-07 16:39:12,926 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-04-07 16:39:16,212 INFO Pakete, von denen ein Upgrade durchgeführt wird: 
+2017-04-07 16:39:18,593 INFO Pakete, die automatisch entfernt wurden: »linux-headers-4.8.0-41 linux-headers-4.8.0-41-generic linux-image-4.8.0-41-generic linux-image-extra-4.8.0-41-generic«
+2017-04-07 16:39:41,516 INFO Pakete wurden erfolgreich automatisch entfernt
+2017-04-08 12:30:07,631 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-04-08 12:30:07,632 INFO Erst-Pakete der Positivliste:  
+2017-04-08 12:30:07,632 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-04-08 12:30:07,632 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-04-08 12:30:12,945 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-04-10 20:00:49,693 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-04-10 20:00:49,694 INFO Erst-Pakete der Positivliste:  
+2017-04-10 20:00:49,694 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-04-10 20:00:49,694 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-04-10 20:00:54,943 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-04-12 00:37:37,974 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-04-12 00:37:37,975 INFO Erst-Pakete der Positivliste:  
+2017-04-12 00:37:37,975 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-04-12 00:37:37,976 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-04-12 00:37:41,314 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-04-13 18:20:11,120 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-04-13 18:20:11,121 INFO Erst-Pakete der Positivliste:  
+2017-04-13 18:20:11,121 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-04-13 18:20:11,121 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-04-13 18:20:27,644 INFO Pakete, von denen ein Upgrade durchgeführt wird: bind9-host dnsmasq-base dnsutils libbind9-140 libdns-export162 libdns162 libisc-export160 libisc160 libisccc140 libisccfg140 liblwres141
+2017-04-13 18:20:27,645 INFO Dpkg-Protokoll wird nach »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« geschrieben
+2017-04-13 18:20:33,976 INFO alle Upgrades installiert
+2017-04-16 00:36:12,585 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-04-16 00:36:12,586 INFO Erst-Pakete der Positivliste:  
+2017-04-16 00:36:12,586 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-04-16 00:36:12,586 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-04-16 00:36:46,783 INFO Pakete, von denen ein Upgrade durchgeführt wird: evolution evolution-common evolution-data-server evolution-data-server-common evolution-data-server-online-accounts evolution-plugins libcamel-1.2-59 libebackend-1.2-10 libebook-1.2-16 libebook-contacts-1.2-2 libecal-1.2-19 libedata-book-1.2-25 libedata-cal-1.2-28 libedataserver-1.2-22 libedataserverui-1.2-1 libevolution
+2017-04-16 00:36:46,784 INFO Dpkg-Protokoll wird nach »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« geschrieben
+2017-04-16 00:36:58,658 INFO alle Upgrades installiert
+2017-04-17 22:20:55,046 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-04-17 22:20:55,046 INFO Erst-Pakete der Positivliste:  
+2017-04-17 22:20:55,046 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-04-17 22:20:55,046 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-04-17 22:20:58,104 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-04-18 00:18:12,463 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-04-18 00:18:12,465 INFO Erst-Pakete der Positivliste:  
+2017-04-18 00:18:12,466 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-04-18 00:18:12,466 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-04-18 00:18:23,398 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-04-19 15:51:18,517 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-04-19 15:51:18,517 INFO Erst-Pakete der Positivliste:  
+2017-04-19 15:51:18,518 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-04-19 15:51:18,518 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-04-19 15:51:32,466 INFO Pakete, von denen ein Upgrade durchgeführt wird: gdb gdbserver
+2017-04-19 15:51:32,468 INFO Dpkg-Protokoll wird nach »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« geschrieben
+2017-04-19 15:51:40,426 INFO alle Upgrades installiert
+2017-04-20 09:17:40,943 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-04-20 09:17:40,943 INFO Erst-Pakete der Positivliste:  
+2017-04-20 09:17:40,943 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-04-20 09:17:40,944 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-04-20 09:17:46,757 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-04-21 09:25:15,685 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-04-21 09:25:15,685 INFO Erst-Pakete der Positivliste:  
+2017-04-21 09:25:15,686 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-04-21 09:25:15,686 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-04-21 09:25:20,867 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-04-22 09:00:56,692 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-04-22 09:00:56,692 INFO Erst-Pakete der Positivliste:  
+2017-04-22 09:00:56,693 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-04-22 09:00:56,693 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-04-22 09:01:02,676 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-04-23 19:22:55,546 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-04-23 19:22:55,547 INFO Erst-Pakete der Positivliste:  
+2017-04-23 19:22:55,547 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-04-23 19:22:55,547 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-04-23 19:22:59,988 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-04-26 08:55:14,766 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-04-26 08:55:14,766 INFO Erst-Pakete der Positivliste:  
+2017-04-26 08:55:14,767 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-04-26 08:55:14,767 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-04-26 08:55:45,414 INFO Pakete, von denen ein Upgrade durchgeführt wird: linux-generic linux-headers-generic linux-image-generic
+2017-04-26 08:55:45,415 INFO Dpkg-Protokoll wird nach »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« geschrieben
+2017-04-26 08:56:54,898 INFO alle Upgrades installiert
+2017-04-28 18:10:53,387 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-04-28 18:10:53,388 INFO Erst-Pakete der Positivliste:  
+2017-04-28 18:10:53,389 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-04-28 18:10:53,389 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-04-28 18:10:55,119 DEBUG Checking: chromium-browser ([<Origin component:'universe' archive:'yakkety-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'yakkety-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-04-28 18:10:56,208 DEBUG Checking: chromium-browser-l10n ([<Origin component:'universe' archive:'yakkety-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'yakkety-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'yakkety-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'yakkety-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-04-28 18:10:57,122 DEBUG Checking: chromium-codecs-ffmpeg-extra ([<Origin component:'universe' archive:'yakkety-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'universe' archive:'yakkety-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-04-28 18:10:58,117 DEBUG Checking: dpkg ([<Origin component:'main' archive:'yakkety-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-04-28 18:10:59,294 DEBUG Checking: dpkg-dev ([<Origin component:'main' archive:'yakkety-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'yakkety-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-04-28 18:11:00,779 DEBUG Checking: ghostscript ([<Origin component:'main' archive:'yakkety-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-04-28 18:11:02,766 DEBUG Checking: ghostscript-x ([<Origin component:'main' archive:'yakkety-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-04-28 18:11:04,307 DEBUG Checking: gir1.2-networkmanager-1.0 ([<Origin component:'main' archive:'yakkety-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-04-28 18:11:05,896 DEBUG Checking: libdpkg-perl ([<Origin component:'main' archive:'yakkety-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'yakkety-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-04-28 18:11:07,710 DEBUG Checking: libgs9 ([<Origin component:'main' archive:'yakkety-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-04-28 18:11:09,571 DEBUG Checking: libgs9-common ([<Origin component:'main' archive:'yakkety-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'yakkety-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-04-28 18:11:11,041 DEBUG Checking: libmysqlclient20 ([<Origin component:'main' archive:'yakkety-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'yakkety-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-04-28 18:11:12,923 DEBUG Checking: libnm-glib-vpn1 ([<Origin component:'main' archive:'yakkety-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-04-28 18:11:14,283 DEBUG Checking: libnm-glib4 ([<Origin component:'main' archive:'yakkety-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-04-28 18:11:15,626 DEBUG Checking: libnm-util2 ([<Origin component:'main' archive:'yakkety-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-04-28 18:11:17,798 DEBUG Checking: libnm0 ([<Origin component:'main' archive:'yakkety-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-04-28 18:11:19,262 DEBUG Checking: libnspr4 ([<Origin component:'main' archive:'yakkety-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'yakkety-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-04-28 18:11:20,549 DEBUG Checking: libnss3 ([<Origin component:'main' archive:'yakkety-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'yakkety-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-04-28 18:11:21,948 DEBUG Checking: libsane ([<Origin component:'main' archive:'yakkety-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-04-28 18:11:23,259 DEBUG Checking: libsane-common ([<Origin component:'main' archive:'yakkety-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'yakkety-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-04-28 18:11:24,680 DEBUG Checking: libxslt1.1 ([<Origin component:'main' archive:'yakkety-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'yakkety-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-04-28 18:11:26,087 DEBUG Checking: mysql-client-5.7 ([<Origin component:'main' archive:'yakkety-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'yakkety-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-04-28 18:11:27,413 DEBUG Checking: mysql-client-core-5.7 ([<Origin component:'main' archive:'yakkety-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'yakkety-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-04-28 18:11:28,762 DEBUG Checking: mysql-common ([<Origin component:'main' archive:'yakkety-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'yakkety-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'yakkety-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'yakkety-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-04-28 18:11:30,120 DEBUG Checking: mysql-server ([<Origin component:'main' archive:'yakkety-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'yakkety-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'yakkety-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'yakkety-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-04-28 18:11:31,490 DEBUG Checking: mysql-server-5.7 ([<Origin component:'main' archive:'yakkety-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'yakkety-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-04-28 18:11:32,827 DEBUG Checking: mysql-server-core-5.7 ([<Origin component:'main' archive:'yakkety-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'yakkety-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-04-28 18:11:34,221 DEBUG Checking: network-manager ([<Origin component:'main' archive:'yakkety-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-04-28 18:11:36,266 DEBUG Checking: sane-utils ([<Origin component:'main' archive:'yakkety-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2017-04-28 18:11:37,604 DEBUG Checking: xsltproc ([<Origin component:'main' archive:'yakkety-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'yakkety-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2017-04-28 18:11:38,945 DEBUG pkgs that look like they should be upgraded: chromium-browser
+chromium-browser-l10n
+chromium-codecs-ffmpeg-extra
+dpkg
+dpkg-dev
+ghostscript
+ghostscript-x
+gir1.2-networkmanager-1.0
+libdpkg-perl
+libgs9
+libgs9-common
+libmysqlclient20
+libnm-glib-vpn1
+libnm-glib4
+libnm-util2
+libnm0
+libnspr4
+libnss3
+libsane
+libsane-common
+libxslt1.1
+mysql-client-5.7
+mysql-client-core-5.7
+mysql-common
+mysql-server
+mysql-server-5.7
+mysql-server-core-5.7
+network-manager
+sane-utils
+xsltproc
+2017-04-28 18:11:39,076 DEBUG fetch.run() result: 0
+2017-04-28 18:11:39,076 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 2138780 DestFile:'/var/cache/apt/archives/dpkg_1.18.10ubuntu1.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg_1.18.10ubuntu1.1_amd64.deb' ID:0 ErrorText: ''>
+2017-04-28 18:11:39,076 DEBUG check_conffile_prompt('/var/cache/apt/archives/dpkg_1.18.10ubuntu1.1_amd64.deb')
+2017-04-28 18:11:39,246 DEBUG found pkg: dpkg
+2017-04-28 18:11:39,247 DEBUG conffile line: '/etc/alternatives/README 69c4ba7f08363e998e0f2e244a04f881'
+2017-04-28 18:11:39,247 DEBUG current md5: 69c4ba7f08363e998e0f2e244a04f881
+2017-04-28 18:11:39,247 DEBUG conffile line: '/etc/cron.daily/dpkg b8065b6bfc248caba501c3f5bb508e66'
+2017-04-28 18:11:39,248 DEBUG current md5: b8065b6bfc248caba501c3f5bb508e66
+2017-04-28 18:11:39,248 DEBUG conffile line: '/etc/dpkg/dpkg.cfg f4413ffb515f8f753624ae3bb365b81b'
+2017-04-28 18:11:39,248 DEBUG current md5: f4413ffb515f8f753624ae3bb365b81b
+2017-04-28 18:11:39,248 DEBUG conffile line: '/etc/logrotate.d/dpkg 782ea5ae536f67ff51dc8c3e2eeb4cf9'
+2017-04-28 18:11:39,248 DEBUG current md5: 782ea5ae536f67ff51dc8c3e2eeb4cf9
+2017-04-28 18:11:39,248 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 3251600 DestFile:'/var/cache/apt/archives/chromium-browser-l10n_58.0.3029.81-0ubuntu0.16.10.1345_all.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/universe/c/chromium-browser/chromium-browser-l10n_58.0.3029.81-0ubuntu0.16.10.1345_all.deb' ID:0 ErrorText: ''>
+2017-04-28 18:11:39,248 DEBUG check_conffile_prompt('/var/cache/apt/archives/chromium-browser-l10n_58.0.3029.81-0ubuntu0.16.10.1345_all.deb')
+2017-04-28 18:11:39,357 DEBUG found pkg: chromium-browser-l10n
+2017-04-28 18:11:39,477 DEBUG No conffiles in deb '/var/cache/apt/archives/chromium-browser-l10n_58.0.3029.81-0ubuntu0.16.10.1345_all.deb' (There is no member named 'conffiles')
+2017-04-28 18:11:39,477 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 111590 DestFile:'/var/cache/apt/archives/libnspr4_2%3a4.13.1-0ubuntu0.16.10.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/n/nspr/libnspr4_4.13.1-0ubuntu0.16.10.1_amd64.deb' ID:0 ErrorText: ''>
+2017-04-28 18:11:39,478 DEBUG check_conffile_prompt('/var/cache/apt/archives/libnspr4_2%3a4.13.1-0ubuntu0.16.10.1_amd64.deb')
+2017-04-28 18:11:39,590 DEBUG found pkg: libnspr4
+2017-04-28 18:11:39,705 DEBUG No conffiles in deb '/var/cache/apt/archives/libnspr4_2%3a4.13.1-0ubuntu0.16.10.1_amd64.deb' (There is no member named 'conffiles')
+2017-04-28 18:11:39,705 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 1142388 DestFile:'/var/cache/apt/archives/libnss3_2%3a3.28.4-0ubuntu0.16.10.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/n/nss/libnss3_3.28.4-0ubuntu0.16.10.1_amd64.deb' ID:0 ErrorText: ''>
+2017-04-28 18:11:39,705 DEBUG check_conffile_prompt('/var/cache/apt/archives/libnss3_2%3a3.28.4-0ubuntu0.16.10.1_amd64.deb')
+2017-04-28 18:11:39,797 DEBUG found pkg: libnss3
+2017-04-28 18:11:39,934 DEBUG No conffiles in deb '/var/cache/apt/archives/libnss3_2%3a3.28.4-0ubuntu0.16.10.1_amd64.deb' (There is no member named 'conffiles')
+2017-04-28 18:11:39,934 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 64175926 DestFile:'/var/cache/apt/archives/chromium-browser_58.0.3029.81-0ubuntu0.16.10.1345_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/universe/c/chromium-browser/chromium-browser_58.0.3029.81-0ubuntu0.16.10.1345_amd64.deb' ID:0 ErrorText: ''>
+2017-04-28 18:11:39,934 DEBUG check_conffile_prompt('/var/cache/apt/archives/chromium-browser_58.0.3029.81-0ubuntu0.16.10.1345_amd64.deb')
+2017-04-28 18:11:39,945 DEBUG found pkg: chromium-browser
+2017-04-28 18:11:39,946 DEBUG conffile line: '/etc/chromium-browser/customizations/00-example 11fcfa625808d0dd36942ebe79f68c53'
+2017-04-28 18:11:39,946 DEBUG current md5: 11fcfa625808d0dd36942ebe79f68c53
+2017-04-28 18:11:39,947 DEBUG conffile line: '/etc/chromium-browser/default 00f6b60b3a6a0b3ec9816ac3bae285eb'
+2017-04-28 18:11:39,947 DEBUG current md5: 00f6b60b3a6a0b3ec9816ac3bae285eb
+2017-04-28 18:11:39,947 DEBUG conffile line: '/etc/default/chromium-browser 00f6b60b3a6a0b3ec9816ac3bae285eb'
+2017-04-28 18:11:39,947 DEBUG current md5: 
+2017-04-28 18:11:49,790 DEBUG pkg_md5sum: 00f6b60b3a6a0b3ec9816ac3bae285eb
+2017-04-28 18:11:49,791 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 999144 DestFile:'/var/cache/apt/archives/chromium-codecs-ffmpeg-extra_58.0.3029.81-0ubuntu0.16.10.1345_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/universe/c/chromium-browser/chromium-codecs-ffmpeg-extra_58.0.3029.81-0ubuntu0.16.10.1345_amd64.deb' ID:0 ErrorText: ''>
+2017-04-28 18:11:49,791 DEBUG check_conffile_prompt('/var/cache/apt/archives/chromium-codecs-ffmpeg-extra_58.0.3029.81-0ubuntu0.16.10.1345_amd64.deb')
+2017-04-28 18:11:49,946 DEBUG found pkg: chromium-codecs-ffmpeg-extra
+2017-04-28 18:11:50,024 DEBUG No conffiles in deb '/var/cache/apt/archives/chromium-codecs-ffmpeg-extra_58.0.3029.81-0ubuntu0.16.10.1345_amd64.deb' (There is no member named 'conffiles')
+2017-04-28 18:11:50,024 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 2006172 DestFile:'/var/cache/apt/archives/libsane_1.0.25+git20150528-1ubuntu2.16.10.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/s/sane-backends/libsane_1.0.25+git20150528-1ubuntu2.16.10.1_amd64.deb' ID:0 ErrorText: ''>
+2017-04-28 18:11:50,024 DEBUG check_conffile_prompt('/var/cache/apt/archives/libsane_1.0.25+git20150528-1ubuntu2.16.10.1_amd64.deb')
+2017-04-28 18:11:50,093 DEBUG found pkg: libsane
+2017-04-28 18:11:50,259 DEBUG No conffiles in deb '/var/cache/apt/archives/libsane_1.0.25+git20150528-1ubuntu2.16.10.1_amd64.deb' (There is no member named 'conffiles')
+2017-04-28 18:11:50,259 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 709054 DestFile:'/var/cache/apt/archives/libsane-common_1.0.25+git20150528-1ubuntu2.16.10.1_all.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/s/sane-backends/libsane-common_1.0.25+git20150528-1ubuntu2.16.10.1_all.deb' ID:0 ErrorText: ''>
+2017-04-28 18:11:50,259 DEBUG check_conffile_prompt('/var/cache/apt/archives/libsane-common_1.0.25+git20150528-1ubuntu2.16.10.1_all.deb')
+2017-04-28 18:11:50,381 DEBUG found pkg: libsane-common
+2017-04-28 18:11:50,381 DEBUG conffile line: '/etc/sane.d/abaton.conf 51591e7ab98851effab49089323cb160'
+2017-04-28 18:11:50,382 DEBUG current md5: 51591e7ab98851effab49089323cb160
+2017-04-28 18:11:50,382 DEBUG conffile line: '/etc/sane.d/agfafocus.conf f763f1f31d26507986aad58ca02f79f9'
+2017-04-28 18:11:50,382 DEBUG current md5: f763f1f31d26507986aad58ca02f79f9
+2017-04-28 18:11:50,382 DEBUG conffile line: '/etc/sane.d/apple.conf 602eda3ecedd81ef751d9241becb9142'
+2017-04-28 18:11:50,383 DEBUG current md5: 602eda3ecedd81ef751d9241becb9142
+2017-04-28 18:11:50,383 DEBUG conffile line: '/etc/sane.d/artec.conf 1b87eeb6069e6f5ac7b5f0cc4bf48083'
+2017-04-28 18:11:50,383 DEBUG current md5: 1b87eeb6069e6f5ac7b5f0cc4bf48083
+2017-04-28 18:11:50,383 DEBUG conffile line: '/etc/sane.d/artec_eplus48u.conf 3672fe16e6b14a124ad74acd47941be9'
+2017-04-28 18:11:50,383 DEBUG current md5: 3672fe16e6b14a124ad74acd47941be9
+2017-04-28 18:11:50,383 DEBUG conffile line: '/etc/sane.d/avision.conf 51e9f41665cca34d58ceb8bcf2ed072f'
+2017-04-28 18:11:50,384 DEBUG current md5: 51e9f41665cca34d58ceb8bcf2ed072f
+2017-04-28 18:11:50,384 DEBUG conffile line: '/etc/sane.d/bh.conf ed8e137983ae58a7bf038180b29737bd'
+2017-04-28 18:11:50,384 DEBUG current md5: ed8e137983ae58a7bf038180b29737bd
+2017-04-28 18:11:50,384 DEBUG conffile line: '/etc/sane.d/canon.conf 099d16dab225eaa121f1ba2f3af9f60a'
+2017-04-28 18:11:50,384 DEBUG current md5: 099d16dab225eaa121f1ba2f3af9f60a
+2017-04-28 18:11:50,384 DEBUG conffile line: '/etc/sane.d/canon630u.conf 5fae93df3328f1915e3d26f77a8c3b9d'
+2017-04-28 18:11:50,385 DEBUG current md5: 5fae93df3328f1915e3d26f77a8c3b9d
+2017-04-28 18:11:50,385 DEBUG conffile line: '/etc/sane.d/canon_dr.conf a9f78c230502d27be1db0c19105bac86'
+2017-04-28 18:11:50,386 DEBUG current md5: a9f78c230502d27be1db0c19105bac86
+2017-04-28 18:11:50,386 DEBUG conffile line: '/etc/sane.d/canon_pp.conf 2ecfac7c883bc980aba880f424abb8ad'
+2017-04-28 18:11:50,386 DEBUG current md5: 2ecfac7c883bc980aba880f424abb8ad
+2017-04-28 18:11:50,387 DEBUG conffile line: '/etc/sane.d/cardscan.conf c53b0f155e8abb0e35da6e4bd9898e41'
+2017-04-28 18:11:50,387 DEBUG current md5: c53b0f155e8abb0e35da6e4bd9898e41
+2017-04-28 18:11:50,388 DEBUG conffile line: '/etc/sane.d/coolscan.conf b5a49230bc9b80a4358d966255d4697a'
+2017-04-28 18:11:50,388 DEBUG current md5: b5a49230bc9b80a4358d966255d4697a
+2017-04-28 18:11:50,388 DEBUG conffile line: '/etc/sane.d/coolscan2.conf e9039d4f201acacca70e8964ec22ee70'
+2017-04-28 18:11:50,388 DEBUG current md5: e9039d4f201acacca70e8964ec22ee70
+2017-04-28 18:11:50,389 DEBUG conffile line: '/etc/sane.d/coolscan3.conf dc124184659f6acfcb2f77d4759adc8c'
+2017-04-28 18:11:50,389 DEBUG current md5: dc124184659f6acfcb2f77d4759adc8c
+2017-04-28 18:11:50,389 DEBUG conffile line: '/etc/sane.d/dc210.conf 821754802fb212acc9f48c7dd93ddaa1'
+2017-04-28 18:11:50,390 DEBUG current md5: 821754802fb212acc9f48c7dd93ddaa1
+2017-04-28 18:11:50,390 DEBUG conffile line: '/etc/sane.d/dc240.conf 821754802fb212acc9f48c7dd93ddaa1'
+2017-04-28 18:11:50,390 DEBUG current md5: 821754802fb212acc9f48c7dd93ddaa1
+2017-04-28 18:11:50,391 DEBUG conffile line: '/etc/sane.d/dc25.conf 0659d0dee2b39c585b6ebc682af0dbd9'
+2017-04-28 18:11:50,391 DEBUG current md5: 0659d0dee2b39c585b6ebc682af0dbd9
+2017-04-28 18:11:50,391 DEBUG conffile line: '/etc/sane.d/dell1600n_net.conf ce26ec480900a2420d14d5f2c43f07eb'
+2017-04-28 18:11:50,391 DEBUG current md5: ce26ec480900a2420d14d5f2c43f07eb
+2017-04-28 18:11:50,392 DEBUG conffile line: '/etc/sane.d/dll.conf b1debba18869614aa9f9c7e26bc7a747'
+2017-04-28 18:11:50,392 DEBUG current md5: b1debba18869614aa9f9c7e26bc7a747
+2017-04-28 18:11:50,392 DEBUG conffile line: '/etc/sane.d/dmc.conf 0731b2373c97cc98c5c42dd56e7fb05c'
+2017-04-28 18:11:50,393 DEBUG current md5: 0731b2373c97cc98c5c42dd56e7fb05c
+2017-04-28 18:11:50,393 DEBUG conffile line: '/etc/sane.d/epjitsu.conf a38ce4b0a76d0e81e42777db0569d1e1'
+2017-04-28 18:11:50,393 DEBUG current md5: a38ce4b0a76d0e81e42777db0569d1e1
+2017-04-28 18:11:50,393 DEBUG conffile line: '/etc/sane.d/epson.conf 318ed78f38b29c99e478cbc7efc8ff14'
+2017-04-28 18:11:50,394 DEBUG current md5: 318ed78f38b29c99e478cbc7efc8ff14
+2017-04-28 18:11:50,395 DEBUG conffile line: '/etc/sane.d/epson2.conf fb0befe1041db6a1b6a0813c0c8fcf1c'
+2017-04-28 18:11:50,395 DEBUG current md5: fb0befe1041db6a1b6a0813c0c8fcf1c
+2017-04-28 18:11:50,395 DEBUG conffile line: '/etc/sane.d/epsonds.conf 7f13571941ae5d419a43624a0b570a43'
+2017-04-28 18:11:50,396 DEBUG current md5: 7f13571941ae5d419a43624a0b570a43
+2017-04-28 18:11:50,397 DEBUG conffile line: '/etc/sane.d/fujitsu.conf 12cf8ad48d0b30eb45f9ec175e663421'
+2017-04-28 18:11:50,397 DEBUG current md5: 12cf8ad48d0b30eb45f9ec175e663421
+2017-04-28 18:11:50,397 DEBUG conffile line: '/etc/sane.d/genesys.conf 179dcaf6031785d6ca40792c290484ac'
+2017-04-28 18:11:50,398 DEBUG current md5: 179dcaf6031785d6ca40792c290484ac
+2017-04-28 18:11:50,398 DEBUG conffile line: '/etc/sane.d/gphoto2.conf ca55d23d02774d6eea321dcbd4099e5e'
+2017-04-28 18:11:50,398 DEBUG current md5: ca55d23d02774d6eea321dcbd4099e5e
+2017-04-28 18:11:50,398 DEBUG conffile line: '/etc/sane.d/gt68xx.conf b848c24d73c9a0443a03a7076ba01e3d'
+2017-04-28 18:11:50,399 DEBUG current md5: b848c24d73c9a0443a03a7076ba01e3d
+2017-04-28 18:11:50,399 DEBUG conffile line: '/etc/sane.d/hp.conf 5328dfe188ece714bf9fdb7e26dc9d00'
+2017-04-28 18:11:50,399 DEBUG current md5: 5328dfe188ece714bf9fdb7e26dc9d00
+2017-04-28 18:11:50,399 DEBUG conffile line: '/etc/sane.d/hp3900.conf 9d5532c21c759657347de8b26629cf13'
+2017-04-28 18:11:50,403 DEBUG current md5: 9d5532c21c759657347de8b26629cf13
+2017-04-28 18:11:50,404 DEBUG conffile line: '/etc/sane.d/hp4200.conf 0656916d9805c3af1f81424354082501'
+2017-04-28 18:11:50,404 DEBUG current md5: 0656916d9805c3af1f81424354082501
+2017-04-28 18:11:50,405 DEBUG conffile line: '/etc/sane.d/hp5400.conf 25848f289fb76aeb7f78e29ab323dbf8'
+2017-04-28 18:11:50,405 DEBUG current md5: 25848f289fb76aeb7f78e29ab323dbf8
+2017-04-28 18:11:50,405 DEBUG conffile line: '/etc/sane.d/hpsj5s.conf 0e969889a4509e62ef352a0222d2620e'
+2017-04-28 18:11:50,406 DEBUG current md5: 0e969889a4509e62ef352a0222d2620e
+2017-04-28 18:11:50,406 DEBUG conffile line: '/etc/sane.d/hs2p.conf a7b07bd2a66b8a562ccb64da03bd47da'
+2017-04-28 18:11:50,406 DEBUG current md5: a7b07bd2a66b8a562ccb64da03bd47da
+2017-04-28 18:11:50,407 DEBUG conffile line: '/etc/sane.d/ibm.conf d5eab60adbaf729bb5bf781fc4c5409d'
+2017-04-28 18:11:50,407 DEBUG current md5: d5eab60adbaf729bb5bf781fc4c5409d
+2017-04-28 18:11:50,407 DEBUG conffile line: '/etc/sane.d/kodak.conf 63774fc2dd277fbfc54b4a8f7ea4528d'
+2017-04-28 18:11:50,407 DEBUG current md5: 63774fc2dd277fbfc54b4a8f7ea4528d
+2017-04-28 18:11:50,408 DEBUG conffile line: '/etc/sane.d/kodakaio.conf d3d856994bf02899a396e4f4568f95b7'
+2017-04-28 18:11:50,408 DEBUG current md5: d3d856994bf02899a396e4f4568f95b7
+2017-04-28 18:11:50,408 DEBUG conffile line: '/etc/sane.d/leo.conf 008b9b3cad3c7073aa5331a453e68cd6'
+2017-04-28 18:11:50,409 DEBUG current md5: 008b9b3cad3c7073aa5331a453e68cd6
+2017-04-28 18:11:50,409 DEBUG conffile line: '/etc/sane.d/lexmark.conf f5d92658f9dc0eb540ddc9d24fe3ffb1'
+2017-04-28 18:11:50,409 DEBUG current md5: f5d92658f9dc0eb540ddc9d24fe3ffb1
+2017-04-28 18:11:50,410 DEBUG conffile line: '/etc/sane.d/ma1509.conf 73a9fd7af5924e04054f43e2708f5059'
+2017-04-28 18:11:50,410 DEBUG current md5: 73a9fd7af5924e04054f43e2708f5059
+2017-04-28 18:11:50,411 DEBUG conffile line: '/etc/sane.d/magicolor.conf 1e34b81727b36c9269d413cb6d20b2e6'
+2017-04-28 18:11:50,411 DEBUG current md5: 1e34b81727b36c9269d413cb6d20b2e6
+2017-04-28 18:11:50,412 DEBUG conffile line: '/etc/sane.d/matsushita.conf fe9a8941cd52c7e012724122d67a98e6'
+2017-04-28 18:11:50,412 DEBUG current md5: fe9a8941cd52c7e012724122d67a98e6
+2017-04-28 18:11:50,412 DEBUG conffile line: '/etc/sane.d/microtek.conf 940c8db7e01ccaa6f2c5be2ca020ddf1'
+2017-04-28 18:11:50,413 DEBUG current md5: 940c8db7e01ccaa6f2c5be2ca020ddf1
+2017-04-28 18:11:50,413 DEBUG conffile line: '/etc/sane.d/microtek2.conf 75cb498c51441db57932a4895f7f0d96'
+2017-04-28 18:11:50,413 DEBUG current md5: 75cb498c51441db57932a4895f7f0d96
+2017-04-28 18:11:50,414 DEBUG conffile line: '/etc/sane.d/mustek.conf 33284fd785df74d394b9e30a4ec8283e'
+2017-04-28 18:11:50,414 DEBUG current md5: 33284fd785df74d394b9e30a4ec8283e
+2017-04-28 18:11:50,414 DEBUG conffile line: '/etc/sane.d/mustek_pp.conf c9d10da50e4b77dcc73b97f67a81a89a'
+2017-04-28 18:11:50,415 DEBUG current md5: c9d10da50e4b77dcc73b97f67a81a89a
+2017-04-28 18:11:50,415 DEBUG conffile line: '/etc/sane.d/mustek_usb.conf f4080c5eacaf30b4ed871a5330960696'
+2017-04-28 18:11:50,415 DEBUG current md5: f4080c5eacaf30b4ed871a5330960696
+2017-04-28 18:11:50,415 DEBUG conffile line: '/etc/sane.d/nec.conf 5eed67a9759c991553fa3055af023a33'
+2017-04-28 18:11:50,416 DEBUG current md5: 5eed67a9759c991553fa3055af023a33
+2017-04-28 18:11:50,416 DEBUG conffile line: '/etc/sane.d/net.conf 9e5860565491b3157e3c6e0af682b7a2'
+2017-04-28 18:11:50,416 DEBUG current md5: 9e5860565491b3157e3c6e0af682b7a2
+2017-04-28 18:11:50,416 DEBUG conffile line: '/etc/sane.d/p5.conf 27277daf6f7ed1f21de8c6a59d5b9488'
+2017-04-28 18:11:50,417 DEBUG current md5: 27277daf6f7ed1f21de8c6a59d5b9488
+2017-04-28 18:11:50,417 DEBUG conffile line: '/etc/sane.d/pie.conf 7bdb319bd61b19389e93ed85a1ed85d1'
+2017-04-28 18:11:50,417 DEBUG current md5: 7bdb319bd61b19389e93ed85a1ed85d1
+2017-04-28 18:11:50,418 DEBUG conffile line: '/etc/sane.d/pixma.conf da98f7eae73240333304d1dafe58e19a'
+2017-04-28 18:11:50,418 DEBUG current md5: da98f7eae73240333304d1dafe58e19a
+2017-04-28 18:11:50,418 DEBUG conffile line: '/etc/sane.d/plustek.conf f329323c5ed857873510e38233f1afcf'
+2017-04-28 18:11:50,419 DEBUG current md5: f329323c5ed857873510e38233f1afcf
+2017-04-28 18:11:50,419 DEBUG conffile line: '/etc/sane.d/plustek_pp.conf 327941a5240e699e3251d74192f4f299'
+2017-04-28 18:11:50,420 DEBUG current md5: 327941a5240e699e3251d74192f4f299
+2017-04-28 18:11:50,420 DEBUG conffile line: '/etc/sane.d/qcam.conf 7a30e22cd391b7992646723df280f4fe'
+2017-04-28 18:11:50,421 DEBUG current md5: 7a30e22cd391b7992646723df280f4fe
+2017-04-28 18:11:50,421 DEBUG conffile line: '/etc/sane.d/ricoh.conf b1891143384a7308ec17d9e6ac836201'
+2017-04-28 18:11:50,422 DEBUG current md5: b1891143384a7308ec17d9e6ac836201
+2017-04-28 18:11:50,422 DEBUG conffile line: '/etc/sane.d/rts8891.conf 3446a737f83b38c3b576d5bf2e5161ec'
+2017-04-28 18:11:50,422 DEBUG current md5: 3446a737f83b38c3b576d5bf2e5161ec
+2017-04-28 18:11:50,423 DEBUG conffile line: '/etc/sane.d/s9036.conf 5eed67a9759c991553fa3055af023a33'
+2017-04-28 18:11:50,423 DEBUG current md5: 5eed67a9759c991553fa3055af023a33
+2017-04-28 18:11:50,423 DEBUG conffile line: '/etc/sane.d/sceptre.conf 9d7e8954714b47042b849ddbd2530973'
+2017-04-28 18:11:50,424 DEBUG current md5: 9d7e8954714b47042b849ddbd2530973
+2017-04-28 18:11:50,424 DEBUG conffile line: '/etc/sane.d/sharp.conf d16cb589cdceb30d4523334063ddf040'
+2017-04-28 18:11:50,424 DEBUG current md5: d16cb589cdceb30d4523334063ddf040
+2017-04-28 18:11:50,425 DEBUG conffile line: '/etc/sane.d/sm3840.conf 9b61359cbcc14b9be4d687b80b772bea'
+2017-04-28 18:11:50,425 DEBUG current md5: 9b61359cbcc14b9be4d687b80b772bea
+2017-04-28 18:11:50,425 DEBUG conffile line: '/etc/sane.d/snapscan.conf b349efcbcec257f5fca8372f1e47e7e0'
+2017-04-28 18:11:50,426 DEBUG current md5: b349efcbcec257f5fca8372f1e47e7e0
+2017-04-28 18:11:50,426 DEBUG conffile line: '/etc/sane.d/sp15c.conf 74fd71c4ea2c8c58bbaa2cecfee56f7c'
+2017-04-28 18:11:50,426 DEBUG current md5: 74fd71c4ea2c8c58bbaa2cecfee56f7c
+2017-04-28 18:11:50,426 DEBUG conffile line: '/etc/sane.d/st400.conf febd1d7966858a4a0352a2fe2c1abfa0'
+2017-04-28 18:11:50,427 DEBUG current md5: febd1d7966858a4a0352a2fe2c1abfa0
+2017-04-28 18:11:50,427 DEBUG conffile line: '/etc/sane.d/stv680.conf 1a5a8d37f0de964bab25b3908fa907d5'
+2017-04-28 18:11:50,427 DEBUG current md5: 1a5a8d37f0de964bab25b3908fa907d5
+2017-04-28 18:11:50,428 DEBUG conffile line: '/etc/sane.d/tamarack.conf 93b1a500916dcfabd8a1c288029a5502'
+2017-04-28 18:11:50,428 DEBUG current md5: 93b1a500916dcfabd8a1c288029a5502
+2017-04-28 18:11:50,428 DEBUG conffile line: '/etc/sane.d/teco1.conf 7976c7a3dd90fe100f30a23a29aaea89'
+2017-04-28 18:11:50,428 DEBUG current md5: 7976c7a3dd90fe100f30a23a29aaea89
+2017-04-28 18:11:50,429 DEBUG conffile line: '/etc/sane.d/teco2.conf 1f873f79332e99cb0cd2b9eba938ac3b'
+2017-04-28 18:11:50,429 DEBUG current md5: 1f873f79332e99cb0cd2b9eba938ac3b
+2017-04-28 18:11:50,429 DEBUG conffile line: '/etc/sane.d/teco3.conf 7b632784a85ec6ead7d26e8fd195dea5'
+2017-04-28 18:11:50,429 DEBUG current md5: 7b632784a85ec6ead7d26e8fd195dea5
+2017-04-28 18:11:50,429 DEBUG conffile line: '/etc/sane.d/test.conf eaccee9d3fb610a691705ddf94b9ec11'
+2017-04-28 18:11:50,430 DEBUG current md5: eaccee9d3fb610a691705ddf94b9ec11
+2017-04-28 18:11:50,430 DEBUG conffile line: '/etc/sane.d/u12.conf 9ab31cd28e79474973fc02ccf1c06b99'
+2017-04-28 18:11:50,430 DEBUG current md5: 9ab31cd28e79474973fc02ccf1c06b99
+2017-04-28 18:11:50,430 DEBUG conffile line: '/etc/sane.d/umax.conf 5bcadfd7842926832de6d6e29d23558d'
+2017-04-28 18:11:50,430 DEBUG current md5: 5bcadfd7842926832de6d6e29d23558d
+2017-04-28 18:11:50,430 DEBUG conffile line: '/etc/sane.d/umax1220u.conf 2d36f1f6c15bbfeaf2049d59dcfefe05'
+2017-04-28 18:11:50,431 DEBUG current md5: 2d36f1f6c15bbfeaf2049d59dcfefe05
+2017-04-28 18:11:50,431 DEBUG conffile line: '/etc/sane.d/umax_pp.conf d7cdbfd65fc59cfc71ab5f00a3697aaf'
+2017-04-28 18:11:50,431 DEBUG current md5: d7cdbfd65fc59cfc71ab5f00a3697aaf
+2017-04-28 18:11:50,431 DEBUG conffile line: '/etc/sane.d/xerox_mfp.conf e438fe51c20b618f14341e8910512e17'
+2017-04-28 18:11:50,431 DEBUG current md5: e438fe51c20b618f14341e8910512e17
+2017-04-28 18:11:50,432 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 6956614 DestFile:'/var/cache/apt/archives/mysql-client-core-5.7_5.7.18-0ubuntu0.16.10.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-client-core-5.7_5.7.18-0ubuntu0.16.10.1_amd64.deb' ID:0 ErrorText: ''>
+2017-04-28 18:11:50,432 DEBUG check_conffile_prompt('/var/cache/apt/archives/mysql-client-core-5.7_5.7.18-0ubuntu0.16.10.1_amd64.deb')
+2017-04-28 18:11:50,647 DEBUG found pkg: mysql-client-core-5.7
+2017-04-28 18:11:50,678 DEBUG No conffiles in deb '/var/cache/apt/archives/mysql-client-core-5.7_5.7.18-0ubuntu0.16.10.1_amd64.deb' (There is no member named 'conffiles')
+2017-04-28 18:11:50,678 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 17552 DestFile:'/var/cache/apt/archives/mysql-common_5.7.18-0ubuntu0.16.10.1_all.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-common_5.7.18-0ubuntu0.16.10.1_all.deb' ID:0 ErrorText: ''>
+2017-04-28 18:11:50,678 DEBUG check_conffile_prompt('/var/cache/apt/archives/mysql-common_5.7.18-0ubuntu0.16.10.1_all.deb')
+2017-04-28 18:11:50,753 DEBUG found pkg: mysql-common
+2017-04-28 18:11:50,754 DEBUG conffile line: '/etc/mysql/conf.d/mysql.cnf 61e0993270966cc6bc96b46c01ade21f'
+2017-04-28 18:11:50,754 DEBUG current md5: 61e0993270966cc6bc96b46c01ade21f
+2017-04-28 18:11:50,754 DEBUG conffile line: '/etc/mysql/conf.d/mysqldump.cnf 20890decb4486ce539753193908fb356'
+2017-04-28 18:11:50,755 DEBUG current md5: 20890decb4486ce539753193908fb356
+2017-04-28 18:11:50,755 DEBUG conffile line: '/etc/mysql/my.cnf.fallback cfe2bc1819d5e200eca8ca6912f714af'
+2017-04-28 18:11:50,755 DEBUG current md5: cfe2bc1819d5e200eca8ca6912f714af
+2017-04-28 18:11:50,755 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 1835018 DestFile:'/var/cache/apt/archives/mysql-client-5.7_5.7.18-0ubuntu0.16.10.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-client-5.7_5.7.18-0ubuntu0.16.10.1_amd64.deb' ID:0 ErrorText: ''>
+2017-04-28 18:11:50,755 DEBUG check_conffile_prompt('/var/cache/apt/archives/mysql-client-5.7_5.7.18-0ubuntu0.16.10.1_amd64.deb')
+2017-04-28 18:11:51,054 DEBUG found pkg: mysql-client-5.7
+2017-04-28 18:11:51,147 DEBUG No conffiles in deb '/var/cache/apt/archives/mysql-client-5.7_5.7.18-0ubuntu0.16.10.1_amd64.deb' (There is no member named 'conffiles')
+2017-04-28 18:11:51,147 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 2774598 DestFile:'/var/cache/apt/archives/mysql-server-5.7_5.7.18-0ubuntu0.16.10.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-server-5.7_5.7.18-0ubuntu0.16.10.1_amd64.deb' ID:0 ErrorText: ''>
+2017-04-28 18:11:51,148 DEBUG check_conffile_prompt('/var/cache/apt/archives/mysql-server-5.7_5.7.18-0ubuntu0.16.10.1_amd64.deb')
+2017-04-28 18:11:51,506 DEBUG found pkg: mysql-server-5.7
+2017-04-28 18:11:51,507 DEBUG conffile line: '/etc/apparmor.d/usr.sbin.mysqld f6b03f86843796ca1fcbc25decac3960'
+2017-04-28 18:11:51,508 DEBUG current md5: f6b03f86843796ca1fcbc25decac3960
+2017-04-28 18:11:51,509 DEBUG conffile line: '/etc/init.d/mysql 89a1a5b6ad710389112802fc3fbb81e1'
+2017-04-28 18:11:51,509 DEBUG current md5: 89a1a5b6ad710389112802fc3fbb81e1
+2017-04-28 18:11:51,510 DEBUG conffile line: '/etc/init/mysql.conf 5b097f4a577d63c60a8f6ca01b12bc47'
+2017-04-28 18:11:51,510 DEBUG current md5: 5b097f4a577d63c60a8f6ca01b12bc47
+2017-04-28 18:11:51,510 DEBUG conffile line: '/etc/logcheck/ignore.d.paranoid/mysql-server-5_7 6babe46e791059cdd5a26f4f7fec9eca'
+2017-04-28 18:11:51,511 DEBUG current md5: 6babe46e791059cdd5a26f4f7fec9eca
+2017-04-28 18:11:51,511 DEBUG conffile line: '/etc/logcheck/ignore.d.server/mysql-server-5_7 2d34a7ed83fefc165cd1dfea3a72ccc8'
+2017-04-28 18:11:51,512 DEBUG current md5: 2d34a7ed83fefc165cd1dfea3a72ccc8
+2017-04-28 18:11:51,513 DEBUG conffile line: '/etc/logcheck/ignore.d.workstation/mysql-server-5_7 2d34a7ed83fefc165cd1dfea3a72ccc8'
+2017-04-28 18:11:51,513 DEBUG current md5: 2d34a7ed83fefc165cd1dfea3a72ccc8
+2017-04-28 18:11:51,514 DEBUG conffile line: '/etc/logrotate.d/mysql-server b3c32cbc55b042b1fe76698c8e928974'
+2017-04-28 18:11:51,514 DEBUG current md5: b3c32cbc55b042b1fe76698c8e928974
+2017-04-28 18:11:51,514 DEBUG conffile line: '/etc/mysql/debian-start 68f4d300f151fd3facec50d0bcf009ef'
+2017-04-28 18:11:51,515 DEBUG current md5: 68f4d300f151fd3facec50d0bcf009ef
+2017-04-28 18:11:51,515 DEBUG conffile line: '/etc/mysql/mysql.cnf f5d3113b607567fd2ce955f4279fa9ce'
+2017-04-28 18:11:51,516 DEBUG current md5: f5d3113b607567fd2ce955f4279fa9ce
+2017-04-28 18:11:51,516 DEBUG conffile line: '/etc/mysql/mysql.conf.d/mysqld.cnf cae4bc0923e3a19cdfe3c85c06fbbfb7'
+2017-04-28 18:11:51,516 DEBUG current md5: cae4bc0923e3a19cdfe3c85c06fbbfb7
+2017-04-28 18:11:51,517 DEBUG conffile line: '/etc/mysql/mysql.conf.d/mysqld_safe_syslog.cnf 347fa9f3d579ffc06c39bf7e69f4fc6e'
+2017-04-28 18:11:51,517 DEBUG current md5: 347fa9f3d579ffc06c39bf7e69f4fc6e
+2017-04-28 18:11:51,518 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 7994170 DestFile:'/var/cache/apt/archives/mysql-server-core-5.7_5.7.18-0ubuntu0.16.10.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-server-core-5.7_5.7.18-0ubuntu0.16.10.1_amd64.deb' ID:0 ErrorText: ''>
+2017-04-28 18:11:51,518 DEBUG check_conffile_prompt('/var/cache/apt/archives/mysql-server-core-5.7_5.7.18-0ubuntu0.16.10.1_amd64.deb')
+2017-04-28 18:11:51,612 DEBUG found pkg: mysql-server-core-5.7
+2017-04-28 18:11:51,876 DEBUG No conffiles in deb '/var/cache/apt/archives/mysql-server-core-5.7_5.7.18-0ubuntu0.16.10.1_amd64.deb' (There is no member named 'conffiles')
+2017-04-28 18:11:51,876 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 650530 DestFile:'/var/cache/apt/archives/dpkg-dev_1.18.10ubuntu1.1_all.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg-dev_1.18.10ubuntu1.1_all.deb' ID:0 ErrorText: ''>
+2017-04-28 18:11:51,877 DEBUG check_conffile_prompt('/var/cache/apt/archives/dpkg-dev_1.18.10ubuntu1.1_all.deb')
+2017-04-28 18:11:52,065 DEBUG found pkg: dpkg-dev
+2017-04-28 18:11:52,066 DEBUG conffile line: '/etc/dpkg/shlibs.default 1a2b9d0a869e2aa885ae3621c557fb95'
+2017-04-28 18:11:52,067 DEBUG current md5: 1a2b9d0a869e2aa885ae3621c557fb95
+2017-04-28 18:11:52,067 DEBUG conffile line: '/etc/dpkg/shlibs.override 84b1e69080569cc5c613a50887af5200'
+2017-04-28 18:11:52,067 DEBUG current md5: 84b1e69080569cc5c613a50887af5200
+2017-04-28 18:11:52,068 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 204062 DestFile:'/var/cache/apt/archives/libdpkg-perl_1.18.10ubuntu1.1_all.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/d/dpkg/libdpkg-perl_1.18.10ubuntu1.1_all.deb' ID:0 ErrorText: ''>
+2017-04-28 18:11:52,068 DEBUG check_conffile_prompt('/var/cache/apt/archives/libdpkg-perl_1.18.10ubuntu1.1_all.deb')
+2017-04-28 18:11:52,189 DEBUG found pkg: libdpkg-perl
+2017-04-28 18:11:52,371 DEBUG No conffiles in deb '/var/cache/apt/archives/libdpkg-perl_1.18.10ubuntu1.1_all.deb' (There is no member named 'conffiles')
+2017-04-28 18:11:52,371 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 43304 DestFile:'/var/cache/apt/archives/ghostscript-x_9.19~dfsg+1-0ubuntu6.4_amd64.deb' DescURI: 'http://security.ubuntu.com/ubuntu/pool/main/g/ghostscript/ghostscript-x_9.19~dfsg+1-0ubuntu6.4_amd64.deb' ID:0 ErrorText: ''>
+2017-04-28 18:11:52,372 DEBUG check_conffile_prompt('/var/cache/apt/archives/ghostscript-x_9.19~dfsg+1-0ubuntu6.4_amd64.deb')
+2017-04-28 18:11:52,639 DEBUG found pkg: ghostscript-x
+2017-04-28 18:11:52,675 DEBUG No conffiles in deb '/var/cache/apt/archives/ghostscript-x_9.19~dfsg+1-0ubuntu6.4_amd64.deb' (There is no member named 'conffiles')
+2017-04-28 18:11:52,676 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 50004 DestFile:'/var/cache/apt/archives/ghostscript_9.19~dfsg+1-0ubuntu6.4_amd64.deb' DescURI: 'http://security.ubuntu.com/ubuntu/pool/main/g/ghostscript/ghostscript_9.19~dfsg+1-0ubuntu6.4_amd64.deb' ID:0 ErrorText: ''>
+2017-04-28 18:11:52,676 DEBUG check_conffile_prompt('/var/cache/apt/archives/ghostscript_9.19~dfsg+1-0ubuntu6.4_amd64.deb')
+2017-04-28 18:11:52,809 DEBUG found pkg: ghostscript
+2017-04-28 18:11:52,953 DEBUG No conffiles in deb '/var/cache/apt/archives/ghostscript_9.19~dfsg+1-0ubuntu6.4_amd64.deb' (There is no member named 'conffiles')
+2017-04-28 18:11:52,954 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 2100386 DestFile:'/var/cache/apt/archives/libgs9_9.19~dfsg+1-0ubuntu6.4_amd64.deb' DescURI: 'http://security.ubuntu.com/ubuntu/pool/main/g/ghostscript/libgs9_9.19~dfsg+1-0ubuntu6.4_amd64.deb' ID:0 ErrorText: ''>
+2017-04-28 18:11:52,954 DEBUG check_conffile_prompt('/var/cache/apt/archives/libgs9_9.19~dfsg+1-0ubuntu6.4_amd64.deb')
+2017-04-28 18:11:53,169 DEBUG found pkg: libgs9
+2017-04-28 18:11:53,193 DEBUG No conffiles in deb '/var/cache/apt/archives/libgs9_9.19~dfsg+1-0ubuntu6.4_amd64.deb' (There is no member named 'conffiles')
+2017-04-28 18:11:53,193 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 2987908 DestFile:'/var/cache/apt/archives/libgs9-common_9.19~dfsg+1-0ubuntu6.4_all.deb' DescURI: 'http://security.ubuntu.com/ubuntu/pool/main/g/ghostscript/libgs9-common_9.19~dfsg+1-0ubuntu6.4_all.deb' ID:0 ErrorText: ''>
+2017-04-28 18:11:53,193 DEBUG check_conffile_prompt('/var/cache/apt/archives/libgs9-common_9.19~dfsg+1-0ubuntu6.4_all.deb')
+2017-04-28 18:11:53,196 DEBUG found pkg: libgs9-common
+2017-04-28 18:11:53,430 DEBUG No conffiles in deb '/var/cache/apt/archives/libgs9-common_9.19~dfsg+1-0ubuntu6.4_all.deb' (There is no member named 'conffiles')
+2017-04-28 18:11:53,430 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 126540 DestFile:'/var/cache/apt/archives/libnm-util2_1.2.6-0ubuntu1.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/n/network-manager/libnm-util2_1.2.6-0ubuntu1.1_amd64.deb' ID:0 ErrorText: ''>
+2017-04-28 18:11:53,431 DEBUG check_conffile_prompt('/var/cache/apt/archives/libnm-util2_1.2.6-0ubuntu1.1_amd64.deb')
+2017-04-28 18:11:53,454 DEBUG found pkg: libnm-util2
+2017-04-28 18:11:53,674 DEBUG No conffiles in deb '/var/cache/apt/archives/libnm-util2_1.2.6-0ubuntu1.1_amd64.deb' (There is no member named 'conffiles')
+2017-04-28 18:11:53,674 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 84098 DestFile:'/var/cache/apt/archives/libnm-glib4_1.2.6-0ubuntu1.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/n/network-manager/libnm-glib4_1.2.6-0ubuntu1.1_amd64.deb' ID:0 ErrorText: ''>
+2017-04-28 18:11:53,674 DEBUG check_conffile_prompt('/var/cache/apt/archives/libnm-glib4_1.2.6-0ubuntu1.1_amd64.deb')
+2017-04-28 18:11:53,726 DEBUG found pkg: libnm-glib4
+2017-04-28 18:11:53,918 DEBUG No conffiles in deb '/var/cache/apt/archives/libnm-glib4_1.2.6-0ubuntu1.1_amd64.deb' (There is no member named 'conffiles')
+2017-04-28 18:11:53,918 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 352534 DestFile:'/var/cache/apt/archives/libnm0_1.2.6-0ubuntu1.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/n/network-manager/libnm0_1.2.6-0ubuntu1.1_amd64.deb' ID:0 ErrorText: ''>
+2017-04-28 18:11:53,918 DEBUG check_conffile_prompt('/var/cache/apt/archives/libnm0_1.2.6-0ubuntu1.1_amd64.deb')
+2017-04-28 18:11:54,003 DEBUG found pkg: libnm0
+2017-04-28 18:11:54,174 DEBUG No conffiles in deb '/var/cache/apt/archives/libnm0_1.2.6-0ubuntu1.1_amd64.deb' (There is no member named 'conffiles')
+2017-04-28 18:11:54,175 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 70404 DestFile:'/var/cache/apt/archives/gir1.2-networkmanager-1.0_1.2.6-0ubuntu1.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/n/network-manager/gir1.2-networkmanager-1.0_1.2.6-0ubuntu1.1_amd64.deb' ID:0 ErrorText: ''>
+2017-04-28 18:11:54,175 DEBUG check_conffile_prompt('/var/cache/apt/archives/gir1.2-networkmanager-1.0_1.2.6-0ubuntu1.1_amd64.deb')
+2017-04-28 18:11:54,194 DEBUG found pkg: gir1.2-networkmanager-1.0
+2017-04-28 18:11:54,405 DEBUG No conffiles in deb '/var/cache/apt/archives/gir1.2-networkmanager-1.0_1.2.6-0ubuntu1.1_amd64.deb' (There is no member named 'conffiles')
+2017-04-28 18:11:54,405 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 811422 DestFile:'/var/cache/apt/archives/libmysqlclient20_5.7.18-0ubuntu0.16.10.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/libmysqlclient20_5.7.18-0ubuntu0.16.10.1_amd64.deb' ID:0 ErrorText: ''>
+2017-04-28 18:11:54,406 DEBUG check_conffile_prompt('/var/cache/apt/archives/libmysqlclient20_5.7.18-0ubuntu0.16.10.1_amd64.deb')
+2017-04-28 18:11:54,592 DEBUG found pkg: libmysqlclient20
+2017-04-28 18:11:54,638 DEBUG No conffiles in deb '/var/cache/apt/archives/libmysqlclient20_5.7.18-0ubuntu0.16.10.1_amd64.deb' (There is no member named 'conffiles')
+2017-04-28 18:11:54,639 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 14222 DestFile:'/var/cache/apt/archives/libnm-glib-vpn1_1.2.6-0ubuntu1.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/n/network-manager/libnm-glib-vpn1_1.2.6-0ubuntu1.1_amd64.deb' ID:0 ErrorText: ''>
+2017-04-28 18:11:54,639 DEBUG check_conffile_prompt('/var/cache/apt/archives/libnm-glib-vpn1_1.2.6-0ubuntu1.1_amd64.deb')
+2017-04-28 18:11:54,648 DEBUG found pkg: libnm-glib-vpn1
+2017-04-28 18:11:54,911 DEBUG No conffiles in deb '/var/cache/apt/archives/libnm-glib-vpn1_1.2.6-0ubuntu1.1_amd64.deb' (There is no member named 'conffiles')
+2017-04-28 18:11:54,911 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 147858 DestFile:'/var/cache/apt/archives/libxslt1.1_1.1.29-1ubuntu0.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/libx/libxslt/libxslt1.1_1.1.29-1ubuntu0.1_amd64.deb' ID:0 ErrorText: ''>
+2017-04-28 18:11:54,912 DEBUG check_conffile_prompt('/var/cache/apt/archives/libxslt1.1_1.1.29-1ubuntu0.1_amd64.deb')
+2017-04-28 18:11:55,131 DEBUG found pkg: libxslt1.1
+2017-04-28 18:11:55,282 DEBUG No conffiles in deb '/var/cache/apt/archives/libxslt1.1_1.1.29-1ubuntu0.1_amd64.deb' (There is no member named 'conffiles')
+2017-04-28 18:11:55,283 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 10152 DestFile:'/var/cache/apt/archives/mysql-server_5.7.18-0ubuntu0.16.10.1_all.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.7/mysql-server_5.7.18-0ubuntu0.16.10.1_all.deb' ID:0 ErrorText: ''>
+2017-04-28 18:11:55,283 DEBUG check_conffile_prompt('/var/cache/apt/archives/mysql-server_5.7.18-0ubuntu0.16.10.1_all.deb')
+2017-04-28 18:11:55,331 DEBUG found pkg: mysql-server
+2017-04-28 18:11:55,592 DEBUG No conffiles in deb '/var/cache/apt/archives/mysql-server_5.7.18-0ubuntu0.16.10.1_all.deb' (There is no member named 'conffiles')
+2017-04-28 18:11:55,593 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 1995792 DestFile:'/var/cache/apt/archives/network-manager_1.2.6-0ubuntu1.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/n/network-manager/network-manager_1.2.6-0ubuntu1.1_amd64.deb' ID:0 ErrorText: ''>
+2017-04-28 18:11:55,593 DEBUG check_conffile_prompt('/var/cache/apt/archives/network-manager_1.2.6-0ubuntu1.1_amd64.deb')
+2017-04-28 18:11:55,782 DEBUG found pkg: network-manager
+2017-04-28 18:11:55,783 DEBUG conffile line: '/etc/NetworkManager/NetworkManager.conf 6e21dde76719887007828a1757643976'
+2017-04-28 18:11:55,784 DEBUG current md5: 488b878b7058c400515e3f1e950f27d0
+2017-04-28 18:11:56,143 DEBUG pkg_md5sum: 6e21dde76719887007828a1757643976
+2017-04-28 18:11:56,143 DEBUG conffile line: '/etc/NetworkManager/conf.d/default-wifi-powersave-on.conf 4aa6a7dec60d395b4ada2f5137201fcd'
+2017-04-28 18:11:56,144 DEBUG current md5: 4aa6a7dec60d395b4ada2f5137201fcd
+2017-04-28 18:11:56,144 DEBUG conffile line: '/etc/NetworkManager/dispatcher.d/01ifupdown 299819a8e64f00a1edbdfc99d05a8594'
+2017-04-28 18:11:56,144 DEBUG current md5: 299819a8e64f00a1edbdfc99d05a8594
+2017-04-28 18:11:56,144 DEBUG conffile line: '/etc/dbus-1/system.d/nm-dispatcher.conf 5711a76c31a3763750fe2c331741f679'
+2017-04-28 18:11:56,145 DEBUG current md5: 5711a76c31a3763750fe2c331741f679
+2017-04-28 18:11:56,145 DEBUG conffile line: '/etc/dbus-1/system.d/org.freedesktop.NetworkManager.conf df75fd565f0b3a9099def2ed00a989b2'
+2017-04-28 18:11:56,146 DEBUG current md5: df75fd565f0b3a9099def2ed00a989b2
+2017-04-28 18:11:56,146 DEBUG conffile line: '/etc/dnsmasq.d/network-manager c1f294c4513fa544565d671dcba6a913'
+2017-04-28 18:11:56,146 DEBUG current md5: c1f294c4513fa544565d671dcba6a913
+2017-04-28 18:11:56,147 DEBUG conffile line: '/etc/init.d/network-manager 59b97edb8cc5f8db9882118fbf102a88'
+2017-04-28 18:11:56,147 DEBUG current md5: 59b97edb8cc5f8db9882118fbf102a88
+2017-04-28 18:11:56,147 DEBUG conffile line: '/etc/init/network-manager.conf 080b2a860317698f65f960687f5363cc'
+2017-04-28 18:11:56,148 DEBUG current md5: 080b2a860317698f65f960687f5363cc
+2017-04-28 18:11:56,148 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 188686 DestFile:'/var/cache/apt/archives/sane-utils_1.0.25+git20150528-1ubuntu2.16.10.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/s/sane-backends/sane-utils_1.0.25+git20150528-1ubuntu2.16.10.1_amd64.deb' ID:0 ErrorText: ''>
+2017-04-28 18:11:56,148 DEBUG check_conffile_prompt('/var/cache/apt/archives/sane-utils_1.0.25+git20150528-1ubuntu2.16.10.1_amd64.deb')
+2017-04-28 18:11:56,360 DEBUG found pkg: sane-utils
+2017-04-28 18:11:56,360 DEBUG conffile line: '/etc/default/saned 99c46f8b429fd197e6e1c6c41141735c'
+2017-04-28 18:11:56,361 DEBUG current md5: 99c46f8b429fd197e6e1c6c41141735c
+2017-04-28 18:11:56,361 DEBUG conffile line: '/etc/init.d/saned 415c090dc4e22106c20f6f53574b5724'
+2017-04-28 18:11:56,362 DEBUG current md5: 415c090dc4e22106c20f6f53574b5724
+2017-04-28 18:11:56,362 DEBUG conffile line: '/etc/sane.d/saned.conf f68e0a92c8d4207a7d3f35c36f38ca3d'
+2017-04-28 18:11:56,362 DEBUG current md5: f68e0a92c8d4207a7d3f35c36f38ca3d
+2017-04-28 18:11:56,362 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 1 IsTrusted: 1 FileSize: 13542 DestFile:'/var/cache/apt/archives/xsltproc_1.1.29-1ubuntu0.1_amd64.deb' DescURI: 'http://de.archive.ubuntu.com/ubuntu/pool/main/libx/libxslt/xsltproc_1.1.29-1ubuntu0.1_amd64.deb' ID:0 ErrorText: ''>
+2017-04-28 18:11:56,363 DEBUG check_conffile_prompt('/var/cache/apt/archives/xsltproc_1.1.29-1ubuntu0.1_amd64.deb')
+2017-04-28 18:11:56,459 DEBUG found pkg: xsltproc
+2017-04-28 18:11:56,589 DEBUG No conffiles in deb '/var/cache/apt/archives/xsltproc_1.1.29-1ubuntu0.1_amd64.deb' (There is no member named 'conffiles')
+2017-04-28 18:11:56,589 DEBUG blacklist: []
+2017-04-28 18:11:56,590 DEBUG whitelist: []
+2017-04-28 18:11:57,791 INFO Pakete, von denen ein Upgrade durchgeführt wird: chromium-browser chromium-browser-l10n chromium-codecs-ffmpeg-extra dpkg dpkg-dev ghostscript ghostscript-x gir1.2-networkmanager-1.0 libdpkg-perl libgs9 libgs9-common libmysqlclient20 libnm-glib-vpn1 libnm-glib4 libnm-util2 libnm0 libnspr4 libnss3 libsane libsane-common libxslt1.1 mysql-client-5.7 mysql-client-core-5.7 mysql-common mysql-server mysql-server-5.7 mysql-server-core-5.7 network-manager sane-utils xsltproc
+2017-04-28 18:11:57,791 INFO Dpkg-Protokoll wird nach »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« geschrieben
+2017-04-28 18:12:58,001 ERROR Exception happened during upgrade.
+Traceback (most recent call last):
+  File "/usr/bin/unattended-upgrade", line 410, in cache_commit
+    res = cache.commit(install_progress=iprogress)
+  File "/usr/lib/python3/dist-packages/apt/cache.py", line 529, in commit
+    raise SystemError("installArchives() failed")
+SystemError: installArchives() failed
+2017-04-28 18:12:58,004 ERROR Installation der Upgrades fehlgeschlagen!
+2017-04-28 18:12:58,005 ERROR Fehlermeldung: »installArchives() failed«
+2017-04-28 18:12:58,006 ERROR Dpkg gab einen Fehler zurück. Siehe »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« für Einzelheiten
+2017-04-28 18:13:01,176 DEBUG InstCount=0 DelCount=0 BrokenCount=0
+2017-04-28 18:13:01,177 DEBUG Extracting content from '/var/log/unattended-upgrades/unattended-upgrades-dpkg.log' since '2017-04-28 18:10:53'
+2017-04-28 18:13:01,184 DEBUG Sending mail to 'logs@josef-friedrich.de'
+2017-04-28 18:13:02,988 DEBUG mail returned: 0
+2017-04-29 09:12:24,993 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-04-29 09:12:24,994 INFO Erst-Pakete der Positivliste:  
+2017-04-29 09:12:24,994 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-04-29 09:12:24,994 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-04-29 09:12:28,566 DEBUG pkgs that look like they should be upgraded: 
+2017-04-29 09:12:28,679 DEBUG fetch.run() result: 0
+2017-04-29 09:12:28,680 DEBUG blacklist: []
+2017-04-29 09:12:28,680 DEBUG whitelist: []
+2017-04-29 09:12:30,216 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-04-30 18:45:17,530 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-04-30 18:45:17,531 INFO Erst-Pakete der Positivliste:  
+2017-04-30 18:45:17,531 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-04-30 18:45:17,531 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-04-30 18:45:22,454 DEBUG pkgs that look like they should be upgraded: 
+2017-04-30 18:45:22,565 DEBUG fetch.run() result: 0
+2017-04-30 18:45:22,565 DEBUG blacklist: []
+2017-04-30 18:45:22,565 DEBUG whitelist: []
+2017-04-30 18:45:24,397 INFO Pakete, von denen ein Upgrade durchgeführt wird: 
+2017-04-30 18:45:29,025 DEBUG marking libaio1 for remove
+2017-04-30 18:45:29,341 DEBUG marking mysql-server-5.7 for remove
+2017-04-30 18:45:29,341 DEBUG marking mysql-server-core-5.7 for remove
+2017-04-30 18:45:29,342 DEBUG marking mysql-client-5.7 for remove
+2017-04-30 18:45:29,342 DEBUG marking mysql-client-core-5.7 for remove
+2017-04-30 18:45:29,343 INFO Pakete, die automatisch entfernt wurden: »libaio1 mysql-client-5.7 mysql-client-core-5.7 mysql-server-5.7 mysql-server-core-5.7«
+2017-04-30 18:45:37,423 INFO Pakete wurden erfolgreich automatisch entfernt
+2017-04-30 18:45:37,423 DEBUG InstCount=0 DelCount=5 BrokenCount=0
+2017-04-30 18:45:37,423 DEBUG Extracting content from '/var/log/unattended-upgrades/unattended-upgrades-dpkg.log' since '2017-04-30 18:45:17'
+2017-04-30 18:45:37,431 DEBUG Sending mail to 'logs@josef-friedrich.de'
+2017-04-30 18:45:39,113 DEBUG mail returned: 0
+2017-05-01 08:21:15,487 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-05-01 08:21:15,488 INFO Erst-Pakete der Positivliste:  
+2017-05-01 08:21:15,488 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-05-01 08:21:15,489 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-05-01 08:21:19,722 DEBUG pkgs that look like they should be upgraded: 
+2017-05-01 08:21:19,862 DEBUG fetch.run() result: 0
+2017-05-01 08:21:19,863 DEBUG blacklist: []
+2017-05-01 08:21:19,863 DEBUG whitelist: []
+2017-05-01 08:21:21,424 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen

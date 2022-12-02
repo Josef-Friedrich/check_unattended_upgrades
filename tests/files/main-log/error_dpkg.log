@@ -1,0 +1,124 @@
+2017-03-07 21:13:58,919 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-03-07 21:13:58,919 INFO Erst-Pakete der Positivliste:  
+2017-03-07 21:13:58,920 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-03-07 21:13:58,920 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-03-07 21:14:01,931 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-03-08 08:00:55,695 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-03-08 08:00:55,695 INFO Erst-Pakete der Positivliste:  
+2017-03-08 08:00:55,696 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-03-08 08:00:55,697 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-03-08 08:01:00,908 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-03-09 14:25:42,745 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-03-09 14:25:42,746 INFO Erst-Pakete der Positivliste:  
+2017-03-09 14:25:42,746 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-03-09 14:25:42,747 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-03-09 14:26:58,159 INFO Pakete, von denen ein Upgrade durchgeführt wird: desktop-file-utils firefox firefox-locale-de firefox-locale-en gir1.2-nmgtk-1.0 libnm-gtk-common libnm-gtk0 libnma-common libnma0 linux-generic linux-headers-generic linux-image-generic linux-libc-dev network-manager-gnome
+2017-03-09 14:26:58,160 INFO Dpkg-Protokoll wird nach »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« geschrieben
+2017-03-09 14:27:18,428 ERROR Installation der Upgrades fehlgeschlagen!
+2017-03-09 14:27:18,429 ERROR Fehlermeldung: »installArchives() failed«
+2017-03-09 14:27:18,435 ERROR Dpkg gab einen Fehler zurück. Siehe »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« für Einzelheiten
+2017-03-11 15:09:43,397 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-03-11 15:09:43,398 INFO Erst-Pakete der Positivliste:  
+2017-03-11 15:09:43,398 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-03-11 15:09:43,398 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-03-11 15:11:09,174 INFO Pakete, von denen ein Upgrade durchgeführt wird: desktop-file-utils firefox firefox-locale-de firefox-locale-en gir1.2-gtk-3.0 gir1.2-nmgtk-1.0 gtk-update-icon-cache imagemagick imagemagick-6.q16 imagemagick-common libarchive13 libgail-3-0 libgtk-3-0 libgtk-3-bin libgtk-3-common libimage-magick-perl libimage-magick-q16-perl libmagick++-6.q16-5v5 libmagickcore-6.q16-2 libmagickcore-6.q16-2-extra libmagickwand-6.q16-2 libnm-gtk-common libnm-gtk0 libnma-common libnma0 linux-generic linux-headers-generic linux-image-generic linux-libc-dev network-manager-gnome
+2017-03-11 15:11:09,175 INFO Dpkg-Protokoll wird nach »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« geschrieben
+2017-03-11 15:12:39,287 INFO alle Upgrades installiert
+2017-03-14 08:21:17,496 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-03-14 08:21:17,497 INFO Erst-Pakete der Positivliste:  
+2017-03-14 08:21:17,497 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-03-14 08:21:17,498 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-03-14 08:21:24,623 INFO Pakete, von denen ein Upgrade durchgeführt wird: 
+2017-03-14 08:21:30,040 INFO Pakete, die automatisch entfernt wurden: »linux-headers-4.8.0-37 linux-headers-4.8.0-37-generic linux-image-4.8.0-37-generic linux-image-extra-4.8.0-37-generic«
+2017-03-14 08:21:32,709 ERROR Automatische Paketentfernung ist fehlgeschlagen!
+2017-03-14 08:21:32,709 ERROR Fehlermeldung: 'installArchives() failed'
+2017-03-14 08:21:32,711 ERROR dpkg meldete einen Fehler! Einzelheiten dazu hier '/var/log/unattended-upgrades/unattended-upgrades-dpkg.log'
+2017-03-15 07:55:47,934 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-03-15 07:55:47,935 INFO Erst-Pakete der Positivliste:  
+2017-03-15 07:55:47,935 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-03-15 07:55:47,936 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-03-15 07:56:07,898 INFO Pakete, von denen ein Upgrade durchgeführt wird: libevent-2.0-5 libevent-core-2.0-5 libicu57 python-imaging python-pil python3-pil
+2017-03-15 07:56:07,898 INFO Dpkg-Protokoll wird nach »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« geschrieben
+2017-03-15 07:56:14,817 ERROR Installation der Upgrades fehlgeschlagen!
+2017-03-15 07:56:14,817 ERROR Fehlermeldung: »installArchives() failed«
+2017-03-15 07:56:14,818 ERROR Dpkg gab einen Fehler zurück. Siehe »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« für Einzelheiten
+2017-03-16 15:57:26,264 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-03-16 15:57:26,264 INFO Erst-Pakete der Positivliste:  
+2017-03-16 15:57:26,265 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-03-16 15:57:26,265 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-03-16 15:58:17,526 INFO Pakete, von denen ein Upgrade durchgeführt wird: imagemagick imagemagick-6.q16 imagemagick-common libevent-2.0-5 libevent-core-2.0-5 libicu57 libimage-magick-perl libimage-magick-q16-perl libmagick++-6.q16-5v5 libmagickcore-6.q16-2 libmagickcore-6.q16-2-extra libmagickwand-6.q16-2 python-imaging python-pil python3-pil snap-confine snapd ubuntu-core-launcher
+2017-03-16 15:58:17,527 INFO Dpkg-Protokoll wird nach »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« geschrieben
+2017-03-16 15:58:29,073 ERROR Installation der Upgrades fehlgeschlagen!
+2017-03-16 15:58:29,073 ERROR Fehlermeldung: »installArchives() failed«
+2017-03-16 15:58:29,074 ERROR Dpkg gab einen Fehler zurück. Siehe »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« für Einzelheiten
+2017-03-17 19:52:02,101 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-03-17 19:52:02,101 INFO Erst-Pakete der Positivliste:  
+2017-03-17 19:52:02,102 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-03-17 19:52:02,102 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-03-17 19:52:53,065 INFO Pakete, von denen ein Upgrade durchgeführt wird: imagemagick imagemagick-6.q16 imagemagick-common libevent-2.0-5 libevent-core-2.0-5 libicu57 libimage-magick-perl libimage-magick-q16-perl libmagick++-6.q16-5v5 libmagickcore-6.q16-2 libmagickcore-6.q16-2-extra libmagickwand-6.q16-2 libxml2 libxml2-utils linux-libc-dev python-imaging python-libxml2 python-pil python3-pil
+2017-03-17 19:52:53,065 INFO Dpkg-Protokoll wird nach »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« geschrieben
+2017-03-17 19:53:06,319 ERROR Installation der Upgrades fehlgeschlagen!
+2017-03-17 19:53:06,319 ERROR Fehlermeldung: »installArchives() failed«
+2017-03-17 19:53:06,321 ERROR Dpkg gab einen Fehler zurück. Siehe »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« für Einzelheiten
+2017-03-18 09:39:40,912 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-03-18 09:39:40,913 INFO Erst-Pakete der Positivliste:  
+2017-03-18 09:39:40,913 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-03-18 09:39:40,914 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-03-18 09:40:23,602 INFO Pakete, von denen ein Upgrade durchgeführt wird: gnome-software gnome-software-common imagemagick imagemagick-6.q16 imagemagick-common libevent-2.0-5 libevent-core-2.0-5 libicu57 libimage-magick-perl libimage-magick-q16-perl libmagick++-6.q16-5v5 libmagickcore-6.q16-2 libmagickcore-6.q16-2-extra libmagickwand-6.q16-2 libxml2 libxml2-utils linux-libc-dev python-imaging python-libxml2 python-pil python3-pil
+2017-03-18 09:40:23,603 INFO Dpkg-Protokoll wird nach »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« geschrieben
+2017-03-18 09:40:29,365 ERROR Installation der Upgrades fehlgeschlagen!
+2017-03-18 09:40:29,365 ERROR Fehlermeldung: »installArchives() failed«
+2017-03-18 09:40:29,370 ERROR Dpkg gab einen Fehler zurück. Siehe »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« für Einzelheiten
+2017-03-19 16:39:54,629 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-03-19 16:39:54,630 INFO Erst-Pakete der Positivliste:  
+2017-03-19 16:39:54,630 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-03-19 16:39:54,630 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-03-19 16:40:00,084 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-03-25 21:51:07,620 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-03-25 21:51:07,621 INFO Erst-Pakete der Positivliste:  
+2017-03-25 21:51:07,621 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-03-25 21:51:07,621 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-03-25 21:51:10,734 INFO Keine Pakete zur Aktualisierung gefunden, es sind keine automatischen Löschungen vorzunehmen
+2017-03-26 16:54:37,144 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-03-26 16:54:37,145 INFO Erst-Pakete der Positivliste:  
+2017-03-26 16:54:37,145 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-03-26 16:54:37,145 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-03-26 16:55:42,050 INFO Pakete, von denen ein Upgrade durchgeführt wird: firefox firefox-locale-de firefox-locale-en libfreetype6 libsmbclient libwbclient0 python-samba python3-update-manager samba-common samba-common-bin samba-libs thermald thunderbird thunderbird-gnome-support update-manager update-manager-core
+2017-03-26 16:55:42,051 INFO Dpkg-Protokoll wird nach »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« geschrieben
+2017-03-26 16:55:42,224 ERROR Installation der Upgrades fehlgeschlagen!
+2017-03-26 16:55:42,224 ERROR Fehlermeldung: »E:Can't find a source to download version '1:16.10.8' of 'python3-update-manager:amd64'«
+2017-03-26 16:55:42,225 ERROR Dpkg gab einen Fehler zurück. Siehe »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« für Einzelheiten
+2017-03-29 09:01:25,633 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-03-29 09:01:25,634 INFO Erst-Pakete der Positivliste:  
+2017-03-29 09:01:25,634 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-03-29 09:01:25,634 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-03-29 09:02:33,861 INFO Pakete, von denen ein Upgrade durchgeführt wird: coreutils docker-engine eject gir1.2-gst-plugins-base-1.0 gstreamer1.0-alsa gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-pulseaudio gstreamer1.0-x libgstreamer-plugins-base1.0-0 libgstreamer-plugins-good1.0-0 linux-generic linux-headers-generic linux-image-generic linux-libc-dev
+2017-03-29 09:02:33,861 INFO Dpkg-Protokoll wird nach »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« geschrieben
+2017-03-29 09:02:43,194 ERROR Installation der Upgrades fehlgeschlagen!
+2017-03-29 09:02:43,194 ERROR Fehlermeldung: »installArchives() failed«
+2017-03-29 09:02:43,195 ERROR Dpkg gab einen Fehler zurück. Siehe »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« für Einzelheiten
+2017-03-30 16:14:32,590 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-03-30 16:14:32,590 INFO Erst-Pakete der Positivliste:  
+2017-03-30 16:14:32,591 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-03-30 16:14:32,591 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-03-30 16:15:30,312 INFO Pakete, von denen ein Upgrade durchgeführt wird: apparmor coreutils docker-engine eject gir1.2-gst-plugins-base-1.0 gstreamer1.0-alsa gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-pulseaudio gstreamer1.0-x libapparmor-perl libapparmor1 libgstreamer-plugins-base1.0-0 libgstreamer-plugins-good1.0-0 linux-generic linux-headers-generic linux-image-generic linux-libc-dev
+2017-03-30 16:15:30,313 INFO Dpkg-Protokoll wird nach »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« geschrieben
+2017-03-30 16:15:40,506 ERROR Installation der Upgrades fehlgeschlagen!
+2017-03-30 16:15:40,507 ERROR Fehlermeldung: »installArchives() failed«
+2017-03-30 16:15:40,511 ERROR Dpkg gab einen Fehler zurück. Siehe »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« für Einzelheiten
+2017-03-31 18:33:59,353 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-03-31 18:33:59,353 INFO Erst-Pakete der Positivliste:  
+2017-03-31 18:33:59,354 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-03-31 18:33:59,354 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-03-31 18:34:02,424 INFO Pakete, von denen ein Upgrade durchgeführt wird: 
+2017-03-31 18:34:04,963 INFO Pakete, die automatisch entfernt wurden: »linux-headers-4.8.0-39 linux-headers-4.8.0-39-generic linux-image-4.8.0-39-generic linux-image-extra-4.8.0-39-generic«
+2017-03-31 18:34:32,292 INFO Pakete wurden erfolgreich automatisch entfernt
+2017-04-01 09:00:10,427 INFO Pakete, die anfangs auf die schwarzen Liste standen: 
+2017-04-01 09:00:10,428 INFO Erst-Pakete der Positivliste:  
+2017-04-01 09:00:10,429 INFO Skript für unbeaufsichtigte Upgrades wird gestartet.
+2017-04-01 09:00:10,429 INFO erlaubte Ursprünge sind: ['o=Ubuntu,a=yakkety-security', 'o=Ubuntu,a=yakkety-updates', 'o=Ubuntu,a=yakkety-proposed', 'o=Ubuntu,a=yakkety-backports', 'o=Docker,a=ubuntu-yakkety']
+2017-04-01 09:00:54,341 INFO Pakete, von denen ein Upgrade durchgeführt wird: firefox firefox-locale-de firefox-locale-en libsmbclient libwbclient0 python-samba samba-common samba-common-bin samba-libs
+2017-04-01 09:00:54,343 INFO Dpkg-Protokoll wird nach »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« geschrieben
+2017-04-01 09:01:10,997 ERROR Installation der Upgrades fehlgeschlagen!
+2017-04-01 09:01:10,998 ERROR Fehlermeldung: »installArchives() failed«
+2017-04-01 09:01:10,998 ERROR Dpkg gab einen Fehler zurück. Siehe »/var/log/unattended-upgrades/unattended-upgrades-dpkg.log« für Einzelheiten

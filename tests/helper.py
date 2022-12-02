@@ -123,7 +123,7 @@ def perform_subprocess_run_side_effect(args: list[str], **kwargs):
 
 def execute_main(
     argv: list[str] = ["check_unattended_upgrades.py"],
-    main_log_file: str = "main-log.txt",
+    main_log_file: str = "debug.log",
 ) -> MockResult:
     if not argv or argv[0] != "check_unattended_upgrades.py":
         argv.insert(0, "check_unattended_upgrades.py")
@@ -132,7 +132,10 @@ def execute_main(
     ), mock.patch("sys.argv", argv), mock.patch(
         "builtins.print"
     ) as mocked_print, mock.patch(
-        "__main__.open", mock.mock_open(read_data=read_text_file(main_log_file))
+        "__main__.open",
+        mock.mock_open(
+            read_data=read_text_file(os.path.join("main-log", main_log_file))
+        ),
     ):
 
         file_stdout: io.StringIO = io.StringIO()
