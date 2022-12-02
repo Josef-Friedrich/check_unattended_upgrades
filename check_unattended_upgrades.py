@@ -455,6 +455,10 @@ class LogParser:
             return LogParser.__read_lines(log_file.read())
 
     @staticmethod
+    def reset() -> None:
+        LogParser.runs = []
+
+    @staticmethod
     def parse() -> list[Run]:
         if len(LogParser.runs) > 0:
             return LogParser.runs
@@ -560,9 +564,7 @@ class WarningsInLogContext(nagiosplugin.Context):
 
 class ChecksCollection:
 
-    checks: list[
-        nagiosplugin.Resource | nagiosplugin.Context | nagiosplugin.Summary
-    ]
+    checks: list[nagiosplugin.Resource | nagiosplugin.Context | nagiosplugin.Summary]
 
     def __init__(self, opts: OptionContainer) -> None:
         self.checks = [
@@ -599,6 +601,8 @@ def main() -> None:
     global opts
 
     opts = typing.cast(OptionContainer, get_argparser().parse_args())
+
+    LogParser.reset()
 
     checks: ChecksCollection = ChecksCollection(opts)
     check: nagiosplugin.Check = nagiosplugin.Check(*checks.checks)
