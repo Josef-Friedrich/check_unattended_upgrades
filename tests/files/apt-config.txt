@@ -320,7 +320,7 @@ AptCli::Hooks "";
 AptCli::Hooks::Install "";
 AptCli::Hooks::Install:: "[ ! -f /usr/bin/snap ] || /usr/bin/snap advise-snap --from-apt 2>/dev/null || true";
 Unattended-Upgrade "";
-Unattended-Upgrade::Mail "logs@josef-friedrich.de";
+Unattended-Upgrade::Mail "logs@example.com";
 Unattended-Upgrade::Remove-Unused-Dependencies "true";
 Unattended-Upgrade::Automatic-Reboot "true";
 Unattended-Upgrade::Automatic-Reboot-Time "04:00";
