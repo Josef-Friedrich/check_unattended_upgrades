@@ -6,7 +6,7 @@ from tests.helper import execute_main
 class TestConfigAutoclean(unittest.TestCase):
     def test_ok(self) -> None:
         result = execute_main(["--autoclean", "7"])
-        result.assert_first_line("UNATTENDED_UPGRADES OK")
+        result.assert_first_line("UNATTENDED_UPGRADES OK - all")
         result.assert_ok()
 
     def test_critical(self) -> None:
@@ -20,7 +20,7 @@ class TestConfigAutoclean(unittest.TestCase):
 class TestConfigDownload(unittest.TestCase):
     def test_ok(self) -> None:
         result = execute_main(["--download", "1"])
-        result.assert_first_line("UNATTENDED_UPGRADES OK")
+        result.assert_first_line("UNATTENDED_UPGRADES OK - all")
         result.assert_ok()
 
     def test_critical(self) -> None:
@@ -34,7 +34,7 @@ class TestConfigDownload(unittest.TestCase):
 class TestConfigEnable(unittest.TestCase):
     def test_ok(self) -> None:
         result = execute_main(["--enable", "1"])
-        result.assert_first_line("UNATTENDED_UPGRADES OK")
+        result.assert_first_line("UNATTENDED_UPGRADES OK - all")
         result.assert_ok()
 
     def test_critical(self) -> None:
@@ -48,7 +48,7 @@ class TestConfigEnable(unittest.TestCase):
 class TestConfigSleep(unittest.TestCase):
     def test_ok(self) -> None:
         result = execute_main(["--sleep", "0"])
-        result.assert_first_line("UNATTENDED_UPGRADES OK")
+        result.assert_first_line("UNATTENDED_UPGRADES OK - all")
         result.assert_ok()
 
     def test_critical(self) -> None:
@@ -62,7 +62,7 @@ class TestConfigSleep(unittest.TestCase):
 class TestConfigUnattended(unittest.TestCase):
     def test_ok(self) -> None:
         result = execute_main(["--unattended", "1"])
-        result.assert_first_line("UNATTENDED_UPGRADES OK")
+        result.assert_first_line("UNATTENDED_UPGRADES OK - all")
         result.assert_ok()
 
     def test_critical(self) -> None:
@@ -76,7 +76,7 @@ class TestConfigUnattended(unittest.TestCase):
 class TestConfigLists(unittest.TestCase):
     def test_ok(self) -> None:
         result = execute_main(["--lists", "1"])
-        result.assert_first_line("UNATTENDED_UPGRADES OK")
+        result.assert_first_line("UNATTENDED_UPGRADES OK - all")
         result.assert_ok()
 
     def test_critical(self) -> None:
@@ -90,7 +90,7 @@ class TestConfigLists(unittest.TestCase):
 class TestConfigMail(unittest.TestCase):
     def test_ok(self) -> None:
         result = execute_main(["--mail", "logs@example.com"])
-        result.assert_first_line("UNATTENDED_UPGRADES OK")
+        result.assert_first_line("UNATTENDED_UPGRADES OK - all")
         result.assert_ok()
 
     def test_critical(self) -> None:
@@ -104,7 +104,7 @@ class TestConfigMail(unittest.TestCase):
 class TestConfigRemove(unittest.TestCase):
     def test_ok(self) -> None:
         result = execute_main(["--remove", "true"])
-        result.assert_first_line("UNATTENDED_UPGRADES OK")
+        result.assert_first_line("UNATTENDED_UPGRADES OK - all")
         result.assert_ok()
 
     def test_critical(self) -> None:

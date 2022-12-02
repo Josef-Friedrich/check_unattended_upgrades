@@ -3,6 +3,7 @@ import os
 from contextlib import redirect_stderr, redirect_stdout
 from unittest import mock
 from unittest.mock import Mock
+from freezegun import freeze_time
 
 import check_unattended_upgrades
 
@@ -122,6 +123,7 @@ def perform_subprocess_run_side_effect(args: list[str], **kwargs):
 def execute_main(
     argv: list[str] = ["check_unattended_upgrades.py"],
     main_log_file: str = "info.log",
+    time: str = "2017-09-01 10:55:34",
 ) -> MockResult:
     if not argv or argv[0] != "check_unattended_upgrades.py":
         argv.insert(0, "check_unattended_upgrades.py")
@@ -134,6 +136,8 @@ def execute_main(
         mock.mock_open(
             read_data=read_text_file(os.path.join("main-log", main_log_file))
         ),
+    ), freeze_time(
+        time
     ):
 
         file_stdout: io.StringIO = io.StringIO()

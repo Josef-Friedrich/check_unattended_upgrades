@@ -509,18 +509,14 @@ class LastRunContext(nagiosplugin.Context):
 
         interval: float = datetime.datetime.now().timestamp() - metric.value
 
+        hint = "last-run was {} seconds ago".format(interval)
+
         if interval > opts.critical:
-            return self.result_cls(nagiosplugin.Critical, metric=metric)
+            return self.result_cls(nagiosplugin.Critical, metric=metric, hint=hint)
         elif interval > opts.warning:
-            return self.result_cls(
-                nagiosplugin.Warn,
-                metric=metric,
-            )
+            return self.result_cls(nagiosplugin.Warn, metric=metric, hint=hint)
         else:
-            return self.result_cls(
-                nagiosplugin.Ok,
-                metric=metric,
-            )
+            return self.result_cls(nagiosplugin.Ok, metric=metric, hint=hint)
 
 
 # warnings-in-log #############################################################
@@ -562,6 +558,23 @@ class WarningsInLogContext(nagiosplugin.Context):
         return self.result_cls(state, metric=metric, hint=message.message)
 
 
+class UnattendedUpgradesSummary(nagiosplugin.Summary):
+    def ok(self, results: nagiosplugin.Results) -> str:
+        return "all"
+
+    def problem(self, results: nagiosplugin.Results) -> str:
+        summary: typing.List[nagiosplugin.Result] = []
+        for result in results.most_significant:
+            summary.append(result)
+        return ", ".join(["{0}".format(result) for result in summary])
+
+    def verbose(self, results: nagiosplugin.Results) -> typing.List[str]:
+        summary: typing.List[str] = []
+        for result in results.most_significant:
+            summary.append("{0}: {1}".format(result.state, result))
+        return summary
+
+
 class ChecksCollection:
 
     checks: list[nagiosplugin.Resource | nagiosplugin.Context | nagiosplugin.Summary]
@@ -572,6 +585,7 @@ class ChecksCollection:
             LastRunContext(),
             WarningsInLogResource(),
             WarningsInLogContext(),
+            UnattendedUpgradesSummary(),
         ]
 
         if opts.reboot:

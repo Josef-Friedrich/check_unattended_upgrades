@@ -29,6 +29,7 @@ black = "^22.6.0"
 isort = "^5.10.1"
 nagiosplugin-stubs = "^0.4.0"
 mypy = "^0.991"
+freezegun = "^1.2.2"
 
 [tool.mypy]
 files = "check_unattended_upgrades.py"
