@@ -9,6 +9,16 @@ from freezegun import freeze_time
 
 import check_unattended_upgrades
 
+import subprocess
+
+def run(args: list[str]) -> subprocess.CompletedProcess[str]:
+    return subprocess.run(
+        ['./check_unattended_upgrades.py'] + args,
+        encoding="utf-8",
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+    )
+
 
 def read_text_file(file_name: str) -> str:
     file: str = os.path.join(
