@@ -1,5 +1,8 @@
+from __future__ import annotations
+
 import io
 import os
+import subprocess
 import typing
 from contextlib import redirect_stderr, redirect_stdout
 from unittest import mock
@@ -9,11 +12,10 @@ from freezegun import freeze_time
 
 import check_unattended_upgrades
 
-import subprocess
 
 def run(args: list[str]) -> subprocess.CompletedProcess[str]:
     return subprocess.run(
-        ['./check_unattended_upgrades.py'] + args,
+        ["./check_unattended_upgrades.py"] + args,
         encoding="utf-8",
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
@@ -48,7 +50,7 @@ class MockResult:
     @property
     def exitcode(self) -> int:
         """The captured exit code"""
-        return self.__sys_exit.call_args[0][0]
+        return int(self.__sys_exit.call_args[0][0])
 
     @property
     def print_calls(self) -> list[str]:
@@ -64,6 +66,7 @@ class MockResult:
         output."""
         if self.__stdout:
             return self.__stdout
+        return None
 
     @property
     def stderr(self) -> str | None:
@@ -71,6 +74,7 @@ class MockResult:
         output."""
         if self.__stderr:
             return self.__stderr
+        return None
 
     @property
     def output(self) -> str:
@@ -96,6 +100,7 @@ class MockResult:
         """
         if self.output:
             return self.output.split("\n", 1)[0]
+        return None
 
     def assert_exitcode(self, exitcode: int) -> None:
         assert self.exitcode == exitcode, "exitcode {} != {}".format(

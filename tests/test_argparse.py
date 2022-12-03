@@ -1,15 +1,14 @@
 import unittest
 
-
+import check_unattended_upgrades
 from tests.helper import run
-import check_zpool_scrub
 
 
 class TestWithSubprocess(unittest.TestCase):
     def test_help(self) -> None:
         process = run(["--help"])
         self.assertEqual(process.returncode, 0)
-        self.assertIn("usage: check_zpool_scrub", process.stdout)
+        self.assertIn("usage: check_unattended_upgrades", process.stdout)
 
     def test_version(self) -> None:
         process = run(
@@ -17,7 +16,8 @@ class TestWithSubprocess(unittest.TestCase):
         )
         self.assertEqual(process.returncode, 0)
         self.assertIn(
-            "check_zpool_scrub " + check_zpool_scrub.__version__, process.stdout
+            "check_unattended_upgrades " + check_unattended_upgrades.__version__,
+            process.stdout,
         )
 
 

@@ -1,5 +1,7 @@
 #! /usr/bin/env python3
 
+from __future__ import annotations
+
 import argparse
 import datetime
 import gzip
@@ -457,6 +459,7 @@ class LogParser:
                 message=match[3],
             )
             return message
+        return None
 
     @staticmethod
     def __parse_zipped(path: pathlib.Path) -> list[LogMessage]:
