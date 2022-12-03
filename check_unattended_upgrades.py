@@ -41,13 +41,15 @@ LOG_FILE = "/var/log/unattended-upgrades/unattended-upgrades.log"
 
 def get_argparser() -> argparse.ArgumentParser:
     parser: argparse.ArgumentParser = argparse.ArgumentParser(
-        prog="check_unattended_upgrades",  # To get the right command name in the README.
+        # To get the right command name in the README.
+        prog="check_unattended_upgrades",
         formatter_class=lambda prog: argparse.RawDescriptionHelpFormatter(
             prog, width=80
         ),  # noqa: E501
         description="Copyright (c) 2015-22 Josef Friedrich <josef@friedrich.rocks>\n"
         "\n"
-        "Monitoring plugin to check automatic updates (unattended-upgrades) on Debian / Ubuntu.\n",  # noqa: E501
+        "Monitoring plugin to check automatic updates (unattended-upgrades) "
+        "on Debian / Ubuntu.\n",  # noqa: E501
         epilog="Performance data:\n"
         "  - last_ago\n"
         "       Time interval in seconds for last unattended-upgrades execution.\n"
@@ -66,7 +68,8 @@ def get_argparser() -> argparse.ArgumentParser:
         "   permissions are recommended:\n"
         "\n"
         "       751 (drwxr-x--x) /var/log/unattended-upgrades\n"
-        "       644 (-rw-r--r--) /var/log/unattended-upgrades/unattended-upgrades.log\n",
+        "       644 (-rw-r--r--) "
+        "/var/log/unattended-upgrades/unattended-upgrades.log\n",
     )
 
     parser.add_argument(
@@ -80,7 +83,8 @@ def get_argparser() -> argparse.ArgumentParser:
         "-a",
         "--autoclean",
         metavar="CONFIG_VALUE",
-        help="Check if the configuration 'APT::Periodic::AutocleanInterval' is set properly.",
+        help="Check if the configuration 'APT::Periodic::AutocleanInterval' "
+        "is set properly.",
     )
 
     parser.add_argument(
@@ -89,7 +93,8 @@ def get_argparser() -> argparse.ArgumentParser:
         default=187200,  # 52h = 2d + 4h
         type=int,
         metavar="SECONDS",
-        help="Time interval since the last execution to result in a critical state (seconds).",
+        help="Time interval since the last execution to result in a critical "
+        "state (seconds).",
     )
 
     parser.add_argument(
@@ -103,7 +108,8 @@ def get_argparser() -> argparse.ArgumentParser:
         "-d",
         "--download",
         metavar="CONFIG_VALUE",
-        help="Check if the configuration 'APT::Periodic:Download-Upgradeable-Packages' is set properly.",
+        help="Check if the configuration 'APT::Periodic:Download-Upgradeable-Packages' "
+        "is set properly.",
     )
 
     parser.add_argument(
@@ -117,7 +123,8 @@ def get_argparser() -> argparse.ArgumentParser:
         "-l",
         "--lists",
         metavar="CONFIG_VALUE",
-        help="Check if the configuration 'APT::Periodic::Update-Package-Lists' is set properly.",
+        help="Check if the configuration 'APT::Periodic::Update-Package-Lists' "
+        "is set properly.",
     )
 
     parser.add_argument(
@@ -131,13 +138,16 @@ def get_argparser() -> argparse.ArgumentParser:
         "-n",
         "--dry-run",
         action="store_true",
-        help="Check if 'unattended-upgrades --dry-run' is working. Warning: If you use this option the performance data last_ago is always 0 or near to 0.",
+        help="Check if 'unattended-upgrades --dry-run' is working. Warning: "
+        "If you use this option the performance data last_ago is "
+        "always 0 or near to 0.",
     )
 
     parser.add_argument(
         "-p",
         "--repo",
-        help="Check if 'Unattended-upgrades' is configured to include the specified custom repository.",
+        help="Check if 'Unattended-upgrades' is configured to include the "
+        "specified custom repository.",
     )
 
     parser.add_argument(
@@ -151,7 +161,8 @@ def get_argparser() -> argparse.ArgumentParser:
         "-r",
         "--remove",
         metavar="CONFIG_VALUE",
-        help="Check if the configuration 'Unattended-Upgrade::Remove-Unused- Dependencies' is set properly.",
+        help="Check if the configuration "
+        "'Unattended-Upgrade::Remove-Unused-Dependencies' is set properly.",
     )
 
     parser.add_argument(
@@ -172,14 +183,16 @@ def get_argparser() -> argparse.ArgumentParser:
         "-t",
         "--systemd-timers",
         action="store_true",
-        help="Check if the appropriate Systemd timers are enabled ( apt-daily-upgrade.timer, apt-daily.timer ).",
+        help="Check if the appropriate Systemd timers are enabled "
+        "( apt-daily-upgrade.timer, apt-daily.timer ).",
     )
 
     parser.add_argument(
         "-u",
         "--unattended",
         metavar="CONFIG_VALUE",
-        help="Check if the configuration 'APT::Periodic::Unattended-Upgrade' is set properly.",
+        help="Check if the configuration 'APT::Periodic::Unattended-Upgrade' "
+        "is set properly.",
     )
 
     parser.add_argument("-v", "--verbose", action="store_true", default=False)
@@ -197,7 +210,8 @@ def get_argparser() -> argparse.ArgumentParser:
         default=93600,  # 26h = 1d + 2h
         type=int,
         metavar="SECONDS",
-        help="Time interval since the last execution to result in a warning state (seconds).",
+        help="Time interval since the last execution to result in a "
+        "warning state (seconds).",
     )
 
     return parser
@@ -356,9 +370,8 @@ class ConfigContext(nagiosplugin.Context):
             return self.result_cls(
                 nagiosplugin.Critical,
                 metric=metric,
-                hint="Configuration value for “{}” unexpected! actual: {} expected: {}".format(
-                    r.key, metric.value, self.expected
-                ),
+                hint="Configuration value for “{}” unexpected! "
+                "actual: {} expected: {}".format(r.key, metric.value, self.expected),
             )
 
 
@@ -392,7 +405,8 @@ class LogMessage:
 
 
 class Run:
-    """Collection of all log messages of an execution of the unattended-upgrades script."""
+    """Collection of all log messages of an execution of the
+    unattended-upgrades script."""
 
     log_messages: list[LogMessage]
 
@@ -432,7 +446,8 @@ class LogParser:
     @staticmethod
     def __read_log_line(line: str) -> LogMessage | None:
         match = re.match(
-            r"(\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d),\d\d\d (DEBUG|INFO|WARNING|ERROR|EXCEPTION) (.*)\n?$",
+            r"(\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d),\d\d\d "
+            r"(DEBUG|INFO|WARNING|ERROR|EXCEPTION) (.*)\n?$",
             line,
         )
         if match:

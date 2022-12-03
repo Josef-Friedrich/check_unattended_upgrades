@@ -1,5 +1,6 @@
 import io
 import os
+import typing
 from contextlib import redirect_stderr, redirect_stdout
 from unittest import mock
 from unittest.mock import Mock
@@ -119,7 +120,9 @@ class CompletedProcess:
     stdout: str
 
 
-def perform_subprocess_run_side_effect(args: list[str], **kwargs):
+def perform_subprocess_run_side_effect(
+    args: list[str], **kwargs: typing.Any
+) -> CompletedProcess:
     process = CompletedProcess()
     process.returncode = 0
     process.stdout = read_text_file("apt-config.txt")

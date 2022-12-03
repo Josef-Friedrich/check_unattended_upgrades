@@ -13,7 +13,9 @@ class TestConfigAutoclean(unittest.TestCase):
         result = execute_main(["--autoclean", "42"])
         result.assert_critical()
         result.assert_first_line(
-            "UNATTENDED_UPGRADES CRITICAL - Configuration value for “APT::Periodic::AutocleanInterval” unexpected! actual: 7 expected: 42"
+            "UNATTENDED_UPGRADES CRITICAL - "
+            "Configuration value for “APT::Periodic::AutocleanInterval” "
+            "unexpected! actual: 7 expected: 42"
         )
 
 
@@ -27,7 +29,9 @@ class TestConfigDownload(unittest.TestCase):
         result = execute_main(["--download", "0"])
         result.assert_critical()
         result.assert_first_line(
-            "UNATTENDED_UPGRADES CRITICAL - Configuration value for “APT::Periodic::Download-Upgradeable-Packages” unexpected! actual: 1 expected: 0"
+            "UNATTENDED_UPGRADES CRITICAL - "
+            "Configuration value for “APT::Periodic::Download-Upgradeable-Packages” "
+            "unexpected! actual: 1 expected: 0"
         )
 
 
@@ -41,7 +45,9 @@ class TestConfigEnable(unittest.TestCase):
         result = execute_main(["--enable", "42"])
         result.assert_critical()
         result.assert_first_line(
-            "UNATTENDED_UPGRADES CRITICAL - Configuration value for “APT::Periodic::Enable” unexpected! actual: 1 expected: 42"
+            "UNATTENDED_UPGRADES CRITICAL - "
+            "Configuration value for “APT::Periodic::Enable” "
+            "unexpected! actual: 1 expected: 42"
         )
 
 
@@ -55,7 +61,9 @@ class TestConfigSleep(unittest.TestCase):
         result = execute_main(["--sleep", "42"])
         result.assert_critical()
         result.assert_first_line(
-            "UNATTENDED_UPGRADES CRITICAL - Configuration value for “APT::Periodic::RandomSleep” unexpected! actual: 0 expected: 42"
+            "UNATTENDED_UPGRADES CRITICAL - "
+            "Configuration value for “APT::Periodic::RandomSleep” unexpected! "
+            "actual: 0 expected: 42"
         )
 
 
@@ -69,7 +77,9 @@ class TestConfigUnattended(unittest.TestCase):
         result = execute_main(["--unattended", "42"])
         result.assert_critical()
         result.assert_first_line(
-            "UNATTENDED_UPGRADES CRITICAL - Configuration value for “APT::Periodic::Unattended-Upgrade” unexpected! actual: 1 expected: 42"
+            "UNATTENDED_UPGRADES CRITICAL - "
+            "Configuration value for “APT::Periodic::Unattended-Upgrade” unexpected! "
+            "actual: 1 expected: 42"
         )
 
 
@@ -83,7 +93,9 @@ class TestConfigLists(unittest.TestCase):
         result = execute_main(["--lists", "42"])
         result.assert_critical()
         result.assert_first_line(
-            "UNATTENDED_UPGRADES CRITICAL - Configuration value for “APT::Periodic::Update-Package-Lists” unexpected! actual: 1 expected: 42"
+            "UNATTENDED_UPGRADES CRITICAL - "
+            "Configuration value for “APT::Periodic::Update-Package-Lists” unexpected! "
+            "actual: 1 expected: 42"
         )
 
 
@@ -97,7 +109,9 @@ class TestConfigMail(unittest.TestCase):
         result = execute_main(["--mail", "logs@xxx.xx"])
         result.assert_critical()
         result.assert_first_line(
-            "UNATTENDED_UPGRADES CRITICAL - Configuration value for “Unattended-Upgrade::Mail” unexpected! actual: logs@example.com expected: logs@xxx.xx"
+            "UNATTENDED_UPGRADES CRITICAL - "
+            "Configuration value for “Unattended-Upgrade::Mail” unexpected! "
+            "actual: logs@example.com expected: logs@xxx.xx"
         )
 
 
@@ -111,7 +125,10 @@ class TestConfigRemove(unittest.TestCase):
         result = execute_main(["--remove", "false"])
         result.assert_critical()
         result.assert_first_line(
-            "UNATTENDED_UPGRADES CRITICAL - Configuration value for “Unattended-Upgrade::Remove-Unused-Dependencies” unexpected! actual: true expected: false"
+            "UNATTENDED_UPGRADES CRITICAL - "
+            "Configuration value for "
+            "“Unattended-Upgrade::Remove-Unused-Dependencies” unexpected! "
+            "actual: true expected: false"
         )
 
 
