@@ -1,0 +1,156 @@
+2022-12-01 00:48:20,200 INFO Allowed origins are: origin=*
+2022-12-01 00:48:20,200 INFO Initial blacklist:
+2022-12-01 00:48:20,200 INFO Initial whitelist (not strict):
+2022-12-01 00:48:20,762 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-12-01 00:48:20,763 DEBUG Using (^linux-.*-5\.4\.0\-132\-generic$|^linux-.*-5\.4\.0\-132$|^kfreebsd-.*-5\.4\.0\-132\-generic$|^kfreebsd-.*-5\.4\.0\-132$|^gnumach-.*-5\.4\.0\-132\-generic$|^gnumach-.*-5\.4\.0\-132$|^.*-modules-5\.4\.0\-132\-generic$|^.*-modules-5\.4\.0\-132$|^.*-kernel-5\.4\.0\-132\-generic$|^.*-kernel-5\.4\.0\-132$|^linux-.*-5\.4\.0\-132\-generic$|^linux-.*-5\.4\.0\-132$|^kfreebsd-.*-5\.4\.0\-132\-generic$|^kfreebsd-.*-5\.4\.0\-132$|^gnumach-.*-5\.4\.0\-132\-generic$|^gnumach-.*-5\.4\.0\-132$|^.*-modules-5\.4\.0\-132\-generic$|^.*-modules-5\.4\.0\-132$|^.*-kernel-5\.4\.0\-132\-generic$|^.*-kernel-5\.4\.0\-132$) regexp to find running kernel packages
+2022-12-01 00:48:21,827 DEBUG pkgs that look like they should be upgraded:
+2022-12-01 00:48:21,953 DEBUG fetch.run() result: 0
+2022-12-01 00:48:23,149 INFO Starting unattended upgrades script
+2022-12-01 00:48:23,150 INFO Allowed origins are: origin=*
+2022-12-01 00:48:23,151 INFO Initial blacklist:
+2022-12-01 00:48:23,151 INFO Initial whitelist (not strict):
+2022-12-01 00:48:23,740 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-12-01 00:48:23,740 DEBUG Using (^linux-.*-5\.4\.0\-132\-generic$|^linux-.*-5\.4\.0\-132$|^kfreebsd-.*-5\.4\.0\-132\-generic$|^kfreebsd-.*-5\.4\.0\-132$|^gnumach-.*-5\.4\.0\-132\-generic$|^gnumach-.*-5\.4\.0\-132$|^.*-modules-5\.4\.0\-132\-generic$|^.*-modules-5\.4\.0\-132$|^.*-kernel-5\.4\.0\-132\-generic$|^.*-kernel-5\.4\.0\-132$|^linux-.*-5\.4\.0\-132\-generic$|^linux-.*-5\.4\.0\-132$|^kfreebsd-.*-5\.4\.0\-132\-generic$|^kfreebsd-.*-5\.4\.0\-132$|^gnumach-.*-5\.4\.0\-132\-generic$|^gnumach-.*-5\.4\.0\-132$|^.*-modules-5\.4\.0\-132\-generic$|^.*-modules-5\.4\.0\-132$|^.*-kernel-5\.4\.0\-132\-generic$|^.*-kernel-5\.4\.0\-132$) regexp to find running kernel packages
+2022-12-01 00:48:24,600 DEBUG pkgs that look like they should be upgraded:
+2022-12-01 00:48:24,754 DEBUG fetch.run() result: 0
+2022-12-01 00:48:24,784 DEBUG dpkg is configured not to cause conffile prompts
+2022-12-01 00:48:24,785 INFO No packages found that can be upgraded unattended and no pending auto-removals
+2022-12-01 00:48:24,814 DEBUG Package dmeventd has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-12-01 00:48:24,815 DEBUG Package dmsetup has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-12-01 00:48:24,877 DEBUG Package libdevmapper-event1.02.1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-12-01 00:48:24,877 DEBUG Package libdevmapper1.02.1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-12-01 00:48:24,912 DEBUG Package liblvm2cmd2.03 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-12-01 00:48:25,014 DEBUG Package lvm2 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-12-01 00:48:25,018 DEBUG Package memtest86+ has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-12-01 00:48:25,095 DEBUG Extracting content from /var/log/unattended-upgrades/unattended-upgrades-dpkg.log since 2022-12-01 00:48:23
+2022-12-02 00:17:07,919 INFO Starting unattended upgrades script
+2022-12-02 00:17:07,920 INFO Allowed origins are: origin=*
+2022-12-02 00:17:07,920 INFO Initial blacklist:
+2022-12-02 00:17:07,921 INFO Initial whitelist (not strict):
+2022-12-02 00:17:08,567 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-12-02 00:17:08,567 DEBUG Using (^linux-.*-5\.4\.0\-132\-generic$|^linux-.*-5\.4\.0\-132$|^kfreebsd-.*-5\.4\.0\-132\-generic$|^kfreebsd-.*-5\.4\.0\-132$|^gnumach-.*-5\.4\.0\-132\-generic$|^gnumach-.*-5\.4\.0\-132$|^.*-modules-5\.4\.0\-132\-generic$|^.*-modules-5\.4\.0\-132$|^.*-kernel-5\.4\.0\-132\-generic$|^.*-kernel-5\.4\.0\-132$|^linux-.*-5\.4\.0\-132\-generic$|^linux-.*-5\.4\.0\-132$|^kfreebsd-.*-5\.4\.0\-132\-generic$|^kfreebsd-.*-5\.4\.0\-132$|^gnumach-.*-5\.4\.0\-132\-generic$|^gnumach-.*-5\.4\.0\-132$|^.*-modules-5\.4\.0\-132\-generic$|^.*-modules-5\.4\.0\-132$|^.*-kernel-5\.4\.0\-132\-generic$|^.*-kernel-5\.4\.0\-132$) regexp to find running kernel packages
+2022-12-02 00:17:09,402 DEBUG Checking: libtiff5 ([<Origin component:'main' archive:'focal-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'focal-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-12-02 00:17:09,621 DEBUG Checking: linux-generic ([<Origin component:'main' archive:'focal-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'focal-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-12-02 00:17:09,816 DEBUG Checking: linux-headers-generic ([<Origin component:'main' archive:'focal-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'focal-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-12-02 00:17:09,996 DEBUG Checking: linux-image-generic ([<Origin component:'main' archive:'focal-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'focal-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-12-02 00:17:10,334 DEBUG Checking: linux-libc-dev ([<Origin component:'main' archive:'focal-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'focal-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-12-02 00:17:10,631 DEBUG Checking: snapd ([<Origin component:'main' archive:'focal-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'focal-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-12-02 00:17:10,830 DEBUG Checking: ubuntu-advantage-tools ([<Origin component:'main' archive:'focal-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-12-02 00:17:11,530 DEBUG pkgs that look like they should be upgraded: libtiff5
+linux-generic
+linux-headers-generic
+linux-image-generic
+linux-libc-dev
+snapd
+ubuntu-advantage-tools
+2022-12-02 00:17:17,850 DEBUG fetch.run() result: 0
+2022-12-02 00:46:42,823 INFO Starting unattended upgrades script
+2022-12-02 00:46:42,824 INFO Allowed origins are: origin=*
+2022-12-02 00:46:42,824 INFO Initial blacklist:
+2022-12-02 00:46:42,824 INFO Initial whitelist (not strict):
+2022-12-02 00:46:43,399 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-12-02 00:46:43,399 DEBUG Using (^linux-.*-5\.4\.0\-132\-generic$|^linux-.*-5\.4\.0\-132$|^kfreebsd-.*-5\.4\.0\-132\-generic$|^kfreebsd-.*-5\.4\.0\-132$|^gnumach-.*-5\.4\.0\-132\-generic$|^gnumach-.*-5\.4\.0\-132$|^.*-modules-5\.4\.0\-132\-generic$|^.*-modules-5\.4\.0\-132$|^.*-kernel-5\.4\.0\-132\-generic$|^.*-kernel-5\.4\.0\-132$|^linux-.*-5\.4\.0\-132\-generic$|^linux-.*-5\.4\.0\-132$|^kfreebsd-.*-5\.4\.0\-132\-generic$|^kfreebsd-.*-5\.4\.0\-132$|^gnumach-.*-5\.4\.0\-132\-generic$|^gnumach-.*-5\.4\.0\-132$|^.*-modules-5\.4\.0\-132\-generic$|^.*-modules-5\.4\.0\-132$|^.*-kernel-5\.4\.0\-132\-generic$|^.*-kernel-5\.4\.0\-132$) regexp to find running kernel packages
+2022-12-02 00:46:44,031 DEBUG Checking: libtiff5 ([<Origin component:'main' archive:'focal-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'focal-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-12-02 00:46:44,186 DEBUG Checking: linux-generic ([<Origin component:'main' archive:'focal-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'focal-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-12-02 00:46:44,370 DEBUG Checking: linux-headers-generic ([<Origin component:'main' archive:'focal-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'focal-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-12-02 00:46:44,546 DEBUG Checking: linux-image-generic ([<Origin component:'main' archive:'focal-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'focal-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-12-02 00:46:44,729 DEBUG Checking: linux-libc-dev ([<Origin component:'main' archive:'focal-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'focal-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-12-02 00:46:45,248 DEBUG Checking: snapd ([<Origin component:'main' archive:'focal-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'focal-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-12-02 00:46:45,463 DEBUG Checking: ubuntu-advantage-tools ([<Origin component:'main' archive:'focal-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-12-02 00:46:45,956 DEBUG pkgs that look like they should be upgraded: libtiff5
+linux-generic
+linux-headers-generic
+linux-image-generic
+linux-libc-dev
+snapd
+ubuntu-advantage-tools
+2022-12-02 00:46:46,983 DEBUG fetch.run() result: 0
+2022-12-02 00:46:47,464 DEBUG dpkg is configured not to cause conffile prompts
+2022-12-02 00:46:47,465 INFO Packages that will be upgraded: libtiff5 linux-generic linux-headers-generic linux-image-generic linux-libc-dev snapd ubuntu-advantage-tools
+2022-12-02 00:46:47,465 INFO Writing dpkg log to /var/log/unattended-upgrades/unattended-upgrades-dpkg.log
+2022-12-02 00:46:47,704 DEBUG applying set ['linux-headers-generic', 'linux-image-generic', 'linux-image-5.4.0-135-generic', 'linux-headers-5.4.0-135', 'linux-modules-extra-5.4.0-135-generic', 'linux-generic', 'linux-modules-5.4.0-135-generic', 'linux-headers-5.4.0-135-generic']
+2022-12-02 00:48:58,957 ERROR Exception happened during upgrade.
+Traceback (most recent call last):
+  File "/usr/bin/unattended-upgrade", line 863, in cache_commit
+    res = cache.commit(install_progress=iprogress)
+  File "/usr/lib/python3/dist-packages/apt/cache.py", line 686, in commit
+    raise SystemError("installArchives() failed")
+SystemError: installArchives() failed
+2022-12-02 00:48:59,265 ERROR Exception happened during upgrade.
+NoneType: None
+2022-12-02 00:48:59,266 ERROR Installing the upgrades failed!
+2022-12-02 00:48:59,266 ERROR error message: installArchives() failed
+2022-12-02 00:48:59,267 ERROR dpkg returned a error! See /var/log/unattended-upgrades/unattended-upgrades-dpkg.log for details
+2022-12-02 00:48:59,629 DEBUG InstCount=0 DelCount=0 BrokenCount=0
+2022-12-02 00:48:59,645 DEBUG Package dmeventd has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-12-02 00:48:59,645 DEBUG Package dmsetup has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-12-02 00:48:59,699 DEBUG Package libdevmapper-event1.02.1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-12-02 00:48:59,699 DEBUG Package libdevmapper1.02.1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-12-02 00:48:59,733 DEBUG Package liblvm2cmd2.03 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-12-02 00:48:59,765 DEBUG Package libtiff5 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-12-02 00:48:59,769 INFO Package libtiff5 is kept back because a related package is kept back or due to local apt_preferences(5).
+2022-12-02 00:48:59,786 DEBUG Package linux-generic has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-12-02 00:48:59,789 INFO Package linux-generic is kept back because a related package is kept back or due to local apt_preferences(5).
+2022-12-02 00:48:59,795 DEBUG Package linux-headers-generic has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-12-02 00:48:59,798 INFO Package linux-headers-generic is kept back because a related package is kept back or due to local apt_preferences(5).
+2022-12-02 00:48:59,804 DEBUG Package linux-image-generic has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-12-02 00:48:59,807 INFO Package linux-image-generic is kept back because a related package is kept back or due to local apt_preferences(5).
+2022-12-02 00:48:59,812 DEBUG Package linux-libc-dev has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-12-02 00:48:59,816 INFO Package linux-libc-dev is kept back because a related package is kept back or due to local apt_preferences(5).
+2022-12-02 00:48:59,862 DEBUG Package lvm2 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-12-02 00:48:59,864 DEBUG Package memtest86+ has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-12-02 00:48:59,917 DEBUG Package snapd has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-12-02 00:48:59,920 INFO Package snapd is kept back because a related package is kept back or due to local apt_preferences(5).
+2022-12-02 00:48:59,929 DEBUG Package ubuntu-advantage-tools has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-12-02 00:48:59,930 INFO Package ubuntu-advantage-tools is kept back because a related package is kept back or due to local apt_preferences(5).
+2022-12-02 00:48:59,941 DEBUG Extracting content from /var/log/unattended-upgrades/unattended-upgrades-dpkg.log since 2022-12-02 00:46:42
+2022-12-02 00:48:59,943 DEBUG Sending mail to logs@josef-friedrich.de
+2022-12-02 00:49:01,075 DEBUG mail returned: 0
+2022-12-02 01:48:44,029 INFO Starting unattended upgrades script
+2022-12-02 01:48:44,030 INFO Allowed origins are: origin=*
+2022-12-02 01:48:44,031 INFO Initial blacklist:
+2022-12-02 01:48:44,031 INFO Initial whitelist (not strict):
+2022-12-02 01:48:44,604 DEBUG Using (^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^linux-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^kfreebsd-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^gnumach-.*-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-modules-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$|^.*-kernel-[1-9][0-9]*\.[0-9]+\.[0-9]+-[0-9]+(-.+)?$) regexp to find kernel packages
+2022-12-02 01:48:44,605 DEBUG Using (^linux-.*-5\.4\.0\-132\-generic$|^linux-.*-5\.4\.0\-132$|^kfreebsd-.*-5\.4\.0\-132\-generic$|^kfreebsd-.*-5\.4\.0\-132$|^gnumach-.*-5\.4\.0\-132\-generic$|^gnumach-.*-5\.4\.0\-132$|^.*-modules-5\.4\.0\-132\-generic$|^.*-modules-5\.4\.0\-132$|^.*-kernel-5\.4\.0\-132\-generic$|^.*-kernel-5\.4\.0\-132$|^linux-.*-5\.4\.0\-132\-generic$|^linux-.*-5\.4\.0\-132$|^kfreebsd-.*-5\.4\.0\-132\-generic$|^kfreebsd-.*-5\.4\.0\-132$|^gnumach-.*-5\.4\.0\-132\-generic$|^gnumach-.*-5\.4\.0\-132$|^.*-modules-5\.4\.0\-132\-generic$|^.*-modules-5\.4\.0\-132$|^.*-kernel-5\.4\.0\-132\-generic$|^.*-kernel-5\.4\.0\-132$) regexp to find running kernel packages
+2022-12-02 01:48:45,422 DEBUG Checking: libtiff5 ([<Origin component:'main' archive:'focal-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'focal-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-12-02 01:48:45,594 DEBUG Checking: linux-libc-dev ([<Origin component:'main' archive:'focal-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'focal-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-12-02 01:48:45,841 DEBUG Checking: snapd ([<Origin component:'main' archive:'focal-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>, <Origin component:'main' archive:'focal-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>])
+2022-12-02 01:48:46,190 DEBUG Checking: ubuntu-advantage-tools ([<Origin component:'main' archive:'focal-updates' origin:'Ubuntu' label:'Ubuntu' site:'de.archive.ubuntu.com' isTrusted:True>])
+2022-12-02 01:48:46,624 DEBUG pkgs that look like they should be upgraded: libtiff5
+linux-libc-dev
+snapd
+ubuntu-advantage-tools
+2022-12-02 01:48:47,362 DEBUG fetch.run() result: 0
+2022-12-02 01:48:47,649 DEBUG dpkg is configured not to cause conffile prompts
+2022-12-02 01:48:47,650 INFO Removing unused kernel packages: linux-modules-5.4.0-131-generic linux-headers-5.4.0-131 linux-image-5.4.0-131-generic linux-headers-5.4.0-131-generic linux-modules-extra-5.4.0-131-generic
+2022-12-02 01:48:47,655 DEBUG marking linux-modules-5.4.0-131-generic for removal
+2022-12-02 01:49:51,344 DEBUG marking linux-headers-5.4.0-131 for removal
+2022-12-02 01:50:19,775 DEBUG marking linux-image-5.4.0-131-generic for removal
+2022-12-02 01:50:19,779 DEBUG marking linux-headers-5.4.0-131-generic for removal
+2022-12-02 01:50:19,784 DEBUG marking linux-modules-extra-5.4.0-131-generic for removal
+2022-12-02 01:50:19,785 INFO Packages that were successfully auto-removed: linux-headers-5.4.0-131 linux-headers-5.4.0-131-generic linux-image-5.4.0-131-generic linux-modules-5.4.0-131-generic linux-modules-extra-5.4.0-131-generic
+2022-12-02 01:50:19,786 INFO Packages that are kept back:
+2022-12-02 01:50:20,289 INFO Packages that will be upgraded: libtiff5 linux-libc-dev snapd ubuntu-advantage-tools
+2022-12-02 01:50:20,290 INFO Writing dpkg log to /var/log/unattended-upgrades/unattended-upgrades-dpkg.log
+2022-12-02 01:50:20,495 DEBUG applying set ['linux-libc-dev']
+2022-12-02 01:50:27,014 DEBUG left to upgrade {'ubuntu-advantage-tools', 'snapd', 'libtiff5'}
+2022-12-02 01:50:27,211 DEBUG applying set ['ubuntu-advantage-tools']
+2022-12-02 01:50:39,779 DEBUG left to upgrade {'snapd', 'libtiff5'}
+2022-12-02 01:50:39,976 DEBUG applying set ['snapd']
+2022-12-02 01:51:12,694 DEBUG left to upgrade {'libtiff5'}
+2022-12-02 01:51:12,857 DEBUG applying set ['libtiff5']
+2022-12-02 01:51:15,858 DEBUG left to upgrade set()
+2022-12-02 01:51:15,859 INFO All upgrades installed
+2022-12-02 01:51:16,454 DEBUG InstCount=0 DelCount=0 BrokenCount=0
+2022-12-02 01:51:16,478 DEBUG Package dmeventd has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-12-02 01:51:16,479 DEBUG Package dmsetup has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-12-02 01:51:16,532 DEBUG Package libdevmapper-event1.02.1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-12-02 01:51:16,532 DEBUG Package libdevmapper1.02.1 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-12-02 01:51:16,565 DEBUG Package liblvm2cmd2.03 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-12-02 01:51:16,665 DEBUG Package lvm2 has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-12-02 01:51:16,667 DEBUG Package memtest86+ has a higher version available, checking if it is from an allowed origin and is not pinned down.
+2022-12-02 01:51:16,756 DEBUG Extracting content from /var/log/unattended-upgrades/unattended-upgrades-dpkg.log since 2022-12-02 01:48:44
+2022-12-02 01:51:16,759 DEBUG Sending mail to logs@josef-friedrich.de
+2022-12-02 01:51:17,867 DEBUG mail returned: 0
+2022-12-02 01:51:17,869 WARNING Found /var/run/reboot-required, rebooting
+2022-12-02 01:51:17,882 WARNING Shutdown msg: b"Shutdown scheduled for Fri 2022-12-02 04:00:00 CET, use 'shutdown -c' to cancel."

@@ -568,7 +568,7 @@ class UnattendedUpgradesSummary(nagiosplugin.Summary):
             summary.append(result)
         return ", ".join(["{0}".format(result) for result in summary])
 
-    def verbose(self, results: nagiosplugin.Results) -> typing.List[str]:
+    def verbose(self, results: nagiosplugin.Results) -> list[str]:
         summary: typing.List[str] = []
         for result in results.most_significant:
             summary.append("{0}: {1}".format(result.state, result))

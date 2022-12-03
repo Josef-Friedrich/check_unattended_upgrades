@@ -3,6 +3,7 @@ import os
 from contextlib import redirect_stderr, redirect_stdout
 from unittest import mock
 from unittest.mock import Mock
+
 from freezegun import freeze_time
 
 import check_unattended_upgrades
@@ -105,6 +106,11 @@ class MockResult:
     def assert_first_line(self, first_line: str) -> None:
         assert self.first_line == first_line, "first_line “{}” != “{}”".format(
             self.first_line, first_line
+        )
+
+    def assert_output(self, output: str) -> None:
+        assert self.first_line == output, "output “{}” != “{}”".format(
+            self.first_line, output
         )
 
 
