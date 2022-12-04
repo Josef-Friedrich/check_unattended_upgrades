@@ -6,7 +6,7 @@ from tests.helper import execute_main
 class TestLastRun(unittest.TestCase):
     def test_ok(self) -> None:
         result = execute_main()
-        result.assert_output("UNATTENDED_UPGRADES OK - all")
+        result.assert_first_line("UNATTENDED_UPGRADES OK - all")
         result.assert_ok()
 
 
@@ -18,6 +18,8 @@ class TestWarningsInLog(unittest.TestCase):
         result.assert_output(
             "UNATTENDED_UPGRADES CRITICAL - Sperrung konnte nicht erreicht werden "
             "(läuft eine weitere Paketverwaltung?)"
+            "\ncritical: Sperrung konnte nicht erreicht werden "
+            "(läuft eine weitere Paketverwaltung?)\n"
         )
         result.assert_critical()
 
@@ -30,6 +32,11 @@ class TestWarningsInLog(unittest.TestCase):
             "Shutdown msg: "
             'b"Shutdown scheduled for Fri 2022-12-02 04:00:00 CET, '
             "use 'shutdown -c' to cancel.\""
+            "\ncritical: Sperrung konnte nicht erreicht werden "
+            "(läuft eine weitere Paketverwaltung?)"
+            "\nwarning: Found /var/run/reboot-required, rebooting"
+            '\nwarning: Shutdown msg: b"Shutdown scheduled for '
+            "Fri 2022-12-02 04:00:00 CET, use 'shutdown -c' to cancel.\"\n"
         )
         result.assert_warn()
 
