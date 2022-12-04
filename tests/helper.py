@@ -124,7 +124,7 @@ class MockResult:
         test.assertEqual(self.first_line, first_line)
 
     def assert_output(self, output: str) -> None:
-        test.assertEqual(self.output, output)
+        test.assertEqual(self.output, output, self.output)
 
 
 class CompletedProcess:
@@ -132,20 +132,34 @@ class CompletedProcess:
     stdout: str
 
 
-def perform_subprocess_run_side_effect(
-    args: list[str], **kwargs: typing.Any
-) -> CompletedProcess:
-    process = CompletedProcess()
-    process.returncode = 0
-    process.stdout = read_text_file("apt-config.txt")
-    return process
-
-
 def execute_main(
     argv: list[str] = ["check_unattended_upgrades.py"],
     main_log_file: str = "info.log",
     time: str = "2017-09-01 10:55:34",
+    systemd_apt_daily_timer: bool = True,
+    systemd_apt_daily_upgrade_timer: bool = True,
 ) -> MockResult:
+    def perform_subprocess_run_side_effect(
+        args: list[str], **kwargs: typing.Any
+    ) -> CompletedProcess:
+        command: str = " ".join(args)
+        process: CompletedProcess = CompletedProcess()
+
+        if command == "apt-config dump":
+            process.returncode = 0
+            process.stdout = read_text_file("apt-config.txt")
+
+        elif command == "systemctl is-enabled apt-daily.timer":
+            process.returncode = 0 if systemd_apt_daily_timer else 1
+            process.stdout = "enabled\n" if systemd_apt_daily_timer else "disabled\n"
+
+        elif command == "systemctl is-enabled apt-daily-upgrade.timer":
+            process.returncode = 0 if systemd_apt_daily_upgrade_timer else 1
+            process.stdout = (
+                "enabled\n" if systemd_apt_daily_upgrade_timer else "disabled\n"
+            )
+        return process
+
     if not argv or argv[0] != "check_unattended_upgrades.py":
         argv.insert(0, "check_unattended_upgrades.py")
     with mock.patch("sys.exit") as sys_exit, mock.patch(

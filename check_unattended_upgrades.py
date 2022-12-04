@@ -1,5 +1,20 @@
 #! /usr/bin/env python3
 
+
+"""
+Monitoring scopes
+=================
+
+* ``anacron``: Check if the package 'anacron' is installed.
+* ``config``: Check some configuration values using “apt-config dump”.
+* ``dry-run``: Check if “unattended-upgrades --dry-run” is working.
+* ``errors-in-log``: Check if there are any errors in the log files concerning the last run.
+* ``last-run``: Check when the program was last run.
+* ``reboot``: Check if the machine needs a reboot.
+* ``systemd-timers``: Check if the appropriate systemd timers are enabled.
+"""
+
+
 from __future__ import annotations
 
 import argparse
@@ -39,6 +54,10 @@ class OptionContainer:
 opts: OptionContainer = OptionContainer()
 
 LOG_FILE = "/var/log/unattended-upgrades/unattended-upgrades.log"
+
+
+def run(*args: str) -> subprocess.CompletedProcess[str]:
+    return subprocess.run(args, encoding="utf-8", capture_output=True)
 
 
 def get_argparser() -> argparse.ArgumentParser:
@@ -185,7 +204,7 @@ def get_argparser() -> argparse.ArgumentParser:
         "-t",
         "--systemd-timers",
         action="store_true",
-        help="Check if the appropriate Systemd timers are enabled "
+        help="Check if the appropriate systemd timers are enabled "
         "( apt-daily-upgrade.timer, apt-daily.timer ).",
     )
 
@@ -537,11 +556,11 @@ class LastRunContext(nagiosplugin.Context):
             return self.result_cls(nagiosplugin.Ok, metric=metric, hint=hint)
 
 
-# warnings-in-log #############################################################
+# errors-in-log #############################################################
 
 
 class WarningsInLogResource(nagiosplugin.Resource):
-    name = "warnings-in-log"
+    name = "errors-in-log"
 
     def probe(self) -> typing.Generator[nagiosplugin.Metric, None, None]:
         runs = LogParser.parse()
@@ -553,12 +572,12 @@ class WarningsInLogResource(nagiosplugin.Resource):
                     or message.level == "ERROR"
                     or message.level == "EXCEPTION"
                 ):
-                    yield nagiosplugin.Metric("warnings-in-log", message)
+                    yield nagiosplugin.Metric("errors-in-log", message)
 
 
 class WarningsInLogContext(nagiosplugin.Context):
     def __init__(self) -> None:
-        super(WarningsInLogContext, self).__init__("warnings-in-log")
+        super(WarningsInLogContext, self).__init__("errors-in-log")
 
     def evaluate(
         self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
@@ -583,8 +602,8 @@ class SystemdTimersResource(nagiosplugin.Resource):
     name = "systemd-timers"
 
     def __is_enabled(self, timer_name: str) -> bool:
-        process: subprocess.CompletedProcess[bytes] = subprocess.run(
-            ("systemctl", "is-enabled", timer_name)
+        process: subprocess.CompletedProcess[str] = run(
+            "systemctl", "is-enabled", timer_name
         )
         return process.returncode == 0
 
@@ -634,8 +653,8 @@ class UnattendedUpgradesSummary(nagiosplugin.Summary):
 
     def verbose(self, results: nagiosplugin.Results) -> list[str]:
         summary: typing.List[str] = []
-        for result in results.most_significant:
-            summary.append("{0}: {1}".format(result.state, result))
+        for result in results.results:
+            summary.append("{0}: {1}".format(str(result.state).upper(), result))
         return summary
 
 
