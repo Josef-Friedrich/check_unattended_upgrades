@@ -5,13 +5,12 @@ import os
 import subprocess
 import typing
 from contextlib import redirect_stderr, redirect_stdout
-from unittest import mock, TestCase
+from unittest import TestCase, mock
 from unittest.mock import Mock
 
 from freezegun import freeze_time
 
 import check_unattended_upgrades
-
 
 test: TestCase = TestCase()
 test.maxDiff = None
