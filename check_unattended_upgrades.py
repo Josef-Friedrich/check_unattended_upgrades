@@ -576,6 +576,52 @@ class WarningsInLogContext(nagiosplugin.Context):
         return self.result_cls(state, metric=metric, hint=message.message)
 
 
+# systemd-timers ##############################################################
+
+
+class SystemdTimersResource(nagiosplugin.Resource):
+    name = "systemd-timers"
+
+    def __is_enabled(self, timer_name: str) -> bool:
+        process: subprocess.CompletedProcess[bytes] = subprocess.run(
+            ("systemctl", "is-enabled", timer_name)
+        )
+        return process.returncode == 0
+
+    def probe(self) -> typing.Generator[nagiosplugin.Metric, None, None]:
+        for timer_name in ("apt-daily.timer", "apt-daily-upgrade.timer"):
+            is_enabled: bool = self.__is_enabled(timer_name)
+            yield nagiosplugin.Metric("systemd-timers", [timer_name, is_enabled])
+
+
+class SystemdTimersContext(nagiosplugin.Context):
+    def __init__(self) -> None:
+        super(SystemdTimersContext, self).__init__("systemd-timers")
+
+    def evaluate(
+        self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
+    ) -> nagiosplugin.Result:
+
+        state = nagiosplugin.Ok
+        not_string = ""
+        if not metric.value[1]:
+            state = nagiosplugin.Critical
+            not_string = "not "
+
+        return self.result_cls(
+            state,
+            metric=metric,
+            hint="The systemd timer {} is {}enabled.".format(
+                metric.value[0], not_string
+            ),
+        )
+
+
+###############################################################################
+# Summary
+###############################################################################
+
+
 class UnattendedUpgradesSummary(nagiosplugin.Summary):
     def ok(self, results: nagiosplugin.Results) -> str:
         return "all"
@@ -612,6 +658,8 @@ class ChecksCollection:
             self.checks += [DryRunResource(), DryRunContext()]
         if opts.anacron:
             self.checks += [AnacronResource(), AnacronContext()]
+        if opts.systemd_timers:
+            self.checks += [SystemdTimersResource(), SystemdTimersContext()]
 
         self.check_config("APT::Periodic::AutocleanInterval", opts.autoclean)
         self.check_config("APT::Periodic::Download-Upgradeable-Packages", opts.download)
