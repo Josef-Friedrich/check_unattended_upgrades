@@ -22,17 +22,16 @@ python = "^3.8.1"
 nagiosplugin = "^1.3.3"
 
 [tool.poetry.group.dev.dependencies]
-readme-patcher = "^0.5.0"
-# readme-patcher = { path = "../readme_patcher", develop = true }
-tox = "^3.25.1"
 black = "^22.6.0"
-isort = "^5.10.1"
-nagiosplugin-stubs = "^0.4.0"
-mypy = "^0.991"
+flake8 = "^6.0.0"
 freezegun = "^1.2.2"
+isort = "^5.10.1"
+mypy = "^0.991"
+nagiosplugin-stubs = "^0.4.0"
+readme-patcher = "^0.5.0"
+tox = "^3.25.1"
 tox-poetry-installer = {extras = ["poetry"], version = "^0.10.0"}
 types-freezegun = "^1.1.10"
-flake8 = "^6.0.0"
 
 [tool.mypy]
 files = "check_unattended_upgrades.py"
