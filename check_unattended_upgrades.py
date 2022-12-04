@@ -611,7 +611,7 @@ class SystemdTimersContext(nagiosplugin.Context):
         return self.result_cls(
             state,
             metric=metric,
-            hint="The systemd timer {} is {}enabled.".format(
+            hint="The systemd timer “{}” is {}enabled.".format(
                 metric.value[0], not_string
             ),
         )

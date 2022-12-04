@@ -106,9 +106,7 @@ class MockResult:
         return None
 
     def assert_exitcode(self, exitcode: int) -> None:
-        assert self.exitcode == exitcode, "exitcode {} != {}".format(
-            self.exitcode, exitcode
-        )
+        test.assertEqual(self.exitcode, exitcode)
 
     def assert_ok(self) -> None:
         self.assert_exitcode(0)
