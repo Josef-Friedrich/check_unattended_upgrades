@@ -18,6 +18,7 @@ class TestErrorsInLog(unittest.TestCase):
         result.assert_output(
             "UNATTENDED_UPGRADES CRITICAL - Sperrung konnte nicht erreicht werden "
             "(läuft eine weitere Paketverwaltung?)\n"
+            "OK: last-run was 3600.0 seconds ago\n"
             "CRITICAL: Sperrung konnte nicht erreicht werden "
             "(läuft eine weitere Paketverwaltung?)\n"
         )
@@ -34,6 +35,7 @@ class TestErrorsInLog(unittest.TestCase):
             "use 'shutdown -c' to cancel.\"\n"
             # "CRITICAL: Sperrung konnte nicht erreicht werden "
             # "(läuft eine weitere Paketverwaltung?)\n"
+            "OK: last-run was 3600.0 seconds ago\n"
             "WARNING: Found /var/run/reboot-required, rebooting\n"
             'WARNING: Shutdown msg: b"Shutdown scheduled for '
             "Fri 2022-12-02 04:00:00 CET, use 'shutdown -c' to cancel.\"\n"
@@ -62,6 +64,7 @@ class TestSystemdTimers(unittest.TestCase):
             "UNATTENDED_UPGRADES CRITICAL - "
             "The systemd timer “apt-daily.timer” is not enabled., "
             "The systemd timer “apt-daily-upgrade.timer” is not enabled.\n"
+            "OK: last-run was 3600.0 seconds ago\n"
             "CRITICAL: The systemd timer “apt-daily.timer” is not enabled.\n"
             "CRITICAL: The systemd timer “apt-daily-upgrade.timer” is not enabled.\n"
         )
