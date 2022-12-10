@@ -7,11 +7,11 @@ Monitoring scopes
 
 * ``anacron``: Check if the package 'anacron' is installed.
 * ``config``: Check some configuration values using “apt-config dump”.
-* ``dry-run``: Check if “unattended-upgrades --dry-run” is working.
-* ``errors-in-log``: Check if there are any errors in the log files concerning the last run.
-* ``last-run``: Check when the program was last run.
+* ``dry_run``: Check if “unattended-upgrades --dry-run” is working.
+* ``errors_in_log``: Check if there are any errors in the log files concerning the last run.
+* ``last_run``: Check when the program was last run.
 * ``reboot``: Check if the machine needs a reboot.
-* ``systemd-timers``: Check if the appropriate systemd timers are enabled.
+* ``systemd_timers``: Check if the appropriate systemd timers are enabled.
 """
 
 
@@ -238,38 +238,7 @@ def get_argparser() -> argparse.ArgumentParser:
     return parser
 
 
-# reboot ######################################################################
-
-
-class RebootResource(nagiosplugin.Resource):
-    name: typing.Literal["reboot"] = "reboot"
-
-    def probe(self) -> nagiosplugin.Metric:
-        path = pathlib.Path("/var/run/reboot-required")
-        return nagiosplugin.Metric("reboot", path.exists())
-
-
-class RebootContext(nagiosplugin.Context):
-    def __init__(self) -> None:
-        super(RebootContext, self).__init__("reboot")
-
-    def evaluate(
-        self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
-    ) -> nagiosplugin.Result:
-        if metric.value:
-            return self.result_cls(
-                nagiosplugin.Ok,
-                metric=metric,
-            )
-        else:
-            return self.result_cls(
-                nagiosplugin.Critical,
-                metric=metric,
-                hint="The machine requires a reboot.",
-            )
-
-
-# anacron #####################################################################
+# scope: anacron ##############################################################
 
 
 class AnacronResource(nagiosplugin.Resource):
@@ -300,37 +269,7 @@ class AnacronContext(nagiosplugin.Context):
             )
 
 
-# dry-run #####################################################################
-
-
-class DryRunResource(nagiosplugin.Resource):
-    name = "dry-run"
-
-    def probe(self) -> nagiosplugin.Metric:
-        process: subprocess.CompletedProcess[bytes] = subprocess.run(
-            ("unattended-upgrades", "--dry-run")
-        )
-        return nagiosplugin.Metric("dry-run", process.returncode)
-
-
-class DryRunContext(nagiosplugin.Context):
-    def __init__(self) -> None:
-        super(DryRunContext, self).__init__("dry-run")
-
-    def evaluate(
-        self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
-    ) -> nagiosplugin.Result:
-        if metric.value == 0:
-            return self.result_cls(nagiosplugin.Ok, metric=metric)
-        else:
-            return self.result_cls(
-                nagiosplugin.Critical,
-                metric=metric,
-                hint="unattended-upgrades --dry-run exits with a non-zero status.",
-            )
-
-
-# config ######################################################################
+# scope: config ###############################################################
 
 
 class AptConfig:
@@ -393,6 +332,36 @@ class ConfigContext(nagiosplugin.Context):
                 metric=metric,
                 hint="Configuration value for “{}” unexpected! "
                 "actual: {} expected: {}".format(r.key, metric.value, self.expected),
+            )
+
+
+# scope: dry_run ##############################################################
+
+
+class DryRunResource(nagiosplugin.Resource):
+    name = "dry_run"
+
+    def probe(self) -> nagiosplugin.Metric:
+        process: subprocess.CompletedProcess[bytes] = subprocess.run(
+            ("unattended-upgrades", "--dry-run")
+        )
+        return nagiosplugin.Metric("dry_run", process.returncode)
+
+
+class DryRunContext(nagiosplugin.Context):
+    def __init__(self) -> None:
+        super(DryRunContext, self).__init__("dry_run")
+
+    def evaluate(
+        self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
+    ) -> nagiosplugin.Result:
+        if metric.value == 0:
+            return self.result_cls(nagiosplugin.Ok, metric=metric)
+        else:
+            return self.result_cls(
+                nagiosplugin.Critical,
+                metric=metric,
+                hint="unattended-upgrades --dry-run exits with a non-zero status.",
             )
 
 
@@ -523,44 +492,11 @@ class LogParser:
         return runs
 
 
-# last-run ####################################################################
-
-
-class LastRunResource(nagiosplugin.Resource):
-    name = "last-run"
-
-    def probe(self) -> nagiosplugin.Metric:
-        runs = LogParser.parse()
-        if len(runs) == 0:
-            return nagiosplugin.Metric("last-run", 0)
-        return nagiosplugin.Metric("last-run", runs[-1].end_time)
-
-
-class LastRunContext(nagiosplugin.Context):
-    def __init__(self) -> None:
-        super(LastRunContext, self).__init__("last-run")
-
-    def evaluate(
-        self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
-    ) -> nagiosplugin.Result:
-
-        interval: float = datetime.datetime.now().timestamp() - metric.value
-
-        hint = "last-run was {} seconds ago".format(interval)
-
-        if interval > opts.critical:
-            return self.result_cls(nagiosplugin.Critical, metric=metric, hint=hint)
-        elif interval > opts.warning:
-            return self.result_cls(nagiosplugin.Warn, metric=metric, hint=hint)
-        else:
-            return self.result_cls(nagiosplugin.Ok, metric=metric, hint=hint)
-
-
-# errors-in-log #############################################################
+# scope: errors_in_log ########################################################
 
 
 class WarningsInLogResource(nagiosplugin.Resource):
-    name = "errors-in-log"
+    name = "errors_in_log"
 
     def probe(self) -> typing.Generator[nagiosplugin.Metric, None, None]:
         runs = LogParser.parse()
@@ -572,12 +508,12 @@ class WarningsInLogResource(nagiosplugin.Resource):
                     or message.level == "ERROR"
                     or message.level == "EXCEPTION"
                 ):
-                    yield nagiosplugin.Metric("errors-in-log", message)
+                    yield nagiosplugin.Metric("errors_in_log", message)
 
 
 class WarningsInLogContext(nagiosplugin.Context):
     def __init__(self) -> None:
-        super(WarningsInLogContext, self).__init__("errors-in-log")
+        super(WarningsInLogContext, self).__init__("errors_in_log")
 
     def evaluate(
         self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
@@ -595,11 +531,75 @@ class WarningsInLogContext(nagiosplugin.Context):
         return self.result_cls(state, metric=metric, hint=message.message)
 
 
-# systemd-timers ##############################################################
+# scope: last_run #############################################################
+
+
+class LastRunResource(nagiosplugin.Resource):
+    name = "last_run"
+
+    def probe(self) -> nagiosplugin.Metric:
+        runs = LogParser.parse()
+        if len(runs) == 0:
+            return nagiosplugin.Metric("last_run", 0)
+        return nagiosplugin.Metric("last_run", runs[-1].end_time)
+
+
+class LastRunContext(nagiosplugin.Context):
+    def __init__(self) -> None:
+        super(LastRunContext, self).__init__("last_run")
+
+    def evaluate(
+        self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
+    ) -> nagiosplugin.Result:
+
+        interval: float = datetime.datetime.now().timestamp() - metric.value
+
+        hint = "last-run was {} seconds ago".format(interval)
+
+        if interval > opts.critical:
+            return self.result_cls(nagiosplugin.Critical, metric=metric, hint=hint)
+        elif interval > opts.warning:
+            return self.result_cls(nagiosplugin.Warn, metric=metric, hint=hint)
+        else:
+            return self.result_cls(nagiosplugin.Ok, metric=metric, hint=hint)
+
+
+# scope: reboot ###############################################################
+
+
+class RebootResource(nagiosplugin.Resource):
+    name: typing.Literal["reboot"] = "reboot"
+
+    def probe(self) -> nagiosplugin.Metric:
+        path = pathlib.Path("/var/run/reboot-required")
+        return nagiosplugin.Metric("reboot", path.exists())
+
+
+class RebootContext(nagiosplugin.Context):
+    def __init__(self) -> None:
+        super(RebootContext, self).__init__("reboot")
+
+    def evaluate(
+        self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
+    ) -> nagiosplugin.Result:
+        if metric.value:
+            return self.result_cls(
+                nagiosplugin.Ok,
+                metric=metric,
+            )
+        else:
+            return self.result_cls(
+                nagiosplugin.Critical,
+                metric=metric,
+                hint="The machine requires a reboot.",
+            )
+
+
+# scope: systemd_timers #######################################################
 
 
 class SystemdTimersResource(nagiosplugin.Resource):
-    name = "systemd-timers"
+    name = "systemd_timers"
 
     def __is_enabled(self, timer_name: str) -> bool:
         process: subprocess.CompletedProcess[str] = run(
@@ -610,12 +610,12 @@ class SystemdTimersResource(nagiosplugin.Resource):
     def probe(self) -> typing.Generator[nagiosplugin.Metric, None, None]:
         for timer_name in ("apt-daily.timer", "apt-daily-upgrade.timer"):
             is_enabled: bool = self.__is_enabled(timer_name)
-            yield nagiosplugin.Metric("systemd-timers", [timer_name, is_enabled])
+            yield nagiosplugin.Metric("systemd_timers", [timer_name, is_enabled])
 
 
 class SystemdTimersContext(nagiosplugin.Context):
     def __init__(self) -> None:
-        super(SystemdTimersContext, self).__init__("systemd-timers")
+        super(SystemdTimersContext, self).__init__("systemd_timers")
 
     def evaluate(
         self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
