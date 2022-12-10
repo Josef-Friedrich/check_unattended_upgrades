@@ -38,15 +38,13 @@ class MockResult:
     function."""
 
     __sys_exit: Mock
-    __print: Mock
     __stdout: str | None
     __stderr: str | None
 
     def __init__(
-        self, sys_exit_mock: Mock, print_mock: Mock, stdout: str, stderr: str
+        self, sys_exit_mock: Mock, stdout: str, stderr: str
     ) -> None:
         self.__sys_exit = sys_exit_mock
-        self.__print = print_mock
         self.__stdout = stdout
         self.__stderr = stderr
 
@@ -54,14 +52,6 @@ class MockResult:
     def exitcode(self) -> int:
         """The captured exit code"""
         return int(self.__sys_exit.call_args[0][0])
-
-    @property
-    def print_calls(self) -> list[str]:
-        """The captured print calls as a list for each line."""
-        output: list[str] = []
-        for call in self.__print.call_args_list:
-            output.append(str(call[0][0]))
-        return output
 
     @property
     def stdout(self) -> str | None:
@@ -89,10 +79,10 @@ class MockResult:
 
         if self.__stderr:
             out += self.__stderr
+
         if self.__stdout:
             out += self.__stdout
-        if self.print_calls:
-            out += "\n".join(self.print_calls)
+
 
         return out
 
@@ -165,8 +155,6 @@ def execute_main(
     with mock.patch("sys.exit") as sys_exit, mock.patch(
         "subprocess.run", side_effect=perform_subprocess_run_side_effect
     ), mock.patch("sys.argv", argv), mock.patch(
-        "builtins.print"
-    ) as mocked_print, mock.patch(
         "check_unattended_upgrades.open",
         mock.mock_open(
             read_data=read_text_file(os.path.join("main-log", main_log_file))
@@ -182,7 +170,6 @@ def execute_main(
 
     return MockResult(
         sys_exit_mock=sys_exit,
-        print_mock=mocked_print,
         stdout=file_stdout.getvalue(),
         stderr=file_stderr.getvalue(),
     )

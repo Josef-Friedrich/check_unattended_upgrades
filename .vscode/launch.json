@@ -11,14 +11,20 @@
       "request": "launch",
       "program": "${file}",
       "console": "integratedTerminal",
-      "justMyCode": true
+      "justMyCode": false
     },
     {
       "name": "Python: Specified File",
       "type": "python",
       "request": "launch",
       "program": "python_project_boilerplate/debug.py",
-      "justMyCode": true
+      "justMyCode": false
+    },
+    {
+      "name": "Debug Unit Test",
+      "type": "python",
+      "request": "test",
+      "justMyCode": false
     }
   ]
 }
