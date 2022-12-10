@@ -59,7 +59,7 @@ Command line interface
       -s CONFIG_VALUE, --sleep CONFIG_VALUE
                             Check if the configuration 'APT::Periodic::RandomSleep'
                             is set properly.
-      -t, --systemd-timers  Check if the appropriate Systemd timers are enabled (
+      -t, --systemd-timers  Check if the appropriate systemd timers are enabled (
                             apt-daily-upgrade.timer, apt-daily.timer ).
       -u CONFIG_VALUE, --unattended CONFIG_VALUE
                             Check if the configuration 'APT::Periodic::Unattended-

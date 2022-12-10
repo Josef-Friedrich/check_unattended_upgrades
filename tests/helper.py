@@ -125,6 +125,7 @@ def execute_main(
     time: str = "2017-09-01 10:55:34",
     systemd_apt_daily_timer: bool = True,
     systemd_apt_daily_upgrade_timer: bool = True,
+    anacron: str | None = "/usr/sbin/anacron",
 ) -> MockResult:
     def perform_subprocess_run_side_effect(
         args: list[str], **kwargs: typing.Any
@@ -151,7 +152,9 @@ def execute_main(
         argv.insert(0, "check_unattended_upgrades.py")
     with mock.patch("sys.exit") as sys_exit, mock.patch(
         "subprocess.run", side_effect=perform_subprocess_run_side_effect
-    ), mock.patch("sys.argv", argv), mock.patch(
+    ), mock.patch("shutil.which", return_value=anacron), mock.patch(
+        "sys.argv", argv
+    ), mock.patch(
         "check_unattended_upgrades.open",
         mock.mock_open(
             read_data=read_text_file(os.path.join("main-log", main_log_file))

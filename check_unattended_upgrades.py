@@ -8,7 +8,8 @@ Monitoring scopes
 * ``anacron``: Check if the package 'anacron' is installed.
 * ``config``: Check some configuration values using “apt-config dump”.
 * ``dry_run``: Check if “unattended-upgrades --dry-run” is working.
-* ``errors_in_log``: Check if there are any errors in the log files concerning the last run.
+* ``errors_in_log``: Check if there are any errors in the log files concerning
+                     the last run.
 * ``last_run``: Check when the program was last run.
 * ``reboot``: Check if the machine needs a reboot.
 * ``systemd_timers``: Check if the appropriate systemd timers are enabled.
