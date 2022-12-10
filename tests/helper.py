@@ -41,9 +41,7 @@ class MockResult:
     __stdout: str | None
     __stderr: str | None
 
-    def __init__(
-        self, sys_exit_mock: Mock, stdout: str, stderr: str
-    ) -> None:
+    def __init__(self, sys_exit_mock: Mock, stdout: str, stderr: str) -> None:
         self.__sys_exit = sys_exit_mock
         self.__stdout = stdout
         self.__stderr = stderr
@@ -83,17 +81,7 @@ class MockResult:
         if self.__stdout:
             out += self.__stdout
 
-
         return out
-
-    @property
-    def first_line(self) -> str | None:
-        """The first line of the output without a newline break at the
-        end as a string.
-        """
-        if self.output:
-            return self.output.split("\n", 1)[0]
-        return None
 
     def assert_exitcode(self, exitcode: int) -> None:
         test.assertEqual(self.exitcode, exitcode)
@@ -109,6 +97,15 @@ class MockResult:
 
     def assert_unknown(self) -> None:
         self.assert_exitcode(3)
+
+    @property
+    def first_line(self) -> str | None:
+        """The first line of the output without a newline break at the
+        end as a string.
+        """
+        if self.output:
+            return self.output.split("\n", 1)[0]
+        return None
 
     def assert_first_line(self, first_line: str) -> None:
         test.assertEqual(self.first_line, first_line)
