@@ -127,6 +127,7 @@ def execute_main(
     systemd_apt_daily_upgrade_timer: bool = True,
     anacron: str | None = "/usr/sbin/anacron",
     dry_run: int = 0,
+    reboot: bool = False,
 ) -> MockResult:
     def perform_subprocess_run_side_effect(
         args: list[str], **kwargs: typing.Any
@@ -155,7 +156,9 @@ def execute_main(
         argv.insert(0, "check_unattended_upgrades.py")
     with mock.patch("sys.exit") as sys_exit, mock.patch(
         "subprocess.run", side_effect=perform_subprocess_run_side_effect
-    ), mock.patch("shutil.which", return_value=anacron), mock.patch(
+    ), mock.patch("os.path.exists", return_value=reboot), mock.patch(
+        "shutil.which", return_value=anacron
+    ), mock.patch(
         "sys.argv", argv
     ), mock.patch(
         "check_unattended_upgrades.open",
@@ -165,7 +168,6 @@ def execute_main(
     ), freeze_time(
         time
     ):
-
         file_stdout: io.StringIO = io.StringIO()
         file_stderr: io.StringIO = io.StringIO()
         with redirect_stdout(file_stdout), redirect_stderr(file_stderr):

@@ -26,6 +26,7 @@ import re
 import shutil
 import subprocess
 import typing
+import os
 
 import nagiosplugin
 
@@ -572,8 +573,8 @@ class RebootResource(nagiosplugin.Resource):
     name: typing.Literal["reboot"] = "reboot"
 
     def probe(self) -> nagiosplugin.Metric:
-        path = pathlib.Path("/var/run/reboot-required")
-        return nagiosplugin.Metric("reboot", path.exists())
+        # os.path.exists instead of pathlib.Path for better testing and mocking
+        return nagiosplugin.Metric("reboot", os.path.exists("/var/run/reboot-required"))
 
 
 class RebootContext(nagiosplugin.Context):
@@ -583,14 +584,14 @@ class RebootContext(nagiosplugin.Context):
     def evaluate(
         self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
     ) -> nagiosplugin.Result:
-        if metric.value:
+        if not metric.value:
             return self.result_cls(
                 nagiosplugin.Ok,
                 metric=metric,
             )
         else:
             return self.result_cls(
-                nagiosplugin.Critical,
+                nagiosplugin.Warn,
                 metric=metric,
                 hint="The machine requires a reboot.",
             )

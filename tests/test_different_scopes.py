@@ -87,6 +87,20 @@ class TestLastRun(unittest.TestCase):
         result.assert_ok()
 
 
+class TestReboot(unittest.TestCase):
+    def test_ok(self) -> None:
+        result = execute_main(["--reboot"], reboot=False)
+        result.assert_first_line("UNATTENDED_UPGRADES OK - all")
+        result.assert_ok()
+
+    def test_warn(self) -> None:
+        result = execute_main(["--reboot"], reboot=True)
+        result.assert_first_line(
+            "UNATTENDED_UPGRADES WARNING - The machine requires a reboot."
+        )
+        result.assert_warn()
+
+
 class TestSystemdTimers(unittest.TestCase):
     def test_ok(self) -> None:
         result = execute_main(["--systemd-timers", "--verbose"])
