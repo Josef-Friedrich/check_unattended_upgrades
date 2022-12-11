@@ -18,6 +18,22 @@ class TestAnacron(unittest.TestCase):
         )
 
 
+class TestDryRun(unittest.TestCase):
+    def test_ok(self) -> None:
+        result = execute_main(
+            ["--dry-run"],
+        )
+        result.assert_ok()
+
+    def test_critical(self) -> None:
+        result = execute_main(["--dry-run"], dry_run=1)
+        result.assert_critical()
+        result.assert_first_line(
+            "UNATTENDED_UPGRADES CRITICAL - unattended-upgrades --dry-run "
+            "exits with a non-zero status."
+        )
+
+
 class TestErrorsInLog(unittest.TestCase):
     def test_warn(self) -> None:
         result = execute_main(

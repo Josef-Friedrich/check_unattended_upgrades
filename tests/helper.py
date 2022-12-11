@@ -126,6 +126,7 @@ def execute_main(
     systemd_apt_daily_timer: bool = True,
     systemd_apt_daily_upgrade_timer: bool = True,
     anacron: str | None = "/usr/sbin/anacron",
+    dry_run: int = 0,
 ) -> MockResult:
     def perform_subprocess_run_side_effect(
         args: list[str], **kwargs: typing.Any
@@ -146,6 +147,8 @@ def execute_main(
             process.stdout = (
                 "enabled\n" if systemd_apt_daily_upgrade_timer else "disabled\n"
             )
+        elif command == "unattended-upgrades --dry-run":
+            process.returncode = dry_run
         return process
 
     if not argv or argv[0] != "check_unattended_upgrades.py":
