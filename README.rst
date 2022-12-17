@@ -14,7 +14,7 @@ Command line interface
     usage: check_unattended_upgrades [-h] [-A] [-a CONFIG_VALUE] [-c SECONDS] [-D]
                                      [-d CONFIG_VALUE] [-e CONFIG_VALUE]
                                      [-l CONFIG_VALUE] [-m CONFIG_VALUE] [-n]
-                                     [-p REPO] [-R] [-r CONFIG_VALUE] [-S]
+                                     [-p CUSTOM_REPO] [-R] [-r CONFIG_VALUE] [-S]
                                      [-s CONFIG_VALUE] [-t] [-u CONFIG_VALUE] [-v]
                                      [-V] [-w SECONDS]
 
@@ -48,7 +48,7 @@ Command line interface
       -n, --dry-run         Check if 'unattended-upgrades --dry-run' is working.
                             Warning: If you use this option the performance data
                             last_ago is always 0 or near to 0.
-      -p REPO, --repo REPO, --custom-repo REPO
+      -p CUSTOM_REPO, --repo CUSTOM_REPO, --custom-repo CUSTOM_REPO
                             Check if 'Unattended-upgrades' is configured to include
                             the specified custom repository.
       -R, --reboot          Check if the machine needs a reboot.

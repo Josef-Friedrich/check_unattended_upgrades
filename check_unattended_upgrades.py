@@ -174,6 +174,7 @@ def get_argparser() -> argparse.ArgumentParser:
         "-p",
         "--repo",
         "--custom-repo",
+        dest="custom_repo",
         help="Check if 'Unattended-upgrades' is configured to include the "
         "specified custom repository.",
     )
@@ -486,12 +487,7 @@ class ConfigContext(nagiosplugin.Context):
 
 class CustomRepoResource(nagiosplugin.Resource):
 
-    key: str
-
     name = "custom_repo"
-
-    def __init__(self, key: str) -> None:
-        self.key = key
 
     def probe(self) -> nagiosplugin.Metric:
         return nagiosplugin.Metric("custom_repo", AptConfig.get_repos())
@@ -650,6 +646,33 @@ class RebootContext(nagiosplugin.Context):
 
 # scope: security #############################################################
 
+
+class SecurityResource(nagiosplugin.Resource):
+
+    name = "security"
+
+    def probe(self) -> nagiosplugin.Metric:
+        return nagiosplugin.Metric("security", "security" in AptConfig.get_repos())
+
+
+class SecurityContext(nagiosplugin.Context):
+    def __init__(self) -> None:
+        super(SecurityContext, self).__init__("security")
+
+    def evaluate(
+        self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
+    ) -> nagiosplugin.Result:
+        if metric.value:
+            return self.result_cls(nagiosplugin.Ok, metric=metric)
+        else:
+            return self.result_cls(
+                nagiosplugin.Critical,
+                metric=metric,
+                hint="unattended-upgrades is not configured to handle "
+                "security updates.",
+            )
+
+
 # scope: systemd_timers #######################################################
 
 
@@ -734,6 +757,10 @@ class ChecksCollection:
             self.checks += [AnacronResource(), AnacronContext()]
         if opts.systemd_timers:
             self.checks += [SystemdTimersResource(), SystemdTimersContext()]
+        if opts.security:
+            self.checks += [SecurityResource(), SecurityContext()]
+        if opts.custom_repo:
+            self.checks += [CustomRepoResource(), CustomRepoContext()]
 
         self.check_config("APT::Periodic::AutocleanInterval", opts.autoclean)
         self.check_config("APT::Periodic::Download-Upgradeable-Packages", opts.download)
