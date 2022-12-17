@@ -245,35 +245,9 @@ def get_argparser() -> argparse.ArgumentParser:
     return parser
 
 
-# scope: anacron ##############################################################
+# auxiliary classes ###########################################################
 
-
-class AnacronResource(nagiosplugin.Resource):
-    name = "anacron"
-
-    def probe(self) -> nagiosplugin.Metric:
-        return nagiosplugin.Metric("anacron", shutil.which("anacron"))
-
-
-class AnacronContext(nagiosplugin.Context):
-    def __init__(self) -> None:
-        super(AnacronContext, self).__init__("anacron")
-
-    def evaluate(
-        self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
-    ) -> nagiosplugin.Result:
-        if metric.value is not None:
-            return self.result_cls(
-                nagiosplugin.Ok,
-                metric=metric,
-                hint="Package 'anacron' is installed in: " + metric.value,
-            )
-        else:
-            return self.result_cls(
-                nagiosplugin.Critical,
-                metric=metric,
-                hint="Package 'anacron' is not installed.",
-            )
+# apt config ##################################################################
 
 
 class AptConfig:
@@ -308,111 +282,8 @@ class AptConfig:
         )
 
 
-# scope: config ###############################################################
-
-
-class ConfigResource(nagiosplugin.Resource):
-
-    key: str
-
-    name = "config"
-
-    def __init__(self, key: str) -> None:
-        self.key = key
-
-    def probe(self) -> nagiosplugin.Metric:
-        value = AptConfig.get(self.key)
-        return nagiosplugin.Metric("config", value)
-
-
-class ConfigContext(nagiosplugin.Context):
-
-    expected: str
-
-    def __init__(self, expected: str) -> None:
-        super(ConfigContext, self).__init__("config")
-        self.expected = expected
-
-    def evaluate(
-        self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
-    ) -> nagiosplugin.Result:
-        r: ConfigResource = typing.cast(ConfigResource, resource)
-        if metric.value == self.expected:
-            return self.result_cls(nagiosplugin.Ok, metric=metric)
-        else:
-            return self.result_cls(
-                nagiosplugin.Critical,
-                metric=metric,
-                hint="Configuration value for “{}” unexpected! "
-                "actual: {} expected: {}".format(r.key, metric.value, self.expected),
-            )
-
-
-# scope: custom_repo ##########################################################
-
-
-class CustomRepoResource(nagiosplugin.Resource):
-
-    key: str
-
-    name = "custom_repo"
-
-    def __init__(self, key: str) -> None:
-        self.key = key
-
-    def probe(self) -> nagiosplugin.Metric:
-        return nagiosplugin.Metric("custom_repo", AptConfig.get_repos())
-
-
-class CustomRepoContext(nagiosplugin.Context):
-    def __init__(self) -> None:
-        super(CustomRepoContext, self).__init__("custom_repo")
-
-    def evaluate(
-        self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
-    ) -> nagiosplugin.Result:
-        if opts.custom_repo in metric.value:
-            return self.result_cls(nagiosplugin.Ok, metric=metric)
-        else:
-            return self.result_cls(
-                nagiosplugin.Critical,
-                metric=metric,
-                hint="Unattended-upgrades is not configured to handle updates "
-                "for custom repository '{}'.".format(opts.custom_repo),
-            )
-
-
-# scope: dry_run ##############################################################
-
-
-class DryRunResource(nagiosplugin.Resource):
-    name = "dry_run"
-
-    def probe(self) -> nagiosplugin.Metric:
-        process: subprocess.CompletedProcess[bytes] = subprocess.run(
-            ("unattended-upgrades", "--dry-run")
-        )
-        return nagiosplugin.Metric("dry_run", process.returncode)
-
-
-class DryRunContext(nagiosplugin.Context):
-    def __init__(self) -> None:
-        super(DryRunContext, self).__init__("dry_run")
-
-    def evaluate(
-        self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
-    ) -> nagiosplugin.Result:
-        if metric.value == 0:
-            return self.result_cls(nagiosplugin.Ok, metric=metric)
-        else:
-            return self.result_cls(
-                nagiosplugin.Critical,
-                metric=metric,
-                hint="unattended-upgrades --dry-run exits with a non-zero status.",
-            )
-
-
 # log #########################################################################
+
 
 LogLevel = typing.Literal["DEBUG", "INFO", "WARNING", "ERROR", "EXCEPTION"]
 
@@ -537,6 +408,141 @@ class LogParser:
                 run.add_message(message)
         LogParser.runs = runs
         return runs
+
+
+# scope: anacron ##############################################################
+
+
+class AnacronResource(nagiosplugin.Resource):
+    name = "anacron"
+
+    def probe(self) -> nagiosplugin.Metric:
+        return nagiosplugin.Metric("anacron", shutil.which("anacron"))
+
+
+class AnacronContext(nagiosplugin.Context):
+    def __init__(self) -> None:
+        super(AnacronContext, self).__init__("anacron")
+
+    def evaluate(
+        self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
+    ) -> nagiosplugin.Result:
+        if metric.value is not None:
+            return self.result_cls(
+                nagiosplugin.Ok,
+                metric=metric,
+                hint="Package 'anacron' is installed in: " + metric.value,
+            )
+        else:
+            return self.result_cls(
+                nagiosplugin.Critical,
+                metric=metric,
+                hint="Package 'anacron' is not installed.",
+            )
+
+
+# scope: config ###############################################################
+
+
+class ConfigResource(nagiosplugin.Resource):
+
+    key: str
+
+    name = "config"
+
+    def __init__(self, key: str) -> None:
+        self.key = key
+
+    def probe(self) -> nagiosplugin.Metric:
+        value = AptConfig.get(self.key)
+        return nagiosplugin.Metric("config", value)
+
+
+class ConfigContext(nagiosplugin.Context):
+
+    expected: str
+
+    def __init__(self, expected: str) -> None:
+        super(ConfigContext, self).__init__("config")
+        self.expected = expected
+
+    def evaluate(
+        self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
+    ) -> nagiosplugin.Result:
+        r: ConfigResource = typing.cast(ConfigResource, resource)
+        if metric.value == self.expected:
+            return self.result_cls(nagiosplugin.Ok, metric=metric)
+        else:
+            return self.result_cls(
+                nagiosplugin.Critical,
+                metric=metric,
+                hint="Configuration value for “{}” unexpected! "
+                "actual: {} expected: {}".format(r.key, metric.value, self.expected),
+            )
+
+
+# scope: custom_repo ##########################################################
+
+
+class CustomRepoResource(nagiosplugin.Resource):
+
+    key: str
+
+    name = "custom_repo"
+
+    def __init__(self, key: str) -> None:
+        self.key = key
+
+    def probe(self) -> nagiosplugin.Metric:
+        return nagiosplugin.Metric("custom_repo", AptConfig.get_repos())
+
+
+class CustomRepoContext(nagiosplugin.Context):
+    def __init__(self) -> None:
+        super(CustomRepoContext, self).__init__("custom_repo")
+
+    def evaluate(
+        self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
+    ) -> nagiosplugin.Result:
+        if opts.custom_repo in metric.value:
+            return self.result_cls(nagiosplugin.Ok, metric=metric)
+        else:
+            return self.result_cls(
+                nagiosplugin.Critical,
+                metric=metric,
+                hint="Unattended-upgrades is not configured to handle updates "
+                "for custom repository '{}'.".format(opts.custom_repo),
+            )
+
+
+# scope: dry_run ##############################################################
+
+
+class DryRunResource(nagiosplugin.Resource):
+    name = "dry_run"
+
+    def probe(self) -> nagiosplugin.Metric:
+        process: subprocess.CompletedProcess[bytes] = subprocess.run(
+            ("unattended-upgrades", "--dry-run")
+        )
+        return nagiosplugin.Metric("dry_run", process.returncode)
+
+
+class DryRunContext(nagiosplugin.Context):
+    def __init__(self) -> None:
+        super(DryRunContext, self).__init__("dry_run")
+
+    def evaluate(
+        self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
+    ) -> nagiosplugin.Result:
+        if metric.value == 0:
+            return self.result_cls(nagiosplugin.Ok, metric=metric)
+        else:
+            return self.result_cls(
+                nagiosplugin.Critical,
+                metric=metric,
+                hint="unattended-upgrades --dry-run exits with a non-zero status.",
+            )
 
 
 # scope: errors_in_log ########################################################
