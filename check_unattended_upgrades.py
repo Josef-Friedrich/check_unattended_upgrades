@@ -7,11 +7,15 @@ Monitoring scopes
 
 * ``anacron``: Check if the package 'anacron' is installed.
 * ``config``: Check some configuration values using “apt-config dump”.
+* ``custom_repo``: Check if 'unattended-upgrades' is configured to include the
+                   specified custom repository.
 * ``dry_run``: Check if “unattended-upgrades --dry-run” is working.
 * ``errors_in_log``: Check if there are any errors in the log files concerning
                      the last run.
 * ``last_run``: Check when the program was last run.
 * ``reboot``: Check if the machine needs a reboot.
+* ``security``: Check if 'unattended-upgrades' is configured to handle
+                security updates.
 * ``systemd_timers``: Check if the appropriate systemd timers are enabled.
 """
 
@@ -37,19 +41,19 @@ class OptionContainer:
     anacron: bool
     autoclean: str | None
     critical: int
+    custom_repo: str
     download: str | None
+    dry_run: bool
     enable: str | None
     lists: str | None
     mail: str | None
-    dry_run: bool
-    repo: str
     reboot: bool
     remove: str | None
-    verbose: bool
     security: bool
     sleep: str | None
     systemd_timers: bool
     unattended: str | None
+    verbose: bool
     warning: int
 
 
@@ -169,6 +173,7 @@ def get_argparser() -> argparse.ArgumentParser:
     parser.add_argument(
         "-p",
         "--repo",
+        "--custom-repo",
         help="Check if 'Unattended-upgrades' is configured to include the "
         "specified custom repository.",
     )
@@ -271,9 +276,6 @@ class AnacronContext(nagiosplugin.Context):
             )
 
 
-# scope: config ###############################################################
-
-
 class AptConfig:
 
     __cache: dict[str, str] | None = None
@@ -298,6 +300,15 @@ class AptConfig:
         if not AptConfig.__cache:
             AptConfig.__cache = AptConfig.__read_all_config_values()
         return AptConfig.__cache[key]
+
+    @staticmethod
+    def get_repos() -> str:
+        return AptConfig.get("Unattended-Upgrade::Allowed-Origins") + AptConfig.get(
+            "Unattended-Upgrade::Origins-Pattern"
+        )
+
+
+# scope: config ###############################################################
 
 
 class ConfigResource(nagiosplugin.Resource):
@@ -334,6 +345,40 @@ class ConfigContext(nagiosplugin.Context):
                 metric=metric,
                 hint="Configuration value for “{}” unexpected! "
                 "actual: {} expected: {}".format(r.key, metric.value, self.expected),
+            )
+
+
+# scope: custom_repo ##########################################################
+
+
+class CustomRepoResource(nagiosplugin.Resource):
+
+    key: str
+
+    name = "custom_repo"
+
+    def __init__(self, key: str) -> None:
+        self.key = key
+
+    def probe(self) -> nagiosplugin.Metric:
+        return nagiosplugin.Metric("custom_repo", AptConfig.get_repos())
+
+
+class CustomRepoContext(nagiosplugin.Context):
+    def __init__(self) -> None:
+        super(CustomRepoContext, self).__init__("custom_repo")
+
+    def evaluate(
+        self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
+    ) -> nagiosplugin.Result:
+        if opts.custom_repo in metric.value:
+            return self.result_cls(nagiosplugin.Ok, metric=metric)
+        else:
+            return self.result_cls(
+                nagiosplugin.Critical,
+                metric=metric,
+                hint="Unattended-upgrades is not configured to handle updates "
+                "for custom repository '{}'.".format(opts.custom_repo),
             )
 
 
@@ -596,6 +641,8 @@ class RebootContext(nagiosplugin.Context):
                 hint="The machine requires a reboot.",
             )
 
+
+# scope: security #############################################################
 
 # scope: systemd_timers #######################################################
 
