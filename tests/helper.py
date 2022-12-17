@@ -128,6 +128,7 @@ def execute_main(
     anacron: str | None = "/usr/sbin/anacron",
     dry_run: int = 0,
     reboot: bool = False,
+    apt_config: str = "default.txt",
 ) -> MockResult:
     def perform_subprocess_run_side_effect(
         args: list[str], **kwargs: typing.Any
@@ -137,7 +138,7 @@ def execute_main(
 
         if command == "apt-config dump":
             process.returncode = 0
-            process.stdout = read_text_file("apt-config.txt")
+            process.stdout = read_text_file("apt-config/" + apt_config)
 
         elif command == "systemctl is-enabled apt-daily.timer":
             process.returncode = 0 if systemd_apt_daily_timer else 1
