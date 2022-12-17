@@ -102,6 +102,10 @@ class TestReboot(unittest.TestCase):
 
 
 class TestSecurity(unittest.TestCase):
+    def test_ok(self) -> None:
+        result = execute_main(["--security"], apt_config="allowed-origins.txt")
+        result.assert_ok()
+
     def test_critical(self) -> None:
         result = execute_main(["--security"])
         result.assert_critical()

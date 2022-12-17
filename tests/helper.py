@@ -128,7 +128,7 @@ def execute_main(
     anacron: str | None = "/usr/sbin/anacron",
     dry_run: int = 0,
     reboot: bool = False,
-    apt_config: str = "default.txt",
+    apt_config: typing.Literal["default.txt", "allowed-origins.txt"] = "default.txt",
 ) -> MockResult:
     def perform_subprocess_run_side_effect(
         args: list[str], **kwargs: typing.Any
@@ -155,6 +155,7 @@ def execute_main(
 
     if not argv or argv[0] != "check_unattended_upgrades.py":
         argv.insert(0, "check_unattended_upgrades.py")
+
     with mock.patch("sys.exit") as sys_exit, mock.patch(
         "subprocess.run", side_effect=perform_subprocess_run_side_effect
     ), mock.patch("os.path.exists", return_value=reboot), mock.patch(
