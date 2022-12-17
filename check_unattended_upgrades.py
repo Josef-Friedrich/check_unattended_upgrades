@@ -265,22 +265,48 @@ class AptConfig:
 
         for line in process.stdout.splitlines():
             match: re.Match[str] | None = re.match(r'(.*) "(.*)";', line)
+
             if match:
-                cache[match[1]] = match[2]
+                key: str = match[1]
+                value: str = match[2]
+                # Handle multiline config values like:
+                # Unattended-Upgrade::Origins-Pattern "";
+                # Unattended-Upgrade::Origins-Pattern:: "origin=*";
+                # Unattended-Upgrade::Origins-Pattern:: "o=Canonical";
+                if re.match(r".+::$", key):
+                    key = key[:-2]
+                    cache[key] += value
+                else:
+                    cache[key] = value
 
         return cache
 
     @staticmethod
-    def get(key: str) -> str:
+    def get(key: str) -> str | None:
         if not AptConfig.__cache:
             AptConfig.__cache = AptConfig.__read_all_config_values()
-        return AptConfig.__cache[key]
+
+        if key in AptConfig.__cache:
+            return AptConfig.__cache[key]
+        return None
 
     @staticmethod
-    def get_repos() -> str:
-        return AptConfig.get("Unattended-Upgrade::Allowed-Origins") + AptConfig.get(
-            "Unattended-Upgrade::Origins-Pattern"
-        )
+    def get_repos() -> str | None:
+        output: str = ""
+
+        allowed_origins = AptConfig.get("Unattended-Upgrade::Allowed-Origins")
+
+        if allowed_origins:
+            output += allowed_origins
+
+        origins_pattern = AptConfig.get("Unattended-Upgrade::Origins-Pattern")
+
+        if origins_pattern:
+            output += origins_pattern
+
+        if output != "":
+            return output
+        return None
 
 
 # log #########################################################################
@@ -652,7 +678,8 @@ class SecurityResource(nagiosplugin.Resource):
     name = "security"
 
     def probe(self) -> nagiosplugin.Metric:
-        return nagiosplugin.Metric("security", "security" in AptConfig.get_repos())
+        repos = AptConfig.get_repos()
+        return nagiosplugin.Metric("security", repos and "security" in repos)
 
 
 class SecurityContext(nagiosplugin.Context):

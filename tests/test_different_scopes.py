@@ -101,6 +101,16 @@ class TestReboot(unittest.TestCase):
         result.assert_warn()
 
 
+class TestSecurity(unittest.TestCase):
+    def test_critical(self) -> None:
+        result = execute_main(["--security"])
+        result.assert_critical()
+        result.assert_first_line(
+            "UNATTENDED_UPGRADES CRITICAL - "
+            "unattended-upgrades is not configured to handle security updates."
+        )
+
+
 class TestSystemdTimers(unittest.TestCase):
     def test_ok(self) -> None:
         result = execute_main(["--systemd-timers", "--verbose"])
