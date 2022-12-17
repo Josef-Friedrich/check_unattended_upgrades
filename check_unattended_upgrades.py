@@ -749,18 +749,23 @@ class ChecksCollection:
             UnattendedUpgradesSummary(),
         ]
 
-        if opts.reboot:
-            self.checks += [RebootResource(), RebootContext()]
-        if opts.dry_run:
-            self.checks += [DryRunResource(), DryRunContext()]
         if opts.anacron:
             self.checks += [AnacronResource(), AnacronContext()]
-        if opts.systemd_timers:
-            self.checks += [SystemdTimersResource(), SystemdTimersContext()]
-        if opts.security:
-            self.checks += [SecurityResource(), SecurityContext()]
+
         if opts.custom_repo:
             self.checks += [CustomRepoResource(), CustomRepoContext()]
+
+        if opts.dry_run:
+            self.checks += [DryRunResource(), DryRunContext()]
+
+        if opts.reboot:
+            self.checks += [RebootResource(), RebootContext()]
+
+        if opts.security:
+            self.checks += [SecurityResource(), SecurityContext()]
+
+        if opts.systemd_timers:
+            self.checks += [SystemdTimersResource(), SystemdTimersContext()]
 
         self.check_config("APT::Periodic::AutocleanInterval", opts.autoclean)
         self.check_config("APT::Periodic::Download-Upgradeable-Packages", opts.download)
