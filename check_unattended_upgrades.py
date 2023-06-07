@@ -41,7 +41,7 @@ class OptionContainer:
     anacron: bool
     autoclean: str | None
     critical: int
-    custom_repo: [str] | None
+    custom_repo: list[str] | None
     download: str | None
     dry_run: bool
     enable: str | None
