@@ -515,7 +515,7 @@ class ConfigContext(nagiosplugin.Context):
 class CustomRepoResource(nagiosplugin.Resource):
 
     name = "custom_repo"
-
+    repo: str
     def __init__(self, repo: str) -> None:
         super(CustomRepoResource, self).__init__()
         self.repo = repo
