@@ -516,7 +516,7 @@ class CustomRepoResource(nagiosplugin.Resource):
 
     name = "custom_repo"
 
-    def __init__(self, repo) -> None:
+    def __init__(self, repo: str) -> None:
         super(CustomRepoResource, self).__init__()
         self.repo = repo
 
