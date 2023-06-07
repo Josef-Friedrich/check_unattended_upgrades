@@ -525,7 +525,7 @@ class CustomRepoResource(nagiosplugin.Resource):
 
 
 class CustomRepoContext(nagiosplugin.Context):
-    def __init__(self, repo) -> None:
+    def __init__(self, repo: str) -> None:
         super(CustomRepoContext, self).__init__(repo)
 
     def evaluate(
