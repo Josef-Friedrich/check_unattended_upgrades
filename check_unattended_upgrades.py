@@ -41,7 +41,7 @@ class OptionContainer:
     anacron: bool
     autoclean: str | None
     critical: int
-    custom_repo: str
+    custom_repo: list[str] | None
     download: str | None
     dry_run: bool
     enable: str | None
@@ -175,6 +175,7 @@ def get_argparser() -> argparse.ArgumentParser:
         "--repo",
         "--custom-repo",
         dest="custom_repo",
+        action='append',
         help="Check if 'Unattended-upgrades' is configured to include the "
         "specified custom repository.",
     )
@@ -514,26 +515,30 @@ class ConfigContext(nagiosplugin.Context):
 class CustomRepoResource(nagiosplugin.Resource):
 
     name = "custom_repo"
+    repo: str
+    def __init__(self, repo: str) -> None:
+        super(CustomRepoResource, self).__init__()
+        self.repo = repo
 
     def probe(self) -> nagiosplugin.Metric:
-        return nagiosplugin.Metric("custom_repo", AptConfig.get_repos())
+        return nagiosplugin.Metric(self.repo, AptConfig.get_repos())
 
 
 class CustomRepoContext(nagiosplugin.Context):
-    def __init__(self) -> None:
-        super(CustomRepoContext, self).__init__("custom_repo")
+    def __init__(self, repo: str) -> None:
+        super(CustomRepoContext, self).__init__(repo)
 
     def evaluate(
         self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
     ) -> nagiosplugin.Result:
-        if opts.custom_repo in metric.value:
+        if self.name in metric.value:
             return self.result_cls(nagiosplugin.Ok, metric=metric)
         else:
             return self.result_cls(
                 nagiosplugin.Critical,
                 metric=metric,
                 hint="Unattended-upgrades is not configured to handle updates "
-                "for custom repository '{}'.".format(opts.custom_repo),
+                "for custom repository '{}'.".format(self.name),
             )
 
 
@@ -779,8 +784,8 @@ class ChecksCollection:
         if opts.anacron:
             self.checks += [AnacronResource(), AnacronContext()]
 
-        if opts.custom_repo:
-            self.checks += [CustomRepoResource(), CustomRepoContext()]
+        for repo in opts.custom_repo:
+            self.checks += [CustomRepoResource(repo), CustomRepoContext(repo)]
 
         if opts.dry_run:
             self.checks += [DryRunResource(), DryRunContext()]
