@@ -499,7 +499,11 @@ class ConfigContext(nagiosplugin.Context):
     ) -> nagiosplugin.Result:
         r: ConfigResource = typing.cast(ConfigResource, resource)
         if metric.value == self.expected:
-            return self.result_cls(nagiosplugin.Ok, metric=metric)
+            return self.result_cls(
+                nagiosplugin.Ok, 
+                metric=metric,
+                hint="Configuration value for “{}”: {}".format(r.key, metric.value),
+            )
         else:
             return self.result_cls(
                 nagiosplugin.Critical,
@@ -532,7 +536,12 @@ class CustomRepoContext(nagiosplugin.Context):
         self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
     ) -> nagiosplugin.Result:
         if self.name in metric.value:
-            return self.result_cls(nagiosplugin.Ok, metric=metric)
+            return self.result_cls(
+                nagiosplugin.Ok,
+                metric=metric,
+                hint="Handling updates for custom repository '{}'.".format(self.name),
+            )
+
         else:
             return self.result_cls(
                 nagiosplugin.Critical,
@@ -563,7 +572,11 @@ class DryRunContext(nagiosplugin.Context):
         self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
     ) -> nagiosplugin.Result:
         if metric.value == 0:
-            return self.result_cls(nagiosplugin.Ok, metric=metric)
+            return self.result_cls(
+                nagiosplugin.Ok,
+                metric=metric
+                hint="unattended-upgrades --dry-run exits with a zero status (OK).",
+            )
         else:
             return self.result_cls(
                 nagiosplugin.Critical,
@@ -666,6 +679,7 @@ class RebootContext(nagiosplugin.Context):
             return self.result_cls(
                 nagiosplugin.Ok,
                 metric=metric,
+                hint="No reboot required yet.",
             )
         else:
             return self.result_cls(
@@ -695,7 +709,11 @@ class SecurityContext(nagiosplugin.Context):
         self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
     ) -> nagiosplugin.Result:
         if metric.value:
-            return self.result_cls(nagiosplugin.Ok, metric=metric)
+            return self.result_cls(
+                nagiosplugin.Ok,
+                metric=metric,
+                hint="unattended-upgrades is handling security updates.",
+            )
         else:
             return self.result_cls(
                 nagiosplugin.Critical,
@@ -736,7 +754,6 @@ class SystemdTimersContext(nagiosplugin.Context):
         if not metric.value[1]:
             state = nagiosplugin.Critical
             not_string = "not "
-
         return self.result_cls(
             state,
             metric=metric,
@@ -784,10 +801,6 @@ class ChecksCollection:
         if opts.anacron:
             self.checks += [AnacronResource(), AnacronContext()]
 
-        if opts.custom_repos:
-            for repo in opts.custom_repos:
-                self.checks += [CustomRepoResource(repo), CustomRepoContext(repo)]
-
         if opts.dry_run:
             self.checks += [DryRunResource(), DryRunContext()]
 
@@ -808,6 +821,10 @@ class ChecksCollection:
         self.check_config("APT::Periodic::Update-Package-Lists", opts.lists)
         self.check_config("Unattended-Upgrade::Mail", opts.mail)
         self.check_config("Unattended-Upgrade::Remove-Unused-Dependencies", opts.remove)
+
+        if opts.custom_repos:
+            for repo in opts.custom_repos:
+                self.checks += [CustomRepoResource(repo), CustomRepoContext(repo)]
 
     def check_config(self, key: str, expected: str | None) -> None:
         if expected:
