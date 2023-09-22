@@ -574,7 +574,7 @@ class DryRunContext(nagiosplugin.Context):
         if metric.value == 0:
             return self.result_cls(
                 nagiosplugin.Ok,
-                metric=metric
+                metric=metric,
                 hint="unattended-upgrades --dry-run exits with a zero status (OK).",
             )
         else:
