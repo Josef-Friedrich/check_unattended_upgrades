@@ -784,8 +784,8 @@ class ChecksCollection:
         if opts.anacron:
             self.checks += [AnacronResource(), AnacronContext()]
 
-        if opts.custom_repos:
-            for repo in opts.custom_repos:
+        if opts.custom_repo:
+            for repo in opts.custom_repo:
                 self.checks += [CustomRepoResource(repo), CustomRepoContext(repo)]
 
         if opts.dry_run:
