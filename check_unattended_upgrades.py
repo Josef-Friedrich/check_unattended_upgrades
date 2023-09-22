@@ -41,7 +41,7 @@ class OptionContainer:
     anacron: bool
     autoclean: str | None
     critical: int
-    custom_repo: list[str] | None
+    custom_repos: list[str] | None
     download: str | None
     dry_run: bool
     enable: str | None
@@ -174,7 +174,7 @@ def get_argparser() -> argparse.ArgumentParser:
         "-p",
         "--repo",
         "--custom-repo",
-        dest="custom_repo",
+        dest="custom_repos",
         action='append',
         help="Check if 'Unattended-upgrades' is configured to include the "
         "specified custom repository.",
@@ -784,8 +784,8 @@ class ChecksCollection:
         if opts.anacron:
             self.checks += [AnacronResource(), AnacronContext()]
 
-        if opts.custom_repo:
-            for repo in opts.custom_repo:
+        if opts.custom_repos:
+            for repo in opts.custom_repos:
                 self.checks += [CustomRepoResource(repo), CustomRepoContext(repo)]
 
         if opts.dry_run:
