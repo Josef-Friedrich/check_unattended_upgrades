@@ -45,6 +45,7 @@ class OptionContainer:
     download: str | None
     dry_run: bool
     enable: str | None
+    format: str | None
     lists: str | None
     mail: str | None
     reboot: bool
@@ -81,9 +82,9 @@ def get_argparser() -> argparse.ArgumentParser:
         "  - last_ago\n"
         "       Time interval in seconds for last unattended-upgrades execution.\n"
         "  - warning\n"
-        "       Interval in seconds.\n"
+        "       Interval of time units defined in '--format'.\n"
         "  - critical\n"
-        "       Interval in seconds.\n"
+        "       Interval of time units defined in '--format'.\.\n"
         "\n"
         "About file system permissions:\n"
         "   The user which executes this plugin must have read permissions to this\n"
@@ -119,9 +120,9 @@ def get_argparser() -> argparse.ArgumentParser:
         "--critical",
         default=187200,  # 52h = 2d + 4h
         type=int,
-        metavar="SECONDS",
+        metavar="TIME_UNITS",
         help="Time interval since the last execution to result in a critical "
-        "state (seconds).",
+        "state (time units depending on '--format').",
     )
 
     parser.add_argument(
@@ -144,6 +145,17 @@ def get_argparser() -> argparse.ArgumentParser:
         "--enable",
         metavar="CONFIG_VALUE",
         help="Check if the configuration 'APT::Periodic::Enable' is set properly",
+    )
+
+    parser.add_argument(
+        "-f",
+        "--format",
+        choices=["seconds","minutes","hours","days"],
+        default="seconds",
+        metavar="UNIT",
+        help="Defines the unit for the numbers of '--warning' and '--critical', "
+        "also the output of 'last-run'. Allowed values are: "
+        "'seconds', 'minutes', 'hours' and 'days', default: 'seconds'.",
     )
 
     parser.add_argument(
@@ -239,9 +251,9 @@ def get_argparser() -> argparse.ArgumentParser:
         "--warning",
         default=93600,  # 26h = 1d + 2h
         type=int,
-        metavar="SECONDS",
+        metavar="TIME_UNITS",
         help="Time interval since the last execution to result in a "
-        "warning state (seconds).",
+        "warning state (time units depending on '--format').",
     )
 
     return parser
@@ -645,9 +657,25 @@ class LastRunContext(nagiosplugin.Context):
         self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
     ) -> nagiosplugin.Result:
 
-        interval: float = datetime.datetime.now().timestamp() - metric.value
+        printerval: float = datetime.datetime.now().timestamp() - metric.value
+        interval: int      = 0
+        total_seconds: int = int(datetime.datetime.now().timestamp() - metric.value)
+        total_minutes: int = total_seconds // 60
+        total_hours: int   = total_minutes // 60
+        total_days: int    = total_hours // 24
 
-        hint = "last-run was {} seconds ago".format(interval)
+        if opts.format == "days":
+            interval = total_days
+            hint = "last-run was {} days, {} hours and {} minutes ago".format(total_days,total_hours % 24,total_minutes % 60)
+        elif opts.format == "hours":
+            interval = total_hours
+            hint = "last-run was {} hours {} minutes and {} seconds ago".format(total_hours,total_minutes % 60,total_seconds % 60)
+        elif opts.format == "minutes":
+            interval = total_minutes
+            hint = "last-run was {} minutes {} seconds ago".format(total_minutes,total_seconds % 60)
+        else:
+            interval = total_seconds
+            hint = "last-run was {} seconds ago".format(total_seconds)
 
         if interval > opts.critical:
             return self.result_cls(nagiosplugin.Critical, metric=metric, hint=hint)
