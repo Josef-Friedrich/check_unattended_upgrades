@@ -488,31 +488,32 @@ class ConfigResource(nagiosplugin.Resource):
 
     key: str
 
+    expected: str
+
     name = "config"
 
-    def __init__(self, key: str) -> None:
+    def __init__(self, key: str, expected: str) -> None:
         self.key = key
+        self.expected = expected
 
     def probe(self) -> nagiosplugin.Metric:
         value = AptConfig.get(self.key)
-        return nagiosplugin.Metric("config", value)
+        return nagiosplugin.Metric(name=self.key, value=value, context="config")
 
 
 class ConfigContext(nagiosplugin.Context):
 
-    expected: str
-
-    def __init__(self, expected: str) -> None:
+    def __init__(self) -> None:
         super(ConfigContext, self).__init__("config")
-        self.expected = expected
 
     def evaluate(
         self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
     ) -> nagiosplugin.Result:
         r: ConfigResource = typing.cast(ConfigResource, resource)
-        if metric.value == self.expected:
+
+        if metric.value == r.expected:
             return self.result_cls(
-                nagiosplugin.Ok, 
+                nagiosplugin.Ok,
                 metric=metric,
                 hint="Configuration value for “{}”: {}".format(r.key, metric.value),
             )
@@ -521,7 +522,7 @@ class ConfigContext(nagiosplugin.Context):
                 nagiosplugin.Critical,
                 metric=metric,
                 hint="Configuration value for “{}” unexpected! "
-                "actual: {} expected: {}".format(r.key, metric.value, self.expected),
+                "actual: {} expected: {}".format(r.key, metric.value, r.expected),
             )
 
 
@@ -856,8 +857,8 @@ class ChecksCollection:
 
     def check_config(self, key: str, expected: str | None) -> None:
         if expected:
-            self.checks.append(ConfigResource(key))
-            self.checks.append(ConfigContext(expected))
+            self.checks.append(ConfigResource(key, expected))
+            self.checks.append(ConfigContext())
 
 
 # @guarded(verbose=0)
