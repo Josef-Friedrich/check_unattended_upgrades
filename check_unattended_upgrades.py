@@ -512,7 +512,7 @@ class ConfigContext(nagiosplugin.Context):
         r: ConfigResource = typing.cast(ConfigResource, resource)
         if metric.value == self.expected:
             return self.result_cls(
-                nagiosplugin.Ok, 
+                nagiosplugin.Ok,
                 metric=metric,
                 hint="Configuration value for “{}”: {}".format(r.key, metric.value),
             )
@@ -669,10 +669,10 @@ class LastRunContext(nagiosplugin.Context):
             hint = "last-run was {} days, {} hours and {} minutes ago".format(total_days,total_hours % 24,total_minutes % 60)
         elif opts.format == "hours":
             interval = total_hours
-            hint = "last-run was {} hours {} minutes and {} seconds ago".format(total_hours,total_minutes % 60,total_seconds % 60)
+            hint = "last-run was {} hours, {} minutes and {} seconds ago".format(total_hours,total_minutes % 60,total_seconds % 60)
         elif opts.format == "minutes":
             interval = total_minutes
-            hint = "last-run was {} minutes {} seconds ago".format(total_minutes,total_seconds % 60)
+            hint = "last-run was {} minutes and {} seconds ago".format(total_minutes,total_seconds % 60)
         else:
             interval = total_seconds
             hint = "last-run was {} seconds ago".format(total_seconds)
