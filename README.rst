@@ -28,9 +28,9 @@ Command line interface
       -a CONFIG_VALUE, --autoclean CONFIG_VALUE
                             Check if the configuration
                             'APT::Periodic::AutocleanInterval' is set properly.
-      -c SECONDS, --critical SECONDS
+      -c TIME_UNITS, --critical TIME_UNITS
                             Time interval since the last execution to result in a
-                            critical state (seconds).
+                            critical state (time units depending on '--format').
       -D, --short-description
                             Show a short description of this check plugin.
       -d CONFIG_VALUE, --download CONFIG_VALUE
@@ -39,6 +39,11 @@ Command line interface
       -e CONFIG_VALUE, --enable CONFIG_VALUE
                             Check if the configuration 'APT::Periodic::Enable' is
                             set properly
+      -f UNIT, --format UNIT
+                            Defines the unit for the numbers of '--warning' and '--
+                            critical', also the output of 'last-run'. Allowed values
+                            are: 'seconds', 'minutes', 'hours' and 'days', default:
+                            'seconds'.
       -l CONFIG_VALUE, --lists CONFIG_VALUE
                             Check if the configuration 'APT::Periodic::Update-
                             Package-Lists' is set properly.
@@ -66,10 +71,10 @@ Command line interface
                             Check if the configuration 'APT::Periodic::Unattended-
                             Upgrade' is set properly.
       -v, --verbose
-      -V, --version         show program's version number and exit
-      -w SECONDS, --warning SECONDS
+      -V, --version         show program's version number and exit.
+      -w TIME_UNITS, --warning TIME_UNITS
                             Time interval since the last execution to result in a
-                            warning state (seconds).
+                            warning state (time units depending on '--format').
 
     Performance data:
       - last_ago
