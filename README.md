@@ -41,7 +41,8 @@ Options:
         Defines the unit for the numbers of '--warning' and '--
         critical', also the output of 'last-run'. Allowed values
         are: 'seconds', 'minutes', 'hours' and 'days', default:
--h, --help
+        'seconds'.
+ -h, --help
 	Show this help message.
  -l, --lists
 	Check if the configuration 'APT::Periodic::Update-Package-Lists' is set
