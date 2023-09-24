@@ -66,7 +66,7 @@ Options:
 	properly.
  -v, --version
 	Show the version number.
-  -w, --warning
+ -w, --warning
         Time interval since the last execution to result in a
         warning state (time units depending on '--format').
 
