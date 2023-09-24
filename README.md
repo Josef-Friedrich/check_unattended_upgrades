@@ -37,7 +37,11 @@ Options:
 	is set properly.
  -e, --enable
 	Check if the configuration 'APT::Periodic::Enable' is set properly.
- -h, --help
+ -f UNIT, --format UNIT
+        Defines the unit for the numbers of '--warning' and '--
+        critical', also the output of 'last-run'. Allowed values
+        are: 'seconds', 'minutes', 'hours' and 'days', default:
+-h, --help
 	Show this help message.
  -l, --lists
 	Check if the configuration 'APT::Periodic::Update-Package-Lists' is set
