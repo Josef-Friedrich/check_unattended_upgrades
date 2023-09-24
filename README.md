@@ -28,8 +28,8 @@ Options:
 	Check if the configuration 'APT::Periodic::AutocleanInterval' is set
 	properly.
  -c, --critical
-	Time interval since the last execution to result in a critical state
-	(seconds).
+        Time interval since the last execution to result in a
+        critical state (time units depending on '--format').
  -D, --short-description
 	Show a short description of this check plugin.
  -d, --download
@@ -37,6 +37,11 @@ Options:
 	is set properly.
  -e, --enable
 	Check if the configuration 'APT::Periodic::Enable' is set properly.
+ -f UNIT, --format UNIT
+        Defines the unit for the numbers of '--warning' and '--
+        critical', also the output of 'last-run'. Allowed values
+        are: 'seconds', 'minutes', 'hours' and 'days', default:
+        'seconds'.
  -h, --help
 	Show this help message.
  -l, --lists
@@ -67,8 +72,8 @@ Options:
  -v, --version
 	Show the version number.
  -w, --warning
-	Time interval since the last execution to result in a warning state
-	(seconds).
+        Time interval since the last execution to result in a
+        warning state (time units depending on '--format').
 
 Performance data:
   - last_ago
