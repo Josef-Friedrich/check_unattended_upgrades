@@ -84,7 +84,7 @@ def get_argparser() -> argparse.ArgumentParser:
         "  - warning\n"
         "       Interval of time units defined in '--format'.\n"
         "  - critical\n"
-        "       Interval of time units defined in '--format'.\.\n"
+        "       Interval of time units defined in '--format'.\n"
         "\n"
         "About file system permissions:\n"
         "   The user which executes this plugin must have read permissions to this\n"
