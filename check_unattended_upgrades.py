@@ -658,7 +658,6 @@ class LastRunContext(nagiosplugin.Context):
         self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
     ) -> nagiosplugin.Result:
 
-        printerval: float = datetime.datetime.now().timestamp() - metric.value
         interval: int      = 0
         total_seconds: int = int(datetime.datetime.now().timestamp() - metric.value)
         total_minutes: int = total_seconds // 60
