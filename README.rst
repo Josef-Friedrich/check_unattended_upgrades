@@ -11,12 +11,12 @@ Command line interface
 
 :: 
 
-    usage: check_unattended_upgrades [-h] [-A] [-a CONFIG_VALUE] [-c SECONDS] [-D]
-                                     [-d CONFIG_VALUE] [-e CONFIG_VALUE]
-                                     [-l CONFIG_VALUE] [-m CONFIG_VALUE] [-n]
-                                     [-p CUSTOM_REPO] [-R] [-r CONFIG_VALUE] [-S]
-                                     [-s CONFIG_VALUE] [-t] [-u CONFIG_VALUE] [-v]
-                                     [-V] [-w SECONDS]
+    usage: check_unattended_upgrades [-h] [-A] [-a CONFIG_VALUE] [-c TIME_UNITS]
+                                     [-D] [-d CONFIG_VALUE] [-e CONFIG_VALUE]
+                                     [-f UNIT] [-l CONFIG_VALUE] [-m CONFIG_VALUE]
+                                     [-n] [-p CUSTOM_REPOS] [-R] [-r CONFIG_VALUE]
+                                     [-S] [-s CONFIG_VALUE] [-t] [-u CONFIG_VALUE]
+                                     [-v] [-V] [-w TIME_UNITS]
 
     Copyright (c) 2015-22 Josef Friedrich <josef@friedrich.rocks>
 
@@ -53,7 +53,7 @@ Command line interface
       -n, --dry-run         Check if 'unattended-upgrades --dry-run' is working.
                             Warning: If you use this option the performance data
                             last_ago is always 0 or near to 0.
-      -p CUSTOM_REPO, --repo CUSTOM_REPO, --custom-repo CUSTOM_REPO
+      -p CUSTOM_REPOS, --repo CUSTOM_REPOS, --custom-repo CUSTOM_REPOS
                             Check if 'Unattended-upgrades' is configured to include
                             the specified custom repository.
       -R, --reboot          Check if the machine needs a reboot.
@@ -71,7 +71,7 @@ Command line interface
                             Check if the configuration 'APT::Periodic::Unattended-
                             Upgrade' is set properly.
       -v, --verbose
-      -V, --version         show program's version number and exit.
+      -V, --version         show program's version number and exit
       -w TIME_UNITS, --warning TIME_UNITS
                             Time interval since the last execution to result in a
                             warning state (time units depending on '--format').
@@ -80,9 +80,9 @@ Command line interface
       - last_ago
            Time interval in seconds for last unattended-upgrades execution.
       - warning
-           Interval in seconds.
+           Interval of time units defined in '--format'.
       - critical
-           Interval in seconds.
+           Interval of time units defined in '--format'.
 
     About file system permissions:
        The user which executes this plugin must have read permissions to this
