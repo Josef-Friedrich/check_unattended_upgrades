@@ -150,7 +150,7 @@ def get_argparser() -> argparse.ArgumentParser:
     parser.add_argument(
         "-f",
         "--format",
-        choices=["seconds","minutes","hours","days"],
+        choices=["seconds", "minutes", "hours", "days"],
         default="seconds",
         metavar="UNIT",
         help="Defines the unit for the numbers of '--warning' and '--critical', "
@@ -187,7 +187,7 @@ def get_argparser() -> argparse.ArgumentParser:
         "--repo",
         "--custom-repo",
         dest="custom_repos",
-        action='append',
+        action="append",
         help="Check if 'Unattended-upgrades' is configured to include the "
         "specified custom repository.",
     )
@@ -265,7 +265,6 @@ def get_argparser() -> argparse.ArgumentParser:
 
 
 class AptConfig:
-
     __cache: dict[str, str] | None = None
 
     @staticmethod
@@ -329,7 +328,6 @@ LogLevel = typing.Literal["DEBUG", "INFO", "WARNING", "ERROR", "EXCEPTION"]
 
 
 class LogMessage:
-
     __time: datetime.datetime
     __level: LogLevel
     __message: str
@@ -379,7 +377,6 @@ class Run:
 
 
 class LogParser:
-
     runs: list[Run] = []
 
     @staticmethod
@@ -485,7 +482,6 @@ class AnacronContext(nagiosplugin.Context):
 
 
 class ConfigResource(nagiosplugin.Resource):
-
     key: str
 
     expected: str
@@ -502,7 +498,6 @@ class ConfigResource(nagiosplugin.Resource):
 
 
 class ConfigContext(nagiosplugin.Context):
-
     def __init__(self) -> None:
         super(ConfigContext, self).__init__("config")
 
@@ -530,9 +525,9 @@ class ConfigContext(nagiosplugin.Context):
 
 
 class CustomRepoResource(nagiosplugin.Resource):
-
     name = "custom_repo"
     repo: str
+
     def __init__(self, repo: str) -> None:
         super(CustomRepoResource, self).__init__()
         self.repo = repo
@@ -624,7 +619,6 @@ class WarningsInLogContext(nagiosplugin.Context):
     def evaluate(
         self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
     ) -> nagiosplugin.Result:
-
         message: LogMessage = metric.value
 
         state = nagiosplugin.Ok
@@ -657,22 +651,27 @@ class LastRunContext(nagiosplugin.Context):
     def evaluate(
         self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
     ) -> nagiosplugin.Result:
-
-        interval: int      = 0
+        interval: int = 0
         total_seconds: int = int(datetime.datetime.now().timestamp() - metric.value)
         total_minutes: int = total_seconds // 60
-        total_hours: int   = total_minutes // 60
-        total_days: int    = total_hours // 24
+        total_hours: int = total_minutes // 60
+        total_days: int = total_hours // 24
 
         if opts.format == "days":
             interval = total_days
-            hint = "last-run was {} days, {} hours and {} minutes ago".format(total_days,total_hours % 24,total_minutes % 60)
+            hint = "last-run was {} days, {} hours and {} minutes ago".format(
+                total_days, total_hours % 24, total_minutes % 60
+            )
         elif opts.format == "hours":
             interval = total_hours
-            hint = "last-run was {} hours, {} minutes and {} seconds ago".format(total_hours,total_minutes % 60,total_seconds % 60)
+            hint = "last-run was {} hours, {} minutes and {} seconds ago".format(
+                total_hours, total_minutes % 60, total_seconds % 60
+            )
         elif opts.format == "minutes":
             interval = total_minutes
-            hint = "last-run was {} minutes and {} seconds ago".format(total_minutes,total_seconds % 60)
+            hint = "last-run was {} minutes and {} seconds ago".format(
+                total_minutes, total_seconds % 60
+            )
         else:
             interval = total_seconds
             hint = "last-run was {} seconds ago".format(total_seconds)
@@ -721,7 +720,6 @@ class RebootContext(nagiosplugin.Context):
 
 
 class SecurityResource(nagiosplugin.Resource):
-
     name = "security"
 
     def probe(self) -> nagiosplugin.Metric:
@@ -776,7 +774,6 @@ class SystemdTimersContext(nagiosplugin.Context):
     def evaluate(
         self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
     ) -> nagiosplugin.Result:
-
         state = nagiosplugin.Ok
         not_string = ""
         if not metric.value[1]:
@@ -814,7 +811,6 @@ class UnattendedUpgradesSummary(nagiosplugin.Summary):
 
 
 class ChecksCollection:
-
     checks: list[nagiosplugin.Resource | nagiosplugin.Context | nagiosplugin.Summary]
 
     def __init__(self, opts: OptionContainer) -> None:
