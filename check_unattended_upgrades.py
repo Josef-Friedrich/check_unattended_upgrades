@@ -19,7 +19,6 @@ Monitoring scopes
 * ``systemd_timers``: Check if the appropriate systemd timers are enabled.
 """
 
-
 from __future__ import annotations
 
 import argparse

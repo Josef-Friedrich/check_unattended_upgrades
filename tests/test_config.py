@@ -1,9 +1,7 @@
-import unittest
-
 from tests.helper import execute_main
 
 
-class TestConfigAutoclean(unittest.TestCase):
+class TestConfigAutoclean:
     def test_ok(self) -> None:
         result = execute_main(["--autoclean", "7"])
         result.assert_first_line("UNATTENDED_UPGRADES OK - all")
@@ -19,7 +17,7 @@ class TestConfigAutoclean(unittest.TestCase):
         )
 
 
-class TestConfigDownload(unittest.TestCase):
+class TestConfigDownload:
     def test_ok(self) -> None:
         result = execute_main(["--download", "1"])
         result.assert_first_line("UNATTENDED_UPGRADES OK - all")
@@ -35,7 +33,7 @@ class TestConfigDownload(unittest.TestCase):
         )
 
 
-class TestConfigEnable(unittest.TestCase):
+class TestConfigEnable:
     def test_ok(self) -> None:
         result = execute_main(["--enable", "1"])
         result.assert_first_line("UNATTENDED_UPGRADES OK - all")
@@ -51,7 +49,7 @@ class TestConfigEnable(unittest.TestCase):
         )
 
 
-class TestConfigSleep(unittest.TestCase):
+class TestConfigSleep:
     def test_ok(self) -> None:
         result = execute_main(["--sleep", "0"])
         result.assert_first_line("UNATTENDED_UPGRADES OK - all")
@@ -67,7 +65,7 @@ class TestConfigSleep(unittest.TestCase):
         )
 
 
-class TestConfigUnattended(unittest.TestCase):
+class TestConfigUnattended:
     def test_ok(self) -> None:
         result = execute_main(["--unattended", "1"])
         result.assert_first_line("UNATTENDED_UPGRADES OK - all")
@@ -83,7 +81,7 @@ class TestConfigUnattended(unittest.TestCase):
         )
 
 
-class TestConfigLists(unittest.TestCase):
+class TestConfigLists:
     def test_ok(self) -> None:
         result = execute_main(["--lists", "1"])
         result.assert_first_line("UNATTENDED_UPGRADES OK - all")
@@ -99,7 +97,7 @@ class TestConfigLists(unittest.TestCase):
         )
 
 
-class TestConfigMail(unittest.TestCase):
+class TestConfigMail:
     def test_ok(self) -> None:
         result = execute_main(["--mail", "logs@example.com"])
         result.assert_first_line("UNATTENDED_UPGRADES OK - all")
@@ -115,7 +113,7 @@ class TestConfigMail(unittest.TestCase):
         )
 
 
-class TestConfigRemove(unittest.TestCase):
+class TestConfigRemove:
     def test_ok(self) -> None:
         result = execute_main(["--remove", "true"])
         result.assert_first_line("UNATTENDED_UPGRADES OK - all")
@@ -130,7 +128,3 @@ class TestConfigRemove(unittest.TestCase):
             "“Unattended-Upgrade::Remove-Unused-Dependencies” unexpected! "
             "actual: true expected: false"
         )
-
-
-if __name__ == "__main__":
-    unittest.main()

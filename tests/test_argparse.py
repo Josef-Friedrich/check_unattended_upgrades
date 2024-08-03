@@ -4,20 +4,20 @@ import check_unattended_upgrades
 from tests.helper import run
 
 
-class TestWithSubprocess(unittest.TestCase):
+class TestWithSubprocess:
     def test_help(self) -> None:
         process = run(["--help"])
-        self.assertEqual(process.returncode, 0)
-        self.assertIn("usage: check_unattended_upgrades", process.stdout)
+        assert process.returncode == 0
+        assert "usage: check_unattended_upgrades" in process.stdout
 
     def test_version(self) -> None:
         process = run(
             ["--version"],
         )
-        self.assertEqual(process.returncode, 0)
-        self.assertIn(
-            "check_unattended_upgrades " + check_unattended_upgrades.__version__,
-            process.stdout,
+        assert process.returncode == 0
+        assert (
+            "check_unattended_upgrades " + check_unattended_upgrades.__version__
+            in process.stdout
         )
 
 

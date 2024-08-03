@@ -3,7 +3,7 @@ import unittest
 from tests.helper import execute_main
 
 
-class TestAnacron(unittest.TestCase):
+class TestAnacron:
     def test_ok(self) -> None:
         result = execute_main(
             ["--anacron"],
@@ -18,7 +18,7 @@ class TestAnacron(unittest.TestCase):
         )
 
 
-class TestDryRun(unittest.TestCase):
+class TestDryRun:
     def test_ok(self) -> None:
         result = execute_main(
             ["--dry-run"],
@@ -34,7 +34,7 @@ class TestDryRun(unittest.TestCase):
         )
 
 
-class TestErrorsInLog(unittest.TestCase):
+class TestErrorsInLog:
     def test_warn(self) -> None:
         result = execute_main(
             ["-v"], main_log_file="warning.log", time="2022-12-02 02:51:17"
@@ -80,14 +80,14 @@ class TestErrorsInLog(unittest.TestCase):
         # )
 
 
-class TestLastRun(unittest.TestCase):
+class TestLastRun:
     def test_ok(self) -> None:
         result = execute_main()
         result.assert_first_line("UNATTENDED_UPGRADES OK - all")
         result.assert_ok()
 
 
-class TestReboot(unittest.TestCase):
+class TestReboot:
     def test_ok(self) -> None:
         result = execute_main(["--reboot"], reboot=False)
         result.assert_first_line("UNATTENDED_UPGRADES OK - all")
@@ -101,7 +101,7 @@ class TestReboot(unittest.TestCase):
         result.assert_warn()
 
 
-class TestSecurity(unittest.TestCase):
+class TestSecurity:
     def test_ok(self) -> None:
         result = execute_main(["--security"], apt_config="allowed-origins.txt")
         result.assert_ok()
@@ -115,7 +115,7 @@ class TestSecurity(unittest.TestCase):
         )
 
 
-class TestSystemdTimers(unittest.TestCase):
+class TestSystemdTimers:
     def test_ok(self) -> None:
         result = execute_main(["--systemd-timers", "--verbose"])
         result.assert_ok()

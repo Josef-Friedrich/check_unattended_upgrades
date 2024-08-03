@@ -84,7 +84,7 @@ class MockResult:
         return out
 
     def assert_exitcode(self, exitcode: int) -> None:
-        test.assertEqual(self.exitcode, exitcode)
+        test.assertEqualself.exitcode == exitcode
 
     def assert_ok(self) -> None:
         self.assert_exitcode(0)
@@ -108,10 +108,10 @@ class MockResult:
         return None
 
     def assert_first_line(self, first_line: str) -> None:
-        test.assertEqual(self.first_line, first_line)
+        test.assertEqualself.first_line == first_line
 
     def assert_output(self, output: str) -> None:
-        test.assertEqual(self.output, output, self.output)
+        test.assertEqualself.output == output, self.output
 
 
 class CompletedProcess:
@@ -160,16 +160,12 @@ def execute_main(
         "subprocess.run", side_effect=perform_subprocess_run_side_effect
     ), mock.patch("os.path.exists", return_value=reboot), mock.patch(
         "shutil.which", return_value=anacron
-    ), mock.patch(
-        "sys.argv", argv
-    ), mock.patch(
+    ), mock.patch("sys.argv", argv), mock.patch(
         "check_unattended_upgrades.open",
         mock.mock_open(
             read_data=read_text_file(os.path.join("main-log", main_log_file))
         ),
-    ), freeze_time(
-        time
-    ):
+    ), freeze_time(time):
         file_stdout: io.StringIO = io.StringIO()
         file_stderr: io.StringIO = io.StringIO()
         with redirect_stdout(file_stdout), redirect_stderr(file_stderr):

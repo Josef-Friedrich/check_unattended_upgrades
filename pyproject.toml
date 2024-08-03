@@ -18,28 +18,25 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.8.1"
-nagiosplugin = "^1.3.3"
+python = "^3.8"
+nagiosplugin = "^1.3"
 
 [tool.poetry.group.dev.dependencies]
-black = "^22.12.0"
-flake8 = "^6.1.0"
-freezegun = "^1.2.2"
-isort = "^5.12.0"
-mypy = "^1.5.1"
-nagiosplugin-stubs = "^0.4.0"
-readme-patcher = "^0.6.0"
-tox = "^3.28.0"
-tox-poetry-installer = {extras = ["poetry"], version = "^0.10.3"}
+freezegun = "^1"
+mypy = "^1"
+nagiosplugin-stubs = "^0"
+readme-patcher = "^0"
 types-freezegun = "^1.1.10"
+tox = "^4"
+ruff = "^0"
 
 [tool.mypy]
 files = "check_unattended_upgrades.py"
 strict = true
 
 [build-system]
-requires = ["poetry>=1.2.0b2"]
-build-backend = "poetry.masonry.api"
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
 "check_unattended_upgrades.py" = "check_unattended_upgrades:main"
