@@ -1,5 +1,3 @@
-import unittest
-
 from tests.helper import execute_main
 
 
@@ -149,7 +147,3 @@ class TestSystemdTimers:
         #     "CRITICAL: The systemd timer “apt-daily.timer” is not enabled.\n"
         #     "CRITICAL: The systemd timer “apt-daily-upgrade.timer” is not enabled.\n"
         # )
-
-
-if __name__ == "__main__":
-    unittest.main()

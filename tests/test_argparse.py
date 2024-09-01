@@ -1,5 +1,3 @@
-import unittest
-
 import check_unattended_upgrades
 from tests.helper import run
 
@@ -19,7 +17,3 @@ class TestWithSubprocess:
             "check_unattended_upgrades " + check_unattended_upgrades.__version__
             in process.stdout
         )
-
-
-if __name__ == "__main__":
-    unittest.main()
