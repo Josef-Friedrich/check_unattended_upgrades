@@ -1,43 +1,50 @@
-[tool.poetry]
+[project]
 name = "check_unattended_upgrades"
 version = "0.1.0"
 description = ""
-authors = ["Josef Friedrich <josef@friedrich.rocks>"]
+authors = [{ name = "Josef Friedrich", email = "josef@friedrich.rocks" }]
+requires-python = ">=3.10,<4"
 readme = "README.md"
-repository = "https://github.com/Josef-Friedrich/check_unattended_upgrades"
 license = "MIT"
 classifiers = [
     "Development Status :: 5 - Production/Stable",
-    "Programming Language :: Python :: 3 :: Only",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3",
     "Topic :: Utilities",
     "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = ["nagiosplugin>=1.3,<2"]
+
+[dependency-groups]
+dev = [
+    "freezegun>=1.5.5",
+    "mypy>=1.11.2",
+    "nagiosplugin-stubs>=0.6.4",
+    "pytest>=9.0.2",
+    "types-freezegun>=1.1.10",
 ]
 
-[tool.poetry.dependencies]
-python = "^3.8"
-nagiosplugin = "^1.3"
+[project.urls]
+Repository = "https://github.com/Josef-Friedrich/check_unattended_upgrades"
 
-[tool.poetry.group.dev.dependencies]
-freezegun = "^1"
-mypy = "^1"
-nagiosplugin-stubs = "^0"
-pytest = "^8"
-readme-patcher = "^0"
-ruff = "^0"
-tox = "^4"
-types-freezegun = "^1.1.10"
+[project.scripts]
+"check_unattended_upgrades.py" = "check_unattended_upgrades:main"
+
+[tool.uv]
+
+[build-system]
+requires = ["uv_build>=0.9.26,<0.10.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "userdetect"
+module-root = ""
+namespace = true
 
 [tool.mypy]
 files = "check_unattended_upgrades.py"
 strict = true
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
-
-[tool.poetry.scripts]
-"check_unattended_upgrades.py" = "check_unattended_upgrades:main"
