@@ -41,9 +41,8 @@ requires = ["uv_build>=0.9.26,<0.10.0"]
 build-backend = "uv_build"
 
 [tool.uv.build-backend]
-module-name = "userdetect"
-module-root = ""
 namespace = true
+module-root = ""
 
 [tool.mypy]
 files = "check_unattended_upgrades.py"
