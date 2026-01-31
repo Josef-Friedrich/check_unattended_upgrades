@@ -73,7 +73,7 @@ def get_argparser() -> argparse.ArgumentParser:
         formatter_class=lambda prog: argparse.RawDescriptionHelpFormatter(
             prog, width=80
         ),  # noqa: E501
-        description="Copyright (c) 2015-22 Josef Friedrich <josef@friedrich.rocks>\n"
+        description="Copyright (c) 2015-2026 Josef Friedrich <josef@friedrich.rocks>\n"
         "\n"
         "Monitoring plugin to check automatic updates (unattended-upgrades) "
         "on Debian / Ubuntu.\n",  # noqa: E501
