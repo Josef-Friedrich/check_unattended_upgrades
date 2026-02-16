@@ -108,7 +108,7 @@ class MockResult:
         return None
 
     def assert_first_line(self, first_line: str) -> None:
-        assert self.first_line == first_line
+        assert self.first_line == first_line, self.first_line
 
     def assert_output(self, output: str) -> None:
         assert self.output == output, self.output
@@ -153,8 +153,8 @@ def execute_main(
             process.returncode = dry_run
         return process
 
-    if not argv or argv[0] != "check_unattended_upgrades.py":
-        argv.insert(0, "check_unattended_upgrades.py")
+    if not argv or argv[0] != "check_unattended_upgrades":
+        argv.insert(0, "check_unattended_upgrades")
 
     with (
         mock.patch("sys.exit") as sys_exit,
