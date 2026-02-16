@@ -1,6 +1,6 @@
 [project]
 name = "check_unattended_upgrades"
-version = "2.0.0a0"
+version = "2.0.0a1"
 description = "Monitoring plugin to check automatic updates (unattended-upgrades) on Debian / Ubuntu."
 authors = [{ name = "Josef Friedrich", email = "josef@friedrich.rocks" }]
 requires-python = ">=3.10,<4"
