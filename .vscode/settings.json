@@ -21,12 +21,6 @@
     ],
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
-  "python.analysis.diagnosticSeverityOverrides": {
-    "reportPrivateImportUsage": "none",
-    "reportUnusedImport": "information",
-    "reportUnusedExpression": "information",
-    "reportImportCycles": "information"
-  },
   "python.defaultInterpreterPath": ".venv/bin/python",
   "python.testing.pytestEnabled": true,
   "python.testing.pytestArgs": [
@@ -36,5 +30,6 @@
     "${workspaceFolder}/tests",
     "-m",
     "not (slow or gui)"
-  ]
+  ],
+  "mypy.dmypyExecutable": "${workspaceFolder}/.venv/bin/dmypy"
 }

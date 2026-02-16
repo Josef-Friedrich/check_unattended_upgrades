@@ -11,87 +11,85 @@ Command line interface
 
 :: 
 
-    usage: check_unattended_upgrades [-h] [-A] [-a CONFIG_VALUE] [-c TIME_UNITS]
-                                     [-D] [-d CONFIG_VALUE] [-e CONFIG_VALUE]
-                                     [-f UNIT] [-l CONFIG_VALUE] [-m CONFIG_VALUE]
-                                     [-n] [-p CUSTOM_REPOS] [-R] [-r CONFIG_VALUE]
-                                     [-S] [-s CONFIG_VALUE] [-t] [-u CONFIG_VALUE]
-                                     [-v] [-V] [-w TIME_UNITS]
-
+    check_unattended_upgrades v1.4
     Copyright (c) 2015-2026 Josef Friedrich <josef@friedrich.rocks>
 
     Monitoring plugin to check automatic updates (unattended-upgrades) on Debian / Ubuntu.
 
-    options:
-      -h, --help            show this help message and exit
-      -A, --anacron         Check if the package 'anacron' is installed.
-      -a, --autoclean CONFIG_VALUE
-                            Check if the configuration
-                            'APT::Periodic::AutocleanInterval' is set properly.
-      -c, --critical TIME_UNITS
-                            Time interval since the last execution to result in a
-                            critical state (time units depending on '--format').
-      -D, --short-description
-                            Show a short description of this check plugin.
-      -d, --download CONFIG_VALUE
-                            Check if the configuration 'APT::Periodic:Download-
-                            Upgradeable-Packages' is set properly.
-      -e, --enable CONFIG_VALUE
-                            Check if the configuration 'APT::Periodic::Enable' is
-                            set properly
-      -f, --format UNIT     Defines the unit for the numbers of '--warning' and '--
-                            critical', also the output of 'last-run'. Allowed values
-                            are: 'seconds', 'minutes', 'hours' and 'days', default:
-                            'seconds'.
-      -l, --lists CONFIG_VALUE
-                            Check if the configuration 'APT::Periodic::Update-
-                            Package-Lists' is set properly.
-      -m, --mail CONFIG_VALUE
-                            Check if the configuration 'Unattended-Upgrade::Mail' is
-                            set properly.
-      -n, --dry-run         Check if 'unattended-upgrades --dry-run' is working.
-                            Warning: If you use this option the performance data
-                            last_ago is always 0 or near to 0.
-      -p, --repo, --custom-repo CUSTOM_REPOS
-                            Check if 'Unattended-upgrades' is configured to include
-                            the specified custom repository.
-      -R, --reboot          Check if the machine needs a reboot.
-      -r, --remove CONFIG_VALUE
-                            Check if the configuration 'Unattended-Upgrade::Remove-
-                            Unused-Dependencies' is set properly.
-      -S, --security        Check if 'Unattended-upgrades' is configured to handle
-                            security updates.
-      -s, --sleep CONFIG_VALUE
-                            Check if the configuration 'APT::Periodic::RandomSleep'
-                            is set properly.
-      -t, --systemd-timers  Check if the appropriate systemd timers are enabled (
-                            apt-daily-upgrade.timer, apt-daily.timer ).
-      -u, --unattended CONFIG_VALUE
-                            Check if the configuration 'APT::Periodic::Unattended-
-                            Upgrade' is set properly.
-      -v, --verbose
-      -V, --version         show program's version number and exit
-      -w, --warning TIME_UNITS
-                            Time interval since the last execution to result in a
-                            warning state (time units depending on '--format').
+    Usage: check_unattended_upgrades <options>
+
+    Options:
+     -A, --anacron
+    	Check if the package 'anacron' is installed.
+     -a, --autoclean
+    	Check if the configuration 'APT::Periodic::AutocleanInterval' is set
+    	properly.
+     -c, --critical
+    	Time interval since the last execution to result in a critical state
+    	(seconds).
+     -D, --short-description
+    	Show a short description of this check plugin.
+     -d, --download
+    	Check if the configuration 'APT::Periodic:Download-Upgradeable-Packages'
+    	is set properly.
+     -e, --enable
+    	Check if the configuration 'APT::Periodic::Enable' is set properly.
+     -h, --help
+    	Show this help message.
+     -l, --lists
+    	Check if the configuration 'APT::Periodic::Update-Package-Lists' is set
+    	properly.
+     -m, --mail
+    	Check if the configuration 'Unattended-Upgrade::Mail' is set properly.
+     -n, --dry-run
+    	Check if 'unattended-upgrades --dry-run' is working. Warning: If you use
+    	this option the performance data last_ago is always 0 or near to 0.
+     -p, --repo
+    	Check if 'Unattended-upgrades' is configured to include the specified
+    	custom repository.
+     -R, --reboot
+    	Check if the machine needs a reboot.
+     -r, --remove
+    	Check if the configuration 'Unattended-Upgrade::Remove-Unused-
+    	Dependencies' is set properly.
+     -S, --security
+    	Check if 'Unattended-upgrades' is configured to handle security updates.
+     -s, --sleep
+    	Check if the configuration 'APT::Periodic::RandomSleep' is set properly.
+     -t, --systemd-timers
+    	Check if the appropriate Systemd timers are enabled ( apt-daily-upgrade.timer, apt-daily.timer ).
+     -u, --unattended
+    	Check if the configuration 'APT::Periodic::Unattended-Upgrade' is set
+    	properly.
+     -v, --version
+    	Show the version number.
+     -w, --warning
+    	Time interval since the last execution to result in a warning state
+    	(seconds).
 
     Performance data:
       - last_ago
-           Time interval in seconds for last unattended-upgrades execution.
+    	  Time interval in seconds for last unattended-upgrades execution.
       - warning
-           Interval of time units defined in '--format'.
+    	  Interval in seconds.
       - critical
-           Interval of time units defined in '--format'.
+    	  Interval in seconds.
 
     About file system permissions:
-       The user which executes this plugin must have read permissions to this
-       log file:
+    	The user which executes this plugin must have read permissions to this
+    	log file:
 
-           /var/log/unattended-upgrades/unattended-upgrades.log
+    		/var/log/unattended-upgrades/unattended-upgrades.log
 
-       To allow every user on your system to read the mentioned log file this
-       permissions are recommended:
+    	To allow every user on your system to read the mentioned log file this
+    	permissions are recommended:
 
-           751 (drwxr-x--x) /var/log/unattended-upgrades
-           644 (-rw-r--r--) /var/log/unattended-upgrades/unattended-upgrades.log
+    		751 (drwxr-x--x) /var/log/unattended-upgrades
+    		644 (-rw-r--r--) /var/log/unattended-upgrades/unattended-upgrades.log
 
+Project pages
+-------------
+
+* https://github.com/Josef-Friedrich/check_unattended_upgrades
+* https://exchange.icinga.com/joseffriedrich/check_unattended_upgrades
+* https://exchange.nagios.org/directory/Plugins/Software/check_unattended_upgrades/details

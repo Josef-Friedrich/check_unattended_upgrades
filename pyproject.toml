@@ -1,10 +1,10 @@
 [project]
 name = "check_unattended_upgrades"
-version = "0.1.0"
+version = "2.0.0a0"
 description = ""
 authors = [{ name = "Josef Friedrich", email = "josef@friedrich.rocks" }]
 requires-python = ">=3.10,<4"
-readme = "README.md"
+readme = "README.rst"
 license = "MIT"
 classifiers = [
     "Development Status :: 5 - Production/Stable",
@@ -32,17 +32,13 @@ dev = [
 Repository = "https://github.com/Josef-Friedrich/check_unattended_upgrades"
 
 [project.scripts]
-"check_unattended_upgrades.py" = "check_unattended_upgrades:main"
+"check_unattended_upgrades" = "check_unattended_upgrades:main"
 
 [tool.uv]
 
 [build-system]
 requires = ["uv_build>=0.9.26,<0.10.0"]
 build-backend = "uv_build"
-
-[tool.uv.build-backend]
-namespace = true
-module-root = ""
 
 [tool.mypy]
 files = "check_unattended_upgrades.py"

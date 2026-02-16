@@ -18,7 +18,7 @@ test.maxDiff = None
 
 def run(args: list[str]) -> subprocess.CompletedProcess[str]:
     return subprocess.run(
-        ["./check_unattended_upgrades.py"] + args,
+        ["./src/check_unattended_upgrades/__init__.py"] + args,
         encoding="utf-8",
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,

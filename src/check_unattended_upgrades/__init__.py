@@ -30,10 +30,11 @@ import re
 import shutil
 import subprocess
 import typing
+from importlib import metadata
 
 import nagiosplugin
 
-__version__: str = "1.4"
+__version__: str = metadata.version("check_unattended_upgrades")
 
 
 class OptionContainer:
@@ -687,7 +688,7 @@ class LastRunContext(nagiosplugin.Context):
 
 
 class RebootResource(nagiosplugin.Resource):
-    name: typing.Literal["reboot"] = "reboot"
+    name = "reboot"
 
     def probe(self) -> nagiosplugin.Metric:
         # os.path.exists instead of pathlib.Path for better testing and mocking
