@@ -45,7 +45,7 @@ docs: docs_readme_patcher
 
 # Generate the README file using the readme-patcher
 docs_readme_patcher:
-	uv tool run --isolated --no-cache readme-patcher
+	uv tool run --isolated --no-cache --with . readme-patcher
 
 
 # Run ruff check
