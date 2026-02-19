@@ -10,10 +10,11 @@ class TestConfigAutoclean:
     def test_critical(self) -> None:
         result = execute_main(["--autoclean", "42"])
         assert result.exitcode == 2
-        assert result.first_line == ("UNATTENDED_UPGRADES CRITICAL - " +
-            "Configuration value for “APT::Periodic::AutocleanInterval” " +
-            "unexpected! actual: 7 expected: 42")
-
+        assert result.first_line == (
+            "UNATTENDED_UPGRADES CRITICAL - "
+            + "Configuration value for “APT::Periodic::AutocleanInterval” "
+            + "unexpected! actual: 7 expected: 42"
+        )
 
 
 class TestConfigDownload:

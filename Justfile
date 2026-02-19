@@ -48,7 +48,6 @@ docs: docs_readme_patcher
 docs_readme_patcher:
 	uv tool run --isolated --no-cache --with . readme-patcher
 
-
 # Run ruff check
 lint:
 	uv tool run ruff check

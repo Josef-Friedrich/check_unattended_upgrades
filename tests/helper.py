@@ -92,6 +92,7 @@ class MockResult:
             return self.output.split("\n", 1)[0]
         return None
 
+
 class CompletedProcess:
     returncode: int = 0
     stdout: str
@@ -135,6 +136,7 @@ def execute_main(
         argv.insert(0, "check_unattended_upgrades")
 
     with (
+        freeze_time(time),
         mock.patch("sys.exit") as sys_exit,
         mock.patch("subprocess.run", side_effect=perform_subprocess_run_side_effect),
         mock.patch("os.path.exists", return_value=reboot),
@@ -146,7 +148,6 @@ def execute_main(
                 read_data=read_text_file(os.path.join("main-log", main_log_file))
             ),
         ),
-        freeze_time(time),
     ):
         file_stdout: io.StringIO = io.StringIO()
         file_stderr: io.StringIO = io.StringIO()
