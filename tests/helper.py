@@ -83,21 +83,6 @@ class MockResult:
 
         return out
 
-    def assert_exitcode(self, exitcode: int) -> None:
-        assert self.exitcode == exitcode
-
-    def assert_ok(self) -> None:
-        self.assert_exitcode(0)
-
-    def assert_warn(self) -> None:
-        self.assert_exitcode(1)
-
-    def assert_critical(self) -> None:
-        self.assert_exitcode(2)
-
-    def assert_unknown(self) -> None:
-        self.assert_exitcode(3)
-
     @property
     def first_line(self) -> str | None:
         """The first line of the output without a newline break at the
@@ -107,20 +92,13 @@ class MockResult:
             return self.output.split("\n", 1)[0]
         return None
 
-    def assert_first_line(self, first_line: str) -> None:
-        assert self.first_line == first_line, self.first_line
-
-    def assert_output(self, output: str) -> None:
-        assert self.output == output, self.output
-
-
 class CompletedProcess:
     returncode: int = 0
     stdout: str
 
 
 def execute_main(
-    argv: list[str] = ["check_unattended_upgrades.py"],
+    argv: list[str] = ["check_unattended_upgrades"],
     main_log_file: str = "info.log",
     time: str = "2017-09-01 10:55:34",
     systemd_apt_daily_timer: bool = True,
