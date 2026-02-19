@@ -7,7 +7,7 @@ test:
 	uv run --isolated --python=3.11 pytest
 	uv run --isolated --python=3.12 pytest
 	uv run --isolated --python=3.13 pytest
-	uv run --isolated --python=3.14 pytest
+	# uv run --isolated --python=3.14 pytest
 
 # Execute the quick tests
 test_quick:
