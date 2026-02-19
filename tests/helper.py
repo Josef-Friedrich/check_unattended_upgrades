@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import datetime
 import io
 import os
 import subprocess
@@ -135,8 +136,13 @@ def execute_main(
     if not argv or argv[0] != "check_unattended_upgrades":
         argv.insert(0, "check_unattended_upgrades")
 
+
+    test_now = datetime.datetime.strptime(time, "%Y-%m-%d %H:%M:%S")
+    # test_now = datetime.datetime(2017, 9, 1, 10, 55, 34)
+
     with (
-        freeze_time(time),
+        #freeze_time(time),
+        mock.patch('datetime.datetime', wraps=datetime.datetime) as dt,
         mock.patch("sys.exit") as sys_exit,
         mock.patch("subprocess.run", side_effect=perform_subprocess_run_side_effect),
         mock.patch("os.path.exists", return_value=reboot),
@@ -149,6 +155,7 @@ def execute_main(
             ),
         ),
     ):
+        dt.now.return_value = test_now
         file_stdout: io.StringIO = io.StringIO()
         file_stderr: io.StringIO = io.StringIO()
         with redirect_stdout(file_stdout), redirect_stderr(file_stderr):

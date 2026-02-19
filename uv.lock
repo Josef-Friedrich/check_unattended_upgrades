@@ -224,14 +224,14 @@ wheels = [
 
 [[package]]
 name = "nagiosplugin-stubs"
-version = "0.6.4"
+version = "0.7.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/07/4c/3e05ac23156c36efb2a3a7005386d103c36a59548fac9ba7b1c29ca6bf89/nagiosplugin_stubs-0.6.4.tar.gz", hash = "sha256:7b96187ca485b790c81234676652c3ec2065019bd3f28cfa127ea601f4b49b6f", size = 5329, upload-time = "2024-03-03T10:46:12.284Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/78/e9/90ba93b88e712860f4a7bd9d804787a3ac6f7785105d68fed8b6f571074a/nagiosplugin_stubs-0.7.0.tar.gz", hash = "sha256:cc3916113f1be954a63d12ad1eb1259f98ab88aedcd7a4fec74e01caba2bf52f", size = 4215, upload-time = "2026-02-19T19:49:51.332Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/79/65/cb551bd8ec588c111421f96c84c6c5de2530025d87bb519781999e915ad8/nagiosplugin_stubs-0.6.4-py3-none-any.whl", hash = "sha256:938219e2697d55545dca441aec8987c8b733188ef6895c747300f8ff70518a7a", size = 9939, upload-time = "2024-03-03T10:46:10.653Z" },
+    { url = "https://files.pythonhosted.org/packages/4e/ec/5a37b140d868bbaf67757d9cc9decc256409146af63187e844833f8a82e5/nagiosplugin_stubs-0.7.0-py3-none-any.whl", hash = "sha256:236102418614a831d4a39062de98709ac1a5794d626db1a215f42c05db749014", size = 9459, upload-time = "2026-02-19T19:49:50.498Z" },
 ]
 
 [[package]]
