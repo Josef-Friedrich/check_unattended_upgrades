@@ -451,15 +451,13 @@ class LogParser:
 
 
 class AnacronResource(nagiosplugin.Resource):
-    name = "anacron"
-
     def probe(self) -> nagiosplugin.Metric:
         return nagiosplugin.Metric("anacron", shutil.which("anacron"))
 
 
 class AnacronContext(nagiosplugin.Context):
     def __init__(self) -> None:
-        super(AnacronContext, self).__init__("anacron")
+        super().__init__("anacron")
 
     def evaluate(
         self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
@@ -499,7 +497,7 @@ class ConfigResource(nagiosplugin.Resource):
 
 class ConfigContext(nagiosplugin.Context):
     def __init__(self) -> None:
-        super(ConfigContext, self).__init__("config")
+        super().__init__("config")
 
     def evaluate(
         self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
@@ -525,11 +523,10 @@ class ConfigContext(nagiosplugin.Context):
 
 
 class CustomRepoResource(nagiosplugin.Resource):
-    name = "custom_repo"
     repo: str
 
     def __init__(self, repo: str) -> None:
-        super(CustomRepoResource, self).__init__()
+        super().__init__()
         self.repo = repo
 
     def probe(self) -> nagiosplugin.Metric:
@@ -538,7 +535,7 @@ class CustomRepoResource(nagiosplugin.Resource):
 
 class CustomRepoContext(nagiosplugin.Context):
     def __init__(self, repo: str) -> None:
-        super(CustomRepoContext, self).__init__(repo)
+        super().__init__(repo)
 
     def evaluate(
         self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
@@ -574,7 +571,7 @@ class DryRunResource(nagiosplugin.Resource):
 
 class DryRunContext(nagiosplugin.Context):
     def __init__(self) -> None:
-        super(DryRunContext, self).__init__("dry_run")
+        super().__init__("dry_run")
 
     def evaluate(
         self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
@@ -597,8 +594,6 @@ class DryRunContext(nagiosplugin.Context):
 
 
 class WarningsInLogResource(nagiosplugin.Resource):
-    name = "errors_in_log"
-
     def probe(self) -> typing.Generator[nagiosplugin.Metric, None, None]:
         runs = LogParser.parse()
         if len(runs) > 0:
@@ -614,7 +609,7 @@ class WarningsInLogResource(nagiosplugin.Resource):
 
 class WarningsInLogContext(nagiosplugin.Context):
     def __init__(self) -> None:
-        super(WarningsInLogContext, self).__init__("errors_in_log")
+        super().__init__("errors_in_log")
 
     def evaluate(
         self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
@@ -635,8 +630,6 @@ class WarningsInLogContext(nagiosplugin.Context):
 
 
 class LastRunResource(nagiosplugin.Resource):
-    name = "last_run"
-
     def probe(self) -> nagiosplugin.Metric:
         runs = LogParser.parse()
         if len(runs) == 0:
@@ -646,7 +639,7 @@ class LastRunResource(nagiosplugin.Resource):
 
 class LastRunContext(nagiosplugin.Context):
     def __init__(self) -> None:
-        super(LastRunContext, self).__init__("last_run")
+        super().__init__("last_run")
 
     def evaluate(
         self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
@@ -697,7 +690,7 @@ class RebootResource(nagiosplugin.Resource):
 
 class RebootContext(nagiosplugin.Context):
     def __init__(self) -> None:
-        super(RebootContext, self).__init__("reboot")
+        super().__init__("reboot")
 
     def evaluate(
         self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
@@ -729,7 +722,7 @@ class SecurityResource(nagiosplugin.Resource):
 
 class SecurityContext(nagiosplugin.Context):
     def __init__(self) -> None:
-        super(SecurityContext, self).__init__("security")
+        super().__init__("security")
 
     def evaluate(
         self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
@@ -769,7 +762,7 @@ class SystemdTimersResource(nagiosplugin.Resource):
 
 class SystemdTimersContext(nagiosplugin.Context):
     def __init__(self) -> None:
-        super(SystemdTimersContext, self).__init__("systemd_timers")
+        super().__init__("systemd_timers")
 
     def evaluate(
         self, metric: nagiosplugin.Metric, resource: nagiosplugin.Resource
