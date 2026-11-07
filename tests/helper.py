@@ -21,8 +21,7 @@ def run(args: list[str]) -> subprocess.CompletedProcess[str]:
     return subprocess.run(
         ["./src/check_unattended_upgrades/__init__.py"] + args,
         encoding="utf-8",
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
+        capture_output=True,
     )
 
 
@@ -100,7 +99,7 @@ class CompletedProcess:
 
 
 def execute_main(
-    argv: list[str] = ["check_unattended_upgrades"],
+    argv: list[str] | None = None,
     main_log_file: str = "info.log",
     time: str = "2017-09-01 10:55:34",
     systemd_apt_daily_timer: bool = True,
@@ -110,6 +109,9 @@ def execute_main(
     reboot: bool = False,
     apt_config: typing.Literal["default.txt", "allowed-origins.txt"] = "default.txt",
 ) -> MockResult:
+    if argv is None:
+        argv = ["check_unattended_upgrades"]
+
     def perform_subprocess_run_side_effect(
         args: list[str], **kwargs: typing.Any
     ) -> CompletedProcess:

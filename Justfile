@@ -50,7 +50,7 @@ docs_readme_patcher:
 
 # Run ruff check
 lint:
-	uv tool run ruff check
+	uv tool run ruff check --fix --unsafe-fixes
 
 # Perform type checking using mypy
 type_check:

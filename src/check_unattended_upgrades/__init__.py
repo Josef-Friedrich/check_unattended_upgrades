@@ -425,9 +425,8 @@ class LogParser:
         if main_log_file.exists():
             messages = LogParser.__parsed_main(main_log_file)
 
-        if len(messages) == 0:
-            if zipped_log_file.exists():
-                messages = LogParser.__parse_zipped(zipped_log_file)
+        if len(messages) == 0 and zipped_log_file.exists():
+            messages = LogParser.__parse_zipped(zipped_log_file)
 
         runs: list[Run] = []
         if len(messages) > 0:
@@ -755,15 +754,15 @@ class UnattendedUpgradesSummary(mplugin.Summary):
         return "all"
 
     def problem(self, results: mplugin.Results) -> str:
-        summary: typing.List[mplugin.Result] = []
+        summary: list[mplugin.Result] = []
         for result in results.most_significant:
             summary.append(result)
-        return ", ".join(["{0}".format(result) for result in summary])
+        return ", ".join([f"{result}" for result in summary])
 
     def verbose(self, results: mplugin.Results) -> list[str]:
-        summary: typing.List[str] = []
+        summary: list[str] = []
         for result in results.results:
-            summary.append("{0}: {1}".format(str(result.state).upper(), result))
+            summary.append(f"{str(result.state).upper()}: {result}")
         return summary
 
 
