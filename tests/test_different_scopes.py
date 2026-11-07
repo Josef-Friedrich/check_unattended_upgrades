@@ -1,5 +1,3 @@
-import pytest
-
 from tests.helper import execute_main
 
 
@@ -102,9 +100,9 @@ class TestReboot:
 
 
 class TestSecurity:
-    @pytest.mark.skip
     def test_ok(self) -> None:
         result = execute_main(["--security"], apt_config="allowed-origins.txt")
+        assert result.first_line == "UNATTENDED_UPGRADES OK - all"
         assert result.exitcode == 0
 
     def test_critical(self) -> None:

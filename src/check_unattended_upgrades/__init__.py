@@ -300,6 +300,10 @@ class AptConfig:
         return None
 
     @staticmethod
+    def reset() -> None:
+        AptConfig.__cache = None
+
+    @staticmethod
     def get_repos() -> str | None:
         output: str = ""
 
@@ -819,6 +823,7 @@ def main() -> None:
     opts = typing.cast(OptionContainer, get_argparser().parse_args())
 
     LogParser.reset()
+    AptConfig.reset()
 
     checks: ChecksCollection = ChecksCollection(opts)
     check: mplugin.Check = mplugin.Check(*checks.checks)
