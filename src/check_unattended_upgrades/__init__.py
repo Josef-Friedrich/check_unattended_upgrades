@@ -66,7 +66,7 @@ LOG_FILE = "/var/log/unattended-upgrades/unattended-upgrades.log"
 
 
 def run(*args: str) -> subprocess.CompletedProcess[str]:
-    return subprocess.run(args, encoding="utf-8", capture_output=True)
+    return subprocess.run(args, check=False, encoding="utf-8", capture_output=True)
 
 
 def get_argparser() -> argparse.ArgumentParser:
@@ -264,7 +264,10 @@ class AptConfig:
     @staticmethod
     def __read_all_config_values() -> dict[str, str]:
         process: subprocess.CompletedProcess[str] = subprocess.run(
-            ("apt-config", "dump"), encoding="utf-8", stdout=subprocess.PIPE
+            ("apt-config", "dump"),
+            check=False,
+            encoding="utf-8",
+            stdout=subprocess.PIPE,
         )
 
         cache: dict[str, str] = {}
@@ -371,7 +374,7 @@ class Run:
 
 
 class LogParser:
-    runs: list[Run] = []
+    runs: typing.ClassVar[list[Run]] = []
 
     @staticmethod
     def __read_lines(content: str) -> list[LogMessage]:
@@ -547,7 +550,7 @@ class CustomRepoContext(mplugin.Context):
 class DryRunResource(mplugin.Resource):
     def probe(self) -> mplugin.Metric:
         process: subprocess.CompletedProcess[bytes] = subprocess.run(
-            ("unattended-upgrades", "--dry-run")
+            ("unattended-upgrades", "--dry-run"), check=False
         )
         return mplugin.Metric("dry_run", process.returncode)
 
@@ -754,10 +757,7 @@ class UnattendedUpgradesSummary(mplugin.Summary):
         return "all"
 
     def problem(self, results: mplugin.Results) -> str:
-        summary: list[mplugin.Result] = []
-        for result in results.most_significant:
-            summary.append(result)
-        return ", ".join([f"{result}" for result in summary])
+        return ", ".join(f"{result}" for result in results.most_significant)
 
     def verbose(self, results: mplugin.Results) -> list[str]:
         summary: list[str] = []
