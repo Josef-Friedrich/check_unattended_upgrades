@@ -150,6 +150,7 @@ def execute_main(
         mock.patch("sys.exit") as sys_exit,
         mock.patch("subprocess.run", side_effect=perform_subprocess_run_side_effect),
         mock.patch("os.path.exists", return_value=reboot),
+        mock.patch("pathlib.Path.exists", return_value=True),
         mock.patch("shutil.which", return_value=anacron),
         mock.patch("sys.argv", argv),
         mock.patch(
